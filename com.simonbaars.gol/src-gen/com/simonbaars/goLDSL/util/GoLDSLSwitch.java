@@ -108,7 +108,6 @@ public class GoLDSLSwitch<T> extends Switch<T>
         CellPairs cellPairs = (CellPairs)theEObject;
         T result = caseCellPairs(cellPairs);
         if (result == null) result = caseCells(cellPairs);
-        if (result == null) result = caseLives(cellPairs);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -177,13 +176,6 @@ public class GoLDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GoLDSLPackage.LIVES:
-      {
-        Lives lives = (Lives)theEObject;
-        T result = caseLives(lives);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case GoLDSLPackage.RANGE:
       {
         Range range = (Range)theEObject;
@@ -195,7 +187,6 @@ public class GoLDSLSwitch<T> extends Switch<T>
       {
         BoundedRange boundedRange = (BoundedRange)theEObject;
         T result = caseBoundedRange(boundedRange);
-        if (result == null) result = caseRange(boundedRange);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -203,25 +194,6 @@ public class GoLDSLSwitch<T> extends Switch<T>
       {
         UnboundedRange unboundedRange = (UnboundedRange)theEObject;
         T result = caseUnboundedRange(unboundedRange);
-        if (result == null) result = caseRange(unboundedRange);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GoLDSLPackage.LEFT_UNBOUNDED_RANGE:
-      {
-        LeftUnboundedRange leftUnboundedRange = (LeftUnboundedRange)theEObject;
-        T result = caseLeftUnboundedRange(leftUnboundedRange);
-        if (result == null) result = caseUnboundedRange(leftUnboundedRange);
-        if (result == null) result = caseRange(leftUnboundedRange);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GoLDSLPackage.RIGHT_UNBOUNDED_RANGE:
-      {
-        RightUnboundedRange rightUnboundedRange = (RightUnboundedRange)theEObject;
-        T result = caseRightUnboundedRange(rightUnboundedRange);
-        if (result == null) result = caseUnboundedRange(rightUnboundedRange);
-        if (result == null) result = caseRange(rightUnboundedRange);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -475,22 +447,6 @@ public class GoLDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Lives</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Lives</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLives(Lives object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Range</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -534,38 +490,6 @@ public class GoLDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseUnboundedRange(UnboundedRange object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Left Unbounded Range</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Left Unbounded Range</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLeftUnboundedRange(LeftUnboundedRange object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Right Unbounded Range</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Right Unbounded Range</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRightUnboundedRange(RightUnboundedRange object)
   {
     return null;
   }

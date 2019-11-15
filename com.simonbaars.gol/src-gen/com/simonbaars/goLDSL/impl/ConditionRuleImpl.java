@@ -5,7 +5,6 @@ package com.simonbaars.goLDSL.impl;
 
 import com.simonbaars.goLDSL.ConditionRule;
 import com.simonbaars.goLDSL.GoLDSLPackage;
-import com.simonbaars.goLDSL.Lives;
 import com.simonbaars.goLDSL.Range;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRuleImpl#getNumber <em>Number</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRuleImpl#getRange <em>Range</em>}</li>
- *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRuleImpl#getLives <em>Lives</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRuleImpl#getAlive <em>Alive</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,14 +64,24 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
   protected Range range;
 
   /**
-   * The cached value of the '{@link #getLives() <em>Lives</em>}' containment reference.
+   * The default value of the '{@link #getAlive() <em>Alive</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLives()
+   * @see #getAlive()
    * @generated
    * @ordered
    */
-  protected Lives lives;
+  protected static final String ALIVE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getAlive() <em>Alive</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAlive()
+   * @generated
+   * @ordered
+   */
+  protected String alive = ALIVE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -176,26 +185,9 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
    * @generated
    */
   @Override
-  public Lives getLives()
+  public String getAlive()
   {
-    return lives;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLives(Lives newLives, NotificationChain msgs)
-  {
-    Lives oldLives = lives;
-    lives = newLives;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CONDITION_RULE__LIVES, oldLives, newLives);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return alive;
   }
 
   /**
@@ -204,20 +196,12 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
    * @generated
    */
   @Override
-  public void setLives(Lives newLives)
+  public void setAlive(String newAlive)
   {
-    if (newLives != lives)
-    {
-      NotificationChain msgs = null;
-      if (lives != null)
-        msgs = ((InternalEObject)lives).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.CONDITION_RULE__LIVES, null, msgs);
-      if (newLives != null)
-        msgs = ((InternalEObject)newLives).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.CONDITION_RULE__LIVES, null, msgs);
-      msgs = basicSetLives(newLives, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CONDITION_RULE__LIVES, newLives, newLives));
+    String oldAlive = alive;
+    alive = newAlive;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CONDITION_RULE__ALIVE, oldAlive, alive));
   }
 
   /**
@@ -232,8 +216,6 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
     {
       case GoLDSLPackage.CONDITION_RULE__RANGE:
         return basicSetRange(null, msgs);
-      case GoLDSLPackage.CONDITION_RULE__LIVES:
-        return basicSetLives(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -252,8 +234,8 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
         return getNumber();
       case GoLDSLPackage.CONDITION_RULE__RANGE:
         return getRange();
-      case GoLDSLPackage.CONDITION_RULE__LIVES:
-        return getLives();
+      case GoLDSLPackage.CONDITION_RULE__ALIVE:
+        return getAlive();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -274,8 +256,8 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
       case GoLDSLPackage.CONDITION_RULE__RANGE:
         setRange((Range)newValue);
         return;
-      case GoLDSLPackage.CONDITION_RULE__LIVES:
-        setLives((Lives)newValue);
+      case GoLDSLPackage.CONDITION_RULE__ALIVE:
+        setAlive((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -297,8 +279,8 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
       case GoLDSLPackage.CONDITION_RULE__RANGE:
         setRange((Range)null);
         return;
-      case GoLDSLPackage.CONDITION_RULE__LIVES:
-        setLives((Lives)null);
+      case GoLDSLPackage.CONDITION_RULE__ALIVE:
+        setAlive(ALIVE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -318,8 +300,8 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
         return number != NUMBER_EDEFAULT;
       case GoLDSLPackage.CONDITION_RULE__RANGE:
         return range != null;
-      case GoLDSLPackage.CONDITION_RULE__LIVES:
-        return lives != null;
+      case GoLDSLPackage.CONDITION_RULE__ALIVE:
+        return ALIVE_EDEFAULT == null ? alive != null : !ALIVE_EDEFAULT.equals(alive);
     }
     return super.eIsSet(featureID);
   }
@@ -337,6 +319,8 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (number: ");
     result.append(number);
+    result.append(", alive: ");
+    result.append(alive);
     result.append(')');
     return result.toString();
   }

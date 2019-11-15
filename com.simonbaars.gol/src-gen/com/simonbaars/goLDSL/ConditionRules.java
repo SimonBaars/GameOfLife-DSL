@@ -15,7 +15,7 @@ package com.simonbaars.goLDSL;
  * <ul>
  *   <li>{@link com.simonbaars.goLDSL.ConditionRules#getRule1 <em>Rule1</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.ConditionRules#getOperator <em>Operator</em>}</li>
- *   <li>{@link com.simonbaars.goLDSL.ConditionRules#getRules2 <em>Rules2</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.ConditionRules#getRule2 <em>Rule2</em>}</li>
  * </ul>
  *
  * @see com.simonbaars.goLDSL.GoLDSLPackage#getConditionRules()
@@ -72,25 +72,25 @@ public interface ConditionRules extends Condition
   void setOperator(BoolOperator value);
 
   /**
-   * Returns the value of the '<em><b>Rules2</b></em>' containment reference.
+   * Returns the value of the '<em><b>Rule2</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Rules2</em>' containment reference.
-   * @see #setRules2(ConditionRules)
-   * @see com.simonbaars.goLDSL.GoLDSLPackage#getConditionRules_Rules2()
+   * @return the value of the '<em>Rule2</em>' containment reference.
+   * @see #setRule2(ConditionRules)
+   * @see com.simonbaars.goLDSL.GoLDSLPackage#getConditionRules_Rule2()
    * @model containment="true"
    * @generated
    */
-  ConditionRules getRules2();
+  ConditionRules getRule2();
 
   /**
-   * Sets the value of the '{@link com.simonbaars.goLDSL.ConditionRules#getRules2 <em>Rules2</em>}' containment reference.
+   * Sets the value of the '{@link com.simonbaars.goLDSL.ConditionRules#getRule2 <em>Rule2</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rules2</em>' containment reference.
-   * @see #getRules2()
+   * @param value the new value of the '<em>Rule2</em>' containment reference.
+   * @see #getRule2()
    * @generated
    */
-  void setRules2(ConditionRules value);
+  void setRule2(ConditionRules value);
 
 } // ConditionRules

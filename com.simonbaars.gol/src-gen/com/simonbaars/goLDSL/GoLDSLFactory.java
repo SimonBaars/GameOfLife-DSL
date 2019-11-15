@@ -150,15 +150,6 @@ public interface GoLDSLFactory extends EFactory
   ConditionRules createConditionRules();
 
   /**
-   * Returns a new object of class '<em>Lives</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Lives</em>'.
-   * @generated
-   */
-  Lives createLives();
-
-  /**
    * Returns a new object of class '<em>Range</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -184,24 +175,6 @@ public interface GoLDSLFactory extends EFactory
    * @generated
    */
   UnboundedRange createUnboundedRange();
-
-  /**
-   * Returns a new object of class '<em>Left Unbounded Range</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Left Unbounded Range</em>'.
-   * @generated
-   */
-  LeftUnboundedRange createLeftUnboundedRange();
-
-  /**
-   * Returns a new object of class '<em>Right Unbounded Range</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Right Unbounded Range</em>'.
-   * @generated
-   */
-  RightUnboundedRange createRightUnboundedRange();
 
   /**
    * Returns a new object of class '<em>Grid</em>'.

@@ -80,12 +80,9 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
       case GoLDSLPackage.CONDITION: return createCondition();
       case GoLDSLPackage.CONDITION_RULE: return createConditionRule();
       case GoLDSLPackage.CONDITION_RULES: return createConditionRules();
-      case GoLDSLPackage.LIVES: return createLives();
       case GoLDSLPackage.RANGE: return createRange();
       case GoLDSLPackage.BOUNDED_RANGE: return createBoundedRange();
       case GoLDSLPackage.UNBOUNDED_RANGE: return createUnboundedRange();
-      case GoLDSLPackage.LEFT_UNBOUNDED_RANGE: return createLeftUnboundedRange();
-      case GoLDSLPackage.RIGHT_UNBOUNDED_RANGE: return createRightUnboundedRange();
       case GoLDSLPackage.GRID: return createGrid();
       case GoLDSLPackage.OFFSET: return createOffset();
       case GoLDSLPackage.SIZE: return createSize();
@@ -306,18 +303,6 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
    * @generated
    */
   @Override
-  public Lives createLives()
-  {
-    LivesImpl lives = new LivesImpl();
-    return lives;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Range createRange()
   {
     RangeImpl range = new RangeImpl();
@@ -346,30 +331,6 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
   {
     UnboundedRangeImpl unboundedRange = new UnboundedRangeImpl();
     return unboundedRange;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public LeftUnboundedRange createLeftUnboundedRange()
-  {
-    LeftUnboundedRangeImpl leftUnboundedRange = new LeftUnboundedRangeImpl();
-    return leftUnboundedRange;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public RightUnboundedRange createRightUnboundedRange()
-  {
-    RightUnboundedRangeImpl rightUnboundedRange = new RightUnboundedRangeImpl();
-    return rightUnboundedRange;
   }
 
   /**

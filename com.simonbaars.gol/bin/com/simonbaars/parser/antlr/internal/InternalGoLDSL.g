@@ -784,20 +784,15 @@ ruleConditionRule returns [EObject current=null]
 		    |
 		(
 			(
+				lv_alive_2_0='IsAlive'
 				{
-					newCompositeNode(grammarAccess.getConditionRuleAccess().getLivesLivesParserRuleCall_2_0());
+					newLeafNode(lv_alive_2_0, grammarAccess.getConditionRuleAccess().getAliveIsAliveKeyword_2_0());
 				}
-				lv_lives_2_0=ruleLives
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getConditionRuleRule());
+						$current = createModelElement(grammarAccess.getConditionRuleRule());
 					}
-					set(
-						$current,
-						"lives",
-						lv_lives_2_0,
-						"com.simonbaars.GoLDSL.Lives");
-					afterParserOrEnumRuleCall();
+					setWithLastConsumed($current, "alive", lv_alive_2_0, "IsAlive");
 				}
 			)
 		)
@@ -862,54 +857,23 @@ ruleConditionRules returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getConditionRulesAccess().getRules2ConditionRulesParserRuleCall_1_1_0());
+						newCompositeNode(grammarAccess.getConditionRulesAccess().getRule2ConditionRulesParserRuleCall_1_1_0());
 					}
-					lv_rules2_2_0=ruleConditionRules
+					lv_rule2_2_0=ruleConditionRules
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getConditionRulesRule());
 						}
 						set(
 							$current,
-							"rules2",
-							lv_rules2_2_0,
+							"rule2",
+							lv_rule2_2_0,
 							"com.simonbaars.GoLDSL.ConditionRules");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-	)
-;
-
-// Entry rule entryRuleLives
-entryRuleLives returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getLivesRule()); }
-	iv_ruleLives=ruleLives
-	{ $current=$iv_ruleLives.current; }
-	EOF;
-
-// Rule Lives
-ruleLives returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='Lives'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getLivesAccess().getLivesKeyword_0());
-		}
-		{
-			newCompositeNode(grammarAccess.getLivesAccess().getCellPairsParserRuleCall_1());
-		}
-		this_CellPairs_1=ruleCellPairs
-		{
-			$current = $this_CellPairs_1.current;
-			afterParserOrEnumRuleCall();
-		}
 	)
 ;
 
@@ -929,23 +893,45 @@ ruleRange returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		{
-			newCompositeNode(grammarAccess.getRangeAccess().getBoundedRangeParserRuleCall_0());
-		}
-		this_BoundedRange_0=ruleBoundedRange
-		{
-			$current = $this_BoundedRange_0.current;
-			afterParserOrEnumRuleCall();
-		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getRangeAccess().getBoundedBoundedRangeParserRuleCall_0_0());
+				}
+				lv_bounded_0_0=ruleBoundedRange
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getRangeRule());
+					}
+					set(
+						$current,
+						"bounded",
+						lv_bounded_0_0,
+						"com.simonbaars.GoLDSL.BoundedRange");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 		    |
-		{
-			newCompositeNode(grammarAccess.getRangeAccess().getUnboundedRangeParserRuleCall_1());
-		}
-		this_UnboundedRange_1=ruleUnboundedRange
-		{
-			$current = $this_UnboundedRange_1.current;
-			afterParserOrEnumRuleCall();
-		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getRangeAccess().getUnboundedUnboundedRangeParserRuleCall_1_0());
+				}
+				lv_unbounded_1_0=ruleUnboundedRange
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getRangeRule());
+					}
+					set(
+						$current,
+						"unbounded",
+						lv_unbounded_1_0,
+						"com.simonbaars.GoLDSL.UnboundedRange");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 
@@ -1024,35 +1010,57 @@ ruleUnboundedRange returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		{
-			newCompositeNode(grammarAccess.getUnboundedRangeAccess().getLeftUnboundedRangeParserRuleCall_0());
-		}
-		this_LeftUnboundedRange_0=ruleLeftUnboundedRange
-		{
-			$current = $this_LeftUnboundedRange_0.current;
-			afterParserOrEnumRuleCall();
-		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getUnboundedRangeAccess().getLeftLeftUnboundedRangeParserRuleCall_0_0());
+				}
+				lv_left_0_0=ruleLeftUnboundedRange
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getUnboundedRangeRule());
+					}
+					set(
+						$current,
+						"left",
+						lv_left_0_0,
+						"com.simonbaars.GoLDSL.LeftUnboundedRange");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 		    |
-		{
-			newCompositeNode(grammarAccess.getUnboundedRangeAccess().getRightUnboundedRangeParserRuleCall_1());
-		}
-		this_RightUnboundedRange_1=ruleRightUnboundedRange
-		{
-			$current = $this_RightUnboundedRange_1.current;
-			afterParserOrEnumRuleCall();
-		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getUnboundedRangeAccess().getRightRightUnboundedRangeParserRuleCall_1_0());
+				}
+				lv_right_1_0=ruleRightUnboundedRange
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getUnboundedRangeRule());
+					}
+					set(
+						$current,
+						"right",
+						lv_right_1_0,
+						"com.simonbaars.GoLDSL.RightUnboundedRange");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 
 // Entry rule entryRuleLeftUnboundedRange
-entryRuleLeftUnboundedRange returns [EObject current=null]:
+entryRuleLeftUnboundedRange returns [String current=null]:
 	{ newCompositeNode(grammarAccess.getLeftUnboundedRangeRule()); }
 	iv_ruleLeftUnboundedRange=ruleLeftUnboundedRange
-	{ $current=$iv_ruleLeftUnboundedRange.current; }
+	{ $current=$iv_ruleLeftUnboundedRange.current.getText(); }
 	EOF;
 
 // Rule LeftUnboundedRange
-ruleLeftUnboundedRange returns [EObject current=null]
+ruleLeftUnboundedRange returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
 	enterRule();
 }
@@ -1060,40 +1068,30 @@ ruleLeftUnboundedRange returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			(
-				lv_lowerBound_0_0=RULE_INT
-				{
-					newLeafNode(lv_lowerBound_0_0, grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundINTTerminalRuleCall_0_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getLeftUnboundedRangeRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"lowerBound",
-						lv_lowerBound_0_0,
-						"org.eclipse.xtext.common.Terminals.INT");
-				}
-			)
-		)
-		otherlv_1='..'
+		this_INT_0=RULE_INT
 		{
-			newLeafNode(otherlv_1, grammarAccess.getLeftUnboundedRangeAccess().getFullStopFullStopKeyword_1());
+			$current.merge(this_INT_0);
+		}
+		{
+			newLeafNode(this_INT_0, grammarAccess.getLeftUnboundedRangeAccess().getINTTerminalRuleCall_0());
+		}
+		kw='..'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getLeftUnboundedRangeAccess().getFullStopFullStopKeyword_1());
 		}
 	)
 ;
 
 // Entry rule entryRuleRightUnboundedRange
-entryRuleRightUnboundedRange returns [EObject current=null]:
+entryRuleRightUnboundedRange returns [String current=null]:
 	{ newCompositeNode(grammarAccess.getRightUnboundedRangeRule()); }
 	iv_ruleRightUnboundedRange=ruleRightUnboundedRange
-	{ $current=$iv_ruleRightUnboundedRange.current; }
+	{ $current=$iv_ruleRightUnboundedRange.current.getText(); }
 	EOF;
 
 // Rule RightUnboundedRange
-ruleRightUnboundedRange returns [EObject current=null]
+ruleRightUnboundedRange returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
 	enterRule();
 }
@@ -1101,28 +1099,18 @@ ruleRightUnboundedRange returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='..'
+		kw='..'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getRightUnboundedRangeAccess().getFullStopFullStopKeyword_0());
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getRightUnboundedRangeAccess().getFullStopFullStopKeyword_0());
 		}
-		(
-			(
-				lv_higherBound_1_0=RULE_INT
-				{
-					newLeafNode(lv_higherBound_1_0, grammarAccess.getRightUnboundedRangeAccess().getHigherBoundINTTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRightUnboundedRangeRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"higherBound",
-						lv_higherBound_1_0,
-						"org.eclipse.xtext.common.Terminals.INT");
-				}
-			)
-		)
+		this_INT_1=RULE_INT
+		{
+			$current.merge(this_INT_1);
+		}
+		{
+			newLeafNode(this_INT_1, grammarAccess.getRightUnboundedRangeAccess().getINTTerminalRuleCall_1());
+		}
 	)
 ;
 

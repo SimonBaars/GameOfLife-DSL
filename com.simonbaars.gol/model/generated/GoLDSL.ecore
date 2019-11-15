@@ -27,7 +27,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="objects" eType="#//Objects"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CellPairs" eSuperTypes="#//Cells #//Lives">
+  <eClassifiers xsi:type="ecore:EClass" name="CellPairs" eSuperTypes="#//Cells">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cells" upperBound="-1"
         eType="#//Cell" containment="true"/>
   </eClassifiers>
@@ -54,32 +54,32 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="range" eType="#//Range"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lives" eType="#//Lives"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConditionRules" eSuperTypes="#//Condition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rule1" eType="#//ConditionRule"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="#//BoolOperator"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rules2" eType="#//ConditionRules"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rule2" eType="#//ConditionRules"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="BoolOperator">
     <eLiterals name="AND" literal="&amp;"/>
     <eLiterals name="OR" value="1" literal="|"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Lives"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Range"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BoundedRange" eSuperTypes="#//Range">
+  <eClassifiers xsi:type="ecore:EClass" name="Range">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bounded" eType="#//BoundedRange"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unbounded" eType="#//UnboundedRange"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundedRange">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="higherBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UnboundedRange" eSuperTypes="#//Range"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LeftUnboundedRange" eSuperTypes="#//UnboundedRange">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RightUnboundedRange" eSuperTypes="#//UnboundedRange">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="higherBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UnboundedRange">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="left" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="right" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Grid">
     <eStructuralFeatures xsi:type="ecore:EReference" name="size" eType="#//Size" containment="true"/>

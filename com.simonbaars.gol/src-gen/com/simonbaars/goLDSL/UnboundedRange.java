@@ -3,17 +3,69 @@
  */
 package com.simonbaars.goLDSL;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Unbounded Range</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link com.simonbaars.goLDSL.UnboundedRange#getLeft <em>Left</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.UnboundedRange#getRight <em>Right</em>}</li>
+ * </ul>
  *
  * @see com.simonbaars.goLDSL.GoLDSLPackage#getUnboundedRange()
  * @model
  * @generated
  */
-public interface UnboundedRange extends Range
+public interface UnboundedRange extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Left</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Left</em>' attribute.
+   * @see #setLeft(String)
+   * @see com.simonbaars.goLDSL.GoLDSLPackage#getUnboundedRange_Left()
+   * @model
+   * @generated
+   */
+  String getLeft();
+
+  /**
+   * Sets the value of the '{@link com.simonbaars.goLDSL.UnboundedRange#getLeft <em>Left</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Left</em>' attribute.
+   * @see #getLeft()
+   * @generated
+   */
+  void setLeft(String value);
+
+  /**
+   * Returns the value of the '<em><b>Right</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Right</em>' attribute.
+   * @see #setRight(String)
+   * @see com.simonbaars.goLDSL.GoLDSLPackage#getUnboundedRange_Right()
+   * @model
+   * @generated
+   */
+  String getRight();
+
+  /**
+   * Sets the value of the '{@link com.simonbaars.goLDSL.UnboundedRange#getRight <em>Right</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Right</em>' attribute.
+   * @see #getRight()
+   * @generated
+   */
+  void setRight(String value);
+
 } // UnboundedRange

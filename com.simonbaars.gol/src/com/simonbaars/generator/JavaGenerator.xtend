@@ -2,15 +2,18 @@ package com.simonbaars.generator
 
 import com.simonbaars.goLDSL.Action
 import com.simonbaars.goLDSL.Board
+import com.simonbaars.goLDSL.BoundedRange
 import com.simonbaars.goLDSL.Cell
 import com.simonbaars.goLDSL.CellDef
 import com.simonbaars.goLDSL.CellPairs
 import com.simonbaars.goLDSL.Cells
+import com.simonbaars.goLDSL.ConditionRule
 import com.simonbaars.goLDSL.ConditionRules
 import com.simonbaars.goLDSL.DSL
 import com.simonbaars.goLDSL.Grid
 import com.simonbaars.goLDSL.GridPart
 import com.simonbaars.goLDSL.Objects
+import com.simonbaars.goLDSL.Range
 import com.simonbaars.goLDSL.Rule
 import com.simonbaars.goLDSL.ShapeDef
 import com.simonbaars.goLDSL.ShapeRef
@@ -18,6 +21,7 @@ import java.util.stream.Collectors
 import java.util.stream.IntStream
 import org.eclipse.emf.common.util.EList
 import org.eclipse.xtend.lib.annotations.Data
+import com.simonbaars.goLDSL.LeftUnboundedRange
 
 @Data class Position {
 	int x
@@ -33,7 +37,7 @@ import java.util.List;
 
 public class RulesOfLife {
 
-	public static void computeSurvivors(boolean[][] gameBoard, List<Point> survivingCells, int surrounding) {
+	public static void computeSurvivors(boolean[][] board, List<Point> points, int surrounding) {
 		«getRules(dsl.getRules, dsl.getShapes)»
 	}
 
@@ -50,71 +54,89 @@ public class RulesOfLife {
 	}
 		
 	def static conditionToJava(ConditionRules condition) {
-		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+		var rule = ruleToJava(condition.rule1)
+	}
+	
+	def static ruleToJava(ConditionRule rule) {
+		if(rule.alive != null){
+			return "board[i][j]";
+		} else if (rule.range != null) {
+			return rangeToJava(rule.range)
+		}
+		return "surrounding == "+rule.number;
+	}
+		
+	def static rangeToJava(Range range) {
+		if(range.bounded != null){
+			return "(surrounding >= "+range.bounded.lowerBound+" && surrounding <= "+range.bounded.lowerBound+")"
+		} 
+		var boundedRange = range as BoundedRange
+			
+		}
 	}
 		
 	def static actionToJava(Action action, EList<ShapeDef> shapes) {
-		return objectsToJava(action.objects, shapes)
+		objectsToJava(action.objects, shapes)
 	}
 	
 	def static getBeginPoints(Board board, EList<ShapeDef> shapes) {
-		return objectsToJava(board as Objects, shapes)
+		objectsToJava(board as Objects, shapes)
 	}
 	
 	def static String objectsToJava(Objects objects, EList<ShapeDef> shapes) {
-		return objectsToJava(objects, shapes, pos(0,0))
+		objectsToJava(objects, shapes, pos(0,0))
 	}
 	
 	def static String objectsToJava(Objects objects, EList<ShapeDef> shapes, Position offset) {
-		return shapesToJava(objects.getShapes, shapes, offset) + cellsToJava(objects.getCells, offset) + cellListToJava(objects.getCell, offset) + gridsToJava(objects.getGrids, offset)
+		shapesToJava(objects.getShapes, shapes, offset) + cellsToJava(objects.getCells, offset) + cellListToJava(objects.getCell, offset) + gridsToJava(objects.getGrids, offset)
 	}
 	
 	def static gridsToJava(EList<Grid> grids, Position offset) {
-		return grids.stream.map(grid | gridToJava(grid, offset)).collect(Collectors.joining(System.lineSeparator));
+		grids.stream.map(grid | gridToJava(grid, offset)).collect(Collectors.joining(System.lineSeparator));
 	}
 	
 	def static gridToJava(Grid grid, Position offset) {
-		return IntStream.range(0, grid.getSize.getWidth).boxed.flatMap(x | IntStream.range(0, grid.getSize.getHeight).boxed.map(y | pos(x, y))).filter(pos | grid.getParts.get(pos.getX + grid.getSize.getWidth * pos.getY) == GridPart.ALIVE).map(pos | cellToJava(merge(pos, offset))).collect(Collectors.joining(System.lineSeparator))
+		IntStream.range(0, grid.getSize.getWidth).boxed.flatMap(x | IntStream.range(0, grid.getSize.getHeight).boxed.map(y | pos(x, y))).filter(pos | grid.getParts.get(pos.getX + grid.getSize.getWidth * pos.getY) == GridPart.ALIVE).map(pos | cellToJava(merge(pos, offset))).collect(Collectors.joining(System.lineSeparator))
 	}
 		
 	def static merge(Position pos1, Position pos2) {
-		return pos(pos1.getX + pos2.getX, pos1.getY + pos2.getY)
+		pos(pos1.getX + pos2.getX, pos1.getY + pos2.getY)
 	}
 	
 	def static cellListToJava(EList<CellDef> cells, Position offset) {
-		return cells.stream.map(cell | cellToJava(cell as Cell, offset)).collect(Collectors.joining(System.lineSeparator));
+		cells.stream.map(cell | cellToJava(cell as Cell, offset)).collect(Collectors.joining(System.lineSeparator));
 	}
 	
 	def static cellToJava(Cell cell, Position offset){
-		return cellToJava(merge(offset, pos(cell.x, cell.y)))
+		cellToJava(merge(offset, pos(cell.x, cell.y)))
 	}
 	
 	def static pos(int x, int y){
-		return new Position(x, y)
+		new Position(x, y)
 	}
 	
 	def static cellToJava(Position pos) {
-		return "points.add(new Point("+pos.getX+", "+pos.getY+"));"
+		"points.add(new Point("+pos.getX+", "+pos.getY+"));"
 	}
 	
 	def static cellsToJava(EList<Cells> cells, Position offset) {
-		return cells.stream.map(cell | cellsToJava(cell as CellPairs, offset)).collect(Collectors.joining(System.lineSeparator));
+		cells.stream.map(cell | cellsToJava(cell as CellPairs, offset)).collect(Collectors.joining(System.lineSeparator));
 	}
 	
 	def static cellsToJava(CellPairs cells, Position offset) {
-		return cells.getCells.stream.map(cell | cellToJava(cell, offset)).collect(Collectors.joining(System.lineSeparator));
+		cells.getCells.stream.map(cell | cellToJava(cell, offset)).collect(Collectors.joining(System.lineSeparator));
 	}
 	
 	def static shapesToJava(EList<ShapeRef> refs, EList<ShapeDef> shapes, Position offset) {
-		return refs.stream.map(ref | shapeToJava(shapes, getShapeByName(shapes, ref.getName), merge(offset, pos(ref.getX, ref.getY)))).collect(Collectors.joining(System.lineSeparator));
+		refs.stream.map(ref | shapeToJava(shapes, getShapeByName(shapes, ref.getName), merge(offset, pos(ref.getX, ref.getY)))).collect(Collectors.joining(System.lineSeparator));
 	}
 	
 	def static shapeToJava(EList<ShapeDef> shapes, ShapeDef shape, Position offset) {
-		return objectsToJava(shape.getObjects, shapes, merge(offset, shape.getOffset === null ? pos(0,0) : pos(-shape.getOffset.getX, -shape.getOffset.getY)))
+		objectsToJava(shape.getObjects, shapes, merge(offset, shape.getOffset === null ? pos(0,0) : pos(-shape.getOffset.getX, -shape.getOffset.getY)))
 	}
 	
 	def static getShapeByName(EList<ShapeDef> shapes, String name) {
-		return shapes.stream.filter(shape | shape.getName.equals(name)).findAny.get
+		shapes.stream.filter(shape | shape.getName.equals(name)).findAny.get
 	}
 	
 }

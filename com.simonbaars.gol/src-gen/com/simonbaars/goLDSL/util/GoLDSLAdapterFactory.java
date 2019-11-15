@@ -146,11 +146,6 @@ public class GoLDSLAdapterFactory extends AdapterFactoryImpl
         return createConditionRulesAdapter();
       }
       @Override
-      public Adapter caseLives(Lives object)
-      {
-        return createLivesAdapter();
-      }
-      @Override
       public Adapter caseRange(Range object)
       {
         return createRangeAdapter();
@@ -164,16 +159,6 @@ public class GoLDSLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseUnboundedRange(UnboundedRange object)
       {
         return createUnboundedRangeAdapter();
-      }
-      @Override
-      public Adapter caseLeftUnboundedRange(LeftUnboundedRange object)
-      {
-        return createLeftUnboundedRangeAdapter();
-      }
-      @Override
-      public Adapter caseRightUnboundedRange(RightUnboundedRange object)
-      {
-        return createRightUnboundedRangeAdapter();
       }
       @Override
       public Adapter caseGrid(Grid object)
@@ -423,21 +408,6 @@ public class GoLDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.Lives <em>Lives</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.simonbaars.goLDSL.Lives
-   * @generated
-   */
-  public Adapter createLivesAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.Range <em>Range</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -478,36 +448,6 @@ public class GoLDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createUnboundedRangeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.LeftUnboundedRange <em>Left Unbounded Range</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.simonbaars.goLDSL.LeftUnboundedRange
-   * @generated
-   */
-  public Adapter createLeftUnboundedRangeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.RightUnboundedRange <em>Right Unbounded Range</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.simonbaars.goLDSL.RightUnboundedRange
-   * @generated
-   */
-  public Adapter createRightUnboundedRangeAdapter()
   {
     return null;
   }

@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRulesImpl#getRule1 <em>Rule1</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRulesImpl#getOperator <em>Operator</em>}</li>
- *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRulesImpl#getRules2 <em>Rules2</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRulesImpl#getRule2 <em>Rule2</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,14 +64,14 @@ public class ConditionRulesImpl extends ConditionImpl implements ConditionRules
   protected BoolOperator operator = OPERATOR_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getRules2() <em>Rules2</em>}' containment reference.
+   * The cached value of the '{@link #getRule2() <em>Rule2</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRules2()
+   * @see #getRule2()
    * @generated
    * @ordered
    */
-  protected ConditionRules rules2;
+  protected ConditionRules rule2;
 
   /**
    * <!-- begin-user-doc -->
@@ -175,9 +175,9 @@ public class ConditionRulesImpl extends ConditionImpl implements ConditionRules
    * @generated
    */
   @Override
-  public ConditionRules getRules2()
+  public ConditionRules getRule2()
   {
-    return rules2;
+    return rule2;
   }
 
   /**
@@ -185,13 +185,13 @@ public class ConditionRulesImpl extends ConditionImpl implements ConditionRules
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRules2(ConditionRules newRules2, NotificationChain msgs)
+  public NotificationChain basicSetRule2(ConditionRules newRule2, NotificationChain msgs)
   {
-    ConditionRules oldRules2 = rules2;
-    rules2 = newRules2;
+    ConditionRules oldRule2 = rule2;
+    rule2 = newRule2;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CONDITION_RULES__RULES2, oldRules2, newRules2);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CONDITION_RULES__RULE2, oldRule2, newRule2);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -203,20 +203,20 @@ public class ConditionRulesImpl extends ConditionImpl implements ConditionRules
    * @generated
    */
   @Override
-  public void setRules2(ConditionRules newRules2)
+  public void setRule2(ConditionRules newRule2)
   {
-    if (newRules2 != rules2)
+    if (newRule2 != rule2)
     {
       NotificationChain msgs = null;
-      if (rules2 != null)
-        msgs = ((InternalEObject)rules2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.CONDITION_RULES__RULES2, null, msgs);
-      if (newRules2 != null)
-        msgs = ((InternalEObject)newRules2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.CONDITION_RULES__RULES2, null, msgs);
-      msgs = basicSetRules2(newRules2, msgs);
+      if (rule2 != null)
+        msgs = ((InternalEObject)rule2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.CONDITION_RULES__RULE2, null, msgs);
+      if (newRule2 != null)
+        msgs = ((InternalEObject)newRule2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.CONDITION_RULES__RULE2, null, msgs);
+      msgs = basicSetRule2(newRule2, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CONDITION_RULES__RULES2, newRules2, newRules2));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CONDITION_RULES__RULE2, newRule2, newRule2));
   }
 
   /**
@@ -231,8 +231,8 @@ public class ConditionRulesImpl extends ConditionImpl implements ConditionRules
     {
       case GoLDSLPackage.CONDITION_RULES__RULE1:
         return basicSetRule1(null, msgs);
-      case GoLDSLPackage.CONDITION_RULES__RULES2:
-        return basicSetRules2(null, msgs);
+      case GoLDSLPackage.CONDITION_RULES__RULE2:
+        return basicSetRule2(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -251,8 +251,8 @@ public class ConditionRulesImpl extends ConditionImpl implements ConditionRules
         return getRule1();
       case GoLDSLPackage.CONDITION_RULES__OPERATOR:
         return getOperator();
-      case GoLDSLPackage.CONDITION_RULES__RULES2:
-        return getRules2();
+      case GoLDSLPackage.CONDITION_RULES__RULE2:
+        return getRule2();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -273,8 +273,8 @@ public class ConditionRulesImpl extends ConditionImpl implements ConditionRules
       case GoLDSLPackage.CONDITION_RULES__OPERATOR:
         setOperator((BoolOperator)newValue);
         return;
-      case GoLDSLPackage.CONDITION_RULES__RULES2:
-        setRules2((ConditionRules)newValue);
+      case GoLDSLPackage.CONDITION_RULES__RULE2:
+        setRule2((ConditionRules)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -296,8 +296,8 @@ public class ConditionRulesImpl extends ConditionImpl implements ConditionRules
       case GoLDSLPackage.CONDITION_RULES__OPERATOR:
         setOperator(OPERATOR_EDEFAULT);
         return;
-      case GoLDSLPackage.CONDITION_RULES__RULES2:
-        setRules2((ConditionRules)null);
+      case GoLDSLPackage.CONDITION_RULES__RULE2:
+        setRule2((ConditionRules)null);
         return;
     }
     super.eUnset(featureID);
@@ -317,8 +317,8 @@ public class ConditionRulesImpl extends ConditionImpl implements ConditionRules
         return rule1 != null;
       case GoLDSLPackage.CONDITION_RULES__OPERATOR:
         return operator != OPERATOR_EDEFAULT;
-      case GoLDSLPackage.CONDITION_RULES__RULES2:
-        return rules2 != null;
+      case GoLDSLPackage.CONDITION_RULES__RULE2:
+        return rule2 != null;
     }
     return super.eIsSet(featureID);
   }

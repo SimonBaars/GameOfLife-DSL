@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.simonbaars.goLDSL.ConditionRule#getNumber <em>Number</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.ConditionRule#getRange <em>Range</em>}</li>
- *   <li>{@link com.simonbaars.goLDSL.ConditionRule#getLives <em>Lives</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.ConditionRule#getAlive <em>Alive</em>}</li>
  * </ul>
  *
  * @see com.simonbaars.goLDSL.GoLDSLPackage#getConditionRule()
@@ -70,25 +70,25 @@ public interface ConditionRule extends EObject
   void setRange(Range value);
 
   /**
-   * Returns the value of the '<em><b>Lives</b></em>' containment reference.
+   * Returns the value of the '<em><b>Alive</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Lives</em>' containment reference.
-   * @see #setLives(Lives)
-   * @see com.simonbaars.goLDSL.GoLDSLPackage#getConditionRule_Lives()
-   * @model containment="true"
+   * @return the value of the '<em>Alive</em>' attribute.
+   * @see #setAlive(String)
+   * @see com.simonbaars.goLDSL.GoLDSLPackage#getConditionRule_Alive()
+   * @model
    * @generated
    */
-  Lives getLives();
+  String getAlive();
 
   /**
-   * Sets the value of the '{@link com.simonbaars.goLDSL.ConditionRule#getLives <em>Lives</em>}' containment reference.
+   * Sets the value of the '{@link com.simonbaars.goLDSL.ConditionRule#getAlive <em>Alive</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Lives</em>' containment reference.
-   * @see #getLives()
+   * @param value the new value of the '<em>Alive</em>' attribute.
+   * @see #getAlive()
    * @generated
    */
-  void setLives(Lives value);
+  void setAlive(String value);
 
 } // ConditionRule
