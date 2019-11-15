@@ -299,7 +299,7 @@ public class GameOfLife extends JFrame implements ActionListener {
         	while(true) {
             boolean[][] gameBoard = new boolean[d_gameBoardSize.width+2][d_gameBoardSize.height+2];
             for (Point current : point) {
-                gameBoard[current.x+1][current.y+1] = true;
+                gameBoard[Math.abs(current.x+1)%gameBoard.length][Math.abs(current.y+1)%gameBoard[0].length] = true;
             }
             ArrayList<Point> survivingCells = new ArrayList<Point>(0);
             // Iterate through the array, follow game of life rules
