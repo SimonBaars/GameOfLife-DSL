@@ -2,7 +2,6 @@ package com.simonbaars.generator;
 
 import com.simonbaars.generator.Position;
 import com.simonbaars.goLDSL.Board;
-import com.simonbaars.goLDSL.Cell;
 import com.simonbaars.goLDSL.CellDef;
 import com.simonbaars.goLDSL.CellPairs;
 import com.simonbaars.goLDSL.Cells;
@@ -75,70 +74,55 @@ public class JavaGenerator {
   }
   
   public static String objectsToJava(final Objects objects, final EList<ShapeDef> shapes, final Position offset) {
-    String _shapesToJava = JavaGenerator.shapesToJava(objects.getShapes(), shapes);
-    String _cellsToJava = JavaGenerator.cellsToJava(objects.getCells());
-    String _plus = (_shapesToJava + _cellsToJava);
-    String _cellListToJava = JavaGenerator.cellListToJava(objects.getCell());
-    String _plus_1 = (_plus + _cellListToJava);
-    String _gridsToJava = JavaGenerator.gridsToJava(objects.getGrids());
-    return (_plus_1 + _gridsToJava);
+    throw new Error("Unresolved compilation problems:"
+      + "\nInvalid number of arguments. The method shapesToJava(EList<ShapeRef>, EList<ShapeDef>, Position) is not applicable for the arguments (EList<ShapeRef>,EList<ShapeDef>)");
   }
   
   public static String gridsToJava(final EList<Grid> grids) {
-    final Function<Grid, String> _function = (Grid grid) -> {
-      return JavaGenerator.gridToJava(grid);
-    };
-    return grids.stream().<String>map(_function).collect(Collectors.joining(System.lineSeparator()));
-  }
-  
-  public static String gridToJava(final Grid grid) {
     throw new Error("Unresolved compilation problems:"
-      + "\nType mismatch: cannot convert from int to Position");
+      + "\nInvalid number of arguments. The method gridToJava(Grid, Position) is not applicable for the arguments (Grid)");
   }
   
-  public static String cellListToJava(final EList<CellDef> cells) {
+  public static String gridToJava(final Grid grid, final Position offset) {
     throw new Error("Unresolved compilation problems:"
-      + "\nInvalid number of arguments. The method cellToJava(Cell, Position) is not applicable for the arguments (Cell)");
+      + "\nThe method or field mergepos is undefined");
   }
   
-  public static String cellToJava(final Cell cell, final Position offset) {
-    int _x = cell.getX();
-    int _y = cell.getY();
-    Position _position = new Position(_x, _y);
-    return JavaGenerator.cellToJava(_position, offset);
+  public static String cellListToJava(final EList<CellDef> cells, final Position offset) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nType mismatch: cannot convert from Cell to Position");
   }
   
-  public static String cellToJava(final Position pos, final Position offset) {
-    int _x = pos.getX();
-    int _x_1 = offset.getX();
-    int _minus = (_x - _x_1);
-    String _plus = ("points.add(new Point(" + Integer.valueOf(_minus));
-    String _plus_1 = (_plus + ", ");
-    int _y = pos.getY();
-    int _x_2 = offset.getX();
-    int _minus_1 = (_y - _x_2);
-    String _plus_2 = (_plus_1 + Integer.valueOf(_minus_1));
-    return (_plus_2 + ");");
+  public static String cellToJava(final Position pos) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field offset is undefined"
+      + "\nThe method or field offset is undefined"
+      + "\ngetX cannot be resolved"
+      + "\ngetX cannot be resolved");
   }
   
-  public static String cellsToJava(final EList<Cells> cells) {
+  public static String cellsToJava(final EList<Cells> cells, final Position offset) {
     final Function<Cells, String> _function = (Cells cell) -> {
-      return JavaGenerator.cellsToJava(((CellPairs) cell));
+      return JavaGenerator.cellsToJava(((CellPairs) cell), offset);
     };
     return cells.stream().<String>map(_function).collect(Collectors.joining(System.lineSeparator()));
   }
   
-  public static String cellsToJava(final CellPairs cells) {
+  public static String cellsToJava(final CellPairs cells, final Position offset) {
     throw new Error("Unresolved compilation problems:"
-      + "\nInvalid number of arguments. The method cellToJava(Cell, Position) is not applicable for the arguments (Cell)");
+      + "\nType mismatch: cannot convert from Cell to Position");
   }
   
-  public static String shapesToJava(final EList<ShapeRef> refs, final EList<ShapeDef> shapes) {
+  public static String shapesToJava(final EList<ShapeRef> refs, final EList<ShapeDef> shapes, final Position offset) {
     final Function<ShapeRef, String> _function = (ShapeRef ref) -> {
       ShapeDef _shapeByName = JavaGenerator.getShapeByName(shapes, ref.getName());
-      int _x = ref.getX();
+      int _x = offset.getX();
+      int _x_1 = ref.getX();
+      int _plus = (_x + _x_1);
+      int _x_2 = offset.getX();
       int _y = ref.getY();
-      Position _position = new Position(_x, _y);
+      int _plus_1 = (_x_2 + _y);
+      Position _position = new Position(_plus, _plus_1);
       return JavaGenerator.shapeToJava(shapes, _shapeByName, _position);
     };
     return refs.stream().<String>map(_function).collect(Collectors.joining(System.lineSeparator()));

@@ -57,43 +57,43 @@ public class RulesOfLife {
 	}
 	
 	def static String objectsToJava(Objects objects, EList<ShapeDef> shapes, Position offset) {
-		return shapesToJava(objects.getShapes, shapes) + cellsToJava(objects.getCells) + cellListToJava(objects.getCell) + gridsToJava(objects.getGrids)
+		return shapesToJava(objects.getShapes, shapes) + cellsToJava(objects.getCells, offset) + cellListToJava(objects.getCell, offset) + gridsToJava(objects.getGrids)
 	}
 	
 	def static gridsToJava(EList<Grid> grids) {
 		return grids.stream.map(grid | gridToJava(grid)).collect(Collectors.joining(System.lineSeparator));
 	}
 	
-	def static gridToJava(Grid grid) {
-		return IntStream.range(0, grid.getSize.getWidth).boxed.flatMap(x | IntStream.range(0, grid.getSize.getHeight).boxed.map(y | new Position(x, y))).filter(pos | grid.getParts.get(pos.getX + grid.getSize.getWidth * pos.getY) == GridPart.ALIVE).map(pos | cellToJava(pos, 0)).collect(Collectors.joining(System.lineSeparator))
+	def static gridToJava(Grid grid, Position offset) {
+		return IntStream.range(0, grid.getSize.getWidth).boxed.flatMap(x | IntStream.range(0, grid.getSize.getHeight).boxed.map(y | new Position(x, y))).filter(pos | grid.getParts.get(pos.getX + grid.getSize.getWidth * pos.getY) == GridPart.ALIVE).map(pos | cellToJava(mergepos, offset)).collect(Collectors.joining(System.lineSeparator))
 	}
 	
-	def static cellListToJava(EList<CellDef> cells) {
-		return cells.stream.map(cell | cellToJava(cell as Cell)).collect(Collectors.joining(System.lineSeparator));
+	def static cellListToJava(EList<CellDef> cells, Position offset) {
+		return cells.stream.map(cell | cellToJava(cell as Cell, offset)).collect(Collectors.joining(System.lineSeparator));
 	}
 	
 	//def static cellToJava(Cell cell) {
 	//	return cellToJava(cell, 0)
 	//}
 	
-	def static cellToJava(Cell cell, Position offset) {
-		return cellToJava(new Position(cell.getX, cell.getY), offset)
-	}
+	//def static cellToJava(Cell cell, Position offset) {
+	//	return cellToJava(new Position(cell.getX, cell.getY))
+	//}
 	
-	def static cellToJava(Position pos, Position offset) {
+	def static cellToJava(Position pos) {
 		return "points.add(new Point("+(pos.getX-offset.getX)+", "+(pos.getY-offset.getX)+");"
 	}
 	
-	def static cellsToJava(EList<Cells> cells) {
-		return cells.stream.map(cell | cellsToJava(cell as CellPairs)).collect(Collectors.joining(System.lineSeparator));
+	def static cellsToJava(EList<Cells> cells, Position offset) {
+		return cells.stream.map(cell | cellsToJava(cell as CellPairs, offset)).collect(Collectors.joining(System.lineSeparator));
 	}
 	
-	def static cellsToJava(CellPairs cells) {
-		return cells.getCells.stream.map(cell | cellToJava(cell)).collect(Collectors.joining(System.lineSeparator));
+	def static cellsToJava(CellPairs cells, Position offset) {
+		return cells.getCells.stream.map(cell | cellToJava(cell, offset)).collect(Collectors.joining(System.lineSeparator));
 	}
 	
-	def static shapesToJava(EList<ShapeRef> refs, EList<ShapeDef> shapes) {
-		return refs.stream.map(ref | shapeToJava(shapes, getShapeByName(shapes, ref.getName), new Position(ref.getX, ref.getY))).collect(Collectors.joining(System.lineSeparator));
+	def static shapesToJava(EList<ShapeRef> refs, EList<ShapeDef> shapes, Position offset) {
+		return refs.stream.map(ref | shapeToJava(shapes, getShapeByName(shapes, ref.getName), new Position(offset.getX+ref.getX, offset.getX+ref.getY))).collect(Collectors.joining(System.lineSeparator));
 	}
 	
 	def static shapeToJava(EList<ShapeDef> shapes, ShapeDef shape, Position offset) {
