@@ -115,22 +115,13 @@ public interface GoLDSLPackage extends EPackage
   int BOARD = 1;
 
   /**
-   * The feature id for the '<em><b>Objects</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOARD__OBJECTS = 0;
-
-  /**
    * The number of structural features of the '<em>Board</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BOARD_FEATURE_COUNT = 1;
+  int BOARD_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.ObjectsImpl <em>Objects</em>}' class.
@@ -149,7 +140,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OBJECTS__SHAPES = 0;
+  int OBJECTS__SHAPES = BOARD_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Cell</b></em>' containment reference list.
@@ -158,7 +149,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OBJECTS__CELL = 1;
+  int OBJECTS__CELL = BOARD_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Cells</b></em>' containment reference list.
@@ -167,7 +158,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OBJECTS__CELLS = 2;
+  int OBJECTS__CELLS = BOARD_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Grids</b></em>' containment reference list.
@@ -176,7 +167,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OBJECTS__GRIDS = 3;
+  int OBJECTS__GRIDS = BOARD_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Objects</em>' class.
@@ -185,7 +176,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OBJECTS_FEATURE_COUNT = 4;
+  int OBJECTS_FEATURE_COUNT = BOARD_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.ShapeDefImpl <em>Shape Def</em>}' class.
@@ -430,22 +421,13 @@ public interface GoLDSLPackage extends EPackage
   int ACTION = 10;
 
   /**
-   * The feature id for the '<em><b>Objects</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ACTION__OBJECTS = 0;
-
-  /**
    * The number of structural features of the '<em>Action</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTION_FEATURE_COUNT = 1;
+  int ACTION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.ConditionImpl <em>Condition</em>}' class.
@@ -458,22 +440,13 @@ public interface GoLDSLPackage extends EPackage
   int CONDITION = 11;
 
   /**
-   * The feature id for the '<em><b>Conditions</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITION__CONDITIONS = 0;
-
-  /**
    * The number of structural features of the '<em>Condition</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITION_FEATURE_COUNT = 1;
+  int CONDITION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.ConditionRuleImpl <em>Condition Rule</em>}' class.
@@ -538,7 +511,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONDITION_RULES__RULE1 = 0;
+  int CONDITION_RULES__RULE1 = CONDITION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -547,7 +520,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONDITION_RULES__OPERATOR = 1;
+  int CONDITION_RULES__OPERATOR = CONDITION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Rules2</b></em>' containment reference.
@@ -556,7 +529,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONDITION_RULES__RULES2 = 2;
+  int CONDITION_RULES__RULES2 = CONDITION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Condition Rules</em>' class.
@@ -565,7 +538,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONDITION_RULES_FEATURE_COUNT = 3;
+  int CONDITION_RULES_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.LivesImpl <em>Lives</em>}' class.
@@ -578,22 +551,13 @@ public interface GoLDSLPackage extends EPackage
   int LIVES = 14;
 
   /**
-   * The feature id for the '<em><b>Cell</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIVES__CELL = 0;
-
-  /**
    * The number of structural features of the '<em>Lives</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LIVES_FEATURE_COUNT = 1;
+  int LIVES_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.RangeImpl <em>Range</em>}' class.
@@ -912,17 +876,6 @@ public interface GoLDSLPackage extends EPackage
   EClass getBoard();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.simonbaars.goLDSL.Board#getObjects <em>Objects</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Objects</em>'.
-   * @see com.simonbaars.goLDSL.Board#getObjects()
-   * @see #getBoard()
-   * @generated
-   */
-  EReference getBoard_Objects();
-
-  /**
    * Returns the meta object for class '{@link com.simonbaars.goLDSL.Objects <em>Objects</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1178,17 +1131,6 @@ public interface GoLDSLPackage extends EPackage
   EClass getAction();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.simonbaars.goLDSL.Action#getObjects <em>Objects</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Objects</em>'.
-   * @see com.simonbaars.goLDSL.Action#getObjects()
-   * @see #getAction()
-   * @generated
-   */
-  EReference getAction_Objects();
-
-  /**
    * Returns the meta object for class '{@link com.simonbaars.goLDSL.Condition <em>Condition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1197,17 +1139,6 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    */
   EClass getCondition();
-
-  /**
-   * Returns the meta object for the containment reference '{@link com.simonbaars.goLDSL.Condition#getConditions <em>Conditions</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Conditions</em>'.
-   * @see com.simonbaars.goLDSL.Condition#getConditions()
-   * @see #getCondition()
-   * @generated
-   */
-  EReference getCondition_Conditions();
 
   /**
    * Returns the meta object for class '{@link com.simonbaars.goLDSL.ConditionRule <em>Condition Rule</em>}'.
@@ -1304,17 +1235,6 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    */
   EClass getLives();
-
-  /**
-   * Returns the meta object for the containment reference '{@link com.simonbaars.goLDSL.Lives#getCell <em>Cell</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Cell</em>'.
-   * @see com.simonbaars.goLDSL.Lives#getCell()
-   * @see #getLives()
-   * @generated
-   */
-  EReference getLives_Cell();
 
   /**
    * Returns the meta object for class '{@link com.simonbaars.goLDSL.Range <em>Range</em>}'.
@@ -1594,14 +1514,6 @@ public interface GoLDSLPackage extends EPackage
     EClass BOARD = eINSTANCE.getBoard();
 
     /**
-     * The meta object literal for the '<em><b>Objects</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BOARD__OBJECTS = eINSTANCE.getBoard_Objects();
-
-    /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.ObjectsImpl <em>Objects</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1812,14 +1724,6 @@ public interface GoLDSLPackage extends EPackage
     EClass ACTION = eINSTANCE.getAction();
 
     /**
-     * The meta object literal for the '<em><b>Objects</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ACTION__OBJECTS = eINSTANCE.getAction_Objects();
-
-    /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.ConditionImpl <em>Condition</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1828,14 +1732,6 @@ public interface GoLDSLPackage extends EPackage
      * @generated
      */
     EClass CONDITION = eINSTANCE.getCondition();
-
-    /**
-     * The meta object literal for the '<em><b>Conditions</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CONDITION__CONDITIONS = eINSTANCE.getCondition_Conditions();
 
     /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.ConditionRuleImpl <em>Condition Rule</em>}' class.
@@ -1914,14 +1810,6 @@ public interface GoLDSLPackage extends EPackage
      * @generated
      */
     EClass LIVES = eINSTANCE.getLives();
-
-    /**
-     * The meta object literal for the '<em><b>Cell</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LIVES__CELL = eINSTANCE.getLives_Cell();
 
     /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.RangeImpl <em>Range</em>}' class.

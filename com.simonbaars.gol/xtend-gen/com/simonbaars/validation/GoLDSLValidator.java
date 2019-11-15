@@ -5,7 +5,6 @@ package com.simonbaars.validation;
 
 import com.simonbaars.goLDSL.DSL;
 import com.simonbaars.goLDSL.Grid;
-import com.simonbaars.goLDSL.Rule;
 import com.simonbaars.goLDSL.ShapeDef;
 import com.simonbaars.goLDSL.ShapeRef;
 import com.simonbaars.validation.AbstractGoLDSLValidator;
@@ -34,15 +33,9 @@ public class GoLDSLValidator extends AbstractGoLDSLValidator {
   
   @Check
   public void checkShapesExist(final DSL dsl) {
-    EList<ShapeDef> shapes = dsl.getShapes();
-    this.findNonExistentShapes(dsl.getBoard().getObjects().getShapes(), shapes);
-    for (final ShapeDef def : shapes) {
-      this.findNonExistentShapes(def.getObjects().getShapes(), shapes);
-    }
-    EList<Rule> _rules = dsl.getRules();
-    for (final Rule rule : _rules) {
-      this.findNonExistentShapes(rule.getAction().getObjects().getShapes(), shapes);
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field objects is undefined for the type Action"
+      + "\nshapes cannot be resolved");
   }
   
   protected void findNonExistentShapes(final EList<ShapeRef> references, final EList<ShapeDef> shapes) {

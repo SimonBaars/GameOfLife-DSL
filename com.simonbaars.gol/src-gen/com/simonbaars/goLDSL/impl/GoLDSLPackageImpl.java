@@ -345,17 +345,6 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EReference getBoard_Objects()
-  {
-    return (EReference)boardEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getObjects()
   {
     return objectsEClass;
@@ -620,31 +609,9 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EReference getAction_Objects()
-  {
-    return (EReference)actionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getCondition()
   {
     return conditionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getCondition_Conditions()
-  {
-    return (EReference)conditionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -744,17 +711,6 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
   public EClass getLives()
   {
     return livesEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getLives_Cell()
-  {
-    return (EReference)livesEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1014,7 +970,6 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     createEReference(dslEClass, DSL__SHAPES);
 
     boardEClass = createEClass(BOARD);
-    createEReference(boardEClass, BOARD__OBJECTS);
 
     objectsEClass = createEClass(OBJECTS);
     createEReference(objectsEClass, OBJECTS__SHAPES);
@@ -1048,10 +1003,8 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     createEReference(ruleEClass, RULE__ACTION);
 
     actionEClass = createEClass(ACTION);
-    createEReference(actionEClass, ACTION__OBJECTS);
 
     conditionEClass = createEClass(CONDITION);
-    createEReference(conditionEClass, CONDITION__CONDITIONS);
 
     conditionRuleEClass = createEClass(CONDITION_RULE);
     createEAttribute(conditionRuleEClass, CONDITION_RULE__NUMBER);
@@ -1064,7 +1017,6 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     createEReference(conditionRulesEClass, CONDITION_RULES__RULES2);
 
     livesEClass = createEClass(LIVES);
-    createEReference(livesEClass, LIVES__CELL);
 
     rangeEClass = createEClass(RANGE);
 
@@ -1126,8 +1078,12 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    objectsEClass.getESuperTypes().add(this.getBoard());
+    objectsEClass.getESuperTypes().add(this.getAction());
     cellPairsEClass.getESuperTypes().add(this.getCells());
+    cellPairsEClass.getESuperTypes().add(this.getLives());
     cellEClass.getESuperTypes().add(this.getCellDef());
+    conditionRulesEClass.getESuperTypes().add(this.getCondition());
     boundedRangeEClass.getESuperTypes().add(this.getRange());
     unboundedRangeEClass.getESuperTypes().add(this.getRange());
     leftUnboundedRangeEClass.getESuperTypes().add(this.getUnboundedRange());
@@ -1140,7 +1096,6 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     initEReference(getDSL_Shapes(), this.getShapeDef(), null, "shapes", null, 0, -1, com.simonbaars.goLDSL.DSL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(boardEClass, Board.class, "Board", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBoard_Objects(), this.getObjects(), null, "objects", null, 0, 1, Board.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(objectsEClass, Objects.class, "Objects", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getObjects_Shapes(), this.getShapeRef(), null, "shapes", null, 0, -1, Objects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1174,10 +1129,8 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     initEReference(getRule_Action(), this.getAction(), null, "action", null, 0, 1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAction_Objects(), this.getObjects(), null, "objects", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getCondition_Conditions(), this.getConditionRules(), null, "conditions", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(conditionRuleEClass, ConditionRule.class, "ConditionRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getConditionRule_Number(), ecorePackage.getEInt(), "number", null, 0, 1, ConditionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1190,7 +1143,6 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     initEReference(getConditionRules_Rules2(), this.getConditionRules(), null, "rules2", null, 0, 1, ConditionRules.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(livesEClass, Lives.class, "Lives", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLives_Cell(), this.getCellPairs(), null, "cell", null, 0, 1, Lives.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rangeEClass, Range.class, "Range", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

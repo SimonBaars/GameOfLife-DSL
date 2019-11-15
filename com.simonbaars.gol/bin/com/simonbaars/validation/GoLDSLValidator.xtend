@@ -5,6 +5,7 @@ package com.simonbaars.validation
 
 import com.simonbaars.goLDSL.DSL
 import com.simonbaars.goLDSL.Grid
+import com.simonbaars.goLDSL.Objects
 import com.simonbaars.goLDSL.Rule
 import com.simonbaars.goLDSL.ShapeDef
 import com.simonbaars.goLDSL.ShapeRef
@@ -20,37 +21,37 @@ class GoLDSLValidator extends AbstractGoLDSLValidator {
 	
 	@Check
 	def checkGreetingStartsWithCapital(Grid grid) {
-		if(grid.getSize().getWidth()*grid.getSize().getHeight()!=grid.getParts().size()){
+		if(grid.size.width * grid.size.height != grid.parts.size){
 			error("Grid size must correspond with specified size.", grid, null)
 		}
 	}
 	
 	@Check
 	def checkShapesExist(DSL dsl) {
-		var shapes = dsl.getShapes;
-		findNonExistentShapes(dsl.getBoard.getObjects.getShapes, shapes)
+		var shapes = dsl.shapes;
+		findNonExistentShapes((dsl.board as Objects).shapes, shapes)
 		for(ShapeDef def : shapes){
-			findNonExistentShapes(def.getObjects.getShapes, shapes)
+			findNonExistentShapes(def.objects.shapes, shapes)
 		}
-		for(Rule rule : dsl.getRules){
-			findNonExistentShapes(rule.getAction.getObjects.getShapes, shapes)
+		for(Rule rule : dsl.rules){
+			findNonExistentShapes(rule.action.objects.shapes, shapes)
 		}
 	}
 	
 	protected def void findNonExistentShapes(EList<ShapeRef> references, EList<ShapeDef> shapes) {
 		for(ShapeRef ref : references){
 			if(!shapeExists(shapes, ref)){
-				error("Shape does not exist: "+ref.getName, ref, null)
+				error("Shape does not exist: "+ref.name, ref, null)
 			}
 		}
 	}
 	
 	def shapeExists(EList<ShapeDef> shapes, EList<ShapeRef> references){
-		return references.stream.allMatch[ref | shapes.stream.anyMatch[shape | shape.getName.equals(ref.getName)]];
+		return references.stream.allMatch[ref | shapes.stream.anyMatch[shape | shape.name.equals(ref.name)]];
 	}
 	
 	def shapeExists(EList<ShapeDef> shapes, ShapeRef ref){
-		return shapes.stream.anyMatch[shape | shape.getName.equals(ref.getName)];
+		return shapes.stream.anyMatch[shape | shape.name.equals(ref.name)];
 	}
 	
 }

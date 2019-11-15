@@ -19,9 +19,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//DSL/rules"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//DSL/shapes"/>
     </genClasses>
-    <genClasses ecoreClass="GoLDSL.ecore#//Board">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Board/objects"/>
-    </genClasses>
+    <genClasses ecoreClass="GoLDSL.ecore#//Board"/>
     <genClasses ecoreClass="GoLDSL.ecore#//Objects">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/shapes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/cell"/>
@@ -51,12 +49,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Rule/condition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Rule/action"/>
     </genClasses>
-    <genClasses ecoreClass="GoLDSL.ecore#//Action">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Action/objects"/>
-    </genClasses>
-    <genClasses ecoreClass="GoLDSL.ecore#//Condition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Condition/conditions"/>
-    </genClasses>
+    <genClasses ecoreClass="GoLDSL.ecore#//Action"/>
+    <genClasses ecoreClass="GoLDSL.ecore#//Condition"/>
     <genClasses ecoreClass="GoLDSL.ecore#//ConditionRule">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//ConditionRule/number"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//ConditionRule/range"/>
@@ -67,9 +61,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//ConditionRules/operator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//ConditionRules/rules2"/>
     </genClasses>
-    <genClasses ecoreClass="GoLDSL.ecore#//Lives">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Lives/cell"/>
-    </genClasses>
+    <genClasses ecoreClass="GoLDSL.ecore#//Lives"/>
     <genClasses ecoreClass="GoLDSL.ecore#//Range"/>
     <genClasses ecoreClass="GoLDSL.ecore#//BoundedRange">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//BoundedRange/lowerBound"/>

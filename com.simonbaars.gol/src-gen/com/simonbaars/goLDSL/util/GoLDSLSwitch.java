@@ -91,6 +91,8 @@ public class GoLDSLSwitch<T> extends Switch<T>
       {
         Objects objects = (Objects)theEObject;
         T result = caseObjects(objects);
+        if (result == null) result = caseBoard(objects);
+        if (result == null) result = caseAction(objects);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -106,6 +108,7 @@ public class GoLDSLSwitch<T> extends Switch<T>
         CellPairs cellPairs = (CellPairs)theEObject;
         T result = caseCellPairs(cellPairs);
         if (result == null) result = caseCells(cellPairs);
+        if (result == null) result = caseLives(cellPairs);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -170,6 +173,7 @@ public class GoLDSLSwitch<T> extends Switch<T>
       {
         ConditionRules conditionRules = (ConditionRules)theEObject;
         T result = caseConditionRules(conditionRules);
+        if (result == null) result = caseCondition(conditionRules);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

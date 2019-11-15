@@ -3,44 +3,22 @@
  */
 package com.simonbaars.goLDSL.impl;
 
-import com.simonbaars.goLDSL.CellPairs;
 import com.simonbaars.goLDSL.GoLDSLPackage;
 import com.simonbaars.goLDSL.Lives;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lives</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * </p>
- * <ul>
- *   <li>{@link com.simonbaars.goLDSL.impl.LivesImpl#getCell <em>Cell</em>}</li>
- * </ul>
  *
  * @generated
  */
 public class LivesImpl extends MinimalEObjectImpl.Container implements Lives
 {
-  /**
-   * The cached value of the '{@link #getCell() <em>Cell</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCell()
-   * @generated
-   * @ordered
-   */
-  protected CellPairs cell;
-
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -60,138 +38,6 @@ public class LivesImpl extends MinimalEObjectImpl.Container implements Lives
   protected EClass eStaticClass()
   {
     return GoLDSLPackage.Literals.LIVES;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public CellPairs getCell()
-  {
-    return cell;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetCell(CellPairs newCell, NotificationChain msgs)
-  {
-    CellPairs oldCell = cell;
-    cell = newCell;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoLDSLPackage.LIVES__CELL, oldCell, newCell);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setCell(CellPairs newCell)
-  {
-    if (newCell != cell)
-    {
-      NotificationChain msgs = null;
-      if (cell != null)
-        msgs = ((InternalEObject)cell).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.LIVES__CELL, null, msgs);
-      if (newCell != null)
-        msgs = ((InternalEObject)newCell).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.LIVES__CELL, null, msgs);
-      msgs = basicSetCell(newCell, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.LIVES__CELL, newCell, newCell));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case GoLDSLPackage.LIVES__CELL:
-        return basicSetCell(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Object eGet(int featureID, boolean resolve, boolean coreType)
-  {
-    switch (featureID)
-    {
-      case GoLDSLPackage.LIVES__CELL:
-        return getCell();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void eSet(int featureID, Object newValue)
-  {
-    switch (featureID)
-    {
-      case GoLDSLPackage.LIVES__CELL:
-        setCell((CellPairs)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void eUnset(int featureID)
-  {
-    switch (featureID)
-    {
-      case GoLDSLPackage.LIVES__CELL:
-        setCell((CellPairs)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public boolean eIsSet(int featureID)
-  {
-    switch (featureID)
-    {
-      case GoLDSLPackage.LIVES__CELL:
-        return cell != null;
-    }
-    return super.eIsSet(featureID);
   }
 
 } //LivesImpl

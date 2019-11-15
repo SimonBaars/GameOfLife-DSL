@@ -160,25 +160,14 @@ ruleBoard returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getBoardAccess().getBoardKeyword_0());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getBoardAccess().getObjectsObjectsParserRuleCall_1_0());
-				}
-				lv_objects_1_0=ruleObjects
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getBoardRule());
-					}
-					set(
-						$current,
-						"objects",
-						lv_objects_1_0,
-						"com.simonbaars.GoLDSL.Objects");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+		{
+			newCompositeNode(grammarAccess.getBoardAccess().getObjectsParserRuleCall_1());
+		}
+		this_Objects_1=ruleObjects
+		{
+			$current = $this_Objects_1.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -696,25 +685,14 @@ ruleAction returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getActionAccess().getCreateKeyword_0());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getActionAccess().getObjectsObjectsParserRuleCall_1_0());
-				}
-				lv_objects_1_0=ruleObjects
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getActionRule());
-					}
-					set(
-						$current,
-						"objects",
-						lv_objects_1_0,
-						"com.simonbaars.GoLDSL.Objects");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+		{
+			newCompositeNode(grammarAccess.getActionAccess().getObjectsParserRuleCall_1());
+		}
+		this_Objects_1=ruleObjects
+		{
+			$current = $this_Objects_1.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -738,25 +716,14 @@ ruleCondition returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getConditionAccess().getIfKeyword_0());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getConditionAccess().getConditionsConditionRulesParserRuleCall_1_0());
-				}
-				lv_conditions_1_0=ruleConditionRules
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getConditionRule());
-					}
-					set(
-						$current,
-						"conditions",
-						lv_conditions_1_0,
-						"com.simonbaars.GoLDSL.ConditionRules");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+		{
+			newCompositeNode(grammarAccess.getConditionAccess().getConditionRulesParserRuleCall_1());
+		}
+		this_ConditionRules_1=ruleConditionRules
+		{
+			$current = $this_ConditionRules_1.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -935,25 +902,14 @@ ruleLives returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getLivesAccess().getLivesKeyword_0());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getLivesAccess().getCellCellPairsParserRuleCall_1_0());
-				}
-				lv_cell_1_0=ruleCellPairs
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getLivesRule());
-					}
-					set(
-						$current,
-						"cell",
-						lv_cell_1_0,
-						"com.simonbaars.GoLDSL.CellPairs");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+		{
+			newCompositeNode(grammarAccess.getLivesAccess().getCellPairsParserRuleCall_1());
+		}
+		this_CellPairs_1=ruleCellPairs
+		{
+			$current = $this_CellPairs_1.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -1104,15 +1060,11 @@ ruleLeftUnboundedRange returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getLeftUnboundedRangeAccess().getLessThanSignKeyword_0());
-		}
 		(
 			(
-				lv_lowerBound_1_0=RULE_INT
+				lv_lowerBound_0_0=RULE_INT
 				{
-					newLeafNode(lv_lowerBound_1_0, grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundINTTerminalRuleCall_1_0());
+					newLeafNode(lv_lowerBound_0_0, grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundINTTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -1121,11 +1073,15 @@ ruleLeftUnboundedRange returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lowerBound",
-						lv_lowerBound_1_0,
+						lv_lowerBound_0_0,
 						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)
+		otherlv_1='..'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getLeftUnboundedRangeAccess().getFullStopFullStopKeyword_1());
+		}
 	)
 ;
 
@@ -1145,9 +1101,9 @@ ruleRightUnboundedRange returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='>'
+		otherlv_0='..'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getRightUnboundedRangeAccess().getGreaterThanSignKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getRightUnboundedRangeAccess().getFullStopFullStopKeyword_0());
 		}
 		(
 			(

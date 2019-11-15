@@ -1,11 +1,13 @@
 package com.simonbaars.generator;
 
 import com.simonbaars.generator.Position;
+import com.simonbaars.goLDSL.Action;
 import com.simonbaars.goLDSL.Board;
 import com.simonbaars.goLDSL.Cell;
 import com.simonbaars.goLDSL.CellDef;
 import com.simonbaars.goLDSL.CellPairs;
 import com.simonbaars.goLDSL.Cells;
+import com.simonbaars.goLDSL.ConditionRules;
 import com.simonbaars.goLDSL.DSL;
 import com.simonbaars.goLDSL.Grid;
 import com.simonbaars.goLDSL.GridPart;
@@ -31,7 +33,7 @@ public class JavaGenerator {
     _builder.newLine();
     _builder.append("import java.awt.Point;");
     _builder.newLine();
-    _builder.append("import java.util.ArrayList;");
+    _builder.append("import java.util.List;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class RulesOfLife {");
@@ -67,11 +69,21 @@ public class JavaGenerator {
   }
   
   public static String getRules(final EList<Rule> rules, final EList<ShapeDef> shapes) {
-    return "";
+    throw new Error("Unresolved compilation problems:"
+      + "\nType mismatch: cannot convert from void to String");
+  }
+  
+  public static void conditionToJava(final ConditionRules condition) {
+    throw new UnsupportedOperationException("TODO: auto-generated method stub");
+  }
+  
+  public static String actionToJava(final Action action, final EList<ShapeDef> shapes) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field objects is undefined for the type Action");
   }
   
   public static String getBeginPoints(final Board board, final EList<ShapeDef> shapes) {
-    return JavaGenerator.objectsToJava(board.getObjects(), shapes);
+    return JavaGenerator.objectsToJava(((Objects) board), shapes);
   }
   
   public static String objectsToJava(final Objects objects, final EList<ShapeDef> shapes) {
@@ -149,7 +161,7 @@ public class JavaGenerator {
     String _plus_1 = (_plus + ", ");
     int _y = pos.getY();
     String _plus_2 = (_plus_1 + Integer.valueOf(_y));
-    return (_plus_2 + ");");
+    return (_plus_2 + "));");
   }
   
   public static String cellsToJava(final EList<Cells> cells, final Position offset) {

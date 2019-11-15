@@ -19,8 +19,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -40,7 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
+public class ObjectsImpl extends BoardImpl implements Objects
 {
   /**
    * The cached value of the '{@link #getShapes() <em>Shapes</em>}' containment reference list.

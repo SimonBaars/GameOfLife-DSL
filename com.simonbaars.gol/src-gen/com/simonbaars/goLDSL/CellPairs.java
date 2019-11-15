@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface CellPairs extends Cells
+public interface CellPairs extends Cells, Lives
 {
   /**
    * Returns the value of the '<em><b>Cells</b></em>' containment reference list.

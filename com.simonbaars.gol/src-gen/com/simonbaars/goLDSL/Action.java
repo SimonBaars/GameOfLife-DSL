@@ -10,12 +10,6 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Action</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link com.simonbaars.goLDSL.Action#getObjects <em>Objects</em>}</li>
- * </ul>
  *
  * @see com.simonbaars.goLDSL.GoLDSLPackage#getAction()
  * @model
@@ -23,26 +17,4 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Action extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Objects</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Objects</em>' containment reference.
-   * @see #setObjects(Objects)
-   * @see com.simonbaars.goLDSL.GoLDSLPackage#getAction_Objects()
-   * @model containment="true"
-   * @generated
-   */
-  Objects getObjects();
-
-  /**
-   * Sets the value of the '{@link com.simonbaars.goLDSL.Action#getObjects <em>Objects</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Objects</em>' containment reference.
-   * @see #getObjects()
-   * @generated
-   */
-  void setObjects(Objects value);
-
 } // Action

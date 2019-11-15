@@ -3,7 +3,6 @@
  */
 package com.simonbaars.goLDSL;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ConditionRules extends EObject
+public interface ConditionRules extends Condition
 {
   /**
    * Returns the value of the '<em><b>Rule1</b></em>' containment reference.

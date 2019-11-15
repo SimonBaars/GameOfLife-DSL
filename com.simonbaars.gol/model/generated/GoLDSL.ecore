@@ -9,11 +9,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="shapes" upperBound="-1"
         eType="#//ShapeDef" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Board">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" eType="#//Objects"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Objects">
+  <eClassifiers xsi:type="ecore:EClass" name="Board"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Objects" eSuperTypes="#//Board #//Action">
     <eStructuralFeatures xsi:type="ecore:EReference" name="shapes" upperBound="-1"
         eType="#//ShapeRef" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cell" upperBound="-1" eType="#//CellDef"
@@ -30,7 +27,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="objects" eType="#//Objects"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CellPairs" eSuperTypes="#//Cells">
+  <eClassifiers xsi:type="ecore:EClass" name="CellPairs" eSuperTypes="#//Cells #//Lives">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cells" upperBound="-1"
         eType="#//Cell" containment="true"/>
   </eClassifiers>
@@ -51,14 +48,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//Action"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Action">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" eType="#//Objects"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Condition">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" eType="#//ConditionRules"
-        containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition"/>
   <eClassifiers xsi:type="ecore:EClass" name="ConditionRule">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="range" eType="#//Range"
@@ -66,7 +57,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="lives" eType="#//Lives"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConditionRules">
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionRules" eSuperTypes="#//Condition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rule1" eType="#//ConditionRule"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="#//BoolOperator"/>
@@ -77,10 +68,7 @@
     <eLiterals name="AND" literal="&amp;"/>
     <eLiterals name="OR" value="1" literal="|"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Lives">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cell" eType="#//CellPairs"
-        containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Lives"/>
   <eClassifiers xsi:type="ecore:EClass" name="Range"/>
   <eClassifiers xsi:type="ecore:EClass" name="BoundedRange" eSuperTypes="#//Range">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

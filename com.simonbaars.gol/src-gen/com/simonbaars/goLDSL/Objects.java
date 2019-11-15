@@ -5,8 +5,6 @@ package com.simonbaars.goLDSL;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Objects</b></em>'.
@@ -26,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Objects extends EObject
+public interface Objects extends Board, Action
 {
   /**
    * Returns the value of the '<em><b>Shapes</b></em>' containment reference list.

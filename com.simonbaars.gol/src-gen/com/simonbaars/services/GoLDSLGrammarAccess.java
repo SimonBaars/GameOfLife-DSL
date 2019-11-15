@@ -68,24 +68,20 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Board");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cBoardKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cObjectsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cObjectsObjectsParserRuleCall_1_0 = (RuleCall)cObjectsAssignment_1.eContents().get(0);
+		private final RuleCall cObjectsParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
 		//Board:
-		//	'Board:' objects=Objects;
+		//	'Board:' Objects;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Board:' objects=Objects
+		//'Board:' Objects
 		public Group getGroup() { return cGroup; }
 		
 		//'Board:'
 		public Keyword getBoardKeyword_0() { return cBoardKeyword_0; }
 		
-		//objects=Objects
-		public Assignment getObjectsAssignment_1() { return cObjectsAssignment_1; }
-		
 		//Objects
-		public RuleCall getObjectsObjectsParserRuleCall_1_0() { return cObjectsObjectsParserRuleCall_1_0; }
+		public RuleCall getObjectsParserRuleCall_1() { return cObjectsParserRuleCall_1; }
 	}
 	public class ObjectsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Objects");
@@ -351,47 +347,39 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Action");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCreateKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cObjectsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cObjectsObjectsParserRuleCall_1_0 = (RuleCall)cObjectsAssignment_1.eContents().get(0);
+		private final RuleCall cObjectsParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
 		//Action:
-		//	'Create' objects=Objects;
+		//	'Create' Objects;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Create' objects=Objects
+		//'Create' Objects
 		public Group getGroup() { return cGroup; }
 		
 		//'Create'
 		public Keyword getCreateKeyword_0() { return cCreateKeyword_0; }
 		
-		//objects=Objects
-		public Assignment getObjectsAssignment_1() { return cObjectsAssignment_1; }
-		
 		//Objects
-		public RuleCall getObjectsObjectsParserRuleCall_1_0() { return cObjectsObjectsParserRuleCall_1_0; }
+		public RuleCall getObjectsParserRuleCall_1() { return cObjectsParserRuleCall_1; }
 	}
 	public class ConditionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Condition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cIfKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cConditionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cConditionsConditionRulesParserRuleCall_1_0 = (RuleCall)cConditionsAssignment_1.eContents().get(0);
+		private final RuleCall cConditionRulesParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
 		//Condition:
-		//	'If' conditions=ConditionRules;
+		//	'If' ConditionRules;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'If' conditions=ConditionRules
+		//'If' ConditionRules
 		public Group getGroup() { return cGroup; }
 		
 		//'If'
 		public Keyword getIfKeyword_0() { return cIfKeyword_0; }
 		
-		//conditions=ConditionRules
-		public Assignment getConditionsAssignment_1() { return cConditionsAssignment_1; }
-		
 		//ConditionRules
-		public RuleCall getConditionsConditionRulesParserRuleCall_1_0() { return cConditionsConditionRulesParserRuleCall_1_0; }
+		public RuleCall getConditionRulesParserRuleCall_1() { return cConditionRulesParserRuleCall_1; }
 	}
 	public class ConditionRuleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.ConditionRule");
@@ -471,24 +459,20 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Lives");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLivesKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cCellAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cCellCellPairsParserRuleCall_1_0 = (RuleCall)cCellAssignment_1.eContents().get(0);
+		private final RuleCall cCellPairsParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
 		//Lives:
-		//	'Lives' cell=CellPairs;
+		//	'Lives' CellPairs;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Lives' cell=CellPairs
+		//'Lives' CellPairs
 		public Group getGroup() { return cGroup; }
 		
 		//'Lives'
 		public Keyword getLivesKeyword_0() { return cLivesKeyword_0; }
 		
-		//cell=CellPairs
-		public Assignment getCellAssignment_1() { return cCellAssignment_1; }
-		
 		//CellPairs
-		public RuleCall getCellCellPairsParserRuleCall_1_0() { return cCellCellPairsParserRuleCall_1_0; }
+		public RuleCall getCellPairsParserRuleCall_1() { return cCellPairsParserRuleCall_1; }
 	}
 	public class RangeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Range");
@@ -562,42 +546,42 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	public class LeftUnboundedRangeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.LeftUnboundedRange");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLessThanSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cLowerBoundAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cLowerBoundINTTerminalRuleCall_1_0 = (RuleCall)cLowerBoundAssignment_1.eContents().get(0);
+		private final Assignment cLowerBoundAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cLowerBoundINTTerminalRuleCall_0_0 = (RuleCall)cLowerBoundAssignment_0.eContents().get(0);
+		private final Keyword cFullStopFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
 		//LeftUnboundedRange:
-		//	'<' lowerBound=INT;
+		//	lowerBound=INT '..';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<' lowerBound=INT
+		//lowerBound=INT '..'
 		public Group getGroup() { return cGroup; }
 		
-		//'<'
-		public Keyword getLessThanSignKeyword_0() { return cLessThanSignKeyword_0; }
-		
 		//lowerBound=INT
-		public Assignment getLowerBoundAssignment_1() { return cLowerBoundAssignment_1; }
+		public Assignment getLowerBoundAssignment_0() { return cLowerBoundAssignment_0; }
 		
 		//INT
-		public RuleCall getLowerBoundINTTerminalRuleCall_1_0() { return cLowerBoundINTTerminalRuleCall_1_0; }
+		public RuleCall getLowerBoundINTTerminalRuleCall_0_0() { return cLowerBoundINTTerminalRuleCall_0_0; }
+		
+		//'..'
+		public Keyword getFullStopFullStopKeyword_1() { return cFullStopFullStopKeyword_1; }
 	}
 	public class RightUnboundedRangeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.RightUnboundedRange");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGreaterThanSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cFullStopFullStopKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHigherBoundAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cHigherBoundINTTerminalRuleCall_1_0 = (RuleCall)cHigherBoundAssignment_1.eContents().get(0);
 		
 		//RightUnboundedRange:
-		//	'>' higherBound=INT;
+		//	'..' higherBound=INT;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'>' higherBound=INT
+		//'..' higherBound=INT
 		public Group getGroup() { return cGroup; }
 		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_0() { return cGreaterThanSignKeyword_0; }
+		//'..'
+		public Keyword getFullStopFullStopKeyword_0() { return cFullStopFullStopKeyword_0; }
 		
 		//higherBound=INT
 		public Assignment getHigherBoundAssignment_1() { return cHigherBoundAssignment_1; }
@@ -854,7 +838,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Board:
-	//	'Board:' objects=Objects;
+	//	'Board:' Objects;
 	public BoardElements getBoardAccess() {
 		return pBoard;
 	}
@@ -944,7 +928,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Action:
-	//	'Create' objects=Objects;
+	//	'Create' Objects;
 	public ActionElements getActionAccess() {
 		return pAction;
 	}
@@ -954,7 +938,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Condition:
-	//	'If' conditions=ConditionRules;
+	//	'If' ConditionRules;
 	public ConditionElements getConditionAccess() {
 		return pCondition;
 	}
@@ -994,7 +978,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Lives:
-	//	'Lives' cell=CellPairs;
+	//	'Lives' CellPairs;
 	public LivesElements getLivesAccess() {
 		return pLives;
 	}
@@ -1034,7 +1018,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//LeftUnboundedRange:
-	//	'<' lowerBound=INT;
+	//	lowerBound=INT '..';
 	public LeftUnboundedRangeElements getLeftUnboundedRangeAccess() {
 		return pLeftUnboundedRange;
 	}
@@ -1044,7 +1028,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//RightUnboundedRange:
-	//	'>' higherBound=INT;
+	//	'..' higherBound=INT;
 	public RightUnboundedRangeElements getRightUnboundedRangeAccess() {
 		return pRightUnboundedRange;
 	}

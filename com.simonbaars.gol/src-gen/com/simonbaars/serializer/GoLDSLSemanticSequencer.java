@@ -4,18 +4,15 @@
 package com.simonbaars.serializer;
 
 import com.google.inject.Inject;
-import com.simonbaars.goLDSL.Board;
 import com.simonbaars.goLDSL.BoundedRange;
 import com.simonbaars.goLDSL.Cell;
 import com.simonbaars.goLDSL.CellPairs;
-import com.simonbaars.goLDSL.Condition;
 import com.simonbaars.goLDSL.ConditionRule;
 import com.simonbaars.goLDSL.ConditionRules;
 import com.simonbaars.goLDSL.DSL;
 import com.simonbaars.goLDSL.GoLDSLPackage;
 import com.simonbaars.goLDSL.Grid;
 import com.simonbaars.goLDSL.LeftUnboundedRange;
-import com.simonbaars.goLDSL.Lives;
 import com.simonbaars.goLDSL.Objects;
 import com.simonbaars.goLDSL.Offset;
 import com.simonbaars.goLDSL.RightUnboundedRange;
@@ -49,12 +46,6 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == GoLDSLPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case GoLDSLPackage.ACTION:
-				sequence_Action(context, (com.simonbaars.goLDSL.Action) semanticObject); 
-				return; 
-			case GoLDSLPackage.BOARD:
-				sequence_Board(context, (Board) semanticObject); 
-				return; 
 			case GoLDSLPackage.BOUNDED_RANGE:
 				sequence_BoundedRange(context, (BoundedRange) semanticObject); 
 				return; 
@@ -63,9 +54,6 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				return; 
 			case GoLDSLPackage.CELL_PAIRS:
 				sequence_CellPairs(context, (CellPairs) semanticObject); 
-				return; 
-			case GoLDSLPackage.CONDITION:
-				sequence_Condition(context, (Condition) semanticObject); 
 				return; 
 			case GoLDSLPackage.CONDITION_RULE:
 				sequence_ConditionRule(context, (ConditionRule) semanticObject); 
@@ -81,9 +69,6 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				return; 
 			case GoLDSLPackage.LEFT_UNBOUNDED_RANGE:
 				sequence_LeftUnboundedRange(context, (LeftUnboundedRange) semanticObject); 
-				return; 
-			case GoLDSLPackage.LIVES:
-				sequence_Lives(context, (Lives) semanticObject); 
 				return; 
 			case GoLDSLPackage.OBJECTS:
 				sequence_Objects(context, (Objects) semanticObject); 
@@ -113,42 +98,6 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     Action returns Action
-	 *
-	 * Constraint:
-	 *     objects=Objects
-	 */
-	protected void sequence_Action(ISerializationContext context, com.simonbaars.goLDSL.Action semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.ACTION__OBJECTS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.ACTION__OBJECTS));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getActionAccess().getObjectsObjectsParserRuleCall_1_0(), semanticObject.getObjects());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Board returns Board
-	 *
-	 * Constraint:
-	 *     objects=Objects
-	 */
-	protected void sequence_Board(ISerializationContext context, Board semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.BOARD__OBJECTS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.BOARD__OBJECTS));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getBoardAccess().getObjectsObjectsParserRuleCall_1_0(), semanticObject.getObjects());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Range returns BoundedRange
 	 *     BoundedRange returns BoundedRange
 	 *
@@ -173,6 +122,7 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 * Contexts:
 	 *     CellPairs returns CellPairs
 	 *     Cells returns CellPairs
+	 *     Lives returns CellPairs
 	 *
 	 * Constraint:
 	 *     cells+=Cell+
@@ -218,6 +168,7 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     Condition returns ConditionRules
 	 *     ConditionRules returns ConditionRules
 	 *
 	 * Constraint:
@@ -225,24 +176,6 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 */
 	protected void sequence_ConditionRules(ISerializationContext context, ConditionRules semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Condition returns Condition
-	 *
-	 * Constraint:
-	 *     conditions=ConditionRules
-	 */
-	protected void sequence_Condition(ISerializationContext context, Condition semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.CONDITION__CONDITIONS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.CONDITION__CONDITIONS));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getConditionAccess().getConditionsConditionRulesParserRuleCall_1_0(), semanticObject.getConditions());
-		feeder.finish();
 	}
 	
 	
@@ -285,32 +218,16 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.LEFT_UNBOUNDED_RANGE__LOWER_BOUND));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundINTTerminalRuleCall_1_0(), semanticObject.getLowerBound());
+		feeder.accept(grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundINTTerminalRuleCall_0_0(), semanticObject.getLowerBound());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Lives returns Lives
-	 *
-	 * Constraint:
-	 *     cell=CellPairs
-	 */
-	protected void sequence_Lives(ISerializationContext context, Lives semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.LIVES__CELL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.LIVES__CELL));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLivesAccess().getCellCellPairsParserRuleCall_1_0(), semanticObject.getCell());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
+	 *     Board returns Objects
 	 *     Objects returns Objects
+	 *     Action returns Objects
 	 *
 	 * Constraint:
 	 *     (shapes+=ShapeRef | cell+=CellDef | cells+=Cells | grids+=Grid)+

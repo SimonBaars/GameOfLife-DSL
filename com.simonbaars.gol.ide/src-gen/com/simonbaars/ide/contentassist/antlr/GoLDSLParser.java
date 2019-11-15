@@ -61,7 +61,6 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getDSLAccess().getBoardAssignment_0(), "rule__DSL__BoardAssignment_0");
 			builder.put(grammarAccess.getDSLAccess().getRulesAssignment_1_0(), "rule__DSL__RulesAssignment_1_0");
 			builder.put(grammarAccess.getDSLAccess().getShapesAssignment_1_1(), "rule__DSL__ShapesAssignment_1_1");
-			builder.put(grammarAccess.getBoardAccess().getObjectsAssignment_1(), "rule__Board__ObjectsAssignment_1");
 			builder.put(grammarAccess.getObjectsAccess().getShapesAssignment_0(), "rule__Objects__ShapesAssignment_0");
 			builder.put(grammarAccess.getObjectsAccess().getCellAssignment_1(), "rule__Objects__CellAssignment_1");
 			builder.put(grammarAccess.getObjectsAccess().getCellsAssignment_2(), "rule__Objects__CellsAssignment_2");
@@ -77,18 +76,15 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getCellAccess().getYAssignment_2(), "rule__Cell__YAssignment_2");
 			builder.put(grammarAccess.getRuleAccess().getConditionAssignment_1(), "rule__Rule__ConditionAssignment_1");
 			builder.put(grammarAccess.getRuleAccess().getActionAssignment_2(), "rule__Rule__ActionAssignment_2");
-			builder.put(grammarAccess.getActionAccess().getObjectsAssignment_1(), "rule__Action__ObjectsAssignment_1");
-			builder.put(grammarAccess.getConditionAccess().getConditionsAssignment_1(), "rule__Condition__ConditionsAssignment_1");
 			builder.put(grammarAccess.getConditionRuleAccess().getNumberAssignment_0(), "rule__ConditionRule__NumberAssignment_0");
 			builder.put(grammarAccess.getConditionRuleAccess().getRangeAssignment_1(), "rule__ConditionRule__RangeAssignment_1");
 			builder.put(grammarAccess.getConditionRuleAccess().getLivesAssignment_2(), "rule__ConditionRule__LivesAssignment_2");
 			builder.put(grammarAccess.getConditionRulesAccess().getRule1Assignment_0(), "rule__ConditionRules__Rule1Assignment_0");
 			builder.put(grammarAccess.getConditionRulesAccess().getOperatorAssignment_1_0(), "rule__ConditionRules__OperatorAssignment_1_0");
 			builder.put(grammarAccess.getConditionRulesAccess().getRules2Assignment_1_1(), "rule__ConditionRules__Rules2Assignment_1_1");
-			builder.put(grammarAccess.getLivesAccess().getCellAssignment_1(), "rule__Lives__CellAssignment_1");
 			builder.put(grammarAccess.getBoundedRangeAccess().getLowerBoundAssignment_0(), "rule__BoundedRange__LowerBoundAssignment_0");
 			builder.put(grammarAccess.getBoundedRangeAccess().getHigherBoundAssignment_2(), "rule__BoundedRange__HigherBoundAssignment_2");
-			builder.put(grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundAssignment_1(), "rule__LeftUnboundedRange__LowerBoundAssignment_1");
+			builder.put(grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundAssignment_0(), "rule__LeftUnboundedRange__LowerBoundAssignment_0");
 			builder.put(grammarAccess.getRightUnboundedRangeAccess().getHigherBoundAssignment_1(), "rule__RightUnboundedRange__HigherBoundAssignment_1");
 			builder.put(grammarAccess.getGridAccess().getSizeAssignment_1(), "rule__Grid__SizeAssignment_1");
 			builder.put(grammarAccess.getGridAccess().getPartsAssignment_2(), "rule__Grid__PartsAssignment_2");

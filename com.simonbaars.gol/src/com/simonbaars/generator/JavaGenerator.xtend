@@ -1,10 +1,12 @@
 package com.simonbaars.generator
 
+import com.simonbaars.goLDSL.Action
 import com.simonbaars.goLDSL.Board
 import com.simonbaars.goLDSL.Cell
 import com.simonbaars.goLDSL.CellDef
 import com.simonbaars.goLDSL.CellPairs
 import com.simonbaars.goLDSL.Cells
+import com.simonbaars.goLDSL.ConditionRules
 import com.simonbaars.goLDSL.DSL
 import com.simonbaars.goLDSL.Grid
 import com.simonbaars.goLDSL.GridPart
@@ -27,7 +29,7 @@ def static toJava(DSL dsl)'''
 package GameOfLife;
 
 import java.awt.Point;
-import java.util.ArrayList;
+import java.util.List;
 
 public class RulesOfLife {
 
@@ -44,11 +46,19 @@ public class RulesOfLife {
 '''
 	
 	def static getRules(EList<Rule> rules, EList<ShapeDef> shapes) {
-		return ""
+		return rules.stream.map(rule | "if(" + conditionToJava(rule.condition as ConditionRules) + ") {" + System.lineSeparator + actionToJava(rule.action, shapes) + System.lineSeparator + "}" ).collect(Collectors.joining(System.lineSeparator+System.lineSeparator))
+	}
+		
+	def static conditionToJava(ConditionRules condition) {
+		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+	}
+		
+	def static actionToJava(Action action, EList<ShapeDef> shapes) {
+		return objectsToJava(action.objects, shapes)
 	}
 	
 	def static getBeginPoints(Board board, EList<ShapeDef> shapes) {
-		return objectsToJava(board.getObjects, shapes)
+		return objectsToJava(board as Objects, shapes)
 	}
 	
 	def static String objectsToJava(Objects objects, EList<ShapeDef> shapes) {
@@ -84,7 +94,7 @@ public class RulesOfLife {
 	}
 	
 	def static cellToJava(Position pos) {
-		return "points.add(new Point("+pos.getX+", "+pos.getY+");"
+		return "points.add(new Point("+pos.getX+", "+pos.getY+"));"
 	}
 	
 	def static cellsToJava(EList<Cells> cells, Position offset) {

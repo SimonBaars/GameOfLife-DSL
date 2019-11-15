@@ -10,12 +10,6 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Condition</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link com.simonbaars.goLDSL.Condition#getConditions <em>Conditions</em>}</li>
- * </ul>
  *
  * @see com.simonbaars.goLDSL.GoLDSLPackage#getCondition()
  * @model
@@ -23,26 +17,4 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Condition extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Conditions</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Conditions</em>' containment reference.
-   * @see #setConditions(ConditionRules)
-   * @see com.simonbaars.goLDSL.GoLDSLPackage#getCondition_Conditions()
-   * @model containment="true"
-   * @generated
-   */
-  ConditionRules getConditions();
-
-  /**
-   * Sets the value of the '{@link com.simonbaars.goLDSL.Condition#getConditions <em>Conditions</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Conditions</em>' containment reference.
-   * @see #getConditions()
-   * @generated
-   */
-  void setConditions(ConditionRules value);
-
 } // Condition

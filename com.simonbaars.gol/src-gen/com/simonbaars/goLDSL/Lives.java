@@ -10,12 +10,6 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Lives</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link com.simonbaars.goLDSL.Lives#getCell <em>Cell</em>}</li>
- * </ul>
  *
  * @see com.simonbaars.goLDSL.GoLDSLPackage#getLives()
  * @model
@@ -23,26 +17,4 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Lives extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Cell</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Cell</em>' containment reference.
-   * @see #setCell(CellPairs)
-   * @see com.simonbaars.goLDSL.GoLDSLPackage#getLives_Cell()
-   * @model containment="true"
-   * @generated
-   */
-  CellPairs getCell();
-
-  /**
-   * Sets the value of the '{@link com.simonbaars.goLDSL.Lives#getCell <em>Cell</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Cell</em>' containment reference.
-   * @see #getCell()
-   * @generated
-   */
-  void setCell(CellPairs value);
-
 } // Lives
