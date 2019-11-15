@@ -213,13 +213,13 @@ public interface GoLDSLFactory extends EFactory
   Grid createGrid();
 
   /**
-   * Returns a new object of class '<em>Grid Offset</em>'.
+   * Returns a new object of class '<em>Offset</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Grid Offset</em>'.
+   * @return a new object of class '<em>Offset</em>'.
    * @generated
    */
-  GridOffset createGridOffset();
+  Offset createOffset();
 
   /**
    * Returns a new object of class '<em>Size</em>'.

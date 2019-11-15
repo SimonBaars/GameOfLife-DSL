@@ -56,7 +56,7 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getLeftUnboundedRangeAccess().getGroup(), "rule__LeftUnboundedRange__Group__0");
 			builder.put(grammarAccess.getRightUnboundedRangeAccess().getGroup(), "rule__RightUnboundedRange__Group__0");
 			builder.put(grammarAccess.getGridAccess().getGroup(), "rule__Grid__Group__0");
-			builder.put(grammarAccess.getGridOffsetAccess().getGroup(), "rule__GridOffset__Group__0");
+			builder.put(grammarAccess.getOffsetAccess().getGroup(), "rule__Offset__Group__0");
 			builder.put(grammarAccess.getSizeAccess().getGroup(), "rule__Size__Group__0");
 			builder.put(grammarAccess.getDSLAccess().getBoardAssignment_0(), "rule__DSL__BoardAssignment_0");
 			builder.put(grammarAccess.getDSLAccess().getRulesAssignment_1_0(), "rule__DSL__RulesAssignment_1_0");
@@ -92,7 +92,8 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getRightUnboundedRangeAccess().getHigherBoundAssignment_1(), "rule__RightUnboundedRange__HigherBoundAssignment_1");
 			builder.put(grammarAccess.getGridAccess().getSizeAssignment_1(), "rule__Grid__SizeAssignment_1");
 			builder.put(grammarAccess.getGridAccess().getPartsAssignment_2(), "rule__Grid__PartsAssignment_2");
-			builder.put(grammarAccess.getGridOffsetAccess().getOffsetAssignment_1(), "rule__GridOffset__OffsetAssignment_1");
+			builder.put(grammarAccess.getOffsetAccess().getXAssignment_1(), "rule__Offset__XAssignment_1");
+			builder.put(grammarAccess.getOffsetAccess().getYAssignment_2(), "rule__Offset__YAssignment_2");
 			builder.put(grammarAccess.getSizeAccess().getWidthAssignment_1(), "rule__Size__WidthAssignment_1");
 			builder.put(grammarAccess.getSizeAccess().getHeightAssignment_2(), "rule__Size__HeightAssignment_2");
 		}

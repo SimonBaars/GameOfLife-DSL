@@ -4,7 +4,7 @@
 package com.simonbaars.goLDSL.impl;
 
 import com.simonbaars.goLDSL.GoLDSLPackage;
-import com.simonbaars.goLDSL.GridOffset;
+import com.simonbaars.goLDSL.Offset;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -15,45 +15,66 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Grid Offset</b></em>'.
+ * An implementation of the model object '<em><b>Offset</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.simonbaars.goLDSL.impl.GridOffsetImpl#getOffset <em>Offset</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.impl.OffsetImpl#getX <em>X</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.impl.OffsetImpl#getY <em>Y</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GridOffsetImpl extends MinimalEObjectImpl.Container implements GridOffset
+public class OffsetImpl extends MinimalEObjectImpl.Container implements Offset
 {
   /**
-   * The default value of the '{@link #getOffset() <em>Offset</em>}' attribute.
+   * The default value of the '{@link #getX() <em>X</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOffset()
+   * @see #getX()
    * @generated
    * @ordered
    */
-  protected static final int OFFSET_EDEFAULT = 0;
+  protected static final int X_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getOffset() <em>Offset</em>}' attribute.
+   * The cached value of the '{@link #getX() <em>X</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOffset()
+   * @see #getX()
    * @generated
    * @ordered
    */
-  protected int offset = OFFSET_EDEFAULT;
+  protected int x = X_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getY() <em>Y</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getY()
+   * @generated
+   * @ordered
+   */
+  protected static final int Y_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getY()
+   * @generated
+   * @ordered
+   */
+  protected int y = Y_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GridOffsetImpl()
+  protected OffsetImpl()
   {
     super();
   }
@@ -66,7 +87,7 @@ public class GridOffsetImpl extends MinimalEObjectImpl.Container implements Grid
   @Override
   protected EClass eStaticClass()
   {
-    return GoLDSLPackage.Literals.GRID_OFFSET;
+    return GoLDSLPackage.Literals.OFFSET;
   }
 
   /**
@@ -75,9 +96,9 @@ public class GridOffsetImpl extends MinimalEObjectImpl.Container implements Grid
    * @generated
    */
   @Override
-  public int getOffset()
+  public int getX()
   {
-    return offset;
+    return x;
   }
 
   /**
@@ -86,12 +107,37 @@ public class GridOffsetImpl extends MinimalEObjectImpl.Container implements Grid
    * @generated
    */
   @Override
-  public void setOffset(int newOffset)
+  public void setX(int newX)
   {
-    int oldOffset = offset;
-    offset = newOffset;
+    int oldX = x;
+    x = newX;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.GRID_OFFSET__OFFSET, oldOffset, offset));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.OFFSET__X, oldX, x));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int getY()
+  {
+    return y;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setY(int newY)
+  {
+    int oldY = y;
+    y = newY;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.OFFSET__Y, oldY, y));
   }
 
   /**
@@ -104,8 +150,10 @@ public class GridOffsetImpl extends MinimalEObjectImpl.Container implements Grid
   {
     switch (featureID)
     {
-      case GoLDSLPackage.GRID_OFFSET__OFFSET:
-        return getOffset();
+      case GoLDSLPackage.OFFSET__X:
+        return getX();
+      case GoLDSLPackage.OFFSET__Y:
+        return getY();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -120,8 +168,11 @@ public class GridOffsetImpl extends MinimalEObjectImpl.Container implements Grid
   {
     switch (featureID)
     {
-      case GoLDSLPackage.GRID_OFFSET__OFFSET:
-        setOffset((Integer)newValue);
+      case GoLDSLPackage.OFFSET__X:
+        setX((Integer)newValue);
+        return;
+      case GoLDSLPackage.OFFSET__Y:
+        setY((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +188,11 @@ public class GridOffsetImpl extends MinimalEObjectImpl.Container implements Grid
   {
     switch (featureID)
     {
-      case GoLDSLPackage.GRID_OFFSET__OFFSET:
-        setOffset(OFFSET_EDEFAULT);
+      case GoLDSLPackage.OFFSET__X:
+        setX(X_EDEFAULT);
+        return;
+      case GoLDSLPackage.OFFSET__Y:
+        setY(Y_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +208,10 @@ public class GridOffsetImpl extends MinimalEObjectImpl.Container implements Grid
   {
     switch (featureID)
     {
-      case GoLDSLPackage.GRID_OFFSET__OFFSET:
-        return offset != OFFSET_EDEFAULT;
+      case GoLDSLPackage.OFFSET__X:
+        return x != X_EDEFAULT;
+      case GoLDSLPackage.OFFSET__Y:
+        return y != Y_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -171,10 +227,12 @@ public class GridOffsetImpl extends MinimalEObjectImpl.Container implements Grid
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (offset: ");
-    result.append(offset);
+    result.append(" (x: ");
+    result.append(x);
+    result.append(", y: ");
+    result.append(y);
     result.append(')');
     return result.toString();
   }
 
-} //GridOffsetImpl
+} //OffsetImpl

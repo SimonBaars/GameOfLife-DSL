@@ -52,12 +52,12 @@ public interface ShapeDef extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Offset</em>' containment reference.
-   * @see #setOffset(GridOffset)
+   * @see #setOffset(Offset)
    * @see com.simonbaars.goLDSL.GoLDSLPackage#getShapeDef_Offset()
    * @model containment="true"
    * @generated
    */
-  GridOffset getOffset();
+  Offset getOffset();
 
   /**
    * Sets the value of the '{@link com.simonbaars.goLDSL.ShapeDef#getOffset <em>Offset</em>}' containment reference.
@@ -67,7 +67,7 @@ public interface ShapeDef extends EObject
    * @see #getOffset()
    * @generated
    */
-  void setOffset(GridOffset value);
+  void setOffset(Offset value);
 
   /**
    * Returns the value of the '<em><b>Objects</b></em>' containment reference.

@@ -764,32 +764,41 @@ public interface GoLDSLPackage extends EPackage
   int GRID_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link com.simonbaars.goLDSL.impl.GridOffsetImpl <em>Grid Offset</em>}' class.
+   * The meta object id for the '{@link com.simonbaars.goLDSL.impl.OffsetImpl <em>Offset</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.simonbaars.goLDSL.impl.GridOffsetImpl
-   * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getGridOffset()
+   * @see com.simonbaars.goLDSL.impl.OffsetImpl
+   * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getOffset()
    * @generated
    */
-  int GRID_OFFSET = 21;
+  int OFFSET = 21;
 
   /**
-   * The feature id for the '<em><b>Offset</b></em>' attribute.
+   * The feature id for the '<em><b>X</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GRID_OFFSET__OFFSET = 0;
+  int OFFSET__X = 0;
 
   /**
-   * The number of structural features of the '<em>Grid Offset</em>' class.
+   * The feature id for the '<em><b>Y</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GRID_OFFSET_FEATURE_COUNT = 1;
+  int OFFSET__Y = 1;
+
+  /**
+   * The number of structural features of the '<em>Offset</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OFFSET_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.SizeImpl <em>Size</em>}' class.
@@ -1434,25 +1443,36 @@ public interface GoLDSLPackage extends EPackage
   EAttribute getGrid_Parts();
 
   /**
-   * Returns the meta object for class '{@link com.simonbaars.goLDSL.GridOffset <em>Grid Offset</em>}'.
+   * Returns the meta object for class '{@link com.simonbaars.goLDSL.Offset <em>Offset</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Grid Offset</em>'.
-   * @see com.simonbaars.goLDSL.GridOffset
+   * @return the meta object for class '<em>Offset</em>'.
+   * @see com.simonbaars.goLDSL.Offset
    * @generated
    */
-  EClass getGridOffset();
+  EClass getOffset();
 
   /**
-   * Returns the meta object for the attribute '{@link com.simonbaars.goLDSL.GridOffset#getOffset <em>Offset</em>}'.
+   * Returns the meta object for the attribute '{@link com.simonbaars.goLDSL.Offset#getX <em>X</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Offset</em>'.
-   * @see com.simonbaars.goLDSL.GridOffset#getOffset()
-   * @see #getGridOffset()
+   * @return the meta object for the attribute '<em>X</em>'.
+   * @see com.simonbaars.goLDSL.Offset#getX()
+   * @see #getOffset()
    * @generated
    */
-  EAttribute getGridOffset_Offset();
+  EAttribute getOffset_X();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.simonbaars.goLDSL.Offset#getY <em>Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Y</em>'.
+   * @see com.simonbaars.goLDSL.Offset#getY()
+   * @see #getOffset()
+   * @generated
+   */
+  EAttribute getOffset_Y();
 
   /**
    * Returns the meta object for class '{@link com.simonbaars.goLDSL.Size <em>Size</em>}'.
@@ -2012,22 +2032,30 @@ public interface GoLDSLPackage extends EPackage
     EAttribute GRID__PARTS = eINSTANCE.getGrid_Parts();
 
     /**
-     * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.GridOffsetImpl <em>Grid Offset</em>}' class.
+     * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.OffsetImpl <em>Offset</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.simonbaars.goLDSL.impl.GridOffsetImpl
-     * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getGridOffset()
+     * @see com.simonbaars.goLDSL.impl.OffsetImpl
+     * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getOffset()
      * @generated
      */
-    EClass GRID_OFFSET = eINSTANCE.getGridOffset();
+    EClass OFFSET = eINSTANCE.getOffset();
 
     /**
-     * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>X</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GRID_OFFSET__OFFSET = eINSTANCE.getGridOffset_Offset();
+    EAttribute OFFSET__X = eINSTANCE.getOffset_X();
+
+    /**
+     * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OFFSET__Y = eINSTANCE.getOffset_Y();
 
     /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.SizeImpl <em>Size</em>}' class.

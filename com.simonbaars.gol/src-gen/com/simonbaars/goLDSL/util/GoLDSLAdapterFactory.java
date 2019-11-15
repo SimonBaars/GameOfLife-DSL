@@ -181,9 +181,9 @@ public class GoLDSLAdapterFactory extends AdapterFactoryImpl
         return createGridAdapter();
       }
       @Override
-      public Adapter caseGridOffset(GridOffset object)
+      public Adapter caseOffset(Offset object)
       {
-        return createGridOffsetAdapter();
+        return createOffsetAdapter();
       }
       @Override
       public Adapter caseSize(Size object)
@@ -528,16 +528,16 @@ public class GoLDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.GridOffset <em>Grid Offset</em>}'.
+   * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.Offset <em>Offset</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.simonbaars.goLDSL.GridOffset
+   * @see com.simonbaars.goLDSL.Offset
    * @generated
    */
-  public Adapter createGridOffsetAdapter()
+  public Adapter createOffsetAdapter()
   {
     return null;
   }

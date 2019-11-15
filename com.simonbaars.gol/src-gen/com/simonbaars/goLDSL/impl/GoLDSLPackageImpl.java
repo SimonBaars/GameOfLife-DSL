@@ -17,11 +17,11 @@ import com.simonbaars.goLDSL.ConditionRules;
 import com.simonbaars.goLDSL.GoLDSLFactory;
 import com.simonbaars.goLDSL.GoLDSLPackage;
 import com.simonbaars.goLDSL.Grid;
-import com.simonbaars.goLDSL.GridOffset;
 import com.simonbaars.goLDSL.GridPart;
 import com.simonbaars.goLDSL.LeftUnboundedRange;
 import com.simonbaars.goLDSL.Lives;
 import com.simonbaars.goLDSL.Objects;
+import com.simonbaars.goLDSL.Offset;
 import com.simonbaars.goLDSL.Range;
 import com.simonbaars.goLDSL.RightUnboundedRange;
 import com.simonbaars.goLDSL.Rule;
@@ -198,7 +198,7 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass gridOffsetEClass = null;
+  private EClass offsetEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -895,9 +895,9 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EClass getGridOffset()
+  public EClass getOffset()
   {
-    return gridOffsetEClass;
+    return offsetEClass;
   }
 
   /**
@@ -906,9 +906,20 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EAttribute getGridOffset_Offset()
+  public EAttribute getOffset_X()
   {
-    return (EAttribute)gridOffsetEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)offsetEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getOffset_Y()
+  {
+    return (EAttribute)offsetEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1073,8 +1084,9 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     createEReference(gridEClass, GRID__SIZE);
     createEAttribute(gridEClass, GRID__PARTS);
 
-    gridOffsetEClass = createEClass(GRID_OFFSET);
-    createEAttribute(gridOffsetEClass, GRID_OFFSET__OFFSET);
+    offsetEClass = createEClass(OFFSET);
+    createEAttribute(offsetEClass, OFFSET__X);
+    createEAttribute(offsetEClass, OFFSET__Y);
 
     sizeEClass = createEClass(SIZE);
     createEAttribute(sizeEClass, SIZE__WIDTH);
@@ -1138,7 +1150,7 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
 
     initEClass(shapeDefEClass, ShapeDef.class, "ShapeDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getShapeDef_Name(), ecorePackage.getEString(), "name", null, 0, 1, ShapeDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getShapeDef_Offset(), this.getGridOffset(), null, "offset", null, 0, 1, ShapeDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getShapeDef_Offset(), this.getOffset(), null, "offset", null, 0, 1, ShapeDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getShapeDef_Objects(), this.getObjects(), null, "objects", null, 0, 1, ShapeDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(cellPairsEClass, CellPairs.class, "CellPairs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1198,8 +1210,9 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     initEReference(getGrid_Size(), this.getSize(), null, "size", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGrid_Parts(), this.getGridPart(), "parts", null, 0, -1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(gridOffsetEClass, GridOffset.class, "GridOffset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGridOffset_Offset(), ecorePackage.getEInt(), "offset", null, 0, 1, GridOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(offsetEClass, Offset.class, "Offset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getOffset_X(), ecorePackage.getEInt(), "x", null, 0, 1, Offset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOffset_Y(), ecorePackage.getEInt(), "y", null, 0, 1, Offset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sizeEClass, Size.class, "Size", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSize_Width(), ecorePackage.getEInt(), "width", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

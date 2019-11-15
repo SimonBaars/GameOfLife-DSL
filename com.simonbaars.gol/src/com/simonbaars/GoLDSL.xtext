@@ -5,9 +5,8 @@ generate goLDSL "http://www.simonbaars.com/GoLDSL"
 DSL: board=Board (rules += Rule | shapes+=ShapeDef)*;
 Board: 'Board:' objects = Objects;
 Objects: (shapes += ShapeRef | cell += CellDef | cells += Cells | grids += Grid)+;
-ShapeDef: 'Shape' name=ID ':' offset=GridOffset? objects = Objects;
+ShapeDef: 'Shape' name=ID ':' offset=Offset? objects = Objects;
 CellPairs: ('(' cells += Cell ')')+;
-//CellPairs: cell = CellPair (',' cell2 = CellPair)?;
 Cells: 'Cells:' CellPairs;
 CellDef: 'Cell:' Cell;
 ShapeRef: 'Shape' name=ID ':' x=INT ',' y=INT;
@@ -26,5 +25,5 @@ LeftUnboundedRange: '<' lowerBound = INT;
 RightUnboundedRange: '>' higherBound = INT;
 Grid: 'Grid:' size=Size? (parts += GridPart)+;
 enum GridPart: ALIVE = '+' | DEAD = '-';
-GridOffset: 'offset' offset=INT;
+Offset: 'offset' x=INT y=INT;
 Size: 'size' width=INT height=INT;

@@ -86,8 +86,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Grid/size"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//Grid/parts"/>
     </genClasses>
-    <genClasses ecoreClass="GoLDSL.ecore#//GridOffset">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//GridOffset/offset"/>
+    <genClasses ecoreClass="GoLDSL.ecore#//Offset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//Offset/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//Offset/y"/>
     </genClasses>
     <genClasses ecoreClass="GoLDSL.ecore#//Size">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//Size/width"/>

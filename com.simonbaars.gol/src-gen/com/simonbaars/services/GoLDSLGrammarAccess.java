@@ -138,15 +138,15 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cOffsetAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOffsetGridOffsetParserRuleCall_3_0 = (RuleCall)cOffsetAssignment_3.eContents().get(0);
+		private final RuleCall cOffsetOffsetParserRuleCall_3_0 = (RuleCall)cOffsetAssignment_3.eContents().get(0);
 		private final Assignment cObjectsAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cObjectsObjectsParserRuleCall_4_0 = (RuleCall)cObjectsAssignment_4.eContents().get(0);
 		
 		//ShapeDef:
-		//	'Shape' name=ID ':' offset=GridOffset? objects=Objects;
+		//	'Shape' name=ID ':' offset=Offset? objects=Objects;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Shape' name=ID ':' offset=GridOffset? objects=Objects
+		//'Shape' name=ID ':' offset=Offset? objects=Objects
 		public Group getGroup() { return cGroup; }
 		
 		//'Shape'
@@ -161,11 +161,11 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//':'
 		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 		
-		//offset=GridOffset?
+		//offset=Offset?
 		public Assignment getOffsetAssignment_3() { return cOffsetAssignment_3; }
 		
-		//GridOffset
-		public RuleCall getOffsetGridOffsetParserRuleCall_3_0() { return cOffsetGridOffsetParserRuleCall_3_0; }
+		//Offset
+		public RuleCall getOffsetOffsetParserRuleCall_3_0() { return cOffsetOffsetParserRuleCall_3_0; }
 		
 		//objects=Objects
 		public Assignment getObjectsAssignment_4() { return cObjectsAssignment_4; }
@@ -206,7 +206,6 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCellsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cCellPairsParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		////CellPairs: cell = CellPair (',' cell2 = CellPair)?;
 		//Cells:
 		//	'Cells:' CellPairs;
 		@Override public ParserRule getRule() { return rule; }
@@ -637,28 +636,36 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//GridPart
 		public RuleCall getPartsGridPartEnumRuleCall_2_0() { return cPartsGridPartEnumRuleCall_2_0; }
 	}
-	public class GridOffsetElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.GridOffset");
+	public class OffsetElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Offset");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cOffsetKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cOffsetAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cOffsetINTTerminalRuleCall_1_0 = (RuleCall)cOffsetAssignment_1.eContents().get(0);
+		private final Assignment cXAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cXINTTerminalRuleCall_1_0 = (RuleCall)cXAssignment_1.eContents().get(0);
+		private final Assignment cYAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cYINTTerminalRuleCall_2_0 = (RuleCall)cYAssignment_2.eContents().get(0);
 		
-		//GridOffset:
-		//	'offset' offset=INT;
+		//Offset:
+		//	'offset' x=INT y=INT;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'offset' offset=INT
+		//'offset' x=INT y=INT
 		public Group getGroup() { return cGroup; }
 		
 		//'offset'
 		public Keyword getOffsetKeyword_0() { return cOffsetKeyword_0; }
 		
-		//offset=INT
-		public Assignment getOffsetAssignment_1() { return cOffsetAssignment_1; }
+		//x=INT
+		public Assignment getXAssignment_1() { return cXAssignment_1; }
 		
 		//INT
-		public RuleCall getOffsetINTTerminalRuleCall_1_0() { return cOffsetINTTerminalRuleCall_1_0; }
+		public RuleCall getXINTTerminalRuleCall_1_0() { return cXINTTerminalRuleCall_1_0; }
+		
+		//y=INT
+		public Assignment getYAssignment_2() { return cYAssignment_2; }
+		
+		//INT
+		public RuleCall getYINTTerminalRuleCall_2_0() { return cYINTTerminalRuleCall_2_0; }
 	}
 	public class SizeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Size");
@@ -770,7 +777,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final RightUnboundedRangeElements pRightUnboundedRange;
 	private final GridElements pGrid;
 	private final GridPartElements eGridPart;
-	private final GridOffsetElements pGridOffset;
+	private final OffsetElements pOffset;
 	private final SizeElements pSize;
 	
 	private final Grammar grammar;
@@ -805,7 +812,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pRightUnboundedRange = new RightUnboundedRangeElements();
 		this.pGrid = new GridElements();
 		this.eGridPart = new GridPartElements();
-		this.pGridOffset = new GridOffsetElements();
+		this.pOffset = new OffsetElements();
 		this.pSize = new SizeElements();
 	}
 	
@@ -867,7 +874,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ShapeDef:
-	//	'Shape' name=ID ':' offset=GridOffset? objects=Objects;
+	//	'Shape' name=ID ':' offset=Offset? objects=Objects;
 	public ShapeDefElements getShapeDefAccess() {
 		return pShapeDef;
 	}
@@ -886,7 +893,6 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getCellPairsAccess().getRule();
 	}
 	
-	////CellPairs: cell = CellPair (',' cell2 = CellPair)?;
 	//Cells:
 	//	'Cells:' CellPairs;
 	public CellsElements getCellsAccess() {
@@ -1067,14 +1073,14 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getGridPartAccess().getRule();
 	}
 	
-	//GridOffset:
-	//	'offset' offset=INT;
-	public GridOffsetElements getGridOffsetAccess() {
-		return pGridOffset;
+	//Offset:
+	//	'offset' x=INT y=INT;
+	public OffsetElements getOffsetAccess() {
+		return pOffset;
 	}
 	
-	public ParserRule getGridOffsetRule() {
-		return getGridOffsetAccess().getRule();
+	public ParserRule getOffsetRule() {
+		return getOffsetAccess().getRule();
 	}
 	
 	//Size:

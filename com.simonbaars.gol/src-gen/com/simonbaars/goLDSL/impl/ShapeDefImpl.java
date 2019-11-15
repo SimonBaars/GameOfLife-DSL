@@ -4,8 +4,8 @@
 package com.simonbaars.goLDSL.impl;
 
 import com.simonbaars.goLDSL.GoLDSLPackage;
-import com.simonbaars.goLDSL.GridOffset;
 import com.simonbaars.goLDSL.Objects;
+import com.simonbaars.goLDSL.Offset;
 import com.simonbaars.goLDSL.ShapeDef;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -62,7 +62,7 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
    * @generated
    * @ordered
    */
-  protected GridOffset offset;
+  protected Offset offset;
 
   /**
    * The cached value of the '{@link #getObjects() <em>Objects</em>}' containment reference.
@@ -126,7 +126,7 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
    * @generated
    */
   @Override
-  public GridOffset getOffset()
+  public Offset getOffset()
   {
     return offset;
   }
@@ -136,9 +136,9 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetOffset(GridOffset newOffset, NotificationChain msgs)
+  public NotificationChain basicSetOffset(Offset newOffset, NotificationChain msgs)
   {
-    GridOffset oldOffset = offset;
+    Offset oldOffset = offset;
     offset = newOffset;
     if (eNotificationRequired())
     {
@@ -154,7 +154,7 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
    * @generated
    */
   @Override
-  public void setOffset(GridOffset newOffset)
+  public void setOffset(Offset newOffset)
   {
     if (newOffset != offset)
     {
@@ -272,7 +272,7 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
         setName((String)newValue);
         return;
       case GoLDSLPackage.SHAPE_DEF__OFFSET:
-        setOffset((GridOffset)newValue);
+        setOffset((Offset)newValue);
         return;
       case GoLDSLPackage.SHAPE_DEF__OBJECTS:
         setObjects((Objects)newValue);
@@ -295,7 +295,7 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
         setName(NAME_EDEFAULT);
         return;
       case GoLDSLPackage.SHAPE_DEF__OFFSET:
-        setOffset((GridOffset)null);
+        setOffset((Offset)null);
         return;
       case GoLDSLPackage.SHAPE_DEF__OBJECTS:
         setObjects((Objects)null);

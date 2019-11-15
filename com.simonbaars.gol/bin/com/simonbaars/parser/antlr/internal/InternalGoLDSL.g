@@ -325,9 +325,9 @@ ruleShapeDef returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getShapeDefAccess().getOffsetGridOffsetParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getShapeDefAccess().getOffsetOffsetParserRuleCall_3_0());
 				}
-				lv_offset_3_0=ruleGridOffset
+				lv_offset_3_0=ruleOffset
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getShapeDefRule());
@@ -336,7 +336,7 @@ ruleShapeDef returns [EObject current=null]
 						$current,
 						"offset",
 						lv_offset_3_0,
-						"com.simonbaars.GoLDSL.GridOffset");
+						"com.simonbaars.GoLDSL.Offset");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1231,15 +1231,15 @@ ruleGrid returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleGridOffset
-entryRuleGridOffset returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGridOffsetRule()); }
-	iv_ruleGridOffset=ruleGridOffset
-	{ $current=$iv_ruleGridOffset.current; }
+// Entry rule entryRuleOffset
+entryRuleOffset returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getOffsetRule()); }
+	iv_ruleOffset=ruleOffset
+	{ $current=$iv_ruleOffset.current; }
 	EOF;
 
-// Rule GridOffset
-ruleGridOffset returns [EObject current=null]
+// Rule Offset
+ruleOffset returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1249,22 +1249,40 @@ ruleGridOffset returns [EObject current=null]
 	(
 		otherlv_0='offset'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGridOffsetAccess().getOffsetKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getOffsetAccess().getOffsetKeyword_0());
 		}
 		(
 			(
-				lv_offset_1_0=RULE_INT
+				lv_x_1_0=RULE_INT
 				{
-					newLeafNode(lv_offset_1_0, grammarAccess.getGridOffsetAccess().getOffsetINTTerminalRuleCall_1_0());
+					newLeafNode(lv_x_1_0, grammarAccess.getOffsetAccess().getXINTTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGridOffsetRule());
+						$current = createModelElement(grammarAccess.getOffsetRule());
 					}
 					setWithLastConsumed(
 						$current,
-						"offset",
-						lv_offset_1_0,
+						"x",
+						lv_x_1_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+		(
+			(
+				lv_y_2_0=RULE_INT
+				{
+					newLeafNode(lv_y_2_0, grammarAccess.getOffsetAccess().getYINTTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getOffsetRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"y",
+						lv_y_2_0,
 						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)

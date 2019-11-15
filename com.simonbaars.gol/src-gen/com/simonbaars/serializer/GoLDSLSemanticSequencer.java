@@ -14,10 +14,10 @@ import com.simonbaars.goLDSL.ConditionRules;
 import com.simonbaars.goLDSL.DSL;
 import com.simonbaars.goLDSL.GoLDSLPackage;
 import com.simonbaars.goLDSL.Grid;
-import com.simonbaars.goLDSL.GridOffset;
 import com.simonbaars.goLDSL.LeftUnboundedRange;
 import com.simonbaars.goLDSL.Lives;
 import com.simonbaars.goLDSL.Objects;
+import com.simonbaars.goLDSL.Offset;
 import com.simonbaars.goLDSL.RightUnboundedRange;
 import com.simonbaars.goLDSL.Rule;
 import com.simonbaars.goLDSL.ShapeDef;
@@ -79,9 +79,6 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case GoLDSLPackage.GRID:
 				sequence_Grid(context, (Grid) semanticObject); 
 				return; 
-			case GoLDSLPackage.GRID_OFFSET:
-				sequence_GridOffset(context, (GridOffset) semanticObject); 
-				return; 
 			case GoLDSLPackage.LEFT_UNBOUNDED_RANGE:
 				sequence_LeftUnboundedRange(context, (LeftUnboundedRange) semanticObject); 
 				return; 
@@ -90,6 +87,9 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				return; 
 			case GoLDSLPackage.OBJECTS:
 				sequence_Objects(context, (Objects) semanticObject); 
+				return; 
+			case GoLDSLPackage.OFFSET:
+				sequence_Offset(context, (Offset) semanticObject); 
 				return; 
 			case GoLDSLPackage.RIGHT_UNBOUNDED_RANGE:
 				sequence_RightUnboundedRange(context, (RightUnboundedRange) semanticObject); 
@@ -260,24 +260,6 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     GridOffset returns GridOffset
-	 *
-	 * Constraint:
-	 *     offset=INT
-	 */
-	protected void sequence_GridOffset(ISerializationContext context, GridOffset semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.GRID_OFFSET__OFFSET) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.GRID_OFFSET__OFFSET));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGridOffsetAccess().getOffsetINTTerminalRuleCall_1_0(), semanticObject.getOffset());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Grid returns Grid
 	 *
 	 * Constraint:
@@ -340,6 +322,27 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     Offset returns Offset
+	 *
+	 * Constraint:
+	 *     (x=INT y=INT)
+	 */
+	protected void sequence_Offset(ISerializationContext context, Offset semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.OFFSET__X) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.OFFSET__X));
+			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.OFFSET__Y) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.OFFSET__Y));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOffsetAccess().getXINTTerminalRuleCall_1_0(), semanticObject.getX());
+		feeder.accept(grammarAccess.getOffsetAccess().getYINTTerminalRuleCall_2_0(), semanticObject.getY());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Range returns RightUnboundedRange
 	 *     UnboundedRange returns RightUnboundedRange
 	 *     RightUnboundedRange returns RightUnboundedRange
@@ -384,7 +387,7 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     ShapeDef returns ShapeDef
 	 *
 	 * Constraint:
-	 *     (name=ID offset=GridOffset? objects=Objects)
+	 *     (name=ID offset=Offset? objects=Objects)
 	 */
 	protected void sequence_ShapeDef(ISerializationContext context, ShapeDef semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -25,7 +25,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ShapeDef">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="offset" eType="#//GridOffset"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offset" eType="#//Offset"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objects" eType="#//Objects"
         containment="true"/>
@@ -102,8 +102,9 @@
     <eLiterals name="ALIVE" literal="+"/>
     <eLiterals name="DEAD" value="1" literal="-"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GridOffset">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Offset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Size">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

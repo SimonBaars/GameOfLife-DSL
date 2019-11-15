@@ -588,25 +588,25 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleGridOffset
-entryRuleGridOffset
+// Entry rule entryRuleOffset
+entryRuleOffset
 :
-{ before(grammarAccess.getGridOffsetRule()); }
-	 ruleGridOffset
-{ after(grammarAccess.getGridOffsetRule()); } 
+{ before(grammarAccess.getOffsetRule()); }
+	 ruleOffset
+{ after(grammarAccess.getOffsetRule()); } 
 	 EOF 
 ;
 
-// Rule GridOffset
-ruleGridOffset 
+// Rule Offset
+ruleOffset 
 	@init {
 		int stackSize = keepStackSize();
 	}
 	:
 	(
-		{ before(grammarAccess.getGridOffsetAccess().getGroup()); }
-		(rule__GridOffset__Group__0)
-		{ after(grammarAccess.getGridOffsetAccess().getGroup()); }
+		{ before(grammarAccess.getOffsetAccess().getGroup()); }
+		(rule__Offset__Group__0)
+		{ after(grammarAccess.getOffsetAccess().getGroup()); }
 	)
 ;
 finally {
@@ -2138,53 +2138,80 @@ finally {
 }
 
 
-rule__GridOffset__Group__0
+rule__Offset__Group__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GridOffset__Group__0__Impl
-	rule__GridOffset__Group__1
+	rule__Offset__Group__0__Impl
+	rule__Offset__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GridOffset__Group__0__Impl
+rule__Offset__Group__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGridOffsetAccess().getOffsetKeyword_0()); }
+	{ before(grammarAccess.getOffsetAccess().getOffsetKeyword_0()); }
 	'offset'
-	{ after(grammarAccess.getGridOffsetAccess().getOffsetKeyword_0()); }
+	{ after(grammarAccess.getOffsetAccess().getOffsetKeyword_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GridOffset__Group__1
+rule__Offset__Group__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__GridOffset__Group__1__Impl
+	rule__Offset__Group__1__Impl
+	rule__Offset__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GridOffset__Group__1__Impl
+rule__Offset__Group__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getGridOffsetAccess().getOffsetAssignment_1()); }
-	(rule__GridOffset__OffsetAssignment_1)
-	{ after(grammarAccess.getGridOffsetAccess().getOffsetAssignment_1()); }
+	{ before(grammarAccess.getOffsetAccess().getXAssignment_1()); }
+	(rule__Offset__XAssignment_1)
+	{ after(grammarAccess.getOffsetAccess().getXAssignment_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Offset__Group__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Offset__Group__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Offset__Group__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getOffsetAccess().getYAssignment_2()); }
+	(rule__Offset__YAssignment_2)
+	{ after(grammarAccess.getOffsetAccess().getYAssignment_2()); }
 )
 ;
 finally {
@@ -2414,9 +2441,9 @@ rule__ShapeDef__OffsetAssignment_3
 	}
 :
 	(
-		{ before(grammarAccess.getShapeDefAccess().getOffsetGridOffsetParserRuleCall_3_0()); }
-		ruleGridOffset
-		{ after(grammarAccess.getShapeDefAccess().getOffsetGridOffsetParserRuleCall_3_0()); }
+		{ before(grammarAccess.getShapeDefAccess().getOffsetOffsetParserRuleCall_3_0()); }
+		ruleOffset
+		{ after(grammarAccess.getShapeDefAccess().getOffsetOffsetParserRuleCall_3_0()); }
 	)
 ;
 finally {
@@ -2783,15 +2810,30 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__GridOffset__OffsetAssignment_1
+rule__Offset__XAssignment_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getGridOffsetAccess().getOffsetINTTerminalRuleCall_1_0()); }
+		{ before(grammarAccess.getOffsetAccess().getXINTTerminalRuleCall_1_0()); }
 		RULE_INT
-		{ after(grammarAccess.getGridOffsetAccess().getOffsetINTTerminalRuleCall_1_0()); }
+		{ after(grammarAccess.getOffsetAccess().getXINTTerminalRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Offset__YAssignment_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getOffsetAccess().getYINTTerminalRuleCall_2_0()); }
+		RULE_INT
+		{ after(grammarAccess.getOffsetAccess().getYINTTerminalRuleCall_2_0()); }
 	)
 ;
 finally {

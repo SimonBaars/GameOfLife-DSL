@@ -228,10 +228,10 @@ public class GoLDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GoLDSLPackage.GRID_OFFSET:
+      case GoLDSLPackage.OFFSET:
       {
-        GridOffset gridOffset = (GridOffset)theEObject;
-        T result = caseGridOffset(gridOffset);
+        Offset offset = (Offset)theEObject;
+        T result = caseOffset(offset);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -583,17 +583,17 @@ public class GoLDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Grid Offset</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Offset</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Grid Offset</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Offset</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseGridOffset(GridOffset object)
+  public T caseOffset(Offset object)
   {
     return null;
   }

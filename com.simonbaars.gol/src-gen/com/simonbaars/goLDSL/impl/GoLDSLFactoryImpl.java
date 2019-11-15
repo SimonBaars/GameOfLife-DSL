@@ -87,7 +87,7 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
       case GoLDSLPackage.LEFT_UNBOUNDED_RANGE: return createLeftUnboundedRange();
       case GoLDSLPackage.RIGHT_UNBOUNDED_RANGE: return createRightUnboundedRange();
       case GoLDSLPackage.GRID: return createGrid();
-      case GoLDSLPackage.GRID_OFFSET: return createGridOffset();
+      case GoLDSLPackage.OFFSET: return createOffset();
       case GoLDSLPackage.SIZE: return createSize();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -390,10 +390,10 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
    * @generated
    */
   @Override
-  public GridOffset createGridOffset()
+  public Offset createOffset()
   {
-    GridOffsetImpl gridOffset = new GridOffsetImpl();
-    return gridOffset;
+    OffsetImpl offset = new OffsetImpl();
+    return offset;
   }
 
   /**
