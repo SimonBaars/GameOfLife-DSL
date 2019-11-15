@@ -17,7 +17,6 @@ import java.util.stream.IntStream
 import org.eclipse.emf.common.util.EList
 import org.eclipse.xtend.lib.annotations.Data
 
-
 @Data class Position {
 	int x
 	int y
@@ -45,7 +44,7 @@ public class RulesOfLife {
 '''
 	
 	def static getRules(EList<Rule> rules, EList<ShapeDef> shapes) {
-		throw new UnsupportedOperationException("TODO: auto-generated method stub")
+		return ""
 	}
 	
 	def static getBeginPoints(Board board, EList<ShapeDef> shapes) {
@@ -101,7 +100,7 @@ public class RulesOfLife {
 	}
 	
 	def static shapeToJava(EList<ShapeDef> shapes, ShapeDef shape, Position offset) {
-		return objectsToJava(shape.getObjects, shapes, merge(offset, pos(-shape.getOffset.getX, -shape.getOffset.getY)))
+		return objectsToJava(shape.getObjects, shapes, merge(offset, shape.getOffset === null ? pos(0,0) : pos(-shape.getOffset.getX, -shape.getOffset.getY)))
 	}
 	
 	def static getShapeByName(EList<ShapeDef> shapes, String name) {

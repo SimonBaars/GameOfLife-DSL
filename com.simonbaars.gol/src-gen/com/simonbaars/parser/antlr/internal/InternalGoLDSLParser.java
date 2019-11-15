@@ -3042,7 +3042,7 @@ public class InternalGoLDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGrid"
-    // InternalGoLDSL.g:1181:1: ruleGrid returns [EObject current=null] : (otherlv_0= 'Grid:' ( (lv_size_1_0= ruleSize ) )? ( (lv_parts_2_0= ruleGridPart ) )+ ) ;
+    // InternalGoLDSL.g:1181:1: ruleGrid returns [EObject current=null] : (otherlv_0= 'Grid:' ( (lv_size_1_0= ruleSize ) ) ( (lv_parts_2_0= ruleGridPart ) )+ ) ;
     public final EObject ruleGrid() throws RecognitionException {
         EObject current = null;
 
@@ -3056,71 +3056,60 @@ public class InternalGoLDSLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGoLDSL.g:1187:2: ( (otherlv_0= 'Grid:' ( (lv_size_1_0= ruleSize ) )? ( (lv_parts_2_0= ruleGridPart ) )+ ) )
-            // InternalGoLDSL.g:1188:2: (otherlv_0= 'Grid:' ( (lv_size_1_0= ruleSize ) )? ( (lv_parts_2_0= ruleGridPart ) )+ )
+            // InternalGoLDSL.g:1187:2: ( (otherlv_0= 'Grid:' ( (lv_size_1_0= ruleSize ) ) ( (lv_parts_2_0= ruleGridPart ) )+ ) )
+            // InternalGoLDSL.g:1188:2: (otherlv_0= 'Grid:' ( (lv_size_1_0= ruleSize ) ) ( (lv_parts_2_0= ruleGridPart ) )+ )
             {
-            // InternalGoLDSL.g:1188:2: (otherlv_0= 'Grid:' ( (lv_size_1_0= ruleSize ) )? ( (lv_parts_2_0= ruleGridPart ) )+ )
-            // InternalGoLDSL.g:1189:3: otherlv_0= 'Grid:' ( (lv_size_1_0= ruleSize ) )? ( (lv_parts_2_0= ruleGridPart ) )+
+            // InternalGoLDSL.g:1188:2: (otherlv_0= 'Grid:' ( (lv_size_1_0= ruleSize ) ) ( (lv_parts_2_0= ruleGridPart ) )+ )
+            // InternalGoLDSL.g:1189:3: otherlv_0= 'Grid:' ( (lv_size_1_0= ruleSize ) ) ( (lv_parts_2_0= ruleGridPart ) )+
             {
             otherlv_0=(Token)match(input,26,FOLLOW_19); 
 
             			newLeafNode(otherlv_0, grammarAccess.getGridAccess().getGridKeyword_0());
             		
-            // InternalGoLDSL.g:1193:3: ( (lv_size_1_0= ruleSize ) )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // InternalGoLDSL.g:1193:3: ( (lv_size_1_0= ruleSize ) )
+            // InternalGoLDSL.g:1194:4: (lv_size_1_0= ruleSize )
+            {
+            // InternalGoLDSL.g:1194:4: (lv_size_1_0= ruleSize )
+            // InternalGoLDSL.g:1195:5: lv_size_1_0= ruleSize
+            {
 
-            if ( (LA9_0==28) ) {
-                alt9=1;
+            					newCompositeNode(grammarAccess.getGridAccess().getSizeSizeParserRuleCall_1_0());
+            				
+            pushFollow(FOLLOW_20);
+            lv_size_1_0=ruleSize();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getGridRule());
+            					}
+            					set(
+            						current,
+            						"size",
+            						lv_size_1_0,
+            						"com.simonbaars.GoLDSL.Size");
+            					afterParserOrEnumRuleCall();
+            				
+
             }
-            switch (alt9) {
-                case 1 :
-                    // InternalGoLDSL.g:1194:4: (lv_size_1_0= ruleSize )
-                    {
-                    // InternalGoLDSL.g:1194:4: (lv_size_1_0= ruleSize )
-                    // InternalGoLDSL.g:1195:5: lv_size_1_0= ruleSize
-                    {
 
-                    					newCompositeNode(grammarAccess.getGridAccess().getSizeSizeParserRuleCall_1_0());
-                    				
-                    pushFollow(FOLLOW_19);
-                    lv_size_1_0=ruleSize();
-
-                    state._fsp--;
-
-
-                    					if (current==null) {
-                    						current = createModelElementForParent(grammarAccess.getGridRule());
-                    					}
-                    					set(
-                    						current,
-                    						"size",
-                    						lv_size_1_0,
-                    						"com.simonbaars.GoLDSL.Size");
-                    					afterParserOrEnumRuleCall();
-                    				
-
-                    }
-
-
-                    }
-                    break;
 
             }
 
             // InternalGoLDSL.g:1212:3: ( (lv_parts_2_0= ruleGridPart ) )+
-            int cnt10=0;
-            loop10:
+            int cnt9=0;
+            loop9:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( ((LA10_0>=31 && LA10_0<=32)) ) {
-                    alt10=1;
+                if ( ((LA9_0>=31 && LA9_0<=32)) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt9) {
             	case 1 :
             	    // InternalGoLDSL.g:1213:4: (lv_parts_2_0= ruleGridPart )
             	    {
@@ -3130,7 +3119,7 @@ public class InternalGoLDSLParser extends AbstractInternalAntlrParser {
 
             	    					newCompositeNode(grammarAccess.getGridAccess().getPartsGridPartEnumRuleCall_2_0());
             	    				
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    lv_parts_2_0=ruleGridPart();
 
             	    state._fsp--;
@@ -3154,12 +3143,12 @@ public class InternalGoLDSLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt10 >= 1 ) break loop10;
+            	    if ( cnt9 >= 1 ) break loop9;
                         EarlyExitException eee =
-                            new EarlyExitException(10, input);
+                            new EarlyExitException(9, input);
                         throw eee;
                 }
-                cnt10++;
+                cnt9++;
             } while (true);
 
 
@@ -3466,22 +3455,22 @@ public class InternalGoLDSLParser extends AbstractInternalAntlrParser {
             // InternalGoLDSL.g:1360:2: ( (enumLiteral_0= '&' ) | (enumLiteral_1= '|' ) )
             {
             // InternalGoLDSL.g:1360:2: ( (enumLiteral_0= '&' ) | (enumLiteral_1= '|' ) )
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA11_0==29) ) {
-                alt11=1;
+            if ( (LA10_0==29) ) {
+                alt10=1;
             }
-            else if ( (LA11_0==30) ) {
-                alt11=2;
+            else if ( (LA10_0==30) ) {
+                alt10=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
             }
-            switch (alt11) {
+            switch (alt10) {
                 case 1 :
                     // InternalGoLDSL.g:1361:3: (enumLiteral_0= '&' )
                     {
@@ -3554,22 +3543,22 @@ public class InternalGoLDSLParser extends AbstractInternalAntlrParser {
             // InternalGoLDSL.g:1387:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
             {
             // InternalGoLDSL.g:1387:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA12_0==31) ) {
-                alt12=1;
+            if ( (LA11_0==31) ) {
+                alt11=1;
             }
-            else if ( (LA12_0==32) ) {
-                alt12=2;
+            else if ( (LA11_0==32) ) {
+                alt11=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 11, 0, input);
 
                 throw nvae;
             }
-            switch (alt12) {
+            switch (alt11) {
                 case 1 :
                     // InternalGoLDSL.g:1388:3: (enumLiteral_0= '+' )
                     {
@@ -3648,7 +3637,8 @@ public class InternalGoLDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000003400020L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000060000002L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000190000000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000190000002L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000180000000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000180000002L});
 
 }

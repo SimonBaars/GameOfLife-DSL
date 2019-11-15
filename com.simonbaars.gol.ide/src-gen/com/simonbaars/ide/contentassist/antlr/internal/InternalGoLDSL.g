@@ -2096,7 +2096,7 @@ rule__Grid__Group__1__Impl
 :
 (
 	{ before(grammarAccess.getGridAccess().getSizeAssignment_1()); }
-	(rule__Grid__SizeAssignment_1)?
+	(rule__Grid__SizeAssignment_1)
 	{ after(grammarAccess.getGridAccess().getSizeAssignment_1()); }
 )
 ;

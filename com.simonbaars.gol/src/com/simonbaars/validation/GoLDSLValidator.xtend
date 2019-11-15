@@ -18,8 +18,6 @@ import org.eclipse.xtext.validation.Check
  */
 class GoLDSLValidator extends AbstractGoLDSLValidator {
 	
-//	public static val INVALID_NAME = 'invalidName'
-//
 	@Check
 	def checkGreetingStartsWithCapital(Grid grid) {
 		if(grid.getSize().getWidth()*grid.getSize().getHeight()!=grid.getParts().size()){

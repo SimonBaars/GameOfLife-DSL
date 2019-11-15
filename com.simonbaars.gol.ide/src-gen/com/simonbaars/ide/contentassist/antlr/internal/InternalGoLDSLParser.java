@@ -2322,11 +2322,11 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
                 {
                 int LA5_1 = input.LA(2);
 
-                if ( (LA5_1==27) ) {
-                    alt5=2;
-                }
-                else if ( (LA5_1==EOF||(LA5_1>=11 && LA5_1<=12)||LA5_1==24) ) {
+                if ( (LA5_1==EOF||(LA5_1>=11 && LA5_1<=12)||LA5_1==24) ) {
                     alt5=1;
+                }
+                else if ( (LA5_1==27) ) {
+                    alt5=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -6444,7 +6444,7 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
             // InternalGoLDSL.g:2084:1: ( rule__Grid__Group__1__Impl rule__Grid__Group__2 )
             // InternalGoLDSL.g:2085:2: rule__Grid__Group__1__Impl rule__Grid__Group__2
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_21);
             rule__Grid__Group__1__Impl();
 
             state._fsp--;
@@ -6473,38 +6473,27 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grid__Group__1__Impl"
-    // InternalGoLDSL.g:2092:1: rule__Grid__Group__1__Impl : ( ( rule__Grid__SizeAssignment_1 )? ) ;
+    // InternalGoLDSL.g:2092:1: rule__Grid__Group__1__Impl : ( ( rule__Grid__SizeAssignment_1 ) ) ;
     public final void rule__Grid__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2096:1: ( ( ( rule__Grid__SizeAssignment_1 )? ) )
-            // InternalGoLDSL.g:2097:1: ( ( rule__Grid__SizeAssignment_1 )? )
+            // InternalGoLDSL.g:2096:1: ( ( ( rule__Grid__SizeAssignment_1 ) ) )
+            // InternalGoLDSL.g:2097:1: ( ( rule__Grid__SizeAssignment_1 ) )
             {
-            // InternalGoLDSL.g:2097:1: ( ( rule__Grid__SizeAssignment_1 )? )
-            // InternalGoLDSL.g:2098:2: ( rule__Grid__SizeAssignment_1 )?
+            // InternalGoLDSL.g:2097:1: ( ( rule__Grid__SizeAssignment_1 ) )
+            // InternalGoLDSL.g:2098:2: ( rule__Grid__SizeAssignment_1 )
             {
              before(grammarAccess.getGridAccess().getSizeAssignment_1()); 
-            // InternalGoLDSL.g:2099:2: ( rule__Grid__SizeAssignment_1 )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // InternalGoLDSL.g:2099:2: ( rule__Grid__SizeAssignment_1 )
+            // InternalGoLDSL.g:2099:3: rule__Grid__SizeAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Grid__SizeAssignment_1();
 
-            if ( (LA13_0==32) ) {
-                alt13=1;
-            }
-            switch (alt13) {
-                case 1 :
-                    // InternalGoLDSL.g:2099:3: rule__Grid__SizeAssignment_1
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Grid__SizeAssignment_1();
+            state._fsp--;
 
-                    state._fsp--;
-
-
-                    }
-                    break;
 
             }
 
@@ -6583,7 +6572,7 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
             // InternalGoLDSL.g:2126:3: ( rule__Grid__PartsAssignment_2 )
             // InternalGoLDSL.g:2126:4: rule__Grid__PartsAssignment_2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_22);
             rule__Grid__PartsAssignment_2();
 
             state._fsp--;
@@ -6600,21 +6589,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getGridAccess().getPartsAssignment_2()); 
             // InternalGoLDSL.g:2131:3: ( rule__Grid__PartsAssignment_2 )*
-            loop14:
+            loop13:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( ((LA14_0>=13 && LA14_0<=14)) ) {
-                    alt14=1;
+                if ( ((LA13_0>=13 && LA13_0<=14)) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt13) {
             	case 1 :
             	    // InternalGoLDSL.g:2131:4: rule__Grid__PartsAssignment_2
             	    {
-            	    pushFollow(FOLLOW_21);
+            	    pushFollow(FOLLOW_22);
             	    rule__Grid__PartsAssignment_2();
 
             	    state._fsp--;
@@ -6624,7 +6613,7 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop13;
                 }
             } while (true);
 
@@ -8654,7 +8643,8 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000034000020L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000001800L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000100006000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000100006002L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000006000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000006002L});
 
 }

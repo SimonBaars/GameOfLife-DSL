@@ -1208,7 +1208,7 @@ ruleGrid returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)?
+		)
 		(
 			(
 				{

@@ -10,6 +10,7 @@ import com.simonbaars.goLDSL.DSL;
 import com.simonbaars.goLDSL.Grid;
 import com.simonbaars.goLDSL.GridPart;
 import com.simonbaars.goLDSL.Objects;
+import com.simonbaars.goLDSL.Offset;
 import com.simonbaars.goLDSL.Rule;
 import com.simonbaars.goLDSL.ShapeDef;
 import com.simonbaars.goLDSL.ShapeRef;
@@ -40,7 +41,8 @@ public class JavaGenerator {
     _builder.append("public static void computeSurvivors(boolean[][] gameBoard, List<Point> survivingCells, int surrounding) {");
     _builder.newLine();
     _builder.append("\t\t");
-    JavaGenerator.getRules(dsl.getRules(), dsl.getShapes());
+    String _rules = JavaGenerator.getRules(dsl.getRules(), dsl.getShapes());
+    _builder.append(_rules, "\t\t");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("}");
@@ -64,8 +66,8 @@ public class JavaGenerator {
     return _builder;
   }
   
-  public static void getRules(final EList<Rule> rules, final EList<ShapeDef> shapes) {
-    throw new UnsupportedOperationException("TODO: auto-generated method stub");
+  public static String getRules(final EList<Rule> rules, final EList<ShapeDef> shapes) {
+    return "";
   }
   
   public static String getBeginPoints(final Board board, final EList<ShapeDef> shapes) {
@@ -172,11 +174,19 @@ public class JavaGenerator {
   }
   
   public static String shapeToJava(final EList<ShapeDef> shapes, final ShapeDef shape, final Position offset) {
-    int _x = shape.getOffset().getX();
-    int _minus = (-_x);
-    int _y = shape.getOffset().getY();
-    int _minus_1 = (-_y);
-    return JavaGenerator.objectsToJava(shape.getObjects(), shapes, JavaGenerator.merge(offset, JavaGenerator.pos(_minus, _minus_1)));
+    Position _xifexpression = null;
+    Offset _offset = shape.getOffset();
+    boolean _tripleEquals = (_offset == null);
+    if (_tripleEquals) {
+      _xifexpression = JavaGenerator.pos(0, 0);
+    } else {
+      int _x = shape.getOffset().getX();
+      int _minus = (-_x);
+      int _y = shape.getOffset().getY();
+      int _minus_1 = (-_y);
+      _xifexpression = JavaGenerator.pos(_minus, _minus_1);
+    }
+    return JavaGenerator.objectsToJava(shape.getObjects(), shapes, JavaGenerator.merge(offset, _xifexpression));
   }
   
   public static ShapeDef getShapeByName(final EList<ShapeDef> shapes, final String name) {

@@ -23,7 +23,7 @@ BoundedRange: lowerBound = INT '..' higherBound = INT;
 UnboundedRange: LeftUnboundedRange | RightUnboundedRange;
 LeftUnboundedRange: '<' lowerBound = INT;
 RightUnboundedRange: '>' higherBound = INT;
-Grid: 'Grid:' size=Size? (parts += GridPart)+;
+Grid: 'Grid:' size=Size (parts += GridPart)+;
 enum GridPart: ALIVE = '+' | DEAD = '-';
 Offset: 'offset' x=INT y=INT;
 Size: 'size' width=INT height=INT;

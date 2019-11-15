@@ -263,7 +263,7 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     Grid returns Grid
 	 *
 	 * Constraint:
-	 *     (size=Size? parts+=GridPart+)
+	 *     (size=Size parts+=GridPart+)
 	 */
 	protected void sequence_Grid(ISerializationContext context, Grid semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

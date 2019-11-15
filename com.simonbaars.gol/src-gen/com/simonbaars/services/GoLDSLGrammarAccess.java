@@ -615,16 +615,16 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPartsGridPartEnumRuleCall_2_0 = (RuleCall)cPartsAssignment_2.eContents().get(0);
 		
 		//Grid:
-		//	'Grid:' size=Size? parts+=GridPart+;
+		//	'Grid:' size=Size parts+=GridPart+;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Grid:' size=Size? parts+=GridPart+
+		//'Grid:' size=Size parts+=GridPart+
 		public Group getGroup() { return cGroup; }
 		
 		//'Grid:'
 		public Keyword getGridKeyword_0() { return cGridKeyword_0; }
 		
-		//size=Size?
+		//size=Size
 		public Assignment getSizeAssignment_1() { return cSizeAssignment_1; }
 		
 		//Size
@@ -1054,7 +1054,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Grid:
-	//	'Grid:' size=Size? parts+=GridPart+;
+	//	'Grid:' size=Size parts+=GridPart+;
 	public GridElements getGridAccess() {
 		return pGrid;
 	}
