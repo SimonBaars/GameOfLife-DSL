@@ -77,6 +77,7 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getConditionRuleAccess().getNumberAssignment_0(), "rule__ConditionRule__NumberAssignment_0");
 			builder.put(grammarAccess.getConditionRuleAccess().getRangeAssignment_1(), "rule__ConditionRule__RangeAssignment_1");
 			builder.put(grammarAccess.getConditionRuleAccess().getAliveAssignment_2(), "rule__ConditionRule__AliveAssignment_2");
+			builder.put(grammarAccess.getConditionRuleAccess().getDeadAssignment_3(), "rule__ConditionRule__DeadAssignment_3");
 			builder.put(grammarAccess.getConditionRulesAccess().getRule1Assignment_0(), "rule__ConditionRules__Rule1Assignment_0");
 			builder.put(grammarAccess.getConditionRulesAccess().getOperatorAssignment_1_0(), "rule__ConditionRules__OperatorAssignment_1_0");
 			builder.put(grammarAccess.getConditionRulesAccess().getRule2Assignment_1_1(), "rule__ConditionRules__Rule2Assignment_1_1");

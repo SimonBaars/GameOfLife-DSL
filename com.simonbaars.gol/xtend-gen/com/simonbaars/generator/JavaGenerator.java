@@ -3,7 +3,6 @@ package com.simonbaars.generator;
 import com.simonbaars.generator.Position;
 import com.simonbaars.goLDSL.Action;
 import com.simonbaars.goLDSL.Board;
-import com.simonbaars.goLDSL.BoolOperator;
 import com.simonbaars.goLDSL.BoundedRange;
 import com.simonbaars.goLDSL.Cell;
 import com.simonbaars.goLDSL.CellDef;
@@ -97,25 +96,29 @@ public class JavaGenerator {
   
   public static String conditionToJava(final ConditionRules condition) {
     String rule = JavaGenerator.ruleToJava(condition.getRule1());
-    BoolOperator _operator = condition.getOperator();
-    boolean _tripleNotEquals = (_operator != null);
-    if (_tripleNotEquals) {
+    if (((condition.getOperator() != null) && (condition.getRule2() != null))) {
       String _rule = rule;
-      int _value = condition.getOperator().getValue();
-      int _value_1 = condition.getOperator().getValue();
-      int _plus = (_value + _value_1);
+      String _string = condition.getOperator().toString();
+      String _string_1 = condition.getOperator().toString();
+      String _plus = (_string + _string_1);
       String _conditionToJava = JavaGenerator.conditionToJava(condition.getRule2());
-      String _plus_1 = (Integer.valueOf(_plus) + _conditionToJava);
+      String _plus_1 = (_plus + _conditionToJava);
       rule = (_rule + _plus_1);
     }
     return rule;
   }
   
   public static String ruleToJava(final ConditionRule rule) {
-    String _alive = rule.getAlive();
-    boolean _tripleNotEquals = (_alive != null);
-    if (_tripleNotEquals) {
-      return "board[i][j]";
+    if (((rule.getAlive() != null) || (rule.getDead() != null))) {
+      String _xifexpression = null;
+      String _dead = rule.getDead();
+      boolean _tripleNotEquals = (_dead != null);
+      if (_tripleNotEquals) {
+        _xifexpression = "!";
+      } else {
+        _xifexpression = "";
+      }
+      return (_xifexpression + "board[i][j]");
     } else {
       Range _range = rule.getRange();
       boolean _tripleNotEquals_1 = (_range != null);
@@ -150,8 +153,8 @@ public class JavaGenerator {
   }
   
   public static String actionToJava(final Action action, final EList<ShapeDef> shapes) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field objects is undefined for the type Action");
+    Position _position = new Position(0, 0, true);
+    return JavaGenerator.objectsToJava(((Objects) action), shapes, _position);
   }
   
   public static String getBeginPoints(final Board board, final EList<ShapeDef> shapes) {

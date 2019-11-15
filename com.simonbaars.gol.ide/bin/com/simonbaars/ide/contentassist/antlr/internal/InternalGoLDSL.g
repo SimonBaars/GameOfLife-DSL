@@ -696,6 +696,12 @@ rule__ConditionRule__Alternatives
 		(rule__ConditionRule__AliveAssignment_2)
 		{ after(grammarAccess.getConditionRuleAccess().getAliveAssignment_2()); }
 	)
+	|
+	(
+		{ before(grammarAccess.getConditionRuleAccess().getDeadAssignment_3()); }
+		(rule__ConditionRule__DeadAssignment_3)
+		{ after(grammarAccess.getConditionRuleAccess().getDeadAssignment_3()); }
+	)
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2487,13 +2493,32 @@ rule__ConditionRule__AliveAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getConditionRuleAccess().getAliveIsAliveKeyword_2_0()); }
+		{ before(grammarAccess.getConditionRuleAccess().getAliveAliveKeyword_2_0()); }
 		(
-			{ before(grammarAccess.getConditionRuleAccess().getAliveIsAliveKeyword_2_0()); }
-			'IsAlive'
-			{ after(grammarAccess.getConditionRuleAccess().getAliveIsAliveKeyword_2_0()); }
+			{ before(grammarAccess.getConditionRuleAccess().getAliveAliveKeyword_2_0()); }
+			'Alive'
+			{ after(grammarAccess.getConditionRuleAccess().getAliveAliveKeyword_2_0()); }
 		)
-		{ after(grammarAccess.getConditionRuleAccess().getAliveIsAliveKeyword_2_0()); }
+		{ after(grammarAccess.getConditionRuleAccess().getAliveAliveKeyword_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ConditionRule__DeadAssignment_3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getConditionRuleAccess().getDeadDeadKeyword_3_0()); }
+		(
+			{ before(grammarAccess.getConditionRuleAccess().getDeadDeadKeyword_3_0()); }
+			'Dead'
+			{ after(grammarAccess.getConditionRuleAccess().getDeadDeadKeyword_3_0()); }
+		)
+		{ after(grammarAccess.getConditionRuleAccess().getDeadDeadKeyword_3_0()); }
 	)
 ;
 finally {

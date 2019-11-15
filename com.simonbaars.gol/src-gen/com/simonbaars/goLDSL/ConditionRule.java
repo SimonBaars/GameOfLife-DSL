@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.simonbaars.goLDSL.ConditionRule#getNumber <em>Number</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.ConditionRule#getRange <em>Range</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.ConditionRule#getAlive <em>Alive</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.ConditionRule#getDead <em>Dead</em>}</li>
  * </ul>
  *
  * @see com.simonbaars.goLDSL.GoLDSLPackage#getConditionRule()
@@ -90,5 +91,27 @@ public interface ConditionRule extends EObject
    * @generated
    */
   void setAlive(String value);
+
+  /**
+   * Returns the value of the '<em><b>Dead</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Dead</em>' attribute.
+   * @see #setDead(String)
+   * @see com.simonbaars.goLDSL.GoLDSLPackage#getConditionRule_Dead()
+   * @model
+   * @generated
+   */
+  String getDead();
+
+  /**
+   * Sets the value of the '{@link com.simonbaars.goLDSL.ConditionRule#getDead <em>Dead</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Dead</em>' attribute.
+   * @see #getDead()
+   * @generated
+   */
+  void setDead(String value);
 
 } // ConditionRule

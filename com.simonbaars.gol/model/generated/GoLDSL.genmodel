@@ -55,6 +55,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//ConditionRule/number"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//ConditionRule/range"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//ConditionRule/alive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//ConditionRule/dead"/>
     </genClasses>
     <genClasses ecoreClass="GoLDSL.ecore#//ConditionRules">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//ConditionRules/rule1"/>

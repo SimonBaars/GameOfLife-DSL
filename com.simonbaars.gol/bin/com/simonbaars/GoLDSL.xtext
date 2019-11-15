@@ -14,7 +14,7 @@ Cell: x=INT ',' y=INT;
 Rule: 'Rule:' condition=Condition action=Action;
 Action: 'Create' Objects; 
 Condition: 'If' ConditionRules;
-ConditionRule: (number = INT | range = Range | alive = 'IsAlive');
+ConditionRule: (number = INT | range = Range | alive = 'Alive' | dead = 'Dead');
 ConditionRules: rule1 = ConditionRule (operator = BoolOperator rule2 = ConditionRules)?;
 enum BoolOperator: AND = '&' | OR = '|';
 Range: BoundedRange | LeftUnboundedRange | RightUnboundedRange;

@@ -389,13 +389,15 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRangeAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cRangeRangeParserRuleCall_1_0 = (RuleCall)cRangeAssignment_1.eContents().get(0);
 		private final Assignment cAliveAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final Keyword cAliveIsAliveKeyword_2_0 = (Keyword)cAliveAssignment_2.eContents().get(0);
+		private final Keyword cAliveAliveKeyword_2_0 = (Keyword)cAliveAssignment_2.eContents().get(0);
+		private final Assignment cDeadAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
+		private final Keyword cDeadDeadKeyword_3_0 = (Keyword)cDeadAssignment_3.eContents().get(0);
 		
 		//ConditionRule:
-		//	number=INT | range=Range | alive='IsAlive';
+		//	number=INT | range=Range | alive='Alive' | dead='Dead';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//number=INT | range=Range | alive='IsAlive'
+		//number=INT | range=Range | alive='Alive' | dead='Dead'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//number=INT
@@ -410,11 +412,17 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//Range
 		public RuleCall getRangeRangeParserRuleCall_1_0() { return cRangeRangeParserRuleCall_1_0; }
 		
-		//alive='IsAlive'
+		//alive='Alive'
 		public Assignment getAliveAssignment_2() { return cAliveAssignment_2; }
 		
-		//'IsAlive'
-		public Keyword getAliveIsAliveKeyword_2_0() { return cAliveIsAliveKeyword_2_0; }
+		//'Alive'
+		public Keyword getAliveAliveKeyword_2_0() { return cAliveAliveKeyword_2_0; }
+		
+		//dead='Dead'
+		public Assignment getDeadAssignment_3() { return cDeadAssignment_3; }
+		
+		//'Dead'
+		public Keyword getDeadDeadKeyword_3_0() { return cDeadDeadKeyword_3_0; }
 	}
 	public class ConditionRulesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.ConditionRules");
@@ -910,7 +918,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ConditionRule:
-	//	number=INT | range=Range | alive='IsAlive';
+	//	number=INT | range=Range | alive='Alive' | dead='Dead';
 	public ConditionRuleElements getConditionRuleAccess() {
 		return pConditionRule;
 	}

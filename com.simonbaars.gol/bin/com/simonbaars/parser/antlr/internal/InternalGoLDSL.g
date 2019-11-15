@@ -784,15 +784,30 @@ ruleConditionRule returns [EObject current=null]
 		    |
 		(
 			(
-				lv_alive_2_0='IsAlive'
+				lv_alive_2_0='Alive'
 				{
-					newLeafNode(lv_alive_2_0, grammarAccess.getConditionRuleAccess().getAliveIsAliveKeyword_2_0());
+					newLeafNode(lv_alive_2_0, grammarAccess.getConditionRuleAccess().getAliveAliveKeyword_2_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getConditionRuleRule());
 					}
-					setWithLastConsumed($current, "alive", lv_alive_2_0, "IsAlive");
+					setWithLastConsumed($current, "alive", lv_alive_2_0, "Alive");
+				}
+			)
+		)
+		    |
+		(
+			(
+				lv_dead_3_0='Dead'
+				{
+					newLeafNode(lv_dead_3_0, grammarAccess.getConditionRuleAccess().getDeadDeadKeyword_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getConditionRuleRule());
+					}
+					setWithLastConsumed($current, "dead", lv_dead_3_0, "Dead");
 				}
 			)
 		)

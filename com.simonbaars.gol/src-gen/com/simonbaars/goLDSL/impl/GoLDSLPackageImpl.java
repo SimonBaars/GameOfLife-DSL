@@ -648,6 +648,17 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
+  public EAttribute getConditionRule_Dead()
+  {
+    return (EAttribute)conditionRuleEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getConditionRules()
   {
     return conditionRulesEClass;
@@ -972,6 +983,7 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     createEAttribute(conditionRuleEClass, CONDITION_RULE__NUMBER);
     createEReference(conditionRuleEClass, CONDITION_RULE__RANGE);
     createEAttribute(conditionRuleEClass, CONDITION_RULE__ALIVE);
+    createEAttribute(conditionRuleEClass, CONDITION_RULE__DEAD);
 
     conditionRulesEClass = createEClass(CONDITION_RULES);
     createEReference(conditionRulesEClass, CONDITION_RULES__RULE1);
@@ -1092,6 +1104,7 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     initEAttribute(getConditionRule_Number(), ecorePackage.getEInt(), "number", null, 0, 1, ConditionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getConditionRule_Range(), this.getRange(), null, "range", null, 0, 1, ConditionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getConditionRule_Alive(), ecorePackage.getEString(), "alive", null, 0, 1, ConditionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getConditionRule_Dead(), ecorePackage.getEString(), "dead", null, 0, 1, ConditionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(conditionRulesEClass, ConditionRules.class, "ConditionRules", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getConditionRules_Rule1(), this.getConditionRule(), null, "rule1", null, 0, 1, ConditionRules.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

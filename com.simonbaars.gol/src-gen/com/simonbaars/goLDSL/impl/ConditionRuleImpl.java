@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRuleImpl#getNumber <em>Number</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRuleImpl#getRange <em>Range</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRuleImpl#getAlive <em>Alive</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.impl.ConditionRuleImpl#getDead <em>Dead</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,6 +83,26 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
    * @ordered
    */
   protected String alive = ALIVE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getDead() <em>Dead</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDead()
+   * @generated
+   * @ordered
+   */
+  protected static final String DEAD_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getDead() <em>Dead</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDead()
+   * @generated
+   * @ordered
+   */
+  protected String dead = DEAD_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -210,6 +231,31 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
    * @generated
    */
   @Override
+  public String getDead()
+  {
+    return dead;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setDead(String newDead)
+  {
+    String oldDead = dead;
+    dead = newDead;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CONDITION_RULE__DEAD, oldDead, dead));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -236,6 +282,8 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
         return getRange();
       case GoLDSLPackage.CONDITION_RULE__ALIVE:
         return getAlive();
+      case GoLDSLPackage.CONDITION_RULE__DEAD:
+        return getDead();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -258,6 +306,9 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
         return;
       case GoLDSLPackage.CONDITION_RULE__ALIVE:
         setAlive((String)newValue);
+        return;
+      case GoLDSLPackage.CONDITION_RULE__DEAD:
+        setDead((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -282,6 +333,9 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
       case GoLDSLPackage.CONDITION_RULE__ALIVE:
         setAlive(ALIVE_EDEFAULT);
         return;
+      case GoLDSLPackage.CONDITION_RULE__DEAD:
+        setDead(DEAD_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -302,6 +356,8 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
         return range != null;
       case GoLDSLPackage.CONDITION_RULE__ALIVE:
         return ALIVE_EDEFAULT == null ? alive != null : !ALIVE_EDEFAULT.equals(alive);
+      case GoLDSLPackage.CONDITION_RULE__DEAD:
+        return DEAD_EDEFAULT == null ? dead != null : !DEAD_EDEFAULT.equals(dead);
     }
     return super.eIsSet(featureID);
   }
@@ -321,6 +377,8 @@ public class ConditionRuleImpl extends MinimalEObjectImpl.Container implements C
     result.append(number);
     result.append(", alive: ");
     result.append(alive);
+    result.append(", dead: ");
+    result.append(dead);
     result.append(')');
     return result.toString();
   }

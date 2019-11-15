@@ -34,7 +34,7 @@ class GoLDSLValidator extends AbstractGoLDSLValidator {
 			findNonExistentShapes(def.objects.shapes, shapes)
 		}
 		for(Rule rule : dsl.rules){
-			findNonExistentShapes(rule.action.objects.shapes, shapes)
+			findNonExistentShapes((rule.action as Objects).shapes, shapes)
 		}
 	}
 	

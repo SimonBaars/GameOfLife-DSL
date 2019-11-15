@@ -57,15 +57,15 @@ public class RulesOfLife {
 		
 	def static String conditionToJava(ConditionRules condition) {
 		var rule = ruleToJava(condition.rule1)
-		if(condition.operator !== null){
-			rule += condition.operator.value + condition.operator.value + conditionToJava(condition.rule2)
+		if(condition.operator !== null && condition.rule2 !== null){
+			rule += condition.operator.toString + condition.operator.toString + conditionToJava(condition.rule2)
 		}
 		return rule
 	}
 	
 	def static ruleToJava(ConditionRule rule) {
-		if(rule.alive !== null){
-			return "board[i][j]";
+		if(rule.alive !== null || rule.dead !== null){
+			return (rule.dead !== null ? "!" : "") + "board[i][j]";
 		} else if (rule.range !== null) {
 			return rangeToJava(rule.range)
 		}
@@ -86,7 +86,7 @@ public class RulesOfLife {
 	}
 		
 	def static actionToJava(Action action, EList<ShapeDef> shapes) {
-		objectsToJava(action.objects, shapes, new Position(0, 0, true))
+		objectsToJava(action as Objects, shapes, new Position(0, 0, true))
 	}
 	
 	def static getBeginPoints(Board board, EList<ShapeDef> shapes) {

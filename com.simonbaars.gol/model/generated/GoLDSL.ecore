@@ -55,6 +55,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="range" eType="#//Range"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dead" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConditionRules" eSuperTypes="#//Condition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rule1" eType="#//ConditionRule"

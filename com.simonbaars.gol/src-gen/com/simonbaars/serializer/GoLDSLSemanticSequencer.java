@@ -158,7 +158,7 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     ConditionRule returns ConditionRule
 	 *
 	 * Constraint:
-	 *     (number=INT | range=Range | alive='IsAlive')
+	 *     (number=INT | range=Range | alive='Alive' | dead='Dead')
 	 */
 	protected void sequence_ConditionRule(ISerializationContext context, ConditionRule semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

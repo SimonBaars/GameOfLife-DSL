@@ -486,13 +486,22 @@ public interface GoLDSLPackage extends EPackage
   int CONDITION_RULE__ALIVE = 2;
 
   /**
+   * The feature id for the '<em><b>Dead</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_RULE__DEAD = 3;
+
+  /**
    * The number of structural features of the '<em>Condition Rule</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITION_RULE_FEATURE_COUNT = 3;
+  int CONDITION_RULE_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.ConditionRulesImpl <em>Condition Rules</em>}' class.
@@ -1146,6 +1155,17 @@ public interface GoLDSLPackage extends EPackage
   EAttribute getConditionRule_Alive();
 
   /**
+   * Returns the meta object for the attribute '{@link com.simonbaars.goLDSL.ConditionRule#getDead <em>Dead</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Dead</em>'.
+   * @see com.simonbaars.goLDSL.ConditionRule#getDead()
+   * @see #getConditionRule()
+   * @generated
+   */
+  EAttribute getConditionRule_Dead();
+
+  /**
    * Returns the meta object for class '{@link com.simonbaars.goLDSL.ConditionRules <em>Condition Rules</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1708,6 +1728,14 @@ public interface GoLDSLPackage extends EPackage
      * @generated
      */
     EAttribute CONDITION_RULE__ALIVE = eINSTANCE.getConditionRule_Alive();
+
+    /**
+     * The meta object literal for the '<em><b>Dead</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONDITION_RULE__DEAD = eINSTANCE.getConditionRule_Dead();
 
     /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.ConditionRulesImpl <em>Condition Rules</em>}' class.
