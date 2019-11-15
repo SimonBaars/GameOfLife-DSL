@@ -176,6 +176,21 @@ public class GoLDSLAdapterFactory extends AdapterFactoryImpl
         return createRightUnboundedRangeAdapter();
       }
       @Override
+      public Adapter caseGrid(Grid object)
+      {
+        return createGridAdapter();
+      }
+      @Override
+      public Adapter caseGridOffset(GridOffset object)
+      {
+        return createGridOffsetAdapter();
+      }
+      @Override
+      public Adapter caseSize(Size object)
+      {
+        return createSizeAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -493,6 +508,51 @@ public class GoLDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRightUnboundedRangeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.Grid <em>Grid</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.simonbaars.goLDSL.Grid
+   * @generated
+   */
+  public Adapter createGridAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.GridOffset <em>Grid Offset</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.simonbaars.goLDSL.GridOffset
+   * @generated
+   */
+  public Adapter createGridOffsetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.Size <em>Size</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.simonbaars.goLDSL.Size
+   * @generated
+   */
+  public Adapter createSizeAdapter()
   {
     return null;
   }

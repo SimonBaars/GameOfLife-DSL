@@ -86,6 +86,9 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
       case GoLDSLPackage.UNBOUNDED_RANGE: return createUnboundedRange();
       case GoLDSLPackage.LEFT_UNBOUNDED_RANGE: return createLeftUnboundedRange();
       case GoLDSLPackage.RIGHT_UNBOUNDED_RANGE: return createRightUnboundedRange();
+      case GoLDSLPackage.GRID: return createGrid();
+      case GoLDSLPackage.GRID_OFFSET: return createGridOffset();
+      case GoLDSLPackage.SIZE: return createSize();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -103,6 +106,8 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
     {
       case GoLDSLPackage.BOOL_OPERATOR:
         return createBoolOperatorFromString(eDataType, initialValue);
+      case GoLDSLPackage.GRID_PART:
+        return createGridPartFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -120,6 +125,8 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
     {
       case GoLDSLPackage.BOOL_OPERATOR:
         return convertBoolOperatorToString(eDataType, instanceValue);
+      case GoLDSLPackage.GRID_PART:
+        return convertGridPartToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -370,6 +377,42 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
+  public Grid createGrid()
+  {
+    GridImpl grid = new GridImpl();
+    return grid;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public GridOffset createGridOffset()
+  {
+    GridOffsetImpl gridOffset = new GridOffsetImpl();
+    return gridOffset;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Size createSize()
+  {
+    SizeImpl size = new SizeImpl();
+    return size;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public BoolOperator createBoolOperatorFromString(EDataType eDataType, String initialValue)
   {
     BoolOperator result = BoolOperator.get(initialValue);
@@ -383,6 +426,28 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
    * @generated
    */
   public String convertBoolOperatorToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GridPart createGridPartFromString(EDataType eDataType, String initialValue)
+  {
+    GridPart result = GridPart.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertGridPartToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

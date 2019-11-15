@@ -170,13 +170,22 @@ public interface GoLDSLPackage extends EPackage
   int OBJECTS__MORE_CELLS = 2;
 
   /**
+   * The feature id for the '<em><b>Grids</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECTS__GRIDS = 3;
+
+  /**
    * The number of structural features of the '<em>Objects</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OBJECTS_FEATURE_COUNT = 3;
+  int OBJECTS_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.ShapeDefImpl <em>Shape Def</em>}' class.
@@ -198,13 +207,22 @@ public interface GoLDSLPackage extends EPackage
   int SHAPE_DEF__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Offset</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHAPE_DEF__OFFSET = 1;
+
+  /**
    * The feature id for the '<em><b>Objects</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SHAPE_DEF__OBJECTS = 1;
+  int SHAPE_DEF__OBJECTS = 2;
 
   /**
    * The number of structural features of the '<em>Shape Def</em>' class.
@@ -213,7 +231,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SHAPE_DEF_FEATURE_COUNT = 2;
+  int SHAPE_DEF_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.CellsDefImpl <em>Cells Def</em>}' class.
@@ -709,6 +727,108 @@ public interface GoLDSLPackage extends EPackage
   int RIGHT_UNBOUNDED_RANGE_FEATURE_COUNT = UNBOUNDED_RANGE_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link com.simonbaars.goLDSL.impl.GridImpl <em>Grid</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.simonbaars.goLDSL.impl.GridImpl
+   * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getGrid()
+   * @generated
+   */
+  int GRID = 20;
+
+  /**
+   * The feature id for the '<em><b>Size</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRID__SIZE = 0;
+
+  /**
+   * The feature id for the '<em><b>Parts</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRID__PARTS = 1;
+
+  /**
+   * The number of structural features of the '<em>Grid</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRID_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link com.simonbaars.goLDSL.impl.GridOffsetImpl <em>Grid Offset</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.simonbaars.goLDSL.impl.GridOffsetImpl
+   * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getGridOffset()
+   * @generated
+   */
+  int GRID_OFFSET = 21;
+
+  /**
+   * The feature id for the '<em><b>Offset</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRID_OFFSET__OFFSET = 0;
+
+  /**
+   * The number of structural features of the '<em>Grid Offset</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRID_OFFSET_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link com.simonbaars.goLDSL.impl.SizeImpl <em>Size</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.simonbaars.goLDSL.impl.SizeImpl
+   * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getSize()
+   * @generated
+   */
+  int SIZE = 22;
+
+  /**
+   * The feature id for the '<em><b>Width</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE__WIDTH = 0;
+
+  /**
+   * The feature id for the '<em><b>Height</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE__HEIGHT = 1;
+
+  /**
+   * The number of structural features of the '<em>Size</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.BoolOperator <em>Bool Operator</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -716,7 +836,17 @@ public interface GoLDSLPackage extends EPackage
    * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getBoolOperator()
    * @generated
    */
-  int BOOL_OPERATOR = 20;
+  int BOOL_OPERATOR = 23;
+
+  /**
+   * The meta object id for the '{@link com.simonbaars.goLDSL.GridPart <em>Grid Part</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.simonbaars.goLDSL.GridPart
+   * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getGridPart()
+   * @generated
+   */
+  int GRID_PART = 24;
 
 
   /**
@@ -827,6 +957,17 @@ public interface GoLDSLPackage extends EPackage
   EReference getObjects_MoreCells();
 
   /**
+   * Returns the meta object for the containment reference list '{@link com.simonbaars.goLDSL.Objects#getGrids <em>Grids</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Grids</em>'.
+   * @see com.simonbaars.goLDSL.Objects#getGrids()
+   * @see #getObjects()
+   * @generated
+   */
+  EReference getObjects_Grids();
+
+  /**
    * Returns the meta object for class '{@link com.simonbaars.goLDSL.ShapeDef <em>Shape Def</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -846,6 +987,17 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    */
   EAttribute getShapeDef_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.simonbaars.goLDSL.ShapeDef#getOffset <em>Offset</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Offset</em>'.
+   * @see com.simonbaars.goLDSL.ShapeDef#getOffset()
+   * @see #getShapeDef()
+   * @generated
+   */
+  EReference getShapeDef_Offset();
 
   /**
    * Returns the meta object for the containment reference '{@link com.simonbaars.goLDSL.ShapeDef#getObjects <em>Objects</em>}'.
@@ -1250,6 +1402,91 @@ public interface GoLDSLPackage extends EPackage
   EAttribute getRightUnboundedRange_HigherBound();
 
   /**
+   * Returns the meta object for class '{@link com.simonbaars.goLDSL.Grid <em>Grid</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Grid</em>'.
+   * @see com.simonbaars.goLDSL.Grid
+   * @generated
+   */
+  EClass getGrid();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.simonbaars.goLDSL.Grid#getSize <em>Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Size</em>'.
+   * @see com.simonbaars.goLDSL.Grid#getSize()
+   * @see #getGrid()
+   * @generated
+   */
+  EReference getGrid_Size();
+
+  /**
+   * Returns the meta object for the attribute list '{@link com.simonbaars.goLDSL.Grid#getParts <em>Parts</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Parts</em>'.
+   * @see com.simonbaars.goLDSL.Grid#getParts()
+   * @see #getGrid()
+   * @generated
+   */
+  EAttribute getGrid_Parts();
+
+  /**
+   * Returns the meta object for class '{@link com.simonbaars.goLDSL.GridOffset <em>Grid Offset</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Grid Offset</em>'.
+   * @see com.simonbaars.goLDSL.GridOffset
+   * @generated
+   */
+  EClass getGridOffset();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.simonbaars.goLDSL.GridOffset#getOffset <em>Offset</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Offset</em>'.
+   * @see com.simonbaars.goLDSL.GridOffset#getOffset()
+   * @see #getGridOffset()
+   * @generated
+   */
+  EAttribute getGridOffset_Offset();
+
+  /**
+   * Returns the meta object for class '{@link com.simonbaars.goLDSL.Size <em>Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Size</em>'.
+   * @see com.simonbaars.goLDSL.Size
+   * @generated
+   */
+  EClass getSize();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.simonbaars.goLDSL.Size#getWidth <em>Width</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Width</em>'.
+   * @see com.simonbaars.goLDSL.Size#getWidth()
+   * @see #getSize()
+   * @generated
+   */
+  EAttribute getSize_Width();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.simonbaars.goLDSL.Size#getHeight <em>Height</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Height</em>'.
+   * @see com.simonbaars.goLDSL.Size#getHeight()
+   * @see #getSize()
+   * @generated
+   */
+  EAttribute getSize_Height();
+
+  /**
    * Returns the meta object for enum '{@link com.simonbaars.goLDSL.BoolOperator <em>Bool Operator</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1258,6 +1495,16 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    */
   EEnum getBoolOperator();
+
+  /**
+   * Returns the meta object for enum '{@link com.simonbaars.goLDSL.GridPart <em>Grid Part</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Grid Part</em>'.
+   * @see com.simonbaars.goLDSL.GridPart
+   * @generated
+   */
+  EEnum getGridPart();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1369,6 +1616,14 @@ public interface GoLDSLPackage extends EPackage
     EReference OBJECTS__MORE_CELLS = eINSTANCE.getObjects_MoreCells();
 
     /**
+     * The meta object literal for the '<em><b>Grids</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OBJECTS__GRIDS = eINSTANCE.getObjects_Grids();
+
+    /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.ShapeDefImpl <em>Shape Def</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1385,6 +1640,14 @@ public interface GoLDSLPackage extends EPackage
      * @generated
      */
     EAttribute SHAPE_DEF__NAME = eINSTANCE.getShapeDef_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Offset</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SHAPE_DEF__OFFSET = eINSTANCE.getShapeDef_Offset();
 
     /**
      * The meta object literal for the '<em><b>Objects</b></em>' containment reference feature.
@@ -1723,6 +1986,76 @@ public interface GoLDSLPackage extends EPackage
     EAttribute RIGHT_UNBOUNDED_RANGE__HIGHER_BOUND = eINSTANCE.getRightUnboundedRange_HigherBound();
 
     /**
+     * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.GridImpl <em>Grid</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.simonbaars.goLDSL.impl.GridImpl
+     * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getGrid()
+     * @generated
+     */
+    EClass GRID = eINSTANCE.getGrid();
+
+    /**
+     * The meta object literal for the '<em><b>Size</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GRID__SIZE = eINSTANCE.getGrid_Size();
+
+    /**
+     * The meta object literal for the '<em><b>Parts</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GRID__PARTS = eINSTANCE.getGrid_Parts();
+
+    /**
+     * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.GridOffsetImpl <em>Grid Offset</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.simonbaars.goLDSL.impl.GridOffsetImpl
+     * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getGridOffset()
+     * @generated
+     */
+    EClass GRID_OFFSET = eINSTANCE.getGridOffset();
+
+    /**
+     * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GRID_OFFSET__OFFSET = eINSTANCE.getGridOffset_Offset();
+
+    /**
+     * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.SizeImpl <em>Size</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.simonbaars.goLDSL.impl.SizeImpl
+     * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getSize()
+     * @generated
+     */
+    EClass SIZE = eINSTANCE.getSize();
+
+    /**
+     * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIZE__WIDTH = eINSTANCE.getSize_Width();
+
+    /**
+     * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIZE__HEIGHT = eINSTANCE.getSize_Height();
+
+    /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.BoolOperator <em>Bool Operator</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1731,6 +2064,16 @@ public interface GoLDSLPackage extends EPackage
      * @generated
      */
     EEnum BOOL_OPERATOR = eINSTANCE.getBoolOperator();
+
+    /**
+     * The meta object literal for the '{@link com.simonbaars.goLDSL.GridPart <em>Grid Part</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.simonbaars.goLDSL.GridPart
+     * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getGridPart()
+     * @generated
+     */
+    EEnum GRID_PART = eINSTANCE.getGridPart();
 
   }
 

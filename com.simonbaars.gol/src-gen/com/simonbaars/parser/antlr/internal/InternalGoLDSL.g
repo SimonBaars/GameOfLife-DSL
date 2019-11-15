@@ -257,6 +257,26 @@ ruleObjects returns [EObject current=null]
 				}
 			)
 		)
+		    |
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getObjectsAccess().getGridsGridParserRuleCall_3_0());
+				}
+				lv_grids_3_0=ruleGrid
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getObjectsRule());
+					}
+					add(
+						$current,
+						"grids",
+						lv_grids_3_0,
+						"com.simonbaars.GoLDSL.Grid");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)+
 ;
 
@@ -305,9 +325,28 @@ ruleShapeDef returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getShapeDefAccess().getObjectsObjectsParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getShapeDefAccess().getOffsetGridOffsetParserRuleCall_3_0());
 				}
-				lv_objects_3_0=ruleObjects
+				lv_offset_3_0=ruleGridOffset
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getShapeDefRule());
+					}
+					set(
+						$current,
+						"offset",
+						lv_offset_3_0,
+						"com.simonbaars.GoLDSL.GridOffset");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getShapeDefAccess().getObjectsObjectsParserRuleCall_4_0());
+				}
+				lv_objects_4_0=ruleObjects
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getShapeDefRule());
@@ -315,7 +354,7 @@ ruleShapeDef returns [EObject current=null]
 					set(
 						$current,
 						"objects",
-						lv_objects_3_0,
+						lv_objects_4_0,
 						"com.simonbaars.GoLDSL.Objects");
 					afterParserOrEnumRuleCall();
 				}
@@ -1131,6 +1170,167 @@ ruleRightUnboundedRange returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleGrid
+entryRuleGrid returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGridRule()); }
+	iv_ruleGrid=ruleGrid
+	{ $current=$iv_ruleGrid.current; }
+	EOF;
+
+// Rule Grid
+ruleGrid returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='Grid:'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGridAccess().getGridKeyword_0());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGridAccess().getSizeSizeParserRuleCall_1_0());
+				}
+				lv_size_1_0=ruleSize
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGridRule());
+					}
+					set(
+						$current,
+						"size",
+						lv_size_1_0,
+						"com.simonbaars.GoLDSL.Size");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGridAccess().getPartsGridPartEnumRuleCall_2_0());
+				}
+				lv_parts_2_0=ruleGridPart
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGridRule());
+					}
+					add(
+						$current,
+						"parts",
+						lv_parts_2_0,
+						"com.simonbaars.GoLDSL.GridPart");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+	)
+;
+
+// Entry rule entryRuleGridOffset
+entryRuleGridOffset returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGridOffsetRule()); }
+	iv_ruleGridOffset=ruleGridOffset
+	{ $current=$iv_ruleGridOffset.current; }
+	EOF;
+
+// Rule GridOffset
+ruleGridOffset returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='offset'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGridOffsetAccess().getOffsetKeyword_0());
+		}
+		(
+			(
+				lv_offset_1_0=RULE_INT
+				{
+					newLeafNode(lv_offset_1_0, grammarAccess.getGridOffsetAccess().getOffsetINTTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGridOffsetRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"offset",
+						lv_offset_1_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleSize
+entryRuleSize returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getSizeRule()); }
+	iv_ruleSize=ruleSize
+	{ $current=$iv_ruleSize.current; }
+	EOF;
+
+// Rule Size
+ruleSize returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='size'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getSizeAccess().getSizeKeyword_0());
+		}
+		(
+			(
+				lv_width_1_0=RULE_INT
+				{
+					newLeafNode(lv_width_1_0, grammarAccess.getSizeAccess().getWidthINTTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getSizeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"width",
+						lv_width_1_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+		(
+			(
+				lv_height_2_0=RULE_INT
+				{
+					newLeafNode(lv_height_2_0, grammarAccess.getSizeAccess().getHeightINTTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getSizeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"height",
+						lv_height_2_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+	)
+;
+
 // Rule BoolOperator
 ruleBoolOperator returns [Enumerator current=null]
 @init {
@@ -1153,6 +1353,33 @@ ruleBoolOperator returns [Enumerator current=null]
 			{
 				$current = grammarAccess.getBoolOperatorAccess().getOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_1, grammarAccess.getBoolOperatorAccess().getOREnumLiteralDeclaration_1());
+			}
+		)
+	)
+;
+
+// Rule GridPart
+ruleGridPart returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='+'
+			{
+				$current = grammarAccess.getGridPartAccess().getANDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getGridPartAccess().getANDEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='-'
+			{
+				$current = grammarAccess.getGridPartAccess().getOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getGridPartAccess().getOREnumLiteralDeclaration_1());
 			}
 		)
 	)

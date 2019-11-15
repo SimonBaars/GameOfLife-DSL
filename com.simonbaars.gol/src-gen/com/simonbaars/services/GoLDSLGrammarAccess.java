@@ -96,12 +96,14 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMoreCellCellDefParserRuleCall_1_0 = (RuleCall)cMoreCellAssignment_1.eContents().get(0);
 		private final Assignment cMoreCellsAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
 		private final RuleCall cMoreCellsCellsDefParserRuleCall_2_0 = (RuleCall)cMoreCellsAssignment_2.eContents().get(0);
+		private final Assignment cGridsAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
+		private final RuleCall cGridsGridParserRuleCall_3_0 = (RuleCall)cGridsAssignment_3.eContents().get(0);
 		
 		//Objects:
-		//	(shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef)+;
+		//	(shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef | grids+=Grid)+;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef)+
+		//(shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef | grids+=Grid)+
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//shapes+=ShapeRef
@@ -121,6 +123,12 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//CellsDef
 		public RuleCall getMoreCellsCellsDefParserRuleCall_2_0() { return cMoreCellsCellsDefParserRuleCall_2_0; }
+		
+		//grids+=Grid
+		public Assignment getGridsAssignment_3() { return cGridsAssignment_3; }
+		
+		//Grid
+		public RuleCall getGridsGridParserRuleCall_3_0() { return cGridsGridParserRuleCall_3_0; }
 	}
 	public class ShapeDefElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.ShapeDef");
@@ -129,14 +137,16 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cObjectsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cObjectsObjectsParserRuleCall_3_0 = (RuleCall)cObjectsAssignment_3.eContents().get(0);
+		private final Assignment cOffsetAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cOffsetGridOffsetParserRuleCall_3_0 = (RuleCall)cOffsetAssignment_3.eContents().get(0);
+		private final Assignment cObjectsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cObjectsObjectsParserRuleCall_4_0 = (RuleCall)cObjectsAssignment_4.eContents().get(0);
 		
 		//ShapeDef:
-		//	'Shape' name=ID ':' objects=Objects;
+		//	'Shape' name=ID ':' offset=GridOffset? objects=Objects;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Shape' name=ID ':' objects=Objects
+		//'Shape' name=ID ':' offset=GridOffset? objects=Objects
 		public Group getGroup() { return cGroup; }
 		
 		//'Shape'
@@ -151,11 +161,17 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//':'
 		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 		
+		//offset=GridOffset?
+		public Assignment getOffsetAssignment_3() { return cOffsetAssignment_3; }
+		
+		//GridOffset
+		public RuleCall getOffsetGridOffsetParserRuleCall_3_0() { return cOffsetGridOffsetParserRuleCall_3_0; }
+		
 		//objects=Objects
-		public Assignment getObjectsAssignment_3() { return cObjectsAssignment_3; }
+		public Assignment getObjectsAssignment_4() { return cObjectsAssignment_4; }
 		
 		//Objects
-		public RuleCall getObjectsObjectsParserRuleCall_3_0() { return cObjectsObjectsParserRuleCall_3_0; }
+		public RuleCall getObjectsObjectsParserRuleCall_4_0() { return cObjectsObjectsParserRuleCall_4_0; }
 	}
 	public class CellPairsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.CellPairs");
@@ -590,6 +606,91 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getHigherBoundINTTerminalRuleCall_1_0() { return cHigherBoundINTTerminalRuleCall_1_0; }
 	}
+	public class GridElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Grid");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cGridKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cSizeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSizeSizeParserRuleCall_1_0 = (RuleCall)cSizeAssignment_1.eContents().get(0);
+		private final Assignment cPartsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cPartsGridPartEnumRuleCall_2_0 = (RuleCall)cPartsAssignment_2.eContents().get(0);
+		
+		//Grid:
+		//	'Grid:' size=Size? parts+=GridPart+;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'Grid:' size=Size? parts+=GridPart+
+		public Group getGroup() { return cGroup; }
+		
+		//'Grid:'
+		public Keyword getGridKeyword_0() { return cGridKeyword_0; }
+		
+		//size=Size?
+		public Assignment getSizeAssignment_1() { return cSizeAssignment_1; }
+		
+		//Size
+		public RuleCall getSizeSizeParserRuleCall_1_0() { return cSizeSizeParserRuleCall_1_0; }
+		
+		//parts+=GridPart+
+		public Assignment getPartsAssignment_2() { return cPartsAssignment_2; }
+		
+		//GridPart
+		public RuleCall getPartsGridPartEnumRuleCall_2_0() { return cPartsGridPartEnumRuleCall_2_0; }
+	}
+	public class GridOffsetElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.GridOffset");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cOffsetKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cOffsetAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cOffsetINTTerminalRuleCall_1_0 = (RuleCall)cOffsetAssignment_1.eContents().get(0);
+		
+		//GridOffset:
+		//	'offset' offset=INT;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'offset' offset=INT
+		public Group getGroup() { return cGroup; }
+		
+		//'offset'
+		public Keyword getOffsetKeyword_0() { return cOffsetKeyword_0; }
+		
+		//offset=INT
+		public Assignment getOffsetAssignment_1() { return cOffsetAssignment_1; }
+		
+		//INT
+		public RuleCall getOffsetINTTerminalRuleCall_1_0() { return cOffsetINTTerminalRuleCall_1_0; }
+	}
+	public class SizeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Size");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSizeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cWidthAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cWidthINTTerminalRuleCall_1_0 = (RuleCall)cWidthAssignment_1.eContents().get(0);
+		private final Assignment cHeightAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cHeightINTTerminalRuleCall_2_0 = (RuleCall)cHeightAssignment_2.eContents().get(0);
+		
+		//Size:
+		//	'size' width=INT height=INT;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'size' width=INT height=INT
+		public Group getGroup() { return cGroup; }
+		
+		//'size'
+		public Keyword getSizeKeyword_0() { return cSizeKeyword_0; }
+		
+		//width=INT
+		public Assignment getWidthAssignment_1() { return cWidthAssignment_1; }
+		
+		//INT
+		public RuleCall getWidthINTTerminalRuleCall_1_0() { return cWidthINTTerminalRuleCall_1_0; }
+		
+		//height=INT
+		public Assignment getHeightAssignment_2() { return cHeightAssignment_2; }
+		
+		//INT
+		public RuleCall getHeightINTTerminalRuleCall_2_0() { return cHeightINTTerminalRuleCall_2_0; }
+	}
 	
 	public class BoolOperatorElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.BoolOperator");
@@ -618,6 +719,33 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//'|'
 		public Keyword getORVerticalLineKeyword_1_0() { return cORVerticalLineKeyword_1_0; }
 	}
+	public class GridPartElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.GridPart");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cANDEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cANDPlusSignKeyword_0_0 = (Keyword)cANDEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cOREnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cORHyphenMinusKeyword_1_0 = (Keyword)cOREnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum GridPart:
+		//	AND='+' | OR='-';
+		public EnumRule getRule() { return rule; }
+		
+		//AND='+' | OR='-'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//AND='+'
+		public EnumLiteralDeclaration getANDEnumLiteralDeclaration_0() { return cANDEnumLiteralDeclaration_0; }
+		
+		//'+'
+		public Keyword getANDPlusSignKeyword_0_0() { return cANDPlusSignKeyword_0_0; }
+		
+		//OR='-'
+		public EnumLiteralDeclaration getOREnumLiteralDeclaration_1() { return cOREnumLiteralDeclaration_1; }
+		
+		//'-'
+		public Keyword getORHyphenMinusKeyword_1_0() { return cORHyphenMinusKeyword_1_0; }
+	}
 	
 	private final DSLElements pDSL;
 	private final BoardElements pBoard;
@@ -640,6 +768,10 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final UnboundedRangeElements pUnboundedRange;
 	private final LeftUnboundedRangeElements pLeftUnboundedRange;
 	private final RightUnboundedRangeElements pRightUnboundedRange;
+	private final GridElements pGrid;
+	private final GridPartElements eGridPart;
+	private final GridOffsetElements pGridOffset;
+	private final SizeElements pSize;
 	
 	private final Grammar grammar;
 	
@@ -671,6 +803,10 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pUnboundedRange = new UnboundedRangeElements();
 		this.pLeftUnboundedRange = new LeftUnboundedRangeElements();
 		this.pRightUnboundedRange = new RightUnboundedRangeElements();
+		this.pGrid = new GridElements();
+		this.eGridPart = new GridPartElements();
+		this.pGridOffset = new GridOffsetElements();
+		this.pSize = new SizeElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -721,7 +857,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Objects:
-	//	(shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef)+;
+	//	(shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef | grids+=Grid)+;
 	public ObjectsElements getObjectsAccess() {
 		return pObjects;
 	}
@@ -731,7 +867,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ShapeDef:
-	//	'Shape' name=ID ':' objects=Objects;
+	//	'Shape' name=ID ':' offset=GridOffset? objects=Objects;
 	public ShapeDefElements getShapeDefAccess() {
 		return pShapeDef;
 	}
@@ -909,6 +1045,46 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getRightUnboundedRangeRule() {
 		return getRightUnboundedRangeAccess().getRule();
+	}
+	
+	//Grid:
+	//	'Grid:' size=Size? parts+=GridPart+;
+	public GridElements getGridAccess() {
+		return pGrid;
+	}
+	
+	public ParserRule getGridRule() {
+		return getGridAccess().getRule();
+	}
+	
+	//enum GridPart:
+	//	AND='+' | OR='-';
+	public GridPartElements getGridPartAccess() {
+		return eGridPart;
+	}
+	
+	public EnumRule getGridPartRule() {
+		return getGridPartAccess().getRule();
+	}
+	
+	//GridOffset:
+	//	'offset' offset=INT;
+	public GridOffsetElements getGridOffsetAccess() {
+		return pGridOffset;
+	}
+	
+	public ParserRule getGridOffsetRule() {
+		return getGridOffsetAccess().getRule();
+	}
+	
+	//Size:
+	//	'size' width=INT height=INT;
+	public SizeElements getSizeAccess() {
+		return pSize;
+	}
+	
+	public ParserRule getSizeRule() {
+		return getSizeAccess().getRule();
 	}
 	
 	//terminal ID:

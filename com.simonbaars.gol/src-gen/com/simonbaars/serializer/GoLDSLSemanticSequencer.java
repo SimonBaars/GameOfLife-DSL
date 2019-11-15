@@ -13,6 +13,8 @@ import com.simonbaars.goLDSL.ConditionRule;
 import com.simonbaars.goLDSL.ConditionRules;
 import com.simonbaars.goLDSL.DSL;
 import com.simonbaars.goLDSL.GoLDSLPackage;
+import com.simonbaars.goLDSL.Grid;
+import com.simonbaars.goLDSL.GridOffset;
 import com.simonbaars.goLDSL.LeftUnboundedRange;
 import com.simonbaars.goLDSL.Lives;
 import com.simonbaars.goLDSL.Objects;
@@ -20,6 +22,7 @@ import com.simonbaars.goLDSL.RightUnboundedRange;
 import com.simonbaars.goLDSL.Rule;
 import com.simonbaars.goLDSL.ShapeDef;
 import com.simonbaars.goLDSL.ShapeRef;
+import com.simonbaars.goLDSL.Size;
 import com.simonbaars.services.GoLDSLGrammarAccess;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -73,6 +76,12 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case GoLDSLPackage.DSL:
 				sequence_DSL(context, (DSL) semanticObject); 
 				return; 
+			case GoLDSLPackage.GRID:
+				sequence_Grid(context, (Grid) semanticObject); 
+				return; 
+			case GoLDSLPackage.GRID_OFFSET:
+				sequence_GridOffset(context, (GridOffset) semanticObject); 
+				return; 
 			case GoLDSLPackage.LEFT_UNBOUNDED_RANGE:
 				sequence_LeftUnboundedRange(context, (LeftUnboundedRange) semanticObject); 
 				return; 
@@ -93,6 +102,9 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				return; 
 			case GoLDSLPackage.SHAPE_REF:
 				sequence_ShapeRef(context, (ShapeRef) semanticObject); 
+				return; 
+			case GoLDSLPackage.SIZE:
+				sequence_Size(context, (Size) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -248,6 +260,36 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     GridOffset returns GridOffset
+	 *
+	 * Constraint:
+	 *     offset=INT
+	 */
+	protected void sequence_GridOffset(ISerializationContext context, GridOffset semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.GRID_OFFSET__OFFSET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.GRID_OFFSET__OFFSET));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGridOffsetAccess().getOffsetINTTerminalRuleCall_1_0(), semanticObject.getOffset());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Grid returns Grid
+	 *
+	 * Constraint:
+	 *     (size=Size? parts+=GridPart+)
+	 */
+	protected void sequence_Grid(ISerializationContext context, Grid semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Range returns LeftUnboundedRange
 	 *     UnboundedRange returns LeftUnboundedRange
 	 *     LeftUnboundedRange returns LeftUnboundedRange
@@ -289,7 +331,7 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     Objects returns Objects
 	 *
 	 * Constraint:
-	 *     (shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef)+
+	 *     (shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef | grids+=Grid)+
 	 */
 	protected void sequence_Objects(ISerializationContext context, Objects semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -342,19 +384,10 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     ShapeDef returns ShapeDef
 	 *
 	 * Constraint:
-	 *     (name=ID objects=Objects)
+	 *     (name=ID offset=GridOffset? objects=Objects)
 	 */
 	protected void sequence_ShapeDef(ISerializationContext context, ShapeDef semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.SHAPE_DEF__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.SHAPE_DEF__NAME));
-			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.SHAPE_DEF__OBJECTS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.SHAPE_DEF__OBJECTS));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getShapeDefAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getShapeDefAccess().getObjectsObjectsParserRuleCall_3_0(), semanticObject.getObjects());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -378,6 +411,27 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		feeder.accept(grammarAccess.getShapeRefAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getShapeRefAccess().getXINTTerminalRuleCall_3_0(), semanticObject.getX());
 		feeder.accept(grammarAccess.getShapeRefAccess().getYINTTerminalRuleCall_5_0(), semanticObject.getY());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Size returns Size
+	 *
+	 * Constraint:
+	 *     (width=INT height=INT)
+	 */
+	protected void sequence_Size(ISerializationContext context, Size semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.SIZE__WIDTH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.SIZE__WIDTH));
+			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.SIZE__HEIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.SIZE__HEIGHT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSizeAccess().getWidthINTTerminalRuleCall_1_0(), semanticObject.getWidth());
+		feeder.accept(grammarAccess.getSizeAccess().getHeightINTTerminalRuleCall_2_0(), semanticObject.getHeight());
 		feeder.finish();
 	}
 	

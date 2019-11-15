@@ -4,6 +4,7 @@
 package com.simonbaars.goLDSL.impl;
 
 import com.simonbaars.goLDSL.GoLDSLPackage;
+import com.simonbaars.goLDSL.GridOffset;
 import com.simonbaars.goLDSL.Objects;
 import com.simonbaars.goLDSL.ShapeDef;
 
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link com.simonbaars.goLDSL.impl.ShapeDefImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.impl.ShapeDefImpl#getOffset <em>Offset</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.impl.ShapeDefImpl#getObjects <em>Objects</em>}</li>
  * </ul>
  *
@@ -51,6 +53,16 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getOffset() <em>Offset</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOffset()
+   * @generated
+   * @ordered
+   */
+  protected GridOffset offset;
 
   /**
    * The cached value of the '{@link #getObjects() <em>Objects</em>}' containment reference.
@@ -114,6 +126,56 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
    * @generated
    */
   @Override
+  public GridOffset getOffset()
+  {
+    return offset;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetOffset(GridOffset newOffset, NotificationChain msgs)
+  {
+    GridOffset oldOffset = offset;
+    offset = newOffset;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoLDSLPackage.SHAPE_DEF__OFFSET, oldOffset, newOffset);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setOffset(GridOffset newOffset)
+  {
+    if (newOffset != offset)
+    {
+      NotificationChain msgs = null;
+      if (offset != null)
+        msgs = ((InternalEObject)offset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.SHAPE_DEF__OFFSET, null, msgs);
+      if (newOffset != null)
+        msgs = ((InternalEObject)newOffset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.SHAPE_DEF__OFFSET, null, msgs);
+      msgs = basicSetOffset(newOffset, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.SHAPE_DEF__OFFSET, newOffset, newOffset));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Objects getObjects()
   {
     return objects;
@@ -168,6 +230,8 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
   {
     switch (featureID)
     {
+      case GoLDSLPackage.SHAPE_DEF__OFFSET:
+        return basicSetOffset(null, msgs);
       case GoLDSLPackage.SHAPE_DEF__OBJECTS:
         return basicSetObjects(null, msgs);
     }
@@ -186,6 +250,8 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
     {
       case GoLDSLPackage.SHAPE_DEF__NAME:
         return getName();
+      case GoLDSLPackage.SHAPE_DEF__OFFSET:
+        return getOffset();
       case GoLDSLPackage.SHAPE_DEF__OBJECTS:
         return getObjects();
     }
@@ -204,6 +270,9 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
     {
       case GoLDSLPackage.SHAPE_DEF__NAME:
         setName((String)newValue);
+        return;
+      case GoLDSLPackage.SHAPE_DEF__OFFSET:
+        setOffset((GridOffset)newValue);
         return;
       case GoLDSLPackage.SHAPE_DEF__OBJECTS:
         setObjects((Objects)newValue);
@@ -225,6 +294,9 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
       case GoLDSLPackage.SHAPE_DEF__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case GoLDSLPackage.SHAPE_DEF__OFFSET:
+        setOffset((GridOffset)null);
+        return;
       case GoLDSLPackage.SHAPE_DEF__OBJECTS:
         setObjects((Objects)null);
         return;
@@ -244,6 +316,8 @@ public class ShapeDefImpl extends MinimalEObjectImpl.Container implements ShapeD
     {
       case GoLDSLPackage.SHAPE_DEF__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case GoLDSLPackage.SHAPE_DEF__OFFSET:
+        return offset != null;
       case GoLDSLPackage.SHAPE_DEF__OBJECTS:
         return objects != null;
     }

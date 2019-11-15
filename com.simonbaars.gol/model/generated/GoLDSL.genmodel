@@ -10,6 +10,10 @@
       <genEnumLiterals ecoreEnumLiteral="GoLDSL.ecore#//BoolOperator/AND"/>
       <genEnumLiterals ecoreEnumLiteral="GoLDSL.ecore#//BoolOperator/OR"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="GoLDSL.ecore#//GridPart">
+      <genEnumLiterals ecoreEnumLiteral="GoLDSL.ecore#//GridPart/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="GoLDSL.ecore#//GridPart/OR"/>
+    </genEnums>
     <genClasses ecoreClass="GoLDSL.ecore#//DSL">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//DSL/board"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//DSL/rules"/>
@@ -22,9 +26,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/shapes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/moreCell"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/moreCells"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/grids"/>
     </genClasses>
     <genClasses ecoreClass="GoLDSL.ecore#//ShapeDef">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//ShapeDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//ShapeDef/offset"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//ShapeDef/objects"/>
     </genClasses>
     <genClasses ecoreClass="GoLDSL.ecore#//CellPairs">
@@ -75,6 +81,17 @@
     </genClasses>
     <genClasses ecoreClass="GoLDSL.ecore#//RightUnboundedRange">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//RightUnboundedRange/higherBound"/>
+    </genClasses>
+    <genClasses ecoreClass="GoLDSL.ecore#//Grid">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Grid/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//Grid/parts"/>
+    </genClasses>
+    <genClasses ecoreClass="GoLDSL.ecore#//GridOffset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//GridOffset/offset"/>
+    </genClasses>
+    <genClasses ecoreClass="GoLDSL.ecore#//Size">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//Size/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//Size/height"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

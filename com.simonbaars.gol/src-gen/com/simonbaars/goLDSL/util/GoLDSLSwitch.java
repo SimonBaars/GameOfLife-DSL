@@ -221,6 +221,27 @@ public class GoLDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GoLDSLPackage.GRID:
+      {
+        Grid grid = (Grid)theEObject;
+        T result = caseGrid(grid);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoLDSLPackage.GRID_OFFSET:
+      {
+        GridOffset gridOffset = (GridOffset)theEObject;
+        T result = caseGridOffset(gridOffset);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoLDSLPackage.SIZE:
+      {
+        Size size = (Size)theEObject;
+        T result = caseSize(size);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -541,6 +562,54 @@ public class GoLDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRightUnboundedRange(RightUnboundedRange object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Grid</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Grid</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGrid(Grid object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Grid Offset</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Grid Offset</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGridOffset(GridOffset object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Size</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Size</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSize(Size object)
   {
     return null;
   }

@@ -6,6 +6,7 @@ package com.simonbaars.goLDSL.impl;
 import com.simonbaars.goLDSL.CellDef;
 import com.simonbaars.goLDSL.CellsDef;
 import com.simonbaars.goLDSL.GoLDSLPackage;
+import com.simonbaars.goLDSL.Grid;
 import com.simonbaars.goLDSL.Objects;
 import com.simonbaars.goLDSL.ShapeRef;
 
@@ -34,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.simonbaars.goLDSL.impl.ObjectsImpl#getShapes <em>Shapes</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.impl.ObjectsImpl#getMoreCell <em>More Cell</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.impl.ObjectsImpl#getMoreCells <em>More Cells</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.impl.ObjectsImpl#getGrids <em>Grids</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,6 +71,16 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
    * @ordered
    */
   protected EList<CellsDef> moreCells;
+
+  /**
+   * The cached value of the '{@link #getGrids() <em>Grids</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGrids()
+   * @generated
+   * @ordered
+   */
+  protected EList<Grid> grids;
 
   /**
    * <!-- begin-user-doc -->
@@ -142,6 +154,21 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
    * @generated
    */
   @Override
+  public EList<Grid> getGrids()
+  {
+    if (grids == null)
+    {
+      grids = new EObjectContainmentEList<Grid>(Grid.class, this, GoLDSLPackage.OBJECTS__GRIDS);
+    }
+    return grids;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -152,6 +179,8 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
         return ((InternalEList<?>)getMoreCell()).basicRemove(otherEnd, msgs);
       case GoLDSLPackage.OBJECTS__MORE_CELLS:
         return ((InternalEList<?>)getMoreCells()).basicRemove(otherEnd, msgs);
+      case GoLDSLPackage.OBJECTS__GRIDS:
+        return ((InternalEList<?>)getGrids()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -172,6 +201,8 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
         return getMoreCell();
       case GoLDSLPackage.OBJECTS__MORE_CELLS:
         return getMoreCells();
+      case GoLDSLPackage.OBJECTS__GRIDS:
+        return getGrids();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -199,6 +230,10 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
         getMoreCells().clear();
         getMoreCells().addAll((Collection<? extends CellsDef>)newValue);
         return;
+      case GoLDSLPackage.OBJECTS__GRIDS:
+        getGrids().clear();
+        getGrids().addAll((Collection<? extends Grid>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -222,6 +257,9 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
       case GoLDSLPackage.OBJECTS__MORE_CELLS:
         getMoreCells().clear();
         return;
+      case GoLDSLPackage.OBJECTS__GRIDS:
+        getGrids().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -242,6 +280,8 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
         return moreCell != null && !moreCell.isEmpty();
       case GoLDSLPackage.OBJECTS__MORE_CELLS:
         return moreCells != null && !moreCells.isEmpty();
+      case GoLDSLPackage.OBJECTS__GRIDS:
+        return grids != null && !grids.isEmpty();
     }
     return super.eIsSet(featureID);
   }

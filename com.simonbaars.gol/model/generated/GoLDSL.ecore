@@ -20,9 +20,13 @@
         eType="#//CellDef" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="moreCells" upperBound="-1"
         eType="#//CellsDef" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="grids" upperBound="-1"
+        eType="#//Grid" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ShapeDef">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offset" eType="#//GridOffset"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objects" eType="#//Objects"
         containment="true"/>
   </eClassifiers>
@@ -88,5 +92,21 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RightUnboundedRange" eSuperTypes="#//UnboundedRange">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="higherBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Grid">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="size" eType="#//Size" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parts" unique="false" upperBound="-1"
+        eType="#//GridPart"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GridPart">
+    <eLiterals name="AND" literal="+"/>
+    <eLiterals name="OR" value="1" literal="-"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GridOffset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Size">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

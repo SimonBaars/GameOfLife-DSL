@@ -16,6 +16,9 @@ import com.simonbaars.goLDSL.ConditionRule;
 import com.simonbaars.goLDSL.ConditionRules;
 import com.simonbaars.goLDSL.GoLDSLFactory;
 import com.simonbaars.goLDSL.GoLDSLPackage;
+import com.simonbaars.goLDSL.Grid;
+import com.simonbaars.goLDSL.GridOffset;
+import com.simonbaars.goLDSL.GridPart;
 import com.simonbaars.goLDSL.LeftUnboundedRange;
 import com.simonbaars.goLDSL.Lives;
 import com.simonbaars.goLDSL.Objects;
@@ -24,6 +27,7 @@ import com.simonbaars.goLDSL.RightUnboundedRange;
 import com.simonbaars.goLDSL.Rule;
 import com.simonbaars.goLDSL.ShapeDef;
 import com.simonbaars.goLDSL.ShapeRef;
+import com.simonbaars.goLDSL.Size;
 import com.simonbaars.goLDSL.UnboundedRange;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -187,7 +191,35 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass gridEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gridOffsetEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sizeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum boolOperatorEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum gridPartEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -368,6 +400,17 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
+  public EReference getObjects_Grids()
+  {
+    return (EReference)objectsEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getShapeDef()
   {
     return shapeDefEClass;
@@ -390,9 +433,20 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EReference getShapeDef_Objects()
+  public EReference getShapeDef_Offset()
   {
     return (EReference)shapeDefEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getShapeDef_Objects()
+  {
+    return (EReference)shapeDefEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -808,9 +862,108 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
+  public EClass getGrid()
+  {
+    return gridEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getGrid_Size()
+  {
+    return (EReference)gridEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGrid_Parts()
+  {
+    return (EAttribute)gridEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getGridOffset()
+  {
+    return gridOffsetEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGridOffset_Offset()
+  {
+    return (EAttribute)gridOffsetEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSize()
+  {
+    return sizeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSize_Width()
+  {
+    return (EAttribute)sizeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSize_Height()
+  {
+    return (EAttribute)sizeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EEnum getBoolOperator()
   {
     return boolOperatorEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EEnum getGridPart()
+  {
+    return gridPartEEnum;
   }
 
   /**
@@ -856,9 +1009,11 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     createEReference(objectsEClass, OBJECTS__SHAPES);
     createEReference(objectsEClass, OBJECTS__MORE_CELL);
     createEReference(objectsEClass, OBJECTS__MORE_CELLS);
+    createEReference(objectsEClass, OBJECTS__GRIDS);
 
     shapeDefEClass = createEClass(SHAPE_DEF);
     createEAttribute(shapeDefEClass, SHAPE_DEF__NAME);
+    createEReference(shapeDefEClass, SHAPE_DEF__OFFSET);
     createEReference(shapeDefEClass, SHAPE_DEF__OBJECTS);
 
     cellPairsEClass = createEClass(CELL_PAIRS);
@@ -914,8 +1069,20 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     rightUnboundedRangeEClass = createEClass(RIGHT_UNBOUNDED_RANGE);
     createEAttribute(rightUnboundedRangeEClass, RIGHT_UNBOUNDED_RANGE__HIGHER_BOUND);
 
+    gridEClass = createEClass(GRID);
+    createEReference(gridEClass, GRID__SIZE);
+    createEAttribute(gridEClass, GRID__PARTS);
+
+    gridOffsetEClass = createEClass(GRID_OFFSET);
+    createEAttribute(gridOffsetEClass, GRID_OFFSET__OFFSET);
+
+    sizeEClass = createEClass(SIZE);
+    createEAttribute(sizeEClass, SIZE__WIDTH);
+    createEAttribute(sizeEClass, SIZE__HEIGHT);
+
     // Create enums
     boolOperatorEEnum = createEEnum(BOOL_OPERATOR);
+    gridPartEEnum = createEEnum(GRID_PART);
   }
 
   /**
@@ -967,9 +1134,11 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     initEReference(getObjects_Shapes(), this.getShapeRef(), null, "shapes", null, 0, -1, Objects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getObjects_MoreCell(), this.getCellDef(), null, "moreCell", null, 0, -1, Objects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getObjects_MoreCells(), this.getCellsDef(), null, "moreCells", null, 0, -1, Objects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getObjects_Grids(), this.getGrid(), null, "grids", null, 0, -1, Objects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(shapeDefEClass, ShapeDef.class, "ShapeDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getShapeDef_Name(), ecorePackage.getEString(), "name", null, 0, 1, ShapeDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getShapeDef_Offset(), this.getGridOffset(), null, "offset", null, 0, 1, ShapeDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getShapeDef_Objects(), this.getObjects(), null, "objects", null, 0, 1, ShapeDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(cellPairsEClass, CellPairs.class, "CellPairs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1025,10 +1194,25 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     initEClass(rightUnboundedRangeEClass, RightUnboundedRange.class, "RightUnboundedRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRightUnboundedRange_HigherBound(), ecorePackage.getEInt(), "higherBound", null, 0, 1, RightUnboundedRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(gridEClass, Grid.class, "Grid", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGrid_Size(), this.getSize(), null, "size", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGrid_Parts(), this.getGridPart(), "parts", null, 0, -1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(gridOffsetEClass, GridOffset.class, "GridOffset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGridOffset_Offset(), ecorePackage.getEInt(), "offset", null, 0, 1, GridOffset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sizeEClass, Size.class, "Size", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSize_Width(), ecorePackage.getEInt(), "width", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSize_Height(), ecorePackage.getEInt(), "height", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     // Initialize enums and add enum literals
     initEEnum(boolOperatorEEnum, BoolOperator.class, "BoolOperator");
     addEEnumLiteral(boolOperatorEEnum, BoolOperator.AND);
     addEEnumLiteral(boolOperatorEEnum, BoolOperator.OR);
+
+    initEEnum(gridPartEEnum, GridPart.class, "GridPart");
+    addEEnumLiteral(gridPartEEnum, GridPart.AND);
+    addEEnumLiteral(gridPartEEnum, GridPart.OR);
 
     // Create resource
     createResource(eNS_URI);

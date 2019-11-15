@@ -37,6 +37,7 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getRangeAccess().getAlternatives(), "rule__Range__Alternatives");
 			builder.put(grammarAccess.getUnboundedRangeAccess().getAlternatives(), "rule__UnboundedRange__Alternatives");
 			builder.put(grammarAccess.getBoolOperatorAccess().getAlternatives(), "rule__BoolOperator__Alternatives");
+			builder.put(grammarAccess.getGridPartAccess().getAlternatives(), "rule__GridPart__Alternatives");
 			builder.put(grammarAccess.getDSLAccess().getGroup(), "rule__DSL__Group__0");
 			builder.put(grammarAccess.getBoardAccess().getGroup(), "rule__Board__Group__0");
 			builder.put(grammarAccess.getShapeDefAccess().getGroup(), "rule__ShapeDef__Group__0");
@@ -54,6 +55,9 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getBoundedRangeAccess().getGroup(), "rule__BoundedRange__Group__0");
 			builder.put(grammarAccess.getLeftUnboundedRangeAccess().getGroup(), "rule__LeftUnboundedRange__Group__0");
 			builder.put(grammarAccess.getRightUnboundedRangeAccess().getGroup(), "rule__RightUnboundedRange__Group__0");
+			builder.put(grammarAccess.getGridAccess().getGroup(), "rule__Grid__Group__0");
+			builder.put(grammarAccess.getGridOffsetAccess().getGroup(), "rule__GridOffset__Group__0");
+			builder.put(grammarAccess.getSizeAccess().getGroup(), "rule__Size__Group__0");
 			builder.put(grammarAccess.getDSLAccess().getBoardAssignment_0(), "rule__DSL__BoardAssignment_0");
 			builder.put(grammarAccess.getDSLAccess().getRulesAssignment_1_0(), "rule__DSL__RulesAssignment_1_0");
 			builder.put(grammarAccess.getDSLAccess().getShapesAssignment_1_1(), "rule__DSL__ShapesAssignment_1_1");
@@ -61,8 +65,10 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getObjectsAccess().getShapesAssignment_0(), "rule__Objects__ShapesAssignment_0");
 			builder.put(grammarAccess.getObjectsAccess().getMoreCellAssignment_1(), "rule__Objects__MoreCellAssignment_1");
 			builder.put(grammarAccess.getObjectsAccess().getMoreCellsAssignment_2(), "rule__Objects__MoreCellsAssignment_2");
+			builder.put(grammarAccess.getObjectsAccess().getGridsAssignment_3(), "rule__Objects__GridsAssignment_3");
 			builder.put(grammarAccess.getShapeDefAccess().getNameAssignment_1(), "rule__ShapeDef__NameAssignment_1");
-			builder.put(grammarAccess.getShapeDefAccess().getObjectsAssignment_3(), "rule__ShapeDef__ObjectsAssignment_3");
+			builder.put(grammarAccess.getShapeDefAccess().getOffsetAssignment_3(), "rule__ShapeDef__OffsetAssignment_3");
+			builder.put(grammarAccess.getShapeDefAccess().getObjectsAssignment_4(), "rule__ShapeDef__ObjectsAssignment_4");
 			builder.put(grammarAccess.getCellPairsAccess().getCellsAssignment_1(), "rule__CellPairs__CellsAssignment_1");
 			builder.put(grammarAccess.getShapeRefAccess().getNameAssignment_1(), "rule__ShapeRef__NameAssignment_1");
 			builder.put(grammarAccess.getShapeRefAccess().getXAssignment_3(), "rule__ShapeRef__XAssignment_3");
@@ -84,6 +90,11 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getBoundedRangeAccess().getHigherBoundAssignment_2(), "rule__BoundedRange__HigherBoundAssignment_2");
 			builder.put(grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundAssignment_1(), "rule__LeftUnboundedRange__LowerBoundAssignment_1");
 			builder.put(grammarAccess.getRightUnboundedRangeAccess().getHigherBoundAssignment_1(), "rule__RightUnboundedRange__HigherBoundAssignment_1");
+			builder.put(grammarAccess.getGridAccess().getSizeAssignment_1(), "rule__Grid__SizeAssignment_1");
+			builder.put(grammarAccess.getGridAccess().getPartsAssignment_2(), "rule__Grid__PartsAssignment_2");
+			builder.put(grammarAccess.getGridOffsetAccess().getOffsetAssignment_1(), "rule__GridOffset__OffsetAssignment_1");
+			builder.put(grammarAccess.getSizeAccess().getWidthAssignment_1(), "rule__Size__WidthAssignment_1");
+			builder.put(grammarAccess.getSizeAccess().getHeightAssignment_2(), "rule__Size__HeightAssignment_2");
 		}
 	}
 	

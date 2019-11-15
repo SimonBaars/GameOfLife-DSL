@@ -4,8 +4,8 @@ generate goLDSL "http://www.simonbaars.com/GoLDSL"
 
 DSL: board=Board (rules += Rule | shapes+=ShapeDef)*;
 Board: 'Board:' objects = Objects;
-Objects: (shapes += ShapeRef | moreCell += CellDef | moreCells += CellsDef)+;
-ShapeDef: 'Shape' name=ID ':' objects = Objects;
+Objects: (shapes += ShapeRef | moreCell += CellDef | moreCells += CellsDef | grids += Grid)+;
+ShapeDef: 'Shape' name=ID ':' offset=GridOffset? objects = Objects;
 CellPairs: ('(' cells += Cell ')')+;
 //CellPairs: cell = CellPair (',' cell2 = CellPair)?;
 CellsDef: 'Cells:' CellPairs;
@@ -24,3 +24,7 @@ BoundedRange: lowerBound = INT '..' higherBound = INT;
 UnboundedRange: LeftUnboundedRange | RightUnboundedRange;
 LeftUnboundedRange: '<' lowerBound = INT;
 RightUnboundedRange: '>' higherBound = INT;
+Grid: 'Grid:' size=Size? (parts += GridPart)+;
+enum GridPart: AND = '+' | OR = '-';
+GridOffset: 'offset' offset=INT;
+Size: 'size' width=INT height=INT;

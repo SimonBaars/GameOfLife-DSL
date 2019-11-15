@@ -204,6 +204,33 @@ public interface GoLDSLFactory extends EFactory
   RightUnboundedRange createRightUnboundedRange();
 
   /**
+   * Returns a new object of class '<em>Grid</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Grid</em>'.
+   * @generated
+   */
+  Grid createGrid();
+
+  /**
+   * Returns a new object of class '<em>Grid Offset</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Grid Offset</em>'.
+   * @generated
+   */
+  GridOffset createGridOffset();
+
+  /**
+   * Returns a new object of class '<em>Size</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Size</em>'.
+   * @generated
+   */
+  Size createSize();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

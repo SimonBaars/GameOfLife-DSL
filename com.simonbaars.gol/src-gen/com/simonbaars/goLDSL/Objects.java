@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.simonbaars.goLDSL.Objects#getShapes <em>Shapes</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.Objects#getMoreCell <em>More Cell</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.Objects#getMoreCells <em>More Cells</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.Objects#getGrids <em>Grids</em>}</li>
  * </ul>
  *
  * @see com.simonbaars.goLDSL.GoLDSLPackage#getObjects()
@@ -62,5 +63,17 @@ public interface Objects extends EObject
    * @generated
    */
   EList<CellsDef> getMoreCells();
+
+  /**
+   * Returns the value of the '<em><b>Grids</b></em>' containment reference list.
+   * The list contents are of type {@link com.simonbaars.goLDSL.Grid}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Grids</em>' containment reference list.
+   * @see com.simonbaars.goLDSL.GoLDSLPackage#getObjects_Grids()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Grid> getGrids();
 
 } // Objects
