@@ -3,10 +3,14 @@
  */
 package com.simonbaars.generator;
 
+import com.simonbaars.generator.JavaGenerator;
+import com.simonbaars.goLDSL.DSL;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 /**
  * Generates code from your model files on save.
@@ -17,5 +21,13 @@ import org.eclipse.xtext.generator.IGeneratorContext;
 public class GoLDSLGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    EObject _head = IteratorExtensions.<EObject>head(resource.getAllContents());
+    final DSL root = ((DSL) _head);
+    if ((root != null)) {
+      String _lastSegment = resource.getURI().lastSegment();
+      String _plus = ("generated/" + _lastSegment);
+      String path = (_plus + "/");
+      fsa.generateFile((path + "RulesOfLife.java"), JavaGenerator.toJava(root));
+    }
   }
 }

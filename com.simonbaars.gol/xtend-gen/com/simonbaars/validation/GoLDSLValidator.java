@@ -3,7 +3,15 @@
  */
 package com.simonbaars.validation;
 
+import com.simonbaars.goLDSL.DSL;
+import com.simonbaars.goLDSL.Grid;
+import com.simonbaars.goLDSL.Rule;
+import com.simonbaars.goLDSL.ShapeDef;
+import com.simonbaars.goLDSL.ShapeRef;
 import com.simonbaars.validation.AbstractGoLDSLValidator;
+import java.util.function.Predicate;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.xtext.validation.Check;
 
 /**
  * This class contains custom validation rules.
@@ -12,4 +20,57 @@ import com.simonbaars.validation.AbstractGoLDSLValidator;
  */
 @SuppressWarnings("all")
 public class GoLDSLValidator extends AbstractGoLDSLValidator {
+  @Check
+  public void checkGreetingStartsWithCapital(final Grid grid) {
+    int _width = grid.getSize().getWidth();
+    int _height = grid.getSize().getHeight();
+    int _multiply = (_width * _height);
+    int _size = grid.getParts().size();
+    boolean _notEquals = (_multiply != _size);
+    if (_notEquals) {
+      this.error("Grid size must correspond with specified size.", grid, null);
+    }
+  }
+  
+  @Check
+  public void checkShapesExist(final DSL dsl) {
+    EList<ShapeDef> shapes = dsl.getShapes();
+    this.findNonExistentShapes(dsl.getBoard().getObjects().getShapes(), shapes);
+    for (final ShapeDef def : shapes) {
+      this.findNonExistentShapes(def.getObjects().getShapes(), shapes);
+    }
+    EList<Rule> _rules = dsl.getRules();
+    for (final Rule rule : _rules) {
+      this.findNonExistentShapes(rule.getAction().getObjects().getShapes(), shapes);
+    }
+  }
+  
+  protected void findNonExistentShapes(final EList<ShapeRef> references, final EList<ShapeDef> shapes) {
+    for (final ShapeRef ref : references) {
+      boolean _shapeExists = this.shapeExists(shapes, ref);
+      boolean _not = (!_shapeExists);
+      if (_not) {
+        String _name = ref.getName();
+        String _plus = ("Shape does not exist: " + _name);
+        this.error(_plus, ref, null);
+      }
+    }
+  }
+  
+  public boolean shapeExists(final EList<ShapeDef> shapes, final EList<ShapeRef> references) {
+    final Predicate<ShapeRef> _function = (ShapeRef ref) -> {
+      final Predicate<ShapeDef> _function_1 = (ShapeDef shape) -> {
+        return shape.getName().equals(ref.getName());
+      };
+      return shapes.stream().anyMatch(_function_1);
+    };
+    return references.stream().allMatch(_function);
+  }
+  
+  public boolean shapeExists(final EList<ShapeDef> shapes, final ShapeRef ref) {
+    final Predicate<ShapeDef> _function = (ShapeDef shape) -> {
+      return shape.getName().equals(ref.getName());
+    };
+    return shapes.stream().anyMatch(_function);
+  }
 }

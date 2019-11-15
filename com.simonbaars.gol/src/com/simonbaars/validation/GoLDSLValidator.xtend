@@ -3,6 +3,13 @@
  */
 package com.simonbaars.validation
 
+import com.simonbaars.goLDSL.DSL
+import com.simonbaars.goLDSL.Grid
+import com.simonbaars.goLDSL.Rule
+import com.simonbaars.goLDSL.ShapeDef
+import com.simonbaars.goLDSL.ShapeRef
+import org.eclipse.emf.common.util.EList
+import org.eclipse.xtext.validation.Check
 
 /**
  * This class contains custom validation rules. 
@@ -13,13 +20,39 @@ class GoLDSLValidator extends AbstractGoLDSLValidator {
 	
 //	public static val INVALID_NAME = 'invalidName'
 //
-//	@Check
-//	def checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.name.charAt(0))) {
-//			warning('Name should start with a capital', 
-//					GoLDSLPackage.Literals.GREETING__NAME,
-//					INVALID_NAME)
-//		}
-//	}
+	@Check
+	def checkGreetingStartsWithCapital(Grid grid) {
+		if(grid.getSize().getWidth()*grid.getSize().getHeight()!=grid.getParts().size()){
+			error("Grid size must correspond with specified size.", grid, null)
+		}
+	}
+	
+	@Check
+	def checkShapesExist(DSL dsl) {
+		var shapes = dsl.getShapes;
+		findNonExistentShapes(dsl.getBoard.getObjects.getShapes, shapes)
+		for(ShapeDef def : shapes){
+			findNonExistentShapes(def.getObjects.getShapes, shapes)
+		}
+		for(Rule rule : dsl.getRules){
+			findNonExistentShapes(rule.getAction.getObjects.getShapes, shapes)
+		}
+	}
+	
+	protected def void findNonExistentShapes(EList<ShapeRef> references, EList<ShapeDef> shapes) {
+		for(ShapeRef ref : references){
+			if(!shapeExists(shapes, ref)){
+				error("Shape does not exist: "+ref.getName, ref, null)
+			}
+		}
+	}
+	
+	def shapeExists(EList<ShapeDef> shapes, EList<ShapeRef> references){
+		return references.stream.allMatch[ref | shapes.stream.anyMatch[shape | shape.getName.equals(ref.getName)]];
+	}
+	
+	def shapeExists(EList<ShapeDef> shapes, ShapeRef ref){
+		return shapes.stream.anyMatch[shape | shape.getName.equals(ref.getName)];
+	}
 	
 }

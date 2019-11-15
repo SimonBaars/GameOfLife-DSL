@@ -3,6 +3,7 @@
  */
 package com.simonbaars.generator
 
+import com.simonbaars.goLDSL.DSL
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
@@ -16,10 +17,11 @@ import org.eclipse.xtext.generator.IGeneratorContext
 class GoLDSLGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(Greeting)
-//				.map[name]
-//				.join(', '))
+		val root = resource.allContents.head as DSL;
+		 if (root !== null) {
+			 var path = "generated/" + resource.getURI().lastSegment + "/"
+			 fsa.generateFile(path+"RulesOfLife.java", JavaGenerator.toJava(root))
+			 //fsa.generateFile(path+"PlanningOverview.html",HtmlGenerator.toHtml(root))
+		 }
 	}
 }
