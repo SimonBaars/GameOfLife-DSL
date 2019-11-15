@@ -152,22 +152,22 @@ public interface GoLDSLPackage extends EPackage
   int OBJECTS__SHAPES = 0;
 
   /**
-   * The feature id for the '<em><b>More Cell</b></em>' containment reference list.
+   * The feature id for the '<em><b>Cell</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OBJECTS__MORE_CELL = 1;
+  int OBJECTS__CELL = 1;
 
   /**
-   * The feature id for the '<em><b>More Cells</b></em>' containment reference list.
+   * The feature id for the '<em><b>Cells</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OBJECTS__MORE_CELLS = 2;
+  int OBJECTS__CELLS = 2;
 
   /**
    * The feature id for the '<em><b>Grids</b></em>' containment reference list.
@@ -234,23 +234,23 @@ public interface GoLDSLPackage extends EPackage
   int SHAPE_DEF_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link com.simonbaars.goLDSL.impl.CellsDefImpl <em>Cells Def</em>}' class.
+   * The meta object id for the '{@link com.simonbaars.goLDSL.impl.CellsImpl <em>Cells</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.simonbaars.goLDSL.impl.CellsDefImpl
-   * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getCellsDef()
+   * @see com.simonbaars.goLDSL.impl.CellsImpl
+   * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getCells()
    * @generated
    */
-  int CELLS_DEF = 5;
+  int CELLS = 5;
 
   /**
-   * The number of structural features of the '<em>Cells Def</em>' class.
+   * The number of structural features of the '<em>Cells</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CELLS_DEF_FEATURE_COUNT = 0;
+  int CELLS_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.CellPairsImpl <em>Cell Pairs</em>}' class.
@@ -269,7 +269,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CELL_PAIRS__CELLS = CELLS_DEF_FEATURE_COUNT + 0;
+  int CELL_PAIRS__CELLS = CELLS_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Cell Pairs</em>' class.
@@ -278,7 +278,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CELL_PAIRS_FEATURE_COUNT = CELLS_DEF_FEATURE_COUNT + 1;
+  int CELL_PAIRS_FEATURE_COUNT = CELLS_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.CellDefImpl <em>Cell Def</em>}' class.
@@ -935,26 +935,26 @@ public interface GoLDSLPackage extends EPackage
   EReference getObjects_Shapes();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.simonbaars.goLDSL.Objects#getMoreCell <em>More Cell</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.simonbaars.goLDSL.Objects#getCell <em>Cell</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>More Cell</em>'.
-   * @see com.simonbaars.goLDSL.Objects#getMoreCell()
+   * @return the meta object for the containment reference list '<em>Cell</em>'.
+   * @see com.simonbaars.goLDSL.Objects#getCell()
    * @see #getObjects()
    * @generated
    */
-  EReference getObjects_MoreCell();
+  EReference getObjects_Cell();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.simonbaars.goLDSL.Objects#getMoreCells <em>More Cells</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.simonbaars.goLDSL.Objects#getCells <em>Cells</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>More Cells</em>'.
-   * @see com.simonbaars.goLDSL.Objects#getMoreCells()
+   * @return the meta object for the containment reference list '<em>Cells</em>'.
+   * @see com.simonbaars.goLDSL.Objects#getCells()
    * @see #getObjects()
    * @generated
    */
-  EReference getObjects_MoreCells();
+  EReference getObjects_Cells();
 
   /**
    * Returns the meta object for the containment reference list '{@link com.simonbaars.goLDSL.Objects#getGrids <em>Grids</em>}'.
@@ -1032,14 +1032,14 @@ public interface GoLDSLPackage extends EPackage
   EReference getCellPairs_Cells();
 
   /**
-   * Returns the meta object for class '{@link com.simonbaars.goLDSL.CellsDef <em>Cells Def</em>}'.
+   * Returns the meta object for class '{@link com.simonbaars.goLDSL.Cells <em>Cells</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Cells Def</em>'.
-   * @see com.simonbaars.goLDSL.CellsDef
+   * @return the meta object for class '<em>Cells</em>'.
+   * @see com.simonbaars.goLDSL.Cells
    * @generated
    */
-  EClass getCellsDef();
+  EClass getCells();
 
   /**
    * Returns the meta object for class '{@link com.simonbaars.goLDSL.CellDef <em>Cell Def</em>}'.
@@ -1600,20 +1600,20 @@ public interface GoLDSLPackage extends EPackage
     EReference OBJECTS__SHAPES = eINSTANCE.getObjects_Shapes();
 
     /**
-     * The meta object literal for the '<em><b>More Cell</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Cell</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OBJECTS__MORE_CELL = eINSTANCE.getObjects_MoreCell();
+    EReference OBJECTS__CELL = eINSTANCE.getObjects_Cell();
 
     /**
-     * The meta object literal for the '<em><b>More Cells</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Cells</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OBJECTS__MORE_CELLS = eINSTANCE.getObjects_MoreCells();
+    EReference OBJECTS__CELLS = eINSTANCE.getObjects_Cells();
 
     /**
      * The meta object literal for the '<em><b>Grids</b></em>' containment reference list feature.
@@ -1676,14 +1676,14 @@ public interface GoLDSLPackage extends EPackage
     EReference CELL_PAIRS__CELLS = eINSTANCE.getCellPairs_Cells();
 
     /**
-     * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.CellsDefImpl <em>Cells Def</em>}' class.
+     * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.CellsImpl <em>Cells</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.simonbaars.goLDSL.impl.CellsDefImpl
-     * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getCellsDef()
+     * @see com.simonbaars.goLDSL.impl.CellsImpl
+     * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getCells()
      * @generated
      */
-    EClass CELLS_DEF = eINSTANCE.getCellsDef();
+    EClass CELLS = eINSTANCE.getCells();
 
     /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.CellDefImpl <em>Cell Def</em>}' class.

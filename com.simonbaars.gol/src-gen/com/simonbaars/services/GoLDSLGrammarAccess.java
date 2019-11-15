@@ -92,18 +92,18 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cShapesAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final RuleCall cShapesShapeRefParserRuleCall_0_0 = (RuleCall)cShapesAssignment_0.eContents().get(0);
-		private final Assignment cMoreCellAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cMoreCellCellDefParserRuleCall_1_0 = (RuleCall)cMoreCellAssignment_1.eContents().get(0);
-		private final Assignment cMoreCellsAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final RuleCall cMoreCellsCellsDefParserRuleCall_2_0 = (RuleCall)cMoreCellsAssignment_2.eContents().get(0);
+		private final Assignment cCellAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cCellCellDefParserRuleCall_1_0 = (RuleCall)cCellAssignment_1.eContents().get(0);
+		private final Assignment cCellsAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final RuleCall cCellsCellsParserRuleCall_2_0 = (RuleCall)cCellsAssignment_2.eContents().get(0);
 		private final Assignment cGridsAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
 		private final RuleCall cGridsGridParserRuleCall_3_0 = (RuleCall)cGridsAssignment_3.eContents().get(0);
 		
 		//Objects:
-		//	(shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef | grids+=Grid)+;
+		//	(shapes+=ShapeRef | cell+=CellDef | cells+=Cells | grids+=Grid)+;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef | grids+=Grid)+
+		//(shapes+=ShapeRef | cell+=CellDef | cells+=Cells | grids+=Grid)+
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//shapes+=ShapeRef
@@ -112,17 +112,17 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//ShapeRef
 		public RuleCall getShapesShapeRefParserRuleCall_0_0() { return cShapesShapeRefParserRuleCall_0_0; }
 		
-		//moreCell+=CellDef
-		public Assignment getMoreCellAssignment_1() { return cMoreCellAssignment_1; }
+		//cell+=CellDef
+		public Assignment getCellAssignment_1() { return cCellAssignment_1; }
 		
 		//CellDef
-		public RuleCall getMoreCellCellDefParserRuleCall_1_0() { return cMoreCellCellDefParserRuleCall_1_0; }
+		public RuleCall getCellCellDefParserRuleCall_1_0() { return cCellCellDefParserRuleCall_1_0; }
 		
-		//moreCells+=CellsDef
-		public Assignment getMoreCellsAssignment_2() { return cMoreCellsAssignment_2; }
+		//cells+=Cells
+		public Assignment getCellsAssignment_2() { return cCellsAssignment_2; }
 		
-		//CellsDef
-		public RuleCall getMoreCellsCellsDefParserRuleCall_2_0() { return cMoreCellsCellsDefParserRuleCall_2_0; }
+		//Cells
+		public RuleCall getCellsCellsParserRuleCall_2_0() { return cCellsCellsParserRuleCall_2_0; }
 		
 		//grids+=Grid
 		public Assignment getGridsAssignment_3() { return cGridsAssignment_3; }
@@ -200,14 +200,14 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//')'
 		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
 	}
-	public class CellsDefElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.CellsDef");
+	public class CellsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Cells");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCellsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cCellPairsParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
 		////CellPairs: cell = CellPair (',' cell2 = CellPair)?;
-		//CellsDef:
+		//Cells:
 		//	'Cells:' CellPairs;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -722,29 +722,29 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	public class GridPartElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.GridPart");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cANDEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cANDPlusSignKeyword_0_0 = (Keyword)cANDEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cOREnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cORHyphenMinusKeyword_1_0 = (Keyword)cOREnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cALIVEEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cALIVEPlusSignKeyword_0_0 = (Keyword)cALIVEEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cDEADEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cDEADHyphenMinusKeyword_1_0 = (Keyword)cDEADEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum GridPart:
-		//	AND='+' | OR='-';
+		//	ALIVE='+' | DEAD='-';
 		public EnumRule getRule() { return rule; }
 		
-		//AND='+' | OR='-'
+		//ALIVE='+' | DEAD='-'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//AND='+'
-		public EnumLiteralDeclaration getANDEnumLiteralDeclaration_0() { return cANDEnumLiteralDeclaration_0; }
+		//ALIVE='+'
+		public EnumLiteralDeclaration getALIVEEnumLiteralDeclaration_0() { return cALIVEEnumLiteralDeclaration_0; }
 		
 		//'+'
-		public Keyword getANDPlusSignKeyword_0_0() { return cANDPlusSignKeyword_0_0; }
+		public Keyword getALIVEPlusSignKeyword_0_0() { return cALIVEPlusSignKeyword_0_0; }
 		
-		//OR='-'
-		public EnumLiteralDeclaration getOREnumLiteralDeclaration_1() { return cOREnumLiteralDeclaration_1; }
+		//DEAD='-'
+		public EnumLiteralDeclaration getDEADEnumLiteralDeclaration_1() { return cDEADEnumLiteralDeclaration_1; }
 		
 		//'-'
-		public Keyword getORHyphenMinusKeyword_1_0() { return cORHyphenMinusKeyword_1_0; }
+		public Keyword getDEADHyphenMinusKeyword_1_0() { return cDEADHyphenMinusKeyword_1_0; }
 	}
 	
 	private final DSLElements pDSL;
@@ -752,7 +752,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final ObjectsElements pObjects;
 	private final ShapeDefElements pShapeDef;
 	private final CellPairsElements pCellPairs;
-	private final CellsDefElements pCellsDef;
+	private final CellsElements pCells;
 	private final CellDefElements pCellDef;
 	private final ShapeRefElements pShapeRef;
 	private final CellElements pCell;
@@ -787,7 +787,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pObjects = new ObjectsElements();
 		this.pShapeDef = new ShapeDefElements();
 		this.pCellPairs = new CellPairsElements();
-		this.pCellsDef = new CellsDefElements();
+		this.pCells = new CellsElements();
 		this.pCellDef = new CellDefElements();
 		this.pShapeRef = new ShapeRefElements();
 		this.pCell = new CellElements();
@@ -857,7 +857,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Objects:
-	//	(shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef | grids+=Grid)+;
+	//	(shapes+=ShapeRef | cell+=CellDef | cells+=Cells | grids+=Grid)+;
 	public ObjectsElements getObjectsAccess() {
 		return pObjects;
 	}
@@ -887,14 +887,14 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	////CellPairs: cell = CellPair (',' cell2 = CellPair)?;
-	//CellsDef:
+	//Cells:
 	//	'Cells:' CellPairs;
-	public CellsDefElements getCellsDefAccess() {
-		return pCellsDef;
+	public CellsElements getCellsAccess() {
+		return pCells;
 	}
 	
-	public ParserRule getCellsDefRule() {
-		return getCellsDefAccess().getRule();
+	public ParserRule getCellsRule() {
+		return getCellsAccess().getRule();
 	}
 	
 	//CellDef:
@@ -1058,7 +1058,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum GridPart:
-	//	AND='+' | OR='-';
+	//	ALIVE='+' | DEAD='-';
 	public GridPartElements getGridPartAccess() {
 		return eGridPart;
 	}

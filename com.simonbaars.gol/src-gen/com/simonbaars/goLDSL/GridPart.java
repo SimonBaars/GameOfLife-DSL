@@ -21,46 +21,46 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum GridPart implements Enumerator
 {
   /**
-   * The '<em><b>AND</b></em>' literal object.
+   * The '<em><b>ALIVE</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #AND_VALUE
+   * @see #ALIVE_VALUE
    * @generated
    * @ordered
    */
-  AND(0, "AND", "+"),
+  ALIVE(0, "ALIVE", "+"),
 
   /**
-   * The '<em><b>OR</b></em>' literal object.
+   * The '<em><b>DEAD</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #OR_VALUE
+   * @see #DEAD_VALUE
    * @generated
    * @ordered
    */
-  OR(1, "OR", "-");
+  DEAD(1, "DEAD", "-");
 
   /**
-   * The '<em><b>AND</b></em>' literal value.
+   * The '<em><b>ALIVE</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #AND
+   * @see #ALIVE
    * @model literal="+"
    * @generated
    * @ordered
    */
-  public static final int AND_VALUE = 0;
+  public static final int ALIVE_VALUE = 0;
 
   /**
-   * The '<em><b>OR</b></em>' literal value.
+   * The '<em><b>DEAD</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #OR
+   * @see #DEAD
    * @model literal="-"
    * @generated
    * @ordered
    */
-  public static final int OR_VALUE = 1;
+  public static final int DEAD_VALUE = 1;
 
   /**
    * An array of all the '<em><b>Grid Part</b></em>' enumerators.
@@ -71,8 +71,8 @@ public enum GridPart implements Enumerator
   private static final GridPart[] VALUES_ARRAY =
     new GridPart[]
     {
-      AND,
-      OR,
+      ALIVE,
+      DEAD,
     };
 
   /**
@@ -137,8 +137,8 @@ public enum GridPart implements Enumerator
   {
     switch (value)
     {
-      case AND_VALUE: return AND;
-      case OR_VALUE: return OR;
+      case ALIVE_VALUE: return ALIVE;
+      case DEAD_VALUE: return DEAD;
     }
     return null;
   }

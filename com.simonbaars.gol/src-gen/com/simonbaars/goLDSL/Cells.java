@@ -7,14 +7,14 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Cells Def</b></em>'.
+ * A representation of the model object '<em><b>Cells</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see com.simonbaars.goLDSL.GoLDSLPackage#getCellsDef()
+ * @see com.simonbaars.goLDSL.GoLDSLPackage#getCells()
  * @model
  * @generated
  */
-public interface CellsDef extends EObject
+public interface Cells extends EObject
 {
-} // CellsDef
+} // Cells

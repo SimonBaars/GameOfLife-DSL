@@ -71,7 +71,7 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
       case GoLDSLPackage.OBJECTS: return createObjects();
       case GoLDSLPackage.SHAPE_DEF: return createShapeDef();
       case GoLDSLPackage.CELL_PAIRS: return createCellPairs();
-      case GoLDSLPackage.CELLS_DEF: return createCellsDef();
+      case GoLDSLPackage.CELLS: return createCells();
       case GoLDSLPackage.CELL_DEF: return createCellDef();
       case GoLDSLPackage.SHAPE_REF: return createShapeRef();
       case GoLDSLPackage.CELL: return createCell();
@@ -198,10 +198,10 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
    * @generated
    */
   @Override
-  public CellsDef createCellsDef()
+  public Cells createCells()
   {
-    CellsDefImpl cellsDef = new CellsDefImpl();
-    return cellsDef;
+    CellsImpl cells = new CellsImpl();
+    return cells;
   }
 
   /**

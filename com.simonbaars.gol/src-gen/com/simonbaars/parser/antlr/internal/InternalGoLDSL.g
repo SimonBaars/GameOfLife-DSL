@@ -221,17 +221,17 @@ ruleObjects returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getObjectsAccess().getMoreCellCellDefParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getObjectsAccess().getCellCellDefParserRuleCall_1_0());
 				}
-				lv_moreCell_1_0=ruleCellDef
+				lv_cell_1_0=ruleCellDef
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getObjectsRule());
 					}
 					add(
 						$current,
-						"moreCell",
-						lv_moreCell_1_0,
+						"cell",
+						lv_cell_1_0,
 						"com.simonbaars.GoLDSL.CellDef");
 					afterParserOrEnumRuleCall();
 				}
@@ -241,18 +241,18 @@ ruleObjects returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getObjectsAccess().getMoreCellsCellsDefParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getObjectsAccess().getCellsCellsParserRuleCall_2_0());
 				}
-				lv_moreCells_2_0=ruleCellsDef
+				lv_cells_2_0=ruleCells
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getObjectsRule());
 					}
 					add(
 						$current,
-						"moreCells",
-						lv_moreCells_2_0,
-						"com.simonbaars.GoLDSL.CellsDef");
+						"cells",
+						lv_cells_2_0,
+						"com.simonbaars.GoLDSL.Cells");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -409,15 +409,15 @@ ruleCellPairs returns [EObject current=null]
 	)+
 ;
 
-// Entry rule entryRuleCellsDef
-entryRuleCellsDef returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getCellsDefRule()); }
-	iv_ruleCellsDef=ruleCellsDef
-	{ $current=$iv_ruleCellsDef.current; }
+// Entry rule entryRuleCells
+entryRuleCells returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getCellsRule()); }
+	iv_ruleCells=ruleCells
+	{ $current=$iv_ruleCells.current; }
 	EOF;
 
-// Rule CellsDef
-ruleCellsDef returns [EObject current=null]
+// Rule Cells
+ruleCells returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -427,10 +427,10 @@ ruleCellsDef returns [EObject current=null]
 	(
 		otherlv_0='Cells:'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getCellsDefAccess().getCellsKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getCellsAccess().getCellsKeyword_0());
 		}
 		{
-			newCompositeNode(grammarAccess.getCellsDefAccess().getCellPairsParserRuleCall_1());
+			newCompositeNode(grammarAccess.getCellsAccess().getCellPairsParserRuleCall_1());
 		}
 		this_CellPairs_1=ruleCellPairs
 		{
@@ -1370,16 +1370,16 @@ ruleGridPart returns [Enumerator current=null]
 		(
 			enumLiteral_0='+'
 			{
-				$current = grammarAccess.getGridPartAccess().getANDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getGridPartAccess().getANDEnumLiteralDeclaration_0());
+				$current = grammarAccess.getGridPartAccess().getALIVEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getGridPartAccess().getALIVEEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
 			enumLiteral_1='-'
 			{
-				$current = grammarAccess.getGridPartAccess().getOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getGridPartAccess().getOREnumLiteralDeclaration_1());
+				$current = grammarAccess.getGridPartAccess().getDEADEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getGridPartAccess().getDEADEnumLiteralDeclaration_1());
 			}
 		)
 	)

@@ -4,11 +4,11 @@ generate goLDSL "http://www.simonbaars.com/GoLDSL"
 
 DSL: board=Board (rules += Rule | shapes+=ShapeDef)*;
 Board: 'Board:' objects = Objects;
-Objects: (shapes += ShapeRef | moreCell += CellDef | moreCells += CellsDef | grids += Grid)+;
+Objects: (shapes += ShapeRef | cell += CellDef | cells += Cells | grids += Grid)+;
 ShapeDef: 'Shape' name=ID ':' offset=GridOffset? objects = Objects;
 CellPairs: ('(' cells += Cell ')')+;
 //CellPairs: cell = CellPair (',' cell2 = CellPair)?;
-CellsDef: 'Cells:' CellPairs;
+Cells: 'Cells:' CellPairs;
 CellDef: 'Cell:' Cell;
 ShapeRef: 'Shape' name=ID ':' x=INT ',' y=INT;
 Cell: x=INT ',' y=INT;
@@ -25,6 +25,6 @@ UnboundedRange: LeftUnboundedRange | RightUnboundedRange;
 LeftUnboundedRange: '<' lowerBound = INT;
 RightUnboundedRange: '>' higherBound = INT;
 Grid: 'Grid:' size=Size? (parts += GridPart)+;
-enum GridPart: AND = '+' | OR = '-';
+enum GridPart: ALIVE = '+' | DEAD = '-';
 GridOffset: 'offset' offset=INT;
 Size: 'size' width=INT height=INT;

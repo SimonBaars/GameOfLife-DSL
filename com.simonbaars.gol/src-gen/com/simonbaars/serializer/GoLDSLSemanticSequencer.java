@@ -172,7 +172,7 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	/**
 	 * Contexts:
 	 *     CellPairs returns CellPairs
-	 *     CellsDef returns CellPairs
+	 *     Cells returns CellPairs
 	 *
 	 * Constraint:
 	 *     cells+=Cell+
@@ -331,7 +331,7 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     Objects returns Objects
 	 *
 	 * Constraint:
-	 *     (shapes+=ShapeRef | moreCell+=CellDef | moreCells+=CellsDef | grids+=Grid)+
+	 *     (shapes+=ShapeRef | cell+=CellDef | cells+=Cells | grids+=Grid)+
 	 */
 	protected void sequence_Objects(ISerializationContext context, Objects semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -42,7 +42,7 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getBoardAccess().getGroup(), "rule__Board__Group__0");
 			builder.put(grammarAccess.getShapeDefAccess().getGroup(), "rule__ShapeDef__Group__0");
 			builder.put(grammarAccess.getCellPairsAccess().getGroup(), "rule__CellPairs__Group__0");
-			builder.put(grammarAccess.getCellsDefAccess().getGroup(), "rule__CellsDef__Group__0");
+			builder.put(grammarAccess.getCellsAccess().getGroup(), "rule__Cells__Group__0");
 			builder.put(grammarAccess.getCellDefAccess().getGroup(), "rule__CellDef__Group__0");
 			builder.put(grammarAccess.getShapeRefAccess().getGroup(), "rule__ShapeRef__Group__0");
 			builder.put(grammarAccess.getCellAccess().getGroup(), "rule__Cell__Group__0");
@@ -63,8 +63,8 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getDSLAccess().getShapesAssignment_1_1(), "rule__DSL__ShapesAssignment_1_1");
 			builder.put(grammarAccess.getBoardAccess().getObjectsAssignment_1(), "rule__Board__ObjectsAssignment_1");
 			builder.put(grammarAccess.getObjectsAccess().getShapesAssignment_0(), "rule__Objects__ShapesAssignment_0");
-			builder.put(grammarAccess.getObjectsAccess().getMoreCellAssignment_1(), "rule__Objects__MoreCellAssignment_1");
-			builder.put(grammarAccess.getObjectsAccess().getMoreCellsAssignment_2(), "rule__Objects__MoreCellsAssignment_2");
+			builder.put(grammarAccess.getObjectsAccess().getCellAssignment_1(), "rule__Objects__CellAssignment_1");
+			builder.put(grammarAccess.getObjectsAccess().getCellsAssignment_2(), "rule__Objects__CellsAssignment_2");
 			builder.put(grammarAccess.getObjectsAccess().getGridsAssignment_3(), "rule__Objects__GridsAssignment_3");
 			builder.put(grammarAccess.getShapeDefAccess().getNameAssignment_1(), "rule__ShapeDef__NameAssignment_1");
 			builder.put(grammarAccess.getShapeDefAccess().getOffsetAssignment_3(), "rule__ShapeDef__OffsetAssignment_3");

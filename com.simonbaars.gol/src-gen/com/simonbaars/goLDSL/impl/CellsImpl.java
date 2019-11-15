@@ -3,7 +3,7 @@
  */
 package com.simonbaars.goLDSL.impl;
 
-import com.simonbaars.goLDSL.CellsDef;
+import com.simonbaars.goLDSL.Cells;
 import com.simonbaars.goLDSL.GoLDSLPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -12,19 +12,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Cells Def</b></em>'.
+ * An implementation of the model object '<em><b>Cells</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class CellsDefImpl extends MinimalEObjectImpl.Container implements CellsDef
+public class CellsImpl extends MinimalEObjectImpl.Container implements Cells
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected CellsDefImpl()
+  protected CellsImpl()
   {
     super();
   }
@@ -37,7 +37,7 @@ public class CellsDefImpl extends MinimalEObjectImpl.Container implements CellsD
   @Override
   protected EClass eStaticClass()
   {
-    return GoLDSLPackage.Literals.CELLS_DEF;
+    return GoLDSLPackage.Literals.CELLS;
   }
 
-} //CellsDefImpl
+} //CellsImpl

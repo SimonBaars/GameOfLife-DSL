@@ -11,8 +11,8 @@
       <genEnumLiterals ecoreEnumLiteral="GoLDSL.ecore#//BoolOperator/OR"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="GoLDSL.ecore#//GridPart">
-      <genEnumLiterals ecoreEnumLiteral="GoLDSL.ecore#//GridPart/AND"/>
-      <genEnumLiterals ecoreEnumLiteral="GoLDSL.ecore#//GridPart/OR"/>
+      <genEnumLiterals ecoreEnumLiteral="GoLDSL.ecore#//GridPart/ALIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="GoLDSL.ecore#//GridPart/DEAD"/>
     </genEnums>
     <genClasses ecoreClass="GoLDSL.ecore#//DSL">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//DSL/board"/>
@@ -24,8 +24,8 @@
     </genClasses>
     <genClasses ecoreClass="GoLDSL.ecore#//Objects">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/shapes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/moreCell"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/moreCells"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/cell"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/cells"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Objects/grids"/>
     </genClasses>
     <genClasses ecoreClass="GoLDSL.ecore#//ShapeDef">
@@ -36,7 +36,7 @@
     <genClasses ecoreClass="GoLDSL.ecore#//CellPairs">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//CellPairs/cells"/>
     </genClasses>
-    <genClasses ecoreClass="GoLDSL.ecore#//CellsDef"/>
+    <genClasses ecoreClass="GoLDSL.ecore#//Cells"/>
     <genClasses ecoreClass="GoLDSL.ecore#//CellDef"/>
     <genClasses ecoreClass="GoLDSL.ecore#//ShapeRef">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//ShapeRef/name"/>

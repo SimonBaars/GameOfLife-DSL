@@ -10,7 +10,7 @@ import com.simonbaars.goLDSL.BoundedRange;
 import com.simonbaars.goLDSL.Cell;
 import com.simonbaars.goLDSL.CellDef;
 import com.simonbaars.goLDSL.CellPairs;
-import com.simonbaars.goLDSL.CellsDef;
+import com.simonbaars.goLDSL.Cells;
 import com.simonbaars.goLDSL.Condition;
 import com.simonbaars.goLDSL.ConditionRule;
 import com.simonbaars.goLDSL.ConditionRules;
@@ -86,7 +86,7 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass cellsDefEClass = null;
+  private EClass cellsEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -378,7 +378,7 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EReference getObjects_MoreCell()
+  public EReference getObjects_Cell()
   {
     return (EReference)objectsEClass.getEStructuralFeatures().get(1);
   }
@@ -389,7 +389,7 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EReference getObjects_MoreCells()
+  public EReference getObjects_Cells()
   {
     return (EReference)objectsEClass.getEStructuralFeatures().get(2);
   }
@@ -477,9 +477,9 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EClass getCellsDef()
+  public EClass getCells()
   {
-    return cellsDefEClass;
+    return cellsEClass;
   }
 
   /**
@@ -1007,8 +1007,8 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
 
     objectsEClass = createEClass(OBJECTS);
     createEReference(objectsEClass, OBJECTS__SHAPES);
-    createEReference(objectsEClass, OBJECTS__MORE_CELL);
-    createEReference(objectsEClass, OBJECTS__MORE_CELLS);
+    createEReference(objectsEClass, OBJECTS__CELL);
+    createEReference(objectsEClass, OBJECTS__CELLS);
     createEReference(objectsEClass, OBJECTS__GRIDS);
 
     shapeDefEClass = createEClass(SHAPE_DEF);
@@ -1019,7 +1019,7 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     cellPairsEClass = createEClass(CELL_PAIRS);
     createEReference(cellPairsEClass, CELL_PAIRS__CELLS);
 
-    cellsDefEClass = createEClass(CELLS_DEF);
+    cellsEClass = createEClass(CELLS);
 
     cellDefEClass = createEClass(CELL_DEF);
 
@@ -1114,7 +1114,7 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    cellPairsEClass.getESuperTypes().add(this.getCellsDef());
+    cellPairsEClass.getESuperTypes().add(this.getCells());
     cellEClass.getESuperTypes().add(this.getCellDef());
     boundedRangeEClass.getESuperTypes().add(this.getRange());
     unboundedRangeEClass.getESuperTypes().add(this.getRange());
@@ -1132,8 +1132,8 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
 
     initEClass(objectsEClass, Objects.class, "Objects", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getObjects_Shapes(), this.getShapeRef(), null, "shapes", null, 0, -1, Objects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getObjects_MoreCell(), this.getCellDef(), null, "moreCell", null, 0, -1, Objects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getObjects_MoreCells(), this.getCellsDef(), null, "moreCells", null, 0, -1, Objects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getObjects_Cell(), this.getCellDef(), null, "cell", null, 0, -1, Objects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getObjects_Cells(), this.getCells(), null, "cells", null, 0, -1, Objects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getObjects_Grids(), this.getGrid(), null, "grids", null, 0, -1, Objects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(shapeDefEClass, ShapeDef.class, "ShapeDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1144,7 +1144,7 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     initEClass(cellPairsEClass, CellPairs.class, "CellPairs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCellPairs_Cells(), this.getCell(), null, "cells", null, 0, -1, CellPairs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cellsDefEClass, CellsDef.class, "CellsDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(cellsEClass, Cells.class, "Cells", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(cellDefEClass, CellDef.class, "CellDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1211,8 +1211,8 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     addEEnumLiteral(boolOperatorEEnum, BoolOperator.OR);
 
     initEEnum(gridPartEEnum, GridPart.class, "GridPart");
-    addEEnumLiteral(gridPartEEnum, GridPart.AND);
-    addEEnumLiteral(gridPartEEnum, GridPart.OR);
+    addEEnumLiteral(gridPartEEnum, GridPart.ALIVE);
+    addEEnumLiteral(gridPartEEnum, GridPart.DEAD);
 
     // Create resource
     createResource(eNS_URI);

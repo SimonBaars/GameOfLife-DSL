@@ -69,13 +69,13 @@ public interface GoLDSLFactory extends EFactory
   CellPairs createCellPairs();
 
   /**
-   * Returns a new object of class '<em>Cells Def</em>'.
+   * Returns a new object of class '<em>Cells</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Cells Def</em>'.
+   * @return a new object of class '<em>Cells</em>'.
    * @generated
    */
-  CellsDef createCellsDef();
+  Cells createCells();
 
   /**
    * Returns a new object of class '<em>Cell Def</em>'.

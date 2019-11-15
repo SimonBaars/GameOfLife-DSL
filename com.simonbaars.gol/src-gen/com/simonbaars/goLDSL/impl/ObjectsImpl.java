@@ -4,7 +4,7 @@
 package com.simonbaars.goLDSL.impl;
 
 import com.simonbaars.goLDSL.CellDef;
-import com.simonbaars.goLDSL.CellsDef;
+import com.simonbaars.goLDSL.Cells;
 import com.simonbaars.goLDSL.GoLDSLPackage;
 import com.simonbaars.goLDSL.Grid;
 import com.simonbaars.goLDSL.Objects;
@@ -33,8 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link com.simonbaars.goLDSL.impl.ObjectsImpl#getShapes <em>Shapes</em>}</li>
- *   <li>{@link com.simonbaars.goLDSL.impl.ObjectsImpl#getMoreCell <em>More Cell</em>}</li>
- *   <li>{@link com.simonbaars.goLDSL.impl.ObjectsImpl#getMoreCells <em>More Cells</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.impl.ObjectsImpl#getCell <em>Cell</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.impl.ObjectsImpl#getCells <em>Cells</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.impl.ObjectsImpl#getGrids <em>Grids</em>}</li>
  * </ul>
  *
@@ -53,24 +53,24 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
   protected EList<ShapeRef> shapes;
 
   /**
-   * The cached value of the '{@link #getMoreCell() <em>More Cell</em>}' containment reference list.
+   * The cached value of the '{@link #getCell() <em>Cell</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMoreCell()
+   * @see #getCell()
    * @generated
    * @ordered
    */
-  protected EList<CellDef> moreCell;
+  protected EList<CellDef> cell;
 
   /**
-   * The cached value of the '{@link #getMoreCells() <em>More Cells</em>}' containment reference list.
+   * The cached value of the '{@link #getCells() <em>Cells</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMoreCells()
+   * @see #getCells()
    * @generated
    * @ordered
    */
-  protected EList<CellsDef> moreCells;
+  protected EList<Cells> cells;
 
   /**
    * The cached value of the '{@link #getGrids() <em>Grids</em>}' containment reference list.
@@ -124,13 +124,13 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
    * @generated
    */
   @Override
-  public EList<CellDef> getMoreCell()
+  public EList<CellDef> getCell()
   {
-    if (moreCell == null)
+    if (cell == null)
     {
-      moreCell = new EObjectContainmentEList<CellDef>(CellDef.class, this, GoLDSLPackage.OBJECTS__MORE_CELL);
+      cell = new EObjectContainmentEList<CellDef>(CellDef.class, this, GoLDSLPackage.OBJECTS__CELL);
     }
-    return moreCell;
+    return cell;
   }
 
   /**
@@ -139,13 +139,13 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
    * @generated
    */
   @Override
-  public EList<CellsDef> getMoreCells()
+  public EList<Cells> getCells()
   {
-    if (moreCells == null)
+    if (cells == null)
     {
-      moreCells = new EObjectContainmentEList<CellsDef>(CellsDef.class, this, GoLDSLPackage.OBJECTS__MORE_CELLS);
+      cells = new EObjectContainmentEList<Cells>(Cells.class, this, GoLDSLPackage.OBJECTS__CELLS);
     }
-    return moreCells;
+    return cells;
   }
 
   /**
@@ -175,10 +175,10 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
     {
       case GoLDSLPackage.OBJECTS__SHAPES:
         return ((InternalEList<?>)getShapes()).basicRemove(otherEnd, msgs);
-      case GoLDSLPackage.OBJECTS__MORE_CELL:
-        return ((InternalEList<?>)getMoreCell()).basicRemove(otherEnd, msgs);
-      case GoLDSLPackage.OBJECTS__MORE_CELLS:
-        return ((InternalEList<?>)getMoreCells()).basicRemove(otherEnd, msgs);
+      case GoLDSLPackage.OBJECTS__CELL:
+        return ((InternalEList<?>)getCell()).basicRemove(otherEnd, msgs);
+      case GoLDSLPackage.OBJECTS__CELLS:
+        return ((InternalEList<?>)getCells()).basicRemove(otherEnd, msgs);
       case GoLDSLPackage.OBJECTS__GRIDS:
         return ((InternalEList<?>)getGrids()).basicRemove(otherEnd, msgs);
     }
@@ -197,10 +197,10 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
     {
       case GoLDSLPackage.OBJECTS__SHAPES:
         return getShapes();
-      case GoLDSLPackage.OBJECTS__MORE_CELL:
-        return getMoreCell();
-      case GoLDSLPackage.OBJECTS__MORE_CELLS:
-        return getMoreCells();
+      case GoLDSLPackage.OBJECTS__CELL:
+        return getCell();
+      case GoLDSLPackage.OBJECTS__CELLS:
+        return getCells();
       case GoLDSLPackage.OBJECTS__GRIDS:
         return getGrids();
     }
@@ -222,13 +222,13 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
         getShapes().clear();
         getShapes().addAll((Collection<? extends ShapeRef>)newValue);
         return;
-      case GoLDSLPackage.OBJECTS__MORE_CELL:
-        getMoreCell().clear();
-        getMoreCell().addAll((Collection<? extends CellDef>)newValue);
+      case GoLDSLPackage.OBJECTS__CELL:
+        getCell().clear();
+        getCell().addAll((Collection<? extends CellDef>)newValue);
         return;
-      case GoLDSLPackage.OBJECTS__MORE_CELLS:
-        getMoreCells().clear();
-        getMoreCells().addAll((Collection<? extends CellsDef>)newValue);
+      case GoLDSLPackage.OBJECTS__CELLS:
+        getCells().clear();
+        getCells().addAll((Collection<? extends Cells>)newValue);
         return;
       case GoLDSLPackage.OBJECTS__GRIDS:
         getGrids().clear();
@@ -251,11 +251,11 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
       case GoLDSLPackage.OBJECTS__SHAPES:
         getShapes().clear();
         return;
-      case GoLDSLPackage.OBJECTS__MORE_CELL:
-        getMoreCell().clear();
+      case GoLDSLPackage.OBJECTS__CELL:
+        getCell().clear();
         return;
-      case GoLDSLPackage.OBJECTS__MORE_CELLS:
-        getMoreCells().clear();
+      case GoLDSLPackage.OBJECTS__CELLS:
+        getCells().clear();
         return;
       case GoLDSLPackage.OBJECTS__GRIDS:
         getGrids().clear();
@@ -276,10 +276,10 @@ public class ObjectsImpl extends MinimalEObjectImpl.Container implements Objects
     {
       case GoLDSLPackage.OBJECTS__SHAPES:
         return shapes != null && !shapes.isEmpty();
-      case GoLDSLPackage.OBJECTS__MORE_CELL:
-        return moreCell != null && !moreCell.isEmpty();
-      case GoLDSLPackage.OBJECTS__MORE_CELLS:
-        return moreCells != null && !moreCells.isEmpty();
+      case GoLDSLPackage.OBJECTS__CELL:
+        return cell != null && !cell.isEmpty();
+      case GoLDSLPackage.OBJECTS__CELLS:
+        return cells != null && !cells.isEmpty();
       case GoLDSLPackage.OBJECTS__GRIDS:
         return grids != null && !grids.isEmpty();
     }

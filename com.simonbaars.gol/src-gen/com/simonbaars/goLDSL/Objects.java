@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.simonbaars.goLDSL.Objects#getShapes <em>Shapes</em>}</li>
- *   <li>{@link com.simonbaars.goLDSL.Objects#getMoreCell <em>More Cell</em>}</li>
- *   <li>{@link com.simonbaars.goLDSL.Objects#getMoreCells <em>More Cells</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.Objects#getCell <em>Cell</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.Objects#getCells <em>Cells</em>}</li>
  *   <li>{@link com.simonbaars.goLDSL.Objects#getGrids <em>Grids</em>}</li>
  * </ul>
  *
@@ -41,28 +41,28 @@ public interface Objects extends EObject
   EList<ShapeRef> getShapes();
 
   /**
-   * Returns the value of the '<em><b>More Cell</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Cell</b></em>' containment reference list.
    * The list contents are of type {@link com.simonbaars.goLDSL.CellDef}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>More Cell</em>' containment reference list.
-   * @see com.simonbaars.goLDSL.GoLDSLPackage#getObjects_MoreCell()
+   * @return the value of the '<em>Cell</em>' containment reference list.
+   * @see com.simonbaars.goLDSL.GoLDSLPackage#getObjects_Cell()
    * @model containment="true"
    * @generated
    */
-  EList<CellDef> getMoreCell();
+  EList<CellDef> getCell();
 
   /**
-   * Returns the value of the '<em><b>More Cells</b></em>' containment reference list.
-   * The list contents are of type {@link com.simonbaars.goLDSL.CellsDef}.
+   * Returns the value of the '<em><b>Cells</b></em>' containment reference list.
+   * The list contents are of type {@link com.simonbaars.goLDSL.Cells}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>More Cells</em>' containment reference list.
-   * @see com.simonbaars.goLDSL.GoLDSLPackage#getObjects_MoreCells()
+   * @return the value of the '<em>Cells</em>' containment reference list.
+   * @see com.simonbaars.goLDSL.GoLDSLPackage#getObjects_Cells()
    * @model containment="true"
    * @generated
    */
-  EList<CellsDef> getMoreCells();
+  EList<Cells> getCells();
 
   /**
    * Returns the value of the '<em><b>Grids</b></em>' containment reference list.

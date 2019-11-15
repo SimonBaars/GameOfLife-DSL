@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class CellPairsImpl extends CellsDefImpl implements CellPairs
+public class CellPairsImpl extends CellsImpl implements CellPairs
 {
   /**
    * The cached value of the '{@link #getCells() <em>Cells</em>}' containment reference list.

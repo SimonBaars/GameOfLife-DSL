@@ -105,14 +105,14 @@ public class GoLDSLSwitch<T> extends Switch<T>
       {
         CellPairs cellPairs = (CellPairs)theEObject;
         T result = caseCellPairs(cellPairs);
-        if (result == null) result = caseCellsDef(cellPairs);
+        if (result == null) result = caseCells(cellPairs);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GoLDSLPackage.CELLS_DEF:
+      case GoLDSLPackage.CELLS:
       {
-        CellsDef cellsDef = (CellsDef)theEObject;
-        T result = caseCellsDef(cellsDef);
+        Cells cells = (Cells)theEObject;
+        T result = caseCells(cells);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -327,17 +327,17 @@ public class GoLDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Cells Def</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cells</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Cells Def</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cells</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseCellsDef(CellsDef object)
+  public T caseCells(Cells object)
   {
     return null;
   }
