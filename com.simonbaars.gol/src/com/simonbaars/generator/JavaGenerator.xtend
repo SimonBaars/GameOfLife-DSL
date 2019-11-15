@@ -12,8 +12,10 @@ import com.simonbaars.goLDSL.ConditionRules
 import com.simonbaars.goLDSL.DSL
 import com.simonbaars.goLDSL.Grid
 import com.simonbaars.goLDSL.GridPart
+import com.simonbaars.goLDSL.LeftUnboundedRange
 import com.simonbaars.goLDSL.Objects
 import com.simonbaars.goLDSL.Range
+import com.simonbaars.goLDSL.RightUnboundedRange
 import com.simonbaars.goLDSL.Rule
 import com.simonbaars.goLDSL.ShapeDef
 import com.simonbaars.goLDSL.ShapeRef
@@ -21,7 +23,6 @@ import java.util.stream.Collectors
 import java.util.stream.IntStream
 import org.eclipse.emf.common.util.EList
 import org.eclipse.xtend.lib.annotations.Data
-import com.simonbaars.goLDSL.LeftUnboundedRange
 
 @Data class Position {
 	int x
@@ -53,25 +54,33 @@ public class RulesOfLife {
 		return rules.stream.map(rule | "if(" + conditionToJava(rule.condition as ConditionRules) + ") {" + System.lineSeparator + actionToJava(rule.action, shapes) + System.lineSeparator + "}" ).collect(Collectors.joining(System.lineSeparator+System.lineSeparator))
 	}
 		
-	def static conditionToJava(ConditionRules condition) {
+	def static String conditionToJava(ConditionRules condition) {
 		var rule = ruleToJava(condition.rule1)
+		if(condition.operator !== null){
+			rule += condition.operator.value + condition.operator.value + conditionToJava(condition.rule2)
+		}
+		return rule
 	}
 	
 	def static ruleToJava(ConditionRule rule) {
-		if(rule.alive != null){
+		if(rule.alive !== null){
 			return "board[i][j]";
-		} else if (rule.range != null) {
+		} else if (rule.range !== null) {
 			return rangeToJava(rule.range)
 		}
 		return "surrounding == "+rule.number;
 	}
 		
 	def static rangeToJava(Range range) {
-		if(range.bounded != null){
-			return "(surrounding >= "+range.bounded.lowerBound+" && surrounding <= "+range.bounded.lowerBound+")"
-		} 
-		var boundedRange = range as BoundedRange
-			
+		if(range instanceof BoundedRange){
+			var r = range as BoundedRange
+			return "(surrounding >= "+r.lowerBound+" && surrounding <= "+r.higherBound+")"
+		} else if (range instanceof LeftUnboundedRange){
+			var r = range as LeftUnboundedRange
+			return "surrounding >= "+r.lowerBound
+		} else {
+			var r = range as RightUnboundedRange
+			return "surrounding <= "+r.higherBound
 		}
 	}
 		

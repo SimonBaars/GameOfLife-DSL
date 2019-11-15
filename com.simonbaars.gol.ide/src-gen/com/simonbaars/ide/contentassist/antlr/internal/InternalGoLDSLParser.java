@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'&'", "'|'", "'+'", "'-'", "'Board:'", "'Shape'", "':'", "'('", "')'", "'Cells:'", "'Cell:'", "','", "'Rule:'", "'Create'", "'If'", "'..'", "'Grid:'", "'offset'", "'size'", "'IsAlive'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'&'", "'|'", "'+'", "'-'", "'Board:'", "'Shape'", "':'", "'('", "')'", "'Cells:'", "'Cell:'", "','", "'Rule:'", "'Create'", "'If'", "'..'", "'Grid:'", "'offset'", "'size'", "'IsAlive'"
     };
     public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=8;
@@ -37,13 +37,13 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
     public static final int T__14=14;
     public static final int EOF=-1;
     public static final int T__30=30;
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=4;
+    public static final int RULE_INT=5;
     public static final int T__29=29;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
@@ -1427,89 +1427,12 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleBoundedRange"
 
 
-    // $ANTLR start "entryRuleUnboundedRange"
-    // InternalGoLDSL.g:467:1: entryRuleUnboundedRange : ruleUnboundedRange EOF ;
-    public final void entryRuleUnboundedRange() throws RecognitionException {
-        try {
-            // InternalGoLDSL.g:468:1: ( ruleUnboundedRange EOF )
-            // InternalGoLDSL.g:469:1: ruleUnboundedRange EOF
-            {
-             before(grammarAccess.getUnboundedRangeRule()); 
-            pushFollow(FOLLOW_1);
-            ruleUnboundedRange();
-
-            state._fsp--;
-
-             after(grammarAccess.getUnboundedRangeRule()); 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleUnboundedRange"
-
-
-    // $ANTLR start "ruleUnboundedRange"
-    // InternalGoLDSL.g:476:1: ruleUnboundedRange : ( ( rule__UnboundedRange__Alternatives ) ) ;
-    public final void ruleUnboundedRange() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalGoLDSL.g:480:2: ( ( ( rule__UnboundedRange__Alternatives ) ) )
-            // InternalGoLDSL.g:481:2: ( ( rule__UnboundedRange__Alternatives ) )
-            {
-            // InternalGoLDSL.g:481:2: ( ( rule__UnboundedRange__Alternatives ) )
-            // InternalGoLDSL.g:482:3: ( rule__UnboundedRange__Alternatives )
-            {
-             before(grammarAccess.getUnboundedRangeAccess().getAlternatives()); 
-            // InternalGoLDSL.g:483:3: ( rule__UnboundedRange__Alternatives )
-            // InternalGoLDSL.g:483:4: rule__UnboundedRange__Alternatives
-            {
-            pushFollow(FOLLOW_2);
-            rule__UnboundedRange__Alternatives();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getUnboundedRangeAccess().getAlternatives()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleUnboundedRange"
-
-
     // $ANTLR start "entryRuleLeftUnboundedRange"
-    // InternalGoLDSL.g:492:1: entryRuleLeftUnboundedRange : ruleLeftUnboundedRange EOF ;
+    // InternalGoLDSL.g:467:1: entryRuleLeftUnboundedRange : ruleLeftUnboundedRange EOF ;
     public final void entryRuleLeftUnboundedRange() throws RecognitionException {
         try {
-            // InternalGoLDSL.g:493:1: ( ruleLeftUnboundedRange EOF )
-            // InternalGoLDSL.g:494:1: ruleLeftUnboundedRange EOF
+            // InternalGoLDSL.g:468:1: ( ruleLeftUnboundedRange EOF )
+            // InternalGoLDSL.g:469:1: ruleLeftUnboundedRange EOF
             {
              before(grammarAccess.getLeftUnboundedRangeRule()); 
             pushFollow(FOLLOW_1);
@@ -1535,21 +1458,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleLeftUnboundedRange"
-    // InternalGoLDSL.g:501:1: ruleLeftUnboundedRange : ( ( rule__LeftUnboundedRange__Group__0 ) ) ;
+    // InternalGoLDSL.g:476:1: ruleLeftUnboundedRange : ( ( rule__LeftUnboundedRange__Group__0 ) ) ;
     public final void ruleLeftUnboundedRange() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:505:2: ( ( ( rule__LeftUnboundedRange__Group__0 ) ) )
-            // InternalGoLDSL.g:506:2: ( ( rule__LeftUnboundedRange__Group__0 ) )
+            // InternalGoLDSL.g:480:2: ( ( ( rule__LeftUnboundedRange__Group__0 ) ) )
+            // InternalGoLDSL.g:481:2: ( ( rule__LeftUnboundedRange__Group__0 ) )
             {
-            // InternalGoLDSL.g:506:2: ( ( rule__LeftUnboundedRange__Group__0 ) )
-            // InternalGoLDSL.g:507:3: ( rule__LeftUnboundedRange__Group__0 )
+            // InternalGoLDSL.g:481:2: ( ( rule__LeftUnboundedRange__Group__0 ) )
+            // InternalGoLDSL.g:482:3: ( rule__LeftUnboundedRange__Group__0 )
             {
              before(grammarAccess.getLeftUnboundedRangeAccess().getGroup()); 
-            // InternalGoLDSL.g:508:3: ( rule__LeftUnboundedRange__Group__0 )
-            // InternalGoLDSL.g:508:4: rule__LeftUnboundedRange__Group__0
+            // InternalGoLDSL.g:483:3: ( rule__LeftUnboundedRange__Group__0 )
+            // InternalGoLDSL.g:483:4: rule__LeftUnboundedRange__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__LeftUnboundedRange__Group__0();
@@ -1582,11 +1505,11 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleRightUnboundedRange"
-    // InternalGoLDSL.g:517:1: entryRuleRightUnboundedRange : ruleRightUnboundedRange EOF ;
+    // InternalGoLDSL.g:492:1: entryRuleRightUnboundedRange : ruleRightUnboundedRange EOF ;
     public final void entryRuleRightUnboundedRange() throws RecognitionException {
         try {
-            // InternalGoLDSL.g:518:1: ( ruleRightUnboundedRange EOF )
-            // InternalGoLDSL.g:519:1: ruleRightUnboundedRange EOF
+            // InternalGoLDSL.g:493:1: ( ruleRightUnboundedRange EOF )
+            // InternalGoLDSL.g:494:1: ruleRightUnboundedRange EOF
             {
              before(grammarAccess.getRightUnboundedRangeRule()); 
             pushFollow(FOLLOW_1);
@@ -1612,21 +1535,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleRightUnboundedRange"
-    // InternalGoLDSL.g:526:1: ruleRightUnboundedRange : ( ( rule__RightUnboundedRange__Group__0 ) ) ;
+    // InternalGoLDSL.g:501:1: ruleRightUnboundedRange : ( ( rule__RightUnboundedRange__Group__0 ) ) ;
     public final void ruleRightUnboundedRange() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:530:2: ( ( ( rule__RightUnboundedRange__Group__0 ) ) )
-            // InternalGoLDSL.g:531:2: ( ( rule__RightUnboundedRange__Group__0 ) )
+            // InternalGoLDSL.g:505:2: ( ( ( rule__RightUnboundedRange__Group__0 ) ) )
+            // InternalGoLDSL.g:506:2: ( ( rule__RightUnboundedRange__Group__0 ) )
             {
-            // InternalGoLDSL.g:531:2: ( ( rule__RightUnboundedRange__Group__0 ) )
-            // InternalGoLDSL.g:532:3: ( rule__RightUnboundedRange__Group__0 )
+            // InternalGoLDSL.g:506:2: ( ( rule__RightUnboundedRange__Group__0 ) )
+            // InternalGoLDSL.g:507:3: ( rule__RightUnboundedRange__Group__0 )
             {
              before(grammarAccess.getRightUnboundedRangeAccess().getGroup()); 
-            // InternalGoLDSL.g:533:3: ( rule__RightUnboundedRange__Group__0 )
-            // InternalGoLDSL.g:533:4: rule__RightUnboundedRange__Group__0
+            // InternalGoLDSL.g:508:3: ( rule__RightUnboundedRange__Group__0 )
+            // InternalGoLDSL.g:508:4: rule__RightUnboundedRange__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__RightUnboundedRange__Group__0();
@@ -1659,11 +1582,11 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleGrid"
-    // InternalGoLDSL.g:542:1: entryRuleGrid : ruleGrid EOF ;
+    // InternalGoLDSL.g:517:1: entryRuleGrid : ruleGrid EOF ;
     public final void entryRuleGrid() throws RecognitionException {
         try {
-            // InternalGoLDSL.g:543:1: ( ruleGrid EOF )
-            // InternalGoLDSL.g:544:1: ruleGrid EOF
+            // InternalGoLDSL.g:518:1: ( ruleGrid EOF )
+            // InternalGoLDSL.g:519:1: ruleGrid EOF
             {
              before(grammarAccess.getGridRule()); 
             pushFollow(FOLLOW_1);
@@ -1689,21 +1612,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleGrid"
-    // InternalGoLDSL.g:551:1: ruleGrid : ( ( rule__Grid__Group__0 ) ) ;
+    // InternalGoLDSL.g:526:1: ruleGrid : ( ( rule__Grid__Group__0 ) ) ;
     public final void ruleGrid() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:555:2: ( ( ( rule__Grid__Group__0 ) ) )
-            // InternalGoLDSL.g:556:2: ( ( rule__Grid__Group__0 ) )
+            // InternalGoLDSL.g:530:2: ( ( ( rule__Grid__Group__0 ) ) )
+            // InternalGoLDSL.g:531:2: ( ( rule__Grid__Group__0 ) )
             {
-            // InternalGoLDSL.g:556:2: ( ( rule__Grid__Group__0 ) )
-            // InternalGoLDSL.g:557:3: ( rule__Grid__Group__0 )
+            // InternalGoLDSL.g:531:2: ( ( rule__Grid__Group__0 ) )
+            // InternalGoLDSL.g:532:3: ( rule__Grid__Group__0 )
             {
              before(grammarAccess.getGridAccess().getGroup()); 
-            // InternalGoLDSL.g:558:3: ( rule__Grid__Group__0 )
-            // InternalGoLDSL.g:558:4: rule__Grid__Group__0
+            // InternalGoLDSL.g:533:3: ( rule__Grid__Group__0 )
+            // InternalGoLDSL.g:533:4: rule__Grid__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Grid__Group__0();
@@ -1736,11 +1659,11 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleOffset"
-    // InternalGoLDSL.g:567:1: entryRuleOffset : ruleOffset EOF ;
+    // InternalGoLDSL.g:542:1: entryRuleOffset : ruleOffset EOF ;
     public final void entryRuleOffset() throws RecognitionException {
         try {
-            // InternalGoLDSL.g:568:1: ( ruleOffset EOF )
-            // InternalGoLDSL.g:569:1: ruleOffset EOF
+            // InternalGoLDSL.g:543:1: ( ruleOffset EOF )
+            // InternalGoLDSL.g:544:1: ruleOffset EOF
             {
              before(grammarAccess.getOffsetRule()); 
             pushFollow(FOLLOW_1);
@@ -1766,21 +1689,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleOffset"
-    // InternalGoLDSL.g:576:1: ruleOffset : ( ( rule__Offset__Group__0 ) ) ;
+    // InternalGoLDSL.g:551:1: ruleOffset : ( ( rule__Offset__Group__0 ) ) ;
     public final void ruleOffset() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:580:2: ( ( ( rule__Offset__Group__0 ) ) )
-            // InternalGoLDSL.g:581:2: ( ( rule__Offset__Group__0 ) )
+            // InternalGoLDSL.g:555:2: ( ( ( rule__Offset__Group__0 ) ) )
+            // InternalGoLDSL.g:556:2: ( ( rule__Offset__Group__0 ) )
             {
-            // InternalGoLDSL.g:581:2: ( ( rule__Offset__Group__0 ) )
-            // InternalGoLDSL.g:582:3: ( rule__Offset__Group__0 )
+            // InternalGoLDSL.g:556:2: ( ( rule__Offset__Group__0 ) )
+            // InternalGoLDSL.g:557:3: ( rule__Offset__Group__0 )
             {
              before(grammarAccess.getOffsetAccess().getGroup()); 
-            // InternalGoLDSL.g:583:3: ( rule__Offset__Group__0 )
-            // InternalGoLDSL.g:583:4: rule__Offset__Group__0
+            // InternalGoLDSL.g:558:3: ( rule__Offset__Group__0 )
+            // InternalGoLDSL.g:558:4: rule__Offset__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Offset__Group__0();
@@ -1813,11 +1736,11 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleSize"
-    // InternalGoLDSL.g:592:1: entryRuleSize : ruleSize EOF ;
+    // InternalGoLDSL.g:567:1: entryRuleSize : ruleSize EOF ;
     public final void entryRuleSize() throws RecognitionException {
         try {
-            // InternalGoLDSL.g:593:1: ( ruleSize EOF )
-            // InternalGoLDSL.g:594:1: ruleSize EOF
+            // InternalGoLDSL.g:568:1: ( ruleSize EOF )
+            // InternalGoLDSL.g:569:1: ruleSize EOF
             {
              before(grammarAccess.getSizeRule()); 
             pushFollow(FOLLOW_1);
@@ -1843,21 +1766,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleSize"
-    // InternalGoLDSL.g:601:1: ruleSize : ( ( rule__Size__Group__0 ) ) ;
+    // InternalGoLDSL.g:576:1: ruleSize : ( ( rule__Size__Group__0 ) ) ;
     public final void ruleSize() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:605:2: ( ( ( rule__Size__Group__0 ) ) )
-            // InternalGoLDSL.g:606:2: ( ( rule__Size__Group__0 ) )
+            // InternalGoLDSL.g:580:2: ( ( ( rule__Size__Group__0 ) ) )
+            // InternalGoLDSL.g:581:2: ( ( rule__Size__Group__0 ) )
             {
-            // InternalGoLDSL.g:606:2: ( ( rule__Size__Group__0 ) )
-            // InternalGoLDSL.g:607:3: ( rule__Size__Group__0 )
+            // InternalGoLDSL.g:581:2: ( ( rule__Size__Group__0 ) )
+            // InternalGoLDSL.g:582:3: ( rule__Size__Group__0 )
             {
              before(grammarAccess.getSizeAccess().getGroup()); 
-            // InternalGoLDSL.g:608:3: ( rule__Size__Group__0 )
-            // InternalGoLDSL.g:608:4: rule__Size__Group__0
+            // InternalGoLDSL.g:583:3: ( rule__Size__Group__0 )
+            // InternalGoLDSL.g:583:4: rule__Size__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Size__Group__0();
@@ -1890,21 +1813,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleBoolOperator"
-    // InternalGoLDSL.g:617:1: ruleBoolOperator : ( ( rule__BoolOperator__Alternatives ) ) ;
+    // InternalGoLDSL.g:592:1: ruleBoolOperator : ( ( rule__BoolOperator__Alternatives ) ) ;
     public final void ruleBoolOperator() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:621:1: ( ( ( rule__BoolOperator__Alternatives ) ) )
-            // InternalGoLDSL.g:622:2: ( ( rule__BoolOperator__Alternatives ) )
+            // InternalGoLDSL.g:596:1: ( ( ( rule__BoolOperator__Alternatives ) ) )
+            // InternalGoLDSL.g:597:2: ( ( rule__BoolOperator__Alternatives ) )
             {
-            // InternalGoLDSL.g:622:2: ( ( rule__BoolOperator__Alternatives ) )
-            // InternalGoLDSL.g:623:3: ( rule__BoolOperator__Alternatives )
+            // InternalGoLDSL.g:597:2: ( ( rule__BoolOperator__Alternatives ) )
+            // InternalGoLDSL.g:598:3: ( rule__BoolOperator__Alternatives )
             {
              before(grammarAccess.getBoolOperatorAccess().getAlternatives()); 
-            // InternalGoLDSL.g:624:3: ( rule__BoolOperator__Alternatives )
-            // InternalGoLDSL.g:624:4: rule__BoolOperator__Alternatives
+            // InternalGoLDSL.g:599:3: ( rule__BoolOperator__Alternatives )
+            // InternalGoLDSL.g:599:4: rule__BoolOperator__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__BoolOperator__Alternatives();
@@ -1937,21 +1860,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleGridPart"
-    // InternalGoLDSL.g:633:1: ruleGridPart : ( ( rule__GridPart__Alternatives ) ) ;
+    // InternalGoLDSL.g:608:1: ruleGridPart : ( ( rule__GridPart__Alternatives ) ) ;
     public final void ruleGridPart() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:637:1: ( ( ( rule__GridPart__Alternatives ) ) )
-            // InternalGoLDSL.g:638:2: ( ( rule__GridPart__Alternatives ) )
+            // InternalGoLDSL.g:612:1: ( ( ( rule__GridPart__Alternatives ) ) )
+            // InternalGoLDSL.g:613:2: ( ( rule__GridPart__Alternatives ) )
             {
-            // InternalGoLDSL.g:638:2: ( ( rule__GridPart__Alternatives ) )
-            // InternalGoLDSL.g:639:3: ( rule__GridPart__Alternatives )
+            // InternalGoLDSL.g:613:2: ( ( rule__GridPart__Alternatives ) )
+            // InternalGoLDSL.g:614:3: ( rule__GridPart__Alternatives )
             {
              before(grammarAccess.getGridPartAccess().getAlternatives()); 
-            // InternalGoLDSL.g:640:3: ( rule__GridPart__Alternatives )
-            // InternalGoLDSL.g:640:4: rule__GridPart__Alternatives
+            // InternalGoLDSL.g:615:3: ( rule__GridPart__Alternatives )
+            // InternalGoLDSL.g:615:4: rule__GridPart__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__GridPart__Alternatives();
@@ -1984,13 +1907,13 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DSL__Alternatives_1"
-    // InternalGoLDSL.g:648:1: rule__DSL__Alternatives_1 : ( ( ( rule__DSL__RulesAssignment_1_0 ) ) | ( ( rule__DSL__ShapesAssignment_1_1 ) ) );
+    // InternalGoLDSL.g:623:1: rule__DSL__Alternatives_1 : ( ( ( rule__DSL__RulesAssignment_1_0 ) ) | ( ( rule__DSL__ShapesAssignment_1_1 ) ) );
     public final void rule__DSL__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:652:1: ( ( ( rule__DSL__RulesAssignment_1_0 ) ) | ( ( rule__DSL__ShapesAssignment_1_1 ) ) )
+            // InternalGoLDSL.g:627:1: ( ( ( rule__DSL__RulesAssignment_1_0 ) ) | ( ( rule__DSL__ShapesAssignment_1_1 ) ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -2008,14 +1931,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalGoLDSL.g:653:2: ( ( rule__DSL__RulesAssignment_1_0 ) )
+                    // InternalGoLDSL.g:628:2: ( ( rule__DSL__RulesAssignment_1_0 ) )
                     {
-                    // InternalGoLDSL.g:653:2: ( ( rule__DSL__RulesAssignment_1_0 ) )
-                    // InternalGoLDSL.g:654:3: ( rule__DSL__RulesAssignment_1_0 )
+                    // InternalGoLDSL.g:628:2: ( ( rule__DSL__RulesAssignment_1_0 ) )
+                    // InternalGoLDSL.g:629:3: ( rule__DSL__RulesAssignment_1_0 )
                     {
                      before(grammarAccess.getDSLAccess().getRulesAssignment_1_0()); 
-                    // InternalGoLDSL.g:655:3: ( rule__DSL__RulesAssignment_1_0 )
-                    // InternalGoLDSL.g:655:4: rule__DSL__RulesAssignment_1_0
+                    // InternalGoLDSL.g:630:3: ( rule__DSL__RulesAssignment_1_0 )
+                    // InternalGoLDSL.g:630:4: rule__DSL__RulesAssignment_1_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DSL__RulesAssignment_1_0();
@@ -2033,14 +1956,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGoLDSL.g:659:2: ( ( rule__DSL__ShapesAssignment_1_1 ) )
+                    // InternalGoLDSL.g:634:2: ( ( rule__DSL__ShapesAssignment_1_1 ) )
                     {
-                    // InternalGoLDSL.g:659:2: ( ( rule__DSL__ShapesAssignment_1_1 ) )
-                    // InternalGoLDSL.g:660:3: ( rule__DSL__ShapesAssignment_1_1 )
+                    // InternalGoLDSL.g:634:2: ( ( rule__DSL__ShapesAssignment_1_1 ) )
+                    // InternalGoLDSL.g:635:3: ( rule__DSL__ShapesAssignment_1_1 )
                     {
                      before(grammarAccess.getDSLAccess().getShapesAssignment_1_1()); 
-                    // InternalGoLDSL.g:661:3: ( rule__DSL__ShapesAssignment_1_1 )
-                    // InternalGoLDSL.g:661:4: rule__DSL__ShapesAssignment_1_1
+                    // InternalGoLDSL.g:636:3: ( rule__DSL__ShapesAssignment_1_1 )
+                    // InternalGoLDSL.g:636:4: rule__DSL__ShapesAssignment_1_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__DSL__ShapesAssignment_1_1();
@@ -2075,13 +1998,13 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Objects__Alternatives"
-    // InternalGoLDSL.g:669:1: rule__Objects__Alternatives : ( ( ( rule__Objects__ShapesAssignment_0 ) ) | ( ( rule__Objects__CellAssignment_1 ) ) | ( ( rule__Objects__CellsAssignment_2 ) ) | ( ( rule__Objects__GridsAssignment_3 ) ) );
+    // InternalGoLDSL.g:644:1: rule__Objects__Alternatives : ( ( ( rule__Objects__ShapesAssignment_0 ) ) | ( ( rule__Objects__CellAssignment_1 ) ) | ( ( rule__Objects__CellsAssignment_2 ) ) | ( ( rule__Objects__GridsAssignment_3 ) ) );
     public final void rule__Objects__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:673:1: ( ( ( rule__Objects__ShapesAssignment_0 ) ) | ( ( rule__Objects__CellAssignment_1 ) ) | ( ( rule__Objects__CellsAssignment_2 ) ) | ( ( rule__Objects__GridsAssignment_3 ) ) )
+            // InternalGoLDSL.g:648:1: ( ( ( rule__Objects__ShapesAssignment_0 ) ) | ( ( rule__Objects__CellAssignment_1 ) ) | ( ( rule__Objects__CellsAssignment_2 ) ) | ( ( rule__Objects__GridsAssignment_3 ) ) )
             int alt4=4;
             switch ( input.LA(1) ) {
             case 16:
@@ -2113,14 +2036,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
             switch (alt4) {
                 case 1 :
-                    // InternalGoLDSL.g:674:2: ( ( rule__Objects__ShapesAssignment_0 ) )
+                    // InternalGoLDSL.g:649:2: ( ( rule__Objects__ShapesAssignment_0 ) )
                     {
-                    // InternalGoLDSL.g:674:2: ( ( rule__Objects__ShapesAssignment_0 ) )
-                    // InternalGoLDSL.g:675:3: ( rule__Objects__ShapesAssignment_0 )
+                    // InternalGoLDSL.g:649:2: ( ( rule__Objects__ShapesAssignment_0 ) )
+                    // InternalGoLDSL.g:650:3: ( rule__Objects__ShapesAssignment_0 )
                     {
                      before(grammarAccess.getObjectsAccess().getShapesAssignment_0()); 
-                    // InternalGoLDSL.g:676:3: ( rule__Objects__ShapesAssignment_0 )
-                    // InternalGoLDSL.g:676:4: rule__Objects__ShapesAssignment_0
+                    // InternalGoLDSL.g:651:3: ( rule__Objects__ShapesAssignment_0 )
+                    // InternalGoLDSL.g:651:4: rule__Objects__ShapesAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Objects__ShapesAssignment_0();
@@ -2138,14 +2061,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGoLDSL.g:680:2: ( ( rule__Objects__CellAssignment_1 ) )
+                    // InternalGoLDSL.g:655:2: ( ( rule__Objects__CellAssignment_1 ) )
                     {
-                    // InternalGoLDSL.g:680:2: ( ( rule__Objects__CellAssignment_1 ) )
-                    // InternalGoLDSL.g:681:3: ( rule__Objects__CellAssignment_1 )
+                    // InternalGoLDSL.g:655:2: ( ( rule__Objects__CellAssignment_1 ) )
+                    // InternalGoLDSL.g:656:3: ( rule__Objects__CellAssignment_1 )
                     {
                      before(grammarAccess.getObjectsAccess().getCellAssignment_1()); 
-                    // InternalGoLDSL.g:682:3: ( rule__Objects__CellAssignment_1 )
-                    // InternalGoLDSL.g:682:4: rule__Objects__CellAssignment_1
+                    // InternalGoLDSL.g:657:3: ( rule__Objects__CellAssignment_1 )
+                    // InternalGoLDSL.g:657:4: rule__Objects__CellAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Objects__CellAssignment_1();
@@ -2163,14 +2086,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalGoLDSL.g:686:2: ( ( rule__Objects__CellsAssignment_2 ) )
+                    // InternalGoLDSL.g:661:2: ( ( rule__Objects__CellsAssignment_2 ) )
                     {
-                    // InternalGoLDSL.g:686:2: ( ( rule__Objects__CellsAssignment_2 ) )
-                    // InternalGoLDSL.g:687:3: ( rule__Objects__CellsAssignment_2 )
+                    // InternalGoLDSL.g:661:2: ( ( rule__Objects__CellsAssignment_2 ) )
+                    // InternalGoLDSL.g:662:3: ( rule__Objects__CellsAssignment_2 )
                     {
                      before(grammarAccess.getObjectsAccess().getCellsAssignment_2()); 
-                    // InternalGoLDSL.g:688:3: ( rule__Objects__CellsAssignment_2 )
-                    // InternalGoLDSL.g:688:4: rule__Objects__CellsAssignment_2
+                    // InternalGoLDSL.g:663:3: ( rule__Objects__CellsAssignment_2 )
+                    // InternalGoLDSL.g:663:4: rule__Objects__CellsAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Objects__CellsAssignment_2();
@@ -2188,14 +2111,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalGoLDSL.g:692:2: ( ( rule__Objects__GridsAssignment_3 ) )
+                    // InternalGoLDSL.g:667:2: ( ( rule__Objects__GridsAssignment_3 ) )
                     {
-                    // InternalGoLDSL.g:692:2: ( ( rule__Objects__GridsAssignment_3 ) )
-                    // InternalGoLDSL.g:693:3: ( rule__Objects__GridsAssignment_3 )
+                    // InternalGoLDSL.g:667:2: ( ( rule__Objects__GridsAssignment_3 ) )
+                    // InternalGoLDSL.g:668:3: ( rule__Objects__GridsAssignment_3 )
                     {
                      before(grammarAccess.getObjectsAccess().getGridsAssignment_3()); 
-                    // InternalGoLDSL.g:694:3: ( rule__Objects__GridsAssignment_3 )
-                    // InternalGoLDSL.g:694:4: rule__Objects__GridsAssignment_3
+                    // InternalGoLDSL.g:669:3: ( rule__Objects__GridsAssignment_3 )
+                    // InternalGoLDSL.g:669:4: rule__Objects__GridsAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__Objects__GridsAssignment_3();
@@ -2230,13 +2153,13 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRule__Alternatives"
-    // InternalGoLDSL.g:702:1: rule__ConditionRule__Alternatives : ( ( ( rule__ConditionRule__NumberAssignment_0 ) ) | ( ( rule__ConditionRule__RangeAssignment_1 ) ) | ( ( rule__ConditionRule__AliveAssignment_2 ) ) );
+    // InternalGoLDSL.g:677:1: rule__ConditionRule__Alternatives : ( ( ( rule__ConditionRule__NumberAssignment_0 ) ) | ( ( rule__ConditionRule__RangeAssignment_1 ) ) | ( ( rule__ConditionRule__AliveAssignment_2 ) ) );
     public final void rule__ConditionRule__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:706:1: ( ( ( rule__ConditionRule__NumberAssignment_0 ) ) | ( ( rule__ConditionRule__RangeAssignment_1 ) ) | ( ( rule__ConditionRule__AliveAssignment_2 ) ) )
+            // InternalGoLDSL.g:681:1: ( ( ( rule__ConditionRule__NumberAssignment_0 ) ) | ( ( rule__ConditionRule__RangeAssignment_1 ) ) | ( ( rule__ConditionRule__AliveAssignment_2 ) ) )
             int alt5=3;
             switch ( input.LA(1) ) {
             case RULE_INT:
@@ -2276,14 +2199,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
             switch (alt5) {
                 case 1 :
-                    // InternalGoLDSL.g:707:2: ( ( rule__ConditionRule__NumberAssignment_0 ) )
+                    // InternalGoLDSL.g:682:2: ( ( rule__ConditionRule__NumberAssignment_0 ) )
                     {
-                    // InternalGoLDSL.g:707:2: ( ( rule__ConditionRule__NumberAssignment_0 ) )
-                    // InternalGoLDSL.g:708:3: ( rule__ConditionRule__NumberAssignment_0 )
+                    // InternalGoLDSL.g:682:2: ( ( rule__ConditionRule__NumberAssignment_0 ) )
+                    // InternalGoLDSL.g:683:3: ( rule__ConditionRule__NumberAssignment_0 )
                     {
                      before(grammarAccess.getConditionRuleAccess().getNumberAssignment_0()); 
-                    // InternalGoLDSL.g:709:3: ( rule__ConditionRule__NumberAssignment_0 )
-                    // InternalGoLDSL.g:709:4: rule__ConditionRule__NumberAssignment_0
+                    // InternalGoLDSL.g:684:3: ( rule__ConditionRule__NumberAssignment_0 )
+                    // InternalGoLDSL.g:684:4: rule__ConditionRule__NumberAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ConditionRule__NumberAssignment_0();
@@ -2301,14 +2224,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGoLDSL.g:713:2: ( ( rule__ConditionRule__RangeAssignment_1 ) )
+                    // InternalGoLDSL.g:688:2: ( ( rule__ConditionRule__RangeAssignment_1 ) )
                     {
-                    // InternalGoLDSL.g:713:2: ( ( rule__ConditionRule__RangeAssignment_1 ) )
-                    // InternalGoLDSL.g:714:3: ( rule__ConditionRule__RangeAssignment_1 )
+                    // InternalGoLDSL.g:688:2: ( ( rule__ConditionRule__RangeAssignment_1 ) )
+                    // InternalGoLDSL.g:689:3: ( rule__ConditionRule__RangeAssignment_1 )
                     {
                      before(grammarAccess.getConditionRuleAccess().getRangeAssignment_1()); 
-                    // InternalGoLDSL.g:715:3: ( rule__ConditionRule__RangeAssignment_1 )
-                    // InternalGoLDSL.g:715:4: rule__ConditionRule__RangeAssignment_1
+                    // InternalGoLDSL.g:690:3: ( rule__ConditionRule__RangeAssignment_1 )
+                    // InternalGoLDSL.g:690:4: rule__ConditionRule__RangeAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__ConditionRule__RangeAssignment_1();
@@ -2326,14 +2249,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalGoLDSL.g:719:2: ( ( rule__ConditionRule__AliveAssignment_2 ) )
+                    // InternalGoLDSL.g:694:2: ( ( rule__ConditionRule__AliveAssignment_2 ) )
                     {
-                    // InternalGoLDSL.g:719:2: ( ( rule__ConditionRule__AliveAssignment_2 ) )
-                    // InternalGoLDSL.g:720:3: ( rule__ConditionRule__AliveAssignment_2 )
+                    // InternalGoLDSL.g:694:2: ( ( rule__ConditionRule__AliveAssignment_2 ) )
+                    // InternalGoLDSL.g:695:3: ( rule__ConditionRule__AliveAssignment_2 )
                     {
                      before(grammarAccess.getConditionRuleAccess().getAliveAssignment_2()); 
-                    // InternalGoLDSL.g:721:3: ( rule__ConditionRule__AliveAssignment_2 )
-                    // InternalGoLDSL.g:721:4: rule__ConditionRule__AliveAssignment_2
+                    // InternalGoLDSL.g:696:3: ( rule__ConditionRule__AliveAssignment_2 )
+                    // InternalGoLDSL.g:696:4: rule__ConditionRule__AliveAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__ConditionRule__AliveAssignment_2();
@@ -2368,14 +2291,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Alternatives"
-    // InternalGoLDSL.g:729:1: rule__Range__Alternatives : ( ( ( rule__Range__BoundedAssignment_0 ) ) | ( ( rule__Range__UnboundedAssignment_1 ) ) );
+    // InternalGoLDSL.g:704:1: rule__Range__Alternatives : ( ( ruleBoundedRange ) | ( ruleLeftUnboundedRange ) | ( ruleRightUnboundedRange ) );
     public final void rule__Range__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:733:1: ( ( ( rule__Range__BoundedAssignment_0 ) ) | ( ( rule__Range__UnboundedAssignment_1 ) ) )
-            int alt6=2;
+            // InternalGoLDSL.g:708:1: ( ( ruleBoundedRange ) | ( ruleLeftUnboundedRange ) | ( ruleRightUnboundedRange ) )
+            int alt6=3;
             int LA6_0 = input.LA(1);
 
             if ( (LA6_0==RULE_INT) ) {
@@ -2405,7 +2328,7 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
                 }
             }
             else if ( (LA6_0==26) ) {
-                alt6=2;
+                alt6=3;
             }
             else {
                 NoViableAltException nvae =
@@ -2415,24 +2338,18 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalGoLDSL.g:734:2: ( ( rule__Range__BoundedAssignment_0 ) )
+                    // InternalGoLDSL.g:709:2: ( ruleBoundedRange )
                     {
-                    // InternalGoLDSL.g:734:2: ( ( rule__Range__BoundedAssignment_0 ) )
-                    // InternalGoLDSL.g:735:3: ( rule__Range__BoundedAssignment_0 )
+                    // InternalGoLDSL.g:709:2: ( ruleBoundedRange )
+                    // InternalGoLDSL.g:710:3: ruleBoundedRange
                     {
-                     before(grammarAccess.getRangeAccess().getBoundedAssignment_0()); 
-                    // InternalGoLDSL.g:736:3: ( rule__Range__BoundedAssignment_0 )
-                    // InternalGoLDSL.g:736:4: rule__Range__BoundedAssignment_0
-                    {
+                     before(grammarAccess.getRangeAccess().getBoundedRangeParserRuleCall_0()); 
                     pushFollow(FOLLOW_2);
-                    rule__Range__BoundedAssignment_0();
+                    ruleBoundedRange();
 
                     state._fsp--;
 
-
-                    }
-
-                     after(grammarAccess.getRangeAccess().getBoundedAssignment_0()); 
+                     after(grammarAccess.getRangeAccess().getBoundedRangeParserRuleCall_0()); 
 
                     }
 
@@ -2440,24 +2357,37 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGoLDSL.g:740:2: ( ( rule__Range__UnboundedAssignment_1 ) )
+                    // InternalGoLDSL.g:715:2: ( ruleLeftUnboundedRange )
                     {
-                    // InternalGoLDSL.g:740:2: ( ( rule__Range__UnboundedAssignment_1 ) )
-                    // InternalGoLDSL.g:741:3: ( rule__Range__UnboundedAssignment_1 )
+                    // InternalGoLDSL.g:715:2: ( ruleLeftUnboundedRange )
+                    // InternalGoLDSL.g:716:3: ruleLeftUnboundedRange
                     {
-                     before(grammarAccess.getRangeAccess().getUnboundedAssignment_1()); 
-                    // InternalGoLDSL.g:742:3: ( rule__Range__UnboundedAssignment_1 )
-                    // InternalGoLDSL.g:742:4: rule__Range__UnboundedAssignment_1
-                    {
+                     before(grammarAccess.getRangeAccess().getLeftUnboundedRangeParserRuleCall_1()); 
                     pushFollow(FOLLOW_2);
-                    rule__Range__UnboundedAssignment_1();
+                    ruleLeftUnboundedRange();
 
                     state._fsp--;
 
+                     after(grammarAccess.getRangeAccess().getLeftUnboundedRangeParserRuleCall_1()); 
 
                     }
 
-                     after(grammarAccess.getRangeAccess().getUnboundedAssignment_1()); 
+
+                    }
+                    break;
+                case 3 :
+                    // InternalGoLDSL.g:721:2: ( ruleRightUnboundedRange )
+                    {
+                    // InternalGoLDSL.g:721:2: ( ruleRightUnboundedRange )
+                    // InternalGoLDSL.g:722:3: ruleRightUnboundedRange
+                    {
+                     before(grammarAccess.getRangeAccess().getRightUnboundedRangeParserRuleCall_2()); 
+                    pushFollow(FOLLOW_2);
+                    ruleRightUnboundedRange();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getRangeAccess().getRightUnboundedRangeParserRuleCall_2()); 
 
                     }
 
@@ -2481,21 +2411,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Range__Alternatives"
 
 
-    // $ANTLR start "rule__UnboundedRange__Alternatives"
-    // InternalGoLDSL.g:750:1: rule__UnboundedRange__Alternatives : ( ( ( rule__UnboundedRange__LeftAssignment_0 ) ) | ( ( rule__UnboundedRange__RightAssignment_1 ) ) );
-    public final void rule__UnboundedRange__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__BoolOperator__Alternatives"
+    // InternalGoLDSL.g:731:1: rule__BoolOperator__Alternatives : ( ( ( '&' ) ) | ( ( '|' ) ) );
+    public final void rule__BoolOperator__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:754:1: ( ( ( rule__UnboundedRange__LeftAssignment_0 ) ) | ( ( rule__UnboundedRange__RightAssignment_1 ) ) )
+            // InternalGoLDSL.g:735:1: ( ( ( '&' ) ) | ( ( '|' ) ) )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==RULE_INT) ) {
+            if ( (LA7_0==11) ) {
                 alt7=1;
             }
-            else if ( (LA7_0==26) ) {
+            else if ( (LA7_0==12) ) {
                 alt7=2;
             }
             else {
@@ -2506,105 +2436,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalGoLDSL.g:755:2: ( ( rule__UnboundedRange__LeftAssignment_0 ) )
+                    // InternalGoLDSL.g:736:2: ( ( '&' ) )
                     {
-                    // InternalGoLDSL.g:755:2: ( ( rule__UnboundedRange__LeftAssignment_0 ) )
-                    // InternalGoLDSL.g:756:3: ( rule__UnboundedRange__LeftAssignment_0 )
-                    {
-                     before(grammarAccess.getUnboundedRangeAccess().getLeftAssignment_0()); 
-                    // InternalGoLDSL.g:757:3: ( rule__UnboundedRange__LeftAssignment_0 )
-                    // InternalGoLDSL.g:757:4: rule__UnboundedRange__LeftAssignment_0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__UnboundedRange__LeftAssignment_0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getUnboundedRangeAccess().getLeftAssignment_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // InternalGoLDSL.g:761:2: ( ( rule__UnboundedRange__RightAssignment_1 ) )
-                    {
-                    // InternalGoLDSL.g:761:2: ( ( rule__UnboundedRange__RightAssignment_1 ) )
-                    // InternalGoLDSL.g:762:3: ( rule__UnboundedRange__RightAssignment_1 )
-                    {
-                     before(grammarAccess.getUnboundedRangeAccess().getRightAssignment_1()); 
-                    // InternalGoLDSL.g:763:3: ( rule__UnboundedRange__RightAssignment_1 )
-                    // InternalGoLDSL.g:763:4: rule__UnboundedRange__RightAssignment_1
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__UnboundedRange__RightAssignment_1();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getUnboundedRangeAccess().getRightAssignment_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__UnboundedRange__Alternatives"
-
-
-    // $ANTLR start "rule__BoolOperator__Alternatives"
-    // InternalGoLDSL.g:771:1: rule__BoolOperator__Alternatives : ( ( ( '&' ) ) | ( ( '|' ) ) );
-    public final void rule__BoolOperator__Alternatives() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalGoLDSL.g:775:1: ( ( ( '&' ) ) | ( ( '|' ) ) )
-            int alt8=2;
-            int LA8_0 = input.LA(1);
-
-            if ( (LA8_0==11) ) {
-                alt8=1;
-            }
-            else if ( (LA8_0==12) ) {
-                alt8=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
-
-                throw nvae;
-            }
-            switch (alt8) {
-                case 1 :
-                    // InternalGoLDSL.g:776:2: ( ( '&' ) )
-                    {
-                    // InternalGoLDSL.g:776:2: ( ( '&' ) )
-                    // InternalGoLDSL.g:777:3: ( '&' )
+                    // InternalGoLDSL.g:736:2: ( ( '&' ) )
+                    // InternalGoLDSL.g:737:3: ( '&' )
                     {
                      before(grammarAccess.getBoolOperatorAccess().getANDEnumLiteralDeclaration_0()); 
-                    // InternalGoLDSL.g:778:3: ( '&' )
-                    // InternalGoLDSL.g:778:4: '&'
+                    // InternalGoLDSL.g:738:3: ( '&' )
+                    // InternalGoLDSL.g:738:4: '&'
                     {
                     match(input,11,FOLLOW_2); 
 
@@ -2618,14 +2457,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGoLDSL.g:782:2: ( ( '|' ) )
+                    // InternalGoLDSL.g:742:2: ( ( '|' ) )
                     {
-                    // InternalGoLDSL.g:782:2: ( ( '|' ) )
-                    // InternalGoLDSL.g:783:3: ( '|' )
+                    // InternalGoLDSL.g:742:2: ( ( '|' ) )
+                    // InternalGoLDSL.g:743:3: ( '|' )
                     {
                      before(grammarAccess.getBoolOperatorAccess().getOREnumLiteralDeclaration_1()); 
-                    // InternalGoLDSL.g:784:3: ( '|' )
-                    // InternalGoLDSL.g:784:4: '|'
+                    // InternalGoLDSL.g:744:3: ( '|' )
+                    // InternalGoLDSL.g:744:4: '|'
                     {
                     match(input,12,FOLLOW_2); 
 
@@ -2656,38 +2495,38 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GridPart__Alternatives"
-    // InternalGoLDSL.g:792:1: rule__GridPart__Alternatives : ( ( ( '+' ) ) | ( ( '-' ) ) );
+    // InternalGoLDSL.g:752:1: rule__GridPart__Alternatives : ( ( ( '+' ) ) | ( ( '-' ) ) );
     public final void rule__GridPart__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:796:1: ( ( ( '+' ) ) | ( ( '-' ) ) )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // InternalGoLDSL.g:756:1: ( ( ( '+' ) ) | ( ( '-' ) ) )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA9_0==13) ) {
-                alt9=1;
+            if ( (LA8_0==13) ) {
+                alt8=1;
             }
-            else if ( (LA9_0==14) ) {
-                alt9=2;
+            else if ( (LA8_0==14) ) {
+                alt8=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt9) {
+            switch (alt8) {
                 case 1 :
-                    // InternalGoLDSL.g:797:2: ( ( '+' ) )
+                    // InternalGoLDSL.g:757:2: ( ( '+' ) )
                     {
-                    // InternalGoLDSL.g:797:2: ( ( '+' ) )
-                    // InternalGoLDSL.g:798:3: ( '+' )
+                    // InternalGoLDSL.g:757:2: ( ( '+' ) )
+                    // InternalGoLDSL.g:758:3: ( '+' )
                     {
                      before(grammarAccess.getGridPartAccess().getALIVEEnumLiteralDeclaration_0()); 
-                    // InternalGoLDSL.g:799:3: ( '+' )
-                    // InternalGoLDSL.g:799:4: '+'
+                    // InternalGoLDSL.g:759:3: ( '+' )
+                    // InternalGoLDSL.g:759:4: '+'
                     {
                     match(input,13,FOLLOW_2); 
 
@@ -2701,14 +2540,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGoLDSL.g:803:2: ( ( '-' ) )
+                    // InternalGoLDSL.g:763:2: ( ( '-' ) )
                     {
-                    // InternalGoLDSL.g:803:2: ( ( '-' ) )
-                    // InternalGoLDSL.g:804:3: ( '-' )
+                    // InternalGoLDSL.g:763:2: ( ( '-' ) )
+                    // InternalGoLDSL.g:764:3: ( '-' )
                     {
                      before(grammarAccess.getGridPartAccess().getDEADEnumLiteralDeclaration_1()); 
-                    // InternalGoLDSL.g:805:3: ( '-' )
-                    // InternalGoLDSL.g:805:4: '-'
+                    // InternalGoLDSL.g:765:3: ( '-' )
+                    // InternalGoLDSL.g:765:4: '-'
                     {
                     match(input,14,FOLLOW_2); 
 
@@ -2739,14 +2578,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DSL__Group__0"
-    // InternalGoLDSL.g:813:1: rule__DSL__Group__0 : rule__DSL__Group__0__Impl rule__DSL__Group__1 ;
+    // InternalGoLDSL.g:773:1: rule__DSL__Group__0 : rule__DSL__Group__0__Impl rule__DSL__Group__1 ;
     public final void rule__DSL__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:817:1: ( rule__DSL__Group__0__Impl rule__DSL__Group__1 )
-            // InternalGoLDSL.g:818:2: rule__DSL__Group__0__Impl rule__DSL__Group__1
+            // InternalGoLDSL.g:777:1: ( rule__DSL__Group__0__Impl rule__DSL__Group__1 )
+            // InternalGoLDSL.g:778:2: rule__DSL__Group__0__Impl rule__DSL__Group__1
             {
             pushFollow(FOLLOW_5);
             rule__DSL__Group__0__Impl();
@@ -2777,21 +2616,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DSL__Group__0__Impl"
-    // InternalGoLDSL.g:825:1: rule__DSL__Group__0__Impl : ( ( rule__DSL__BoardAssignment_0 ) ) ;
+    // InternalGoLDSL.g:785:1: rule__DSL__Group__0__Impl : ( ( rule__DSL__BoardAssignment_0 ) ) ;
     public final void rule__DSL__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:829:1: ( ( ( rule__DSL__BoardAssignment_0 ) ) )
-            // InternalGoLDSL.g:830:1: ( ( rule__DSL__BoardAssignment_0 ) )
+            // InternalGoLDSL.g:789:1: ( ( ( rule__DSL__BoardAssignment_0 ) ) )
+            // InternalGoLDSL.g:790:1: ( ( rule__DSL__BoardAssignment_0 ) )
             {
-            // InternalGoLDSL.g:830:1: ( ( rule__DSL__BoardAssignment_0 ) )
-            // InternalGoLDSL.g:831:2: ( rule__DSL__BoardAssignment_0 )
+            // InternalGoLDSL.g:790:1: ( ( rule__DSL__BoardAssignment_0 ) )
+            // InternalGoLDSL.g:791:2: ( rule__DSL__BoardAssignment_0 )
             {
              before(grammarAccess.getDSLAccess().getBoardAssignment_0()); 
-            // InternalGoLDSL.g:832:2: ( rule__DSL__BoardAssignment_0 )
-            // InternalGoLDSL.g:832:3: rule__DSL__BoardAssignment_0
+            // InternalGoLDSL.g:792:2: ( rule__DSL__BoardAssignment_0 )
+            // InternalGoLDSL.g:792:3: rule__DSL__BoardAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__DSL__BoardAssignment_0();
@@ -2824,14 +2663,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DSL__Group__1"
-    // InternalGoLDSL.g:840:1: rule__DSL__Group__1 : rule__DSL__Group__1__Impl ;
+    // InternalGoLDSL.g:800:1: rule__DSL__Group__1 : rule__DSL__Group__1__Impl ;
     public final void rule__DSL__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:844:1: ( rule__DSL__Group__1__Impl )
-            // InternalGoLDSL.g:845:2: rule__DSL__Group__1__Impl
+            // InternalGoLDSL.g:804:1: ( rule__DSL__Group__1__Impl )
+            // InternalGoLDSL.g:805:2: rule__DSL__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DSL__Group__1__Impl();
@@ -2857,33 +2696,33 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DSL__Group__1__Impl"
-    // InternalGoLDSL.g:851:1: rule__DSL__Group__1__Impl : ( ( rule__DSL__Alternatives_1 )* ) ;
+    // InternalGoLDSL.g:811:1: rule__DSL__Group__1__Impl : ( ( rule__DSL__Alternatives_1 )* ) ;
     public final void rule__DSL__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:855:1: ( ( ( rule__DSL__Alternatives_1 )* ) )
-            // InternalGoLDSL.g:856:1: ( ( rule__DSL__Alternatives_1 )* )
+            // InternalGoLDSL.g:815:1: ( ( ( rule__DSL__Alternatives_1 )* ) )
+            // InternalGoLDSL.g:816:1: ( ( rule__DSL__Alternatives_1 )* )
             {
-            // InternalGoLDSL.g:856:1: ( ( rule__DSL__Alternatives_1 )* )
-            // InternalGoLDSL.g:857:2: ( rule__DSL__Alternatives_1 )*
+            // InternalGoLDSL.g:816:1: ( ( rule__DSL__Alternatives_1 )* )
+            // InternalGoLDSL.g:817:2: ( rule__DSL__Alternatives_1 )*
             {
              before(grammarAccess.getDSLAccess().getAlternatives_1()); 
-            // InternalGoLDSL.g:858:2: ( rule__DSL__Alternatives_1 )*
-            loop10:
+            // InternalGoLDSL.g:818:2: ( rule__DSL__Alternatives_1 )*
+            loop9:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA10_0==16||LA10_0==23) ) {
-                    alt10=1;
+                if ( (LA9_0==16||LA9_0==23) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt9) {
             	case 1 :
-            	    // InternalGoLDSL.g:858:3: rule__DSL__Alternatives_1
+            	    // InternalGoLDSL.g:818:3: rule__DSL__Alternatives_1
             	    {
             	    pushFollow(FOLLOW_6);
             	    rule__DSL__Alternatives_1();
@@ -2895,7 +2734,7 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop9;
                 }
             } while (true);
 
@@ -2922,14 +2761,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Board__Group__0"
-    // InternalGoLDSL.g:867:1: rule__Board__Group__0 : rule__Board__Group__0__Impl rule__Board__Group__1 ;
+    // InternalGoLDSL.g:827:1: rule__Board__Group__0 : rule__Board__Group__0__Impl rule__Board__Group__1 ;
     public final void rule__Board__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:871:1: ( rule__Board__Group__0__Impl rule__Board__Group__1 )
-            // InternalGoLDSL.g:872:2: rule__Board__Group__0__Impl rule__Board__Group__1
+            // InternalGoLDSL.g:831:1: ( rule__Board__Group__0__Impl rule__Board__Group__1 )
+            // InternalGoLDSL.g:832:2: rule__Board__Group__0__Impl rule__Board__Group__1
             {
             pushFollow(FOLLOW_7);
             rule__Board__Group__0__Impl();
@@ -2960,17 +2799,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Board__Group__0__Impl"
-    // InternalGoLDSL.g:879:1: rule__Board__Group__0__Impl : ( 'Board:' ) ;
+    // InternalGoLDSL.g:839:1: rule__Board__Group__0__Impl : ( 'Board:' ) ;
     public final void rule__Board__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:883:1: ( ( 'Board:' ) )
-            // InternalGoLDSL.g:884:1: ( 'Board:' )
+            // InternalGoLDSL.g:843:1: ( ( 'Board:' ) )
+            // InternalGoLDSL.g:844:1: ( 'Board:' )
             {
-            // InternalGoLDSL.g:884:1: ( 'Board:' )
-            // InternalGoLDSL.g:885:2: 'Board:'
+            // InternalGoLDSL.g:844:1: ( 'Board:' )
+            // InternalGoLDSL.g:845:2: 'Board:'
             {
              before(grammarAccess.getBoardAccess().getBoardKeyword_0()); 
             match(input,15,FOLLOW_2); 
@@ -2997,14 +2836,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Board__Group__1"
-    // InternalGoLDSL.g:894:1: rule__Board__Group__1 : rule__Board__Group__1__Impl ;
+    // InternalGoLDSL.g:854:1: rule__Board__Group__1 : rule__Board__Group__1__Impl ;
     public final void rule__Board__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:898:1: ( rule__Board__Group__1__Impl )
-            // InternalGoLDSL.g:899:2: rule__Board__Group__1__Impl
+            // InternalGoLDSL.g:858:1: ( rule__Board__Group__1__Impl )
+            // InternalGoLDSL.g:859:2: rule__Board__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Board__Group__1__Impl();
@@ -3030,17 +2869,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Board__Group__1__Impl"
-    // InternalGoLDSL.g:905:1: rule__Board__Group__1__Impl : ( ruleObjects ) ;
+    // InternalGoLDSL.g:865:1: rule__Board__Group__1__Impl : ( ruleObjects ) ;
     public final void rule__Board__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:909:1: ( ( ruleObjects ) )
-            // InternalGoLDSL.g:910:1: ( ruleObjects )
+            // InternalGoLDSL.g:869:1: ( ( ruleObjects ) )
+            // InternalGoLDSL.g:870:1: ( ruleObjects )
             {
-            // InternalGoLDSL.g:910:1: ( ruleObjects )
-            // InternalGoLDSL.g:911:2: ruleObjects
+            // InternalGoLDSL.g:870:1: ( ruleObjects )
+            // InternalGoLDSL.g:871:2: ruleObjects
             {
              before(grammarAccess.getBoardAccess().getObjectsParserRuleCall_1()); 
             pushFollow(FOLLOW_2);
@@ -3071,14 +2910,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__Group__0"
-    // InternalGoLDSL.g:921:1: rule__ShapeDef__Group__0 : rule__ShapeDef__Group__0__Impl rule__ShapeDef__Group__1 ;
+    // InternalGoLDSL.g:881:1: rule__ShapeDef__Group__0 : rule__ShapeDef__Group__0__Impl rule__ShapeDef__Group__1 ;
     public final void rule__ShapeDef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:925:1: ( rule__ShapeDef__Group__0__Impl rule__ShapeDef__Group__1 )
-            // InternalGoLDSL.g:926:2: rule__ShapeDef__Group__0__Impl rule__ShapeDef__Group__1
+            // InternalGoLDSL.g:885:1: ( rule__ShapeDef__Group__0__Impl rule__ShapeDef__Group__1 )
+            // InternalGoLDSL.g:886:2: rule__ShapeDef__Group__0__Impl rule__ShapeDef__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__ShapeDef__Group__0__Impl();
@@ -3109,17 +2948,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__Group__0__Impl"
-    // InternalGoLDSL.g:933:1: rule__ShapeDef__Group__0__Impl : ( 'Shape' ) ;
+    // InternalGoLDSL.g:893:1: rule__ShapeDef__Group__0__Impl : ( 'Shape' ) ;
     public final void rule__ShapeDef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:937:1: ( ( 'Shape' ) )
-            // InternalGoLDSL.g:938:1: ( 'Shape' )
+            // InternalGoLDSL.g:897:1: ( ( 'Shape' ) )
+            // InternalGoLDSL.g:898:1: ( 'Shape' )
             {
-            // InternalGoLDSL.g:938:1: ( 'Shape' )
-            // InternalGoLDSL.g:939:2: 'Shape'
+            // InternalGoLDSL.g:898:1: ( 'Shape' )
+            // InternalGoLDSL.g:899:2: 'Shape'
             {
              before(grammarAccess.getShapeDefAccess().getShapeKeyword_0()); 
             match(input,16,FOLLOW_2); 
@@ -3146,14 +2985,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__Group__1"
-    // InternalGoLDSL.g:948:1: rule__ShapeDef__Group__1 : rule__ShapeDef__Group__1__Impl rule__ShapeDef__Group__2 ;
+    // InternalGoLDSL.g:908:1: rule__ShapeDef__Group__1 : rule__ShapeDef__Group__1__Impl rule__ShapeDef__Group__2 ;
     public final void rule__ShapeDef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:952:1: ( rule__ShapeDef__Group__1__Impl rule__ShapeDef__Group__2 )
-            // InternalGoLDSL.g:953:2: rule__ShapeDef__Group__1__Impl rule__ShapeDef__Group__2
+            // InternalGoLDSL.g:912:1: ( rule__ShapeDef__Group__1__Impl rule__ShapeDef__Group__2 )
+            // InternalGoLDSL.g:913:2: rule__ShapeDef__Group__1__Impl rule__ShapeDef__Group__2
             {
             pushFollow(FOLLOW_9);
             rule__ShapeDef__Group__1__Impl();
@@ -3184,21 +3023,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__Group__1__Impl"
-    // InternalGoLDSL.g:960:1: rule__ShapeDef__Group__1__Impl : ( ( rule__ShapeDef__NameAssignment_1 ) ) ;
+    // InternalGoLDSL.g:920:1: rule__ShapeDef__Group__1__Impl : ( ( rule__ShapeDef__NameAssignment_1 ) ) ;
     public final void rule__ShapeDef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:964:1: ( ( ( rule__ShapeDef__NameAssignment_1 ) ) )
-            // InternalGoLDSL.g:965:1: ( ( rule__ShapeDef__NameAssignment_1 ) )
+            // InternalGoLDSL.g:924:1: ( ( ( rule__ShapeDef__NameAssignment_1 ) ) )
+            // InternalGoLDSL.g:925:1: ( ( rule__ShapeDef__NameAssignment_1 ) )
             {
-            // InternalGoLDSL.g:965:1: ( ( rule__ShapeDef__NameAssignment_1 ) )
-            // InternalGoLDSL.g:966:2: ( rule__ShapeDef__NameAssignment_1 )
+            // InternalGoLDSL.g:925:1: ( ( rule__ShapeDef__NameAssignment_1 ) )
+            // InternalGoLDSL.g:926:2: ( rule__ShapeDef__NameAssignment_1 )
             {
              before(grammarAccess.getShapeDefAccess().getNameAssignment_1()); 
-            // InternalGoLDSL.g:967:2: ( rule__ShapeDef__NameAssignment_1 )
-            // InternalGoLDSL.g:967:3: rule__ShapeDef__NameAssignment_1
+            // InternalGoLDSL.g:927:2: ( rule__ShapeDef__NameAssignment_1 )
+            // InternalGoLDSL.g:927:3: rule__ShapeDef__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__ShapeDef__NameAssignment_1();
@@ -3231,14 +3070,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__Group__2"
-    // InternalGoLDSL.g:975:1: rule__ShapeDef__Group__2 : rule__ShapeDef__Group__2__Impl rule__ShapeDef__Group__3 ;
+    // InternalGoLDSL.g:935:1: rule__ShapeDef__Group__2 : rule__ShapeDef__Group__2__Impl rule__ShapeDef__Group__3 ;
     public final void rule__ShapeDef__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:979:1: ( rule__ShapeDef__Group__2__Impl rule__ShapeDef__Group__3 )
-            // InternalGoLDSL.g:980:2: rule__ShapeDef__Group__2__Impl rule__ShapeDef__Group__3
+            // InternalGoLDSL.g:939:1: ( rule__ShapeDef__Group__2__Impl rule__ShapeDef__Group__3 )
+            // InternalGoLDSL.g:940:2: rule__ShapeDef__Group__2__Impl rule__ShapeDef__Group__3
             {
             pushFollow(FOLLOW_10);
             rule__ShapeDef__Group__2__Impl();
@@ -3269,17 +3108,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__Group__2__Impl"
-    // InternalGoLDSL.g:987:1: rule__ShapeDef__Group__2__Impl : ( ':' ) ;
+    // InternalGoLDSL.g:947:1: rule__ShapeDef__Group__2__Impl : ( ':' ) ;
     public final void rule__ShapeDef__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:991:1: ( ( ':' ) )
-            // InternalGoLDSL.g:992:1: ( ':' )
+            // InternalGoLDSL.g:951:1: ( ( ':' ) )
+            // InternalGoLDSL.g:952:1: ( ':' )
             {
-            // InternalGoLDSL.g:992:1: ( ':' )
-            // InternalGoLDSL.g:993:2: ':'
+            // InternalGoLDSL.g:952:1: ( ':' )
+            // InternalGoLDSL.g:953:2: ':'
             {
              before(grammarAccess.getShapeDefAccess().getColonKeyword_2()); 
             match(input,17,FOLLOW_2); 
@@ -3306,14 +3145,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__Group__3"
-    // InternalGoLDSL.g:1002:1: rule__ShapeDef__Group__3 : rule__ShapeDef__Group__3__Impl rule__ShapeDef__Group__4 ;
+    // InternalGoLDSL.g:962:1: rule__ShapeDef__Group__3 : rule__ShapeDef__Group__3__Impl rule__ShapeDef__Group__4 ;
     public final void rule__ShapeDef__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1006:1: ( rule__ShapeDef__Group__3__Impl rule__ShapeDef__Group__4 )
-            // InternalGoLDSL.g:1007:2: rule__ShapeDef__Group__3__Impl rule__ShapeDef__Group__4
+            // InternalGoLDSL.g:966:1: ( rule__ShapeDef__Group__3__Impl rule__ShapeDef__Group__4 )
+            // InternalGoLDSL.g:967:2: rule__ShapeDef__Group__3__Impl rule__ShapeDef__Group__4
             {
             pushFollow(FOLLOW_10);
             rule__ShapeDef__Group__3__Impl();
@@ -3344,29 +3183,29 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__Group__3__Impl"
-    // InternalGoLDSL.g:1014:1: rule__ShapeDef__Group__3__Impl : ( ( rule__ShapeDef__OffsetAssignment_3 )? ) ;
+    // InternalGoLDSL.g:974:1: rule__ShapeDef__Group__3__Impl : ( ( rule__ShapeDef__OffsetAssignment_3 )? ) ;
     public final void rule__ShapeDef__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1018:1: ( ( ( rule__ShapeDef__OffsetAssignment_3 )? ) )
-            // InternalGoLDSL.g:1019:1: ( ( rule__ShapeDef__OffsetAssignment_3 )? )
+            // InternalGoLDSL.g:978:1: ( ( ( rule__ShapeDef__OffsetAssignment_3 )? ) )
+            // InternalGoLDSL.g:979:1: ( ( rule__ShapeDef__OffsetAssignment_3 )? )
             {
-            // InternalGoLDSL.g:1019:1: ( ( rule__ShapeDef__OffsetAssignment_3 )? )
-            // InternalGoLDSL.g:1020:2: ( rule__ShapeDef__OffsetAssignment_3 )?
+            // InternalGoLDSL.g:979:1: ( ( rule__ShapeDef__OffsetAssignment_3 )? )
+            // InternalGoLDSL.g:980:2: ( rule__ShapeDef__OffsetAssignment_3 )?
             {
              before(grammarAccess.getShapeDefAccess().getOffsetAssignment_3()); 
-            // InternalGoLDSL.g:1021:2: ( rule__ShapeDef__OffsetAssignment_3 )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // InternalGoLDSL.g:981:2: ( rule__ShapeDef__OffsetAssignment_3 )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA11_0==28) ) {
-                alt11=1;
+            if ( (LA10_0==28) ) {
+                alt10=1;
             }
-            switch (alt11) {
+            switch (alt10) {
                 case 1 :
-                    // InternalGoLDSL.g:1021:3: rule__ShapeDef__OffsetAssignment_3
+                    // InternalGoLDSL.g:981:3: rule__ShapeDef__OffsetAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__ShapeDef__OffsetAssignment_3();
@@ -3402,14 +3241,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__Group__4"
-    // InternalGoLDSL.g:1029:1: rule__ShapeDef__Group__4 : rule__ShapeDef__Group__4__Impl ;
+    // InternalGoLDSL.g:989:1: rule__ShapeDef__Group__4 : rule__ShapeDef__Group__4__Impl ;
     public final void rule__ShapeDef__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1033:1: ( rule__ShapeDef__Group__4__Impl )
-            // InternalGoLDSL.g:1034:2: rule__ShapeDef__Group__4__Impl
+            // InternalGoLDSL.g:993:1: ( rule__ShapeDef__Group__4__Impl )
+            // InternalGoLDSL.g:994:2: rule__ShapeDef__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ShapeDef__Group__4__Impl();
@@ -3435,21 +3274,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__Group__4__Impl"
-    // InternalGoLDSL.g:1040:1: rule__ShapeDef__Group__4__Impl : ( ( rule__ShapeDef__ObjectsAssignment_4 ) ) ;
+    // InternalGoLDSL.g:1000:1: rule__ShapeDef__Group__4__Impl : ( ( rule__ShapeDef__ObjectsAssignment_4 ) ) ;
     public final void rule__ShapeDef__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1044:1: ( ( ( rule__ShapeDef__ObjectsAssignment_4 ) ) )
-            // InternalGoLDSL.g:1045:1: ( ( rule__ShapeDef__ObjectsAssignment_4 ) )
+            // InternalGoLDSL.g:1004:1: ( ( ( rule__ShapeDef__ObjectsAssignment_4 ) ) )
+            // InternalGoLDSL.g:1005:1: ( ( rule__ShapeDef__ObjectsAssignment_4 ) )
             {
-            // InternalGoLDSL.g:1045:1: ( ( rule__ShapeDef__ObjectsAssignment_4 ) )
-            // InternalGoLDSL.g:1046:2: ( rule__ShapeDef__ObjectsAssignment_4 )
+            // InternalGoLDSL.g:1005:1: ( ( rule__ShapeDef__ObjectsAssignment_4 ) )
+            // InternalGoLDSL.g:1006:2: ( rule__ShapeDef__ObjectsAssignment_4 )
             {
              before(grammarAccess.getShapeDefAccess().getObjectsAssignment_4()); 
-            // InternalGoLDSL.g:1047:2: ( rule__ShapeDef__ObjectsAssignment_4 )
-            // InternalGoLDSL.g:1047:3: rule__ShapeDef__ObjectsAssignment_4
+            // InternalGoLDSL.g:1007:2: ( rule__ShapeDef__ObjectsAssignment_4 )
+            // InternalGoLDSL.g:1007:3: rule__ShapeDef__ObjectsAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__ShapeDef__ObjectsAssignment_4();
@@ -3482,14 +3321,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CellPairs__Group__0"
-    // InternalGoLDSL.g:1056:1: rule__CellPairs__Group__0 : rule__CellPairs__Group__0__Impl rule__CellPairs__Group__1 ;
+    // InternalGoLDSL.g:1016:1: rule__CellPairs__Group__0 : rule__CellPairs__Group__0__Impl rule__CellPairs__Group__1 ;
     public final void rule__CellPairs__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1060:1: ( rule__CellPairs__Group__0__Impl rule__CellPairs__Group__1 )
-            // InternalGoLDSL.g:1061:2: rule__CellPairs__Group__0__Impl rule__CellPairs__Group__1
+            // InternalGoLDSL.g:1020:1: ( rule__CellPairs__Group__0__Impl rule__CellPairs__Group__1 )
+            // InternalGoLDSL.g:1021:2: rule__CellPairs__Group__0__Impl rule__CellPairs__Group__1
             {
             pushFollow(FOLLOW_11);
             rule__CellPairs__Group__0__Impl();
@@ -3520,17 +3359,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CellPairs__Group__0__Impl"
-    // InternalGoLDSL.g:1068:1: rule__CellPairs__Group__0__Impl : ( '(' ) ;
+    // InternalGoLDSL.g:1028:1: rule__CellPairs__Group__0__Impl : ( '(' ) ;
     public final void rule__CellPairs__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1072:1: ( ( '(' ) )
-            // InternalGoLDSL.g:1073:1: ( '(' )
+            // InternalGoLDSL.g:1032:1: ( ( '(' ) )
+            // InternalGoLDSL.g:1033:1: ( '(' )
             {
-            // InternalGoLDSL.g:1073:1: ( '(' )
-            // InternalGoLDSL.g:1074:2: '('
+            // InternalGoLDSL.g:1033:1: ( '(' )
+            // InternalGoLDSL.g:1034:2: '('
             {
              before(grammarAccess.getCellPairsAccess().getLeftParenthesisKeyword_0()); 
             match(input,18,FOLLOW_2); 
@@ -3557,14 +3396,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CellPairs__Group__1"
-    // InternalGoLDSL.g:1083:1: rule__CellPairs__Group__1 : rule__CellPairs__Group__1__Impl rule__CellPairs__Group__2 ;
+    // InternalGoLDSL.g:1043:1: rule__CellPairs__Group__1 : rule__CellPairs__Group__1__Impl rule__CellPairs__Group__2 ;
     public final void rule__CellPairs__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1087:1: ( rule__CellPairs__Group__1__Impl rule__CellPairs__Group__2 )
-            // InternalGoLDSL.g:1088:2: rule__CellPairs__Group__1__Impl rule__CellPairs__Group__2
+            // InternalGoLDSL.g:1047:1: ( rule__CellPairs__Group__1__Impl rule__CellPairs__Group__2 )
+            // InternalGoLDSL.g:1048:2: rule__CellPairs__Group__1__Impl rule__CellPairs__Group__2
             {
             pushFollow(FOLLOW_12);
             rule__CellPairs__Group__1__Impl();
@@ -3595,21 +3434,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CellPairs__Group__1__Impl"
-    // InternalGoLDSL.g:1095:1: rule__CellPairs__Group__1__Impl : ( ( rule__CellPairs__CellsAssignment_1 ) ) ;
+    // InternalGoLDSL.g:1055:1: rule__CellPairs__Group__1__Impl : ( ( rule__CellPairs__CellsAssignment_1 ) ) ;
     public final void rule__CellPairs__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1099:1: ( ( ( rule__CellPairs__CellsAssignment_1 ) ) )
-            // InternalGoLDSL.g:1100:1: ( ( rule__CellPairs__CellsAssignment_1 ) )
+            // InternalGoLDSL.g:1059:1: ( ( ( rule__CellPairs__CellsAssignment_1 ) ) )
+            // InternalGoLDSL.g:1060:1: ( ( rule__CellPairs__CellsAssignment_1 ) )
             {
-            // InternalGoLDSL.g:1100:1: ( ( rule__CellPairs__CellsAssignment_1 ) )
-            // InternalGoLDSL.g:1101:2: ( rule__CellPairs__CellsAssignment_1 )
+            // InternalGoLDSL.g:1060:1: ( ( rule__CellPairs__CellsAssignment_1 ) )
+            // InternalGoLDSL.g:1061:2: ( rule__CellPairs__CellsAssignment_1 )
             {
              before(grammarAccess.getCellPairsAccess().getCellsAssignment_1()); 
-            // InternalGoLDSL.g:1102:2: ( rule__CellPairs__CellsAssignment_1 )
-            // InternalGoLDSL.g:1102:3: rule__CellPairs__CellsAssignment_1
+            // InternalGoLDSL.g:1062:2: ( rule__CellPairs__CellsAssignment_1 )
+            // InternalGoLDSL.g:1062:3: rule__CellPairs__CellsAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__CellPairs__CellsAssignment_1();
@@ -3642,14 +3481,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CellPairs__Group__2"
-    // InternalGoLDSL.g:1110:1: rule__CellPairs__Group__2 : rule__CellPairs__Group__2__Impl ;
+    // InternalGoLDSL.g:1070:1: rule__CellPairs__Group__2 : rule__CellPairs__Group__2__Impl ;
     public final void rule__CellPairs__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1114:1: ( rule__CellPairs__Group__2__Impl )
-            // InternalGoLDSL.g:1115:2: rule__CellPairs__Group__2__Impl
+            // InternalGoLDSL.g:1074:1: ( rule__CellPairs__Group__2__Impl )
+            // InternalGoLDSL.g:1075:2: rule__CellPairs__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CellPairs__Group__2__Impl();
@@ -3675,17 +3514,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CellPairs__Group__2__Impl"
-    // InternalGoLDSL.g:1121:1: rule__CellPairs__Group__2__Impl : ( ')' ) ;
+    // InternalGoLDSL.g:1081:1: rule__CellPairs__Group__2__Impl : ( ')' ) ;
     public final void rule__CellPairs__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1125:1: ( ( ')' ) )
-            // InternalGoLDSL.g:1126:1: ( ')' )
+            // InternalGoLDSL.g:1085:1: ( ( ')' ) )
+            // InternalGoLDSL.g:1086:1: ( ')' )
             {
-            // InternalGoLDSL.g:1126:1: ( ')' )
-            // InternalGoLDSL.g:1127:2: ')'
+            // InternalGoLDSL.g:1086:1: ( ')' )
+            // InternalGoLDSL.g:1087:2: ')'
             {
              before(grammarAccess.getCellPairsAccess().getRightParenthesisKeyword_2()); 
             match(input,19,FOLLOW_2); 
@@ -3712,14 +3551,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cells__Group__0"
-    // InternalGoLDSL.g:1137:1: rule__Cells__Group__0 : rule__Cells__Group__0__Impl rule__Cells__Group__1 ;
+    // InternalGoLDSL.g:1097:1: rule__Cells__Group__0 : rule__Cells__Group__0__Impl rule__Cells__Group__1 ;
     public final void rule__Cells__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1141:1: ( rule__Cells__Group__0__Impl rule__Cells__Group__1 )
-            // InternalGoLDSL.g:1142:2: rule__Cells__Group__0__Impl rule__Cells__Group__1
+            // InternalGoLDSL.g:1101:1: ( rule__Cells__Group__0__Impl rule__Cells__Group__1 )
+            // InternalGoLDSL.g:1102:2: rule__Cells__Group__0__Impl rule__Cells__Group__1
             {
             pushFollow(FOLLOW_13);
             rule__Cells__Group__0__Impl();
@@ -3750,17 +3589,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cells__Group__0__Impl"
-    // InternalGoLDSL.g:1149:1: rule__Cells__Group__0__Impl : ( 'Cells:' ) ;
+    // InternalGoLDSL.g:1109:1: rule__Cells__Group__0__Impl : ( 'Cells:' ) ;
     public final void rule__Cells__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1153:1: ( ( 'Cells:' ) )
-            // InternalGoLDSL.g:1154:1: ( 'Cells:' )
+            // InternalGoLDSL.g:1113:1: ( ( 'Cells:' ) )
+            // InternalGoLDSL.g:1114:1: ( 'Cells:' )
             {
-            // InternalGoLDSL.g:1154:1: ( 'Cells:' )
-            // InternalGoLDSL.g:1155:2: 'Cells:'
+            // InternalGoLDSL.g:1114:1: ( 'Cells:' )
+            // InternalGoLDSL.g:1115:2: 'Cells:'
             {
              before(grammarAccess.getCellsAccess().getCellsKeyword_0()); 
             match(input,20,FOLLOW_2); 
@@ -3787,14 +3626,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cells__Group__1"
-    // InternalGoLDSL.g:1164:1: rule__Cells__Group__1 : rule__Cells__Group__1__Impl ;
+    // InternalGoLDSL.g:1124:1: rule__Cells__Group__1 : rule__Cells__Group__1__Impl ;
     public final void rule__Cells__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1168:1: ( rule__Cells__Group__1__Impl )
-            // InternalGoLDSL.g:1169:2: rule__Cells__Group__1__Impl
+            // InternalGoLDSL.g:1128:1: ( rule__Cells__Group__1__Impl )
+            // InternalGoLDSL.g:1129:2: rule__Cells__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Cells__Group__1__Impl();
@@ -3820,17 +3659,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cells__Group__1__Impl"
-    // InternalGoLDSL.g:1175:1: rule__Cells__Group__1__Impl : ( ruleCellPairs ) ;
+    // InternalGoLDSL.g:1135:1: rule__Cells__Group__1__Impl : ( ruleCellPairs ) ;
     public final void rule__Cells__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1179:1: ( ( ruleCellPairs ) )
-            // InternalGoLDSL.g:1180:1: ( ruleCellPairs )
+            // InternalGoLDSL.g:1139:1: ( ( ruleCellPairs ) )
+            // InternalGoLDSL.g:1140:1: ( ruleCellPairs )
             {
-            // InternalGoLDSL.g:1180:1: ( ruleCellPairs )
-            // InternalGoLDSL.g:1181:2: ruleCellPairs
+            // InternalGoLDSL.g:1140:1: ( ruleCellPairs )
+            // InternalGoLDSL.g:1141:2: ruleCellPairs
             {
              before(grammarAccess.getCellsAccess().getCellPairsParserRuleCall_1()); 
             pushFollow(FOLLOW_2);
@@ -3861,14 +3700,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CellDef__Group__0"
-    // InternalGoLDSL.g:1191:1: rule__CellDef__Group__0 : rule__CellDef__Group__0__Impl rule__CellDef__Group__1 ;
+    // InternalGoLDSL.g:1151:1: rule__CellDef__Group__0 : rule__CellDef__Group__0__Impl rule__CellDef__Group__1 ;
     public final void rule__CellDef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1195:1: ( rule__CellDef__Group__0__Impl rule__CellDef__Group__1 )
-            // InternalGoLDSL.g:1196:2: rule__CellDef__Group__0__Impl rule__CellDef__Group__1
+            // InternalGoLDSL.g:1155:1: ( rule__CellDef__Group__0__Impl rule__CellDef__Group__1 )
+            // InternalGoLDSL.g:1156:2: rule__CellDef__Group__0__Impl rule__CellDef__Group__1
             {
             pushFollow(FOLLOW_11);
             rule__CellDef__Group__0__Impl();
@@ -3899,17 +3738,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CellDef__Group__0__Impl"
-    // InternalGoLDSL.g:1203:1: rule__CellDef__Group__0__Impl : ( 'Cell:' ) ;
+    // InternalGoLDSL.g:1163:1: rule__CellDef__Group__0__Impl : ( 'Cell:' ) ;
     public final void rule__CellDef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1207:1: ( ( 'Cell:' ) )
-            // InternalGoLDSL.g:1208:1: ( 'Cell:' )
+            // InternalGoLDSL.g:1167:1: ( ( 'Cell:' ) )
+            // InternalGoLDSL.g:1168:1: ( 'Cell:' )
             {
-            // InternalGoLDSL.g:1208:1: ( 'Cell:' )
-            // InternalGoLDSL.g:1209:2: 'Cell:'
+            // InternalGoLDSL.g:1168:1: ( 'Cell:' )
+            // InternalGoLDSL.g:1169:2: 'Cell:'
             {
              before(grammarAccess.getCellDefAccess().getCellKeyword_0()); 
             match(input,21,FOLLOW_2); 
@@ -3936,14 +3775,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CellDef__Group__1"
-    // InternalGoLDSL.g:1218:1: rule__CellDef__Group__1 : rule__CellDef__Group__1__Impl ;
+    // InternalGoLDSL.g:1178:1: rule__CellDef__Group__1 : rule__CellDef__Group__1__Impl ;
     public final void rule__CellDef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1222:1: ( rule__CellDef__Group__1__Impl )
-            // InternalGoLDSL.g:1223:2: rule__CellDef__Group__1__Impl
+            // InternalGoLDSL.g:1182:1: ( rule__CellDef__Group__1__Impl )
+            // InternalGoLDSL.g:1183:2: rule__CellDef__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CellDef__Group__1__Impl();
@@ -3969,17 +3808,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CellDef__Group__1__Impl"
-    // InternalGoLDSL.g:1229:1: rule__CellDef__Group__1__Impl : ( ruleCell ) ;
+    // InternalGoLDSL.g:1189:1: rule__CellDef__Group__1__Impl : ( ruleCell ) ;
     public final void rule__CellDef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1233:1: ( ( ruleCell ) )
-            // InternalGoLDSL.g:1234:1: ( ruleCell )
+            // InternalGoLDSL.g:1193:1: ( ( ruleCell ) )
+            // InternalGoLDSL.g:1194:1: ( ruleCell )
             {
-            // InternalGoLDSL.g:1234:1: ( ruleCell )
-            // InternalGoLDSL.g:1235:2: ruleCell
+            // InternalGoLDSL.g:1194:1: ( ruleCell )
+            // InternalGoLDSL.g:1195:2: ruleCell
             {
              before(grammarAccess.getCellDefAccess().getCellParserRuleCall_1()); 
             pushFollow(FOLLOW_2);
@@ -4010,14 +3849,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__0"
-    // InternalGoLDSL.g:1245:1: rule__ShapeRef__Group__0 : rule__ShapeRef__Group__0__Impl rule__ShapeRef__Group__1 ;
+    // InternalGoLDSL.g:1205:1: rule__ShapeRef__Group__0 : rule__ShapeRef__Group__0__Impl rule__ShapeRef__Group__1 ;
     public final void rule__ShapeRef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1249:1: ( rule__ShapeRef__Group__0__Impl rule__ShapeRef__Group__1 )
-            // InternalGoLDSL.g:1250:2: rule__ShapeRef__Group__0__Impl rule__ShapeRef__Group__1
+            // InternalGoLDSL.g:1209:1: ( rule__ShapeRef__Group__0__Impl rule__ShapeRef__Group__1 )
+            // InternalGoLDSL.g:1210:2: rule__ShapeRef__Group__0__Impl rule__ShapeRef__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__ShapeRef__Group__0__Impl();
@@ -4048,17 +3887,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__0__Impl"
-    // InternalGoLDSL.g:1257:1: rule__ShapeRef__Group__0__Impl : ( 'Shape' ) ;
+    // InternalGoLDSL.g:1217:1: rule__ShapeRef__Group__0__Impl : ( 'Shape' ) ;
     public final void rule__ShapeRef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1261:1: ( ( 'Shape' ) )
-            // InternalGoLDSL.g:1262:1: ( 'Shape' )
+            // InternalGoLDSL.g:1221:1: ( ( 'Shape' ) )
+            // InternalGoLDSL.g:1222:1: ( 'Shape' )
             {
-            // InternalGoLDSL.g:1262:1: ( 'Shape' )
-            // InternalGoLDSL.g:1263:2: 'Shape'
+            // InternalGoLDSL.g:1222:1: ( 'Shape' )
+            // InternalGoLDSL.g:1223:2: 'Shape'
             {
              before(grammarAccess.getShapeRefAccess().getShapeKeyword_0()); 
             match(input,16,FOLLOW_2); 
@@ -4085,14 +3924,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__1"
-    // InternalGoLDSL.g:1272:1: rule__ShapeRef__Group__1 : rule__ShapeRef__Group__1__Impl rule__ShapeRef__Group__2 ;
+    // InternalGoLDSL.g:1232:1: rule__ShapeRef__Group__1 : rule__ShapeRef__Group__1__Impl rule__ShapeRef__Group__2 ;
     public final void rule__ShapeRef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1276:1: ( rule__ShapeRef__Group__1__Impl rule__ShapeRef__Group__2 )
-            // InternalGoLDSL.g:1277:2: rule__ShapeRef__Group__1__Impl rule__ShapeRef__Group__2
+            // InternalGoLDSL.g:1236:1: ( rule__ShapeRef__Group__1__Impl rule__ShapeRef__Group__2 )
+            // InternalGoLDSL.g:1237:2: rule__ShapeRef__Group__1__Impl rule__ShapeRef__Group__2
             {
             pushFollow(FOLLOW_9);
             rule__ShapeRef__Group__1__Impl();
@@ -4123,21 +3962,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__1__Impl"
-    // InternalGoLDSL.g:1284:1: rule__ShapeRef__Group__1__Impl : ( ( rule__ShapeRef__NameAssignment_1 ) ) ;
+    // InternalGoLDSL.g:1244:1: rule__ShapeRef__Group__1__Impl : ( ( rule__ShapeRef__NameAssignment_1 ) ) ;
     public final void rule__ShapeRef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1288:1: ( ( ( rule__ShapeRef__NameAssignment_1 ) ) )
-            // InternalGoLDSL.g:1289:1: ( ( rule__ShapeRef__NameAssignment_1 ) )
+            // InternalGoLDSL.g:1248:1: ( ( ( rule__ShapeRef__NameAssignment_1 ) ) )
+            // InternalGoLDSL.g:1249:1: ( ( rule__ShapeRef__NameAssignment_1 ) )
             {
-            // InternalGoLDSL.g:1289:1: ( ( rule__ShapeRef__NameAssignment_1 ) )
-            // InternalGoLDSL.g:1290:2: ( rule__ShapeRef__NameAssignment_1 )
+            // InternalGoLDSL.g:1249:1: ( ( rule__ShapeRef__NameAssignment_1 ) )
+            // InternalGoLDSL.g:1250:2: ( rule__ShapeRef__NameAssignment_1 )
             {
              before(grammarAccess.getShapeRefAccess().getNameAssignment_1()); 
-            // InternalGoLDSL.g:1291:2: ( rule__ShapeRef__NameAssignment_1 )
-            // InternalGoLDSL.g:1291:3: rule__ShapeRef__NameAssignment_1
+            // InternalGoLDSL.g:1251:2: ( rule__ShapeRef__NameAssignment_1 )
+            // InternalGoLDSL.g:1251:3: rule__ShapeRef__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__ShapeRef__NameAssignment_1();
@@ -4170,14 +4009,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__2"
-    // InternalGoLDSL.g:1299:1: rule__ShapeRef__Group__2 : rule__ShapeRef__Group__2__Impl rule__ShapeRef__Group__3 ;
+    // InternalGoLDSL.g:1259:1: rule__ShapeRef__Group__2 : rule__ShapeRef__Group__2__Impl rule__ShapeRef__Group__3 ;
     public final void rule__ShapeRef__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1303:1: ( rule__ShapeRef__Group__2__Impl rule__ShapeRef__Group__3 )
-            // InternalGoLDSL.g:1304:2: rule__ShapeRef__Group__2__Impl rule__ShapeRef__Group__3
+            // InternalGoLDSL.g:1263:1: ( rule__ShapeRef__Group__2__Impl rule__ShapeRef__Group__3 )
+            // InternalGoLDSL.g:1264:2: rule__ShapeRef__Group__2__Impl rule__ShapeRef__Group__3
             {
             pushFollow(FOLLOW_11);
             rule__ShapeRef__Group__2__Impl();
@@ -4208,17 +4047,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__2__Impl"
-    // InternalGoLDSL.g:1311:1: rule__ShapeRef__Group__2__Impl : ( ':' ) ;
+    // InternalGoLDSL.g:1271:1: rule__ShapeRef__Group__2__Impl : ( ':' ) ;
     public final void rule__ShapeRef__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1315:1: ( ( ':' ) )
-            // InternalGoLDSL.g:1316:1: ( ':' )
+            // InternalGoLDSL.g:1275:1: ( ( ':' ) )
+            // InternalGoLDSL.g:1276:1: ( ':' )
             {
-            // InternalGoLDSL.g:1316:1: ( ':' )
-            // InternalGoLDSL.g:1317:2: ':'
+            // InternalGoLDSL.g:1276:1: ( ':' )
+            // InternalGoLDSL.g:1277:2: ':'
             {
              before(grammarAccess.getShapeRefAccess().getColonKeyword_2()); 
             match(input,17,FOLLOW_2); 
@@ -4245,14 +4084,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__3"
-    // InternalGoLDSL.g:1326:1: rule__ShapeRef__Group__3 : rule__ShapeRef__Group__3__Impl rule__ShapeRef__Group__4 ;
+    // InternalGoLDSL.g:1286:1: rule__ShapeRef__Group__3 : rule__ShapeRef__Group__3__Impl rule__ShapeRef__Group__4 ;
     public final void rule__ShapeRef__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1330:1: ( rule__ShapeRef__Group__3__Impl rule__ShapeRef__Group__4 )
-            // InternalGoLDSL.g:1331:2: rule__ShapeRef__Group__3__Impl rule__ShapeRef__Group__4
+            // InternalGoLDSL.g:1290:1: ( rule__ShapeRef__Group__3__Impl rule__ShapeRef__Group__4 )
+            // InternalGoLDSL.g:1291:2: rule__ShapeRef__Group__3__Impl rule__ShapeRef__Group__4
             {
             pushFollow(FOLLOW_14);
             rule__ShapeRef__Group__3__Impl();
@@ -4283,21 +4122,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__3__Impl"
-    // InternalGoLDSL.g:1338:1: rule__ShapeRef__Group__3__Impl : ( ( rule__ShapeRef__XAssignment_3 ) ) ;
+    // InternalGoLDSL.g:1298:1: rule__ShapeRef__Group__3__Impl : ( ( rule__ShapeRef__XAssignment_3 ) ) ;
     public final void rule__ShapeRef__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1342:1: ( ( ( rule__ShapeRef__XAssignment_3 ) ) )
-            // InternalGoLDSL.g:1343:1: ( ( rule__ShapeRef__XAssignment_3 ) )
+            // InternalGoLDSL.g:1302:1: ( ( ( rule__ShapeRef__XAssignment_3 ) ) )
+            // InternalGoLDSL.g:1303:1: ( ( rule__ShapeRef__XAssignment_3 ) )
             {
-            // InternalGoLDSL.g:1343:1: ( ( rule__ShapeRef__XAssignment_3 ) )
-            // InternalGoLDSL.g:1344:2: ( rule__ShapeRef__XAssignment_3 )
+            // InternalGoLDSL.g:1303:1: ( ( rule__ShapeRef__XAssignment_3 ) )
+            // InternalGoLDSL.g:1304:2: ( rule__ShapeRef__XAssignment_3 )
             {
              before(grammarAccess.getShapeRefAccess().getXAssignment_3()); 
-            // InternalGoLDSL.g:1345:2: ( rule__ShapeRef__XAssignment_3 )
-            // InternalGoLDSL.g:1345:3: rule__ShapeRef__XAssignment_3
+            // InternalGoLDSL.g:1305:2: ( rule__ShapeRef__XAssignment_3 )
+            // InternalGoLDSL.g:1305:3: rule__ShapeRef__XAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__ShapeRef__XAssignment_3();
@@ -4330,14 +4169,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__4"
-    // InternalGoLDSL.g:1353:1: rule__ShapeRef__Group__4 : rule__ShapeRef__Group__4__Impl rule__ShapeRef__Group__5 ;
+    // InternalGoLDSL.g:1313:1: rule__ShapeRef__Group__4 : rule__ShapeRef__Group__4__Impl rule__ShapeRef__Group__5 ;
     public final void rule__ShapeRef__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1357:1: ( rule__ShapeRef__Group__4__Impl rule__ShapeRef__Group__5 )
-            // InternalGoLDSL.g:1358:2: rule__ShapeRef__Group__4__Impl rule__ShapeRef__Group__5
+            // InternalGoLDSL.g:1317:1: ( rule__ShapeRef__Group__4__Impl rule__ShapeRef__Group__5 )
+            // InternalGoLDSL.g:1318:2: rule__ShapeRef__Group__4__Impl rule__ShapeRef__Group__5
             {
             pushFollow(FOLLOW_11);
             rule__ShapeRef__Group__4__Impl();
@@ -4368,17 +4207,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__4__Impl"
-    // InternalGoLDSL.g:1365:1: rule__ShapeRef__Group__4__Impl : ( ',' ) ;
+    // InternalGoLDSL.g:1325:1: rule__ShapeRef__Group__4__Impl : ( ',' ) ;
     public final void rule__ShapeRef__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1369:1: ( ( ',' ) )
-            // InternalGoLDSL.g:1370:1: ( ',' )
+            // InternalGoLDSL.g:1329:1: ( ( ',' ) )
+            // InternalGoLDSL.g:1330:1: ( ',' )
             {
-            // InternalGoLDSL.g:1370:1: ( ',' )
-            // InternalGoLDSL.g:1371:2: ','
+            // InternalGoLDSL.g:1330:1: ( ',' )
+            // InternalGoLDSL.g:1331:2: ','
             {
              before(grammarAccess.getShapeRefAccess().getCommaKeyword_4()); 
             match(input,22,FOLLOW_2); 
@@ -4405,14 +4244,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__5"
-    // InternalGoLDSL.g:1380:1: rule__ShapeRef__Group__5 : rule__ShapeRef__Group__5__Impl ;
+    // InternalGoLDSL.g:1340:1: rule__ShapeRef__Group__5 : rule__ShapeRef__Group__5__Impl ;
     public final void rule__ShapeRef__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1384:1: ( rule__ShapeRef__Group__5__Impl )
-            // InternalGoLDSL.g:1385:2: rule__ShapeRef__Group__5__Impl
+            // InternalGoLDSL.g:1344:1: ( rule__ShapeRef__Group__5__Impl )
+            // InternalGoLDSL.g:1345:2: rule__ShapeRef__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ShapeRef__Group__5__Impl();
@@ -4438,21 +4277,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__Group__5__Impl"
-    // InternalGoLDSL.g:1391:1: rule__ShapeRef__Group__5__Impl : ( ( rule__ShapeRef__YAssignment_5 ) ) ;
+    // InternalGoLDSL.g:1351:1: rule__ShapeRef__Group__5__Impl : ( ( rule__ShapeRef__YAssignment_5 ) ) ;
     public final void rule__ShapeRef__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1395:1: ( ( ( rule__ShapeRef__YAssignment_5 ) ) )
-            // InternalGoLDSL.g:1396:1: ( ( rule__ShapeRef__YAssignment_5 ) )
+            // InternalGoLDSL.g:1355:1: ( ( ( rule__ShapeRef__YAssignment_5 ) ) )
+            // InternalGoLDSL.g:1356:1: ( ( rule__ShapeRef__YAssignment_5 ) )
             {
-            // InternalGoLDSL.g:1396:1: ( ( rule__ShapeRef__YAssignment_5 ) )
-            // InternalGoLDSL.g:1397:2: ( rule__ShapeRef__YAssignment_5 )
+            // InternalGoLDSL.g:1356:1: ( ( rule__ShapeRef__YAssignment_5 ) )
+            // InternalGoLDSL.g:1357:2: ( rule__ShapeRef__YAssignment_5 )
             {
              before(grammarAccess.getShapeRefAccess().getYAssignment_5()); 
-            // InternalGoLDSL.g:1398:2: ( rule__ShapeRef__YAssignment_5 )
-            // InternalGoLDSL.g:1398:3: rule__ShapeRef__YAssignment_5
+            // InternalGoLDSL.g:1358:2: ( rule__ShapeRef__YAssignment_5 )
+            // InternalGoLDSL.g:1358:3: rule__ShapeRef__YAssignment_5
             {
             pushFollow(FOLLOW_2);
             rule__ShapeRef__YAssignment_5();
@@ -4485,14 +4324,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cell__Group__0"
-    // InternalGoLDSL.g:1407:1: rule__Cell__Group__0 : rule__Cell__Group__0__Impl rule__Cell__Group__1 ;
+    // InternalGoLDSL.g:1367:1: rule__Cell__Group__0 : rule__Cell__Group__0__Impl rule__Cell__Group__1 ;
     public final void rule__Cell__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1411:1: ( rule__Cell__Group__0__Impl rule__Cell__Group__1 )
-            // InternalGoLDSL.g:1412:2: rule__Cell__Group__0__Impl rule__Cell__Group__1
+            // InternalGoLDSL.g:1371:1: ( rule__Cell__Group__0__Impl rule__Cell__Group__1 )
+            // InternalGoLDSL.g:1372:2: rule__Cell__Group__0__Impl rule__Cell__Group__1
             {
             pushFollow(FOLLOW_14);
             rule__Cell__Group__0__Impl();
@@ -4523,21 +4362,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cell__Group__0__Impl"
-    // InternalGoLDSL.g:1419:1: rule__Cell__Group__0__Impl : ( ( rule__Cell__XAssignment_0 ) ) ;
+    // InternalGoLDSL.g:1379:1: rule__Cell__Group__0__Impl : ( ( rule__Cell__XAssignment_0 ) ) ;
     public final void rule__Cell__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1423:1: ( ( ( rule__Cell__XAssignment_0 ) ) )
-            // InternalGoLDSL.g:1424:1: ( ( rule__Cell__XAssignment_0 ) )
+            // InternalGoLDSL.g:1383:1: ( ( ( rule__Cell__XAssignment_0 ) ) )
+            // InternalGoLDSL.g:1384:1: ( ( rule__Cell__XAssignment_0 ) )
             {
-            // InternalGoLDSL.g:1424:1: ( ( rule__Cell__XAssignment_0 ) )
-            // InternalGoLDSL.g:1425:2: ( rule__Cell__XAssignment_0 )
+            // InternalGoLDSL.g:1384:1: ( ( rule__Cell__XAssignment_0 ) )
+            // InternalGoLDSL.g:1385:2: ( rule__Cell__XAssignment_0 )
             {
              before(grammarAccess.getCellAccess().getXAssignment_0()); 
-            // InternalGoLDSL.g:1426:2: ( rule__Cell__XAssignment_0 )
-            // InternalGoLDSL.g:1426:3: rule__Cell__XAssignment_0
+            // InternalGoLDSL.g:1386:2: ( rule__Cell__XAssignment_0 )
+            // InternalGoLDSL.g:1386:3: rule__Cell__XAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Cell__XAssignment_0();
@@ -4570,14 +4409,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cell__Group__1"
-    // InternalGoLDSL.g:1434:1: rule__Cell__Group__1 : rule__Cell__Group__1__Impl rule__Cell__Group__2 ;
+    // InternalGoLDSL.g:1394:1: rule__Cell__Group__1 : rule__Cell__Group__1__Impl rule__Cell__Group__2 ;
     public final void rule__Cell__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1438:1: ( rule__Cell__Group__1__Impl rule__Cell__Group__2 )
-            // InternalGoLDSL.g:1439:2: rule__Cell__Group__1__Impl rule__Cell__Group__2
+            // InternalGoLDSL.g:1398:1: ( rule__Cell__Group__1__Impl rule__Cell__Group__2 )
+            // InternalGoLDSL.g:1399:2: rule__Cell__Group__1__Impl rule__Cell__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__Cell__Group__1__Impl();
@@ -4608,17 +4447,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cell__Group__1__Impl"
-    // InternalGoLDSL.g:1446:1: rule__Cell__Group__1__Impl : ( ',' ) ;
+    // InternalGoLDSL.g:1406:1: rule__Cell__Group__1__Impl : ( ',' ) ;
     public final void rule__Cell__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1450:1: ( ( ',' ) )
-            // InternalGoLDSL.g:1451:1: ( ',' )
+            // InternalGoLDSL.g:1410:1: ( ( ',' ) )
+            // InternalGoLDSL.g:1411:1: ( ',' )
             {
-            // InternalGoLDSL.g:1451:1: ( ',' )
-            // InternalGoLDSL.g:1452:2: ','
+            // InternalGoLDSL.g:1411:1: ( ',' )
+            // InternalGoLDSL.g:1412:2: ','
             {
              before(grammarAccess.getCellAccess().getCommaKeyword_1()); 
             match(input,22,FOLLOW_2); 
@@ -4645,14 +4484,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cell__Group__2"
-    // InternalGoLDSL.g:1461:1: rule__Cell__Group__2 : rule__Cell__Group__2__Impl ;
+    // InternalGoLDSL.g:1421:1: rule__Cell__Group__2 : rule__Cell__Group__2__Impl ;
     public final void rule__Cell__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1465:1: ( rule__Cell__Group__2__Impl )
-            // InternalGoLDSL.g:1466:2: rule__Cell__Group__2__Impl
+            // InternalGoLDSL.g:1425:1: ( rule__Cell__Group__2__Impl )
+            // InternalGoLDSL.g:1426:2: rule__Cell__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Cell__Group__2__Impl();
@@ -4678,21 +4517,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cell__Group__2__Impl"
-    // InternalGoLDSL.g:1472:1: rule__Cell__Group__2__Impl : ( ( rule__Cell__YAssignment_2 ) ) ;
+    // InternalGoLDSL.g:1432:1: rule__Cell__Group__2__Impl : ( ( rule__Cell__YAssignment_2 ) ) ;
     public final void rule__Cell__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1476:1: ( ( ( rule__Cell__YAssignment_2 ) ) )
-            // InternalGoLDSL.g:1477:1: ( ( rule__Cell__YAssignment_2 ) )
+            // InternalGoLDSL.g:1436:1: ( ( ( rule__Cell__YAssignment_2 ) ) )
+            // InternalGoLDSL.g:1437:1: ( ( rule__Cell__YAssignment_2 ) )
             {
-            // InternalGoLDSL.g:1477:1: ( ( rule__Cell__YAssignment_2 ) )
-            // InternalGoLDSL.g:1478:2: ( rule__Cell__YAssignment_2 )
+            // InternalGoLDSL.g:1437:1: ( ( rule__Cell__YAssignment_2 ) )
+            // InternalGoLDSL.g:1438:2: ( rule__Cell__YAssignment_2 )
             {
              before(grammarAccess.getCellAccess().getYAssignment_2()); 
-            // InternalGoLDSL.g:1479:2: ( rule__Cell__YAssignment_2 )
-            // InternalGoLDSL.g:1479:3: rule__Cell__YAssignment_2
+            // InternalGoLDSL.g:1439:2: ( rule__Cell__YAssignment_2 )
+            // InternalGoLDSL.g:1439:3: rule__Cell__YAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Cell__YAssignment_2();
@@ -4725,14 +4564,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__0"
-    // InternalGoLDSL.g:1488:1: rule__Rule__Group__0 : rule__Rule__Group__0__Impl rule__Rule__Group__1 ;
+    // InternalGoLDSL.g:1448:1: rule__Rule__Group__0 : rule__Rule__Group__0__Impl rule__Rule__Group__1 ;
     public final void rule__Rule__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1492:1: ( rule__Rule__Group__0__Impl rule__Rule__Group__1 )
-            // InternalGoLDSL.g:1493:2: rule__Rule__Group__0__Impl rule__Rule__Group__1
+            // InternalGoLDSL.g:1452:1: ( rule__Rule__Group__0__Impl rule__Rule__Group__1 )
+            // InternalGoLDSL.g:1453:2: rule__Rule__Group__0__Impl rule__Rule__Group__1
             {
             pushFollow(FOLLOW_15);
             rule__Rule__Group__0__Impl();
@@ -4763,17 +4602,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__0__Impl"
-    // InternalGoLDSL.g:1500:1: rule__Rule__Group__0__Impl : ( 'Rule:' ) ;
+    // InternalGoLDSL.g:1460:1: rule__Rule__Group__0__Impl : ( 'Rule:' ) ;
     public final void rule__Rule__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1504:1: ( ( 'Rule:' ) )
-            // InternalGoLDSL.g:1505:1: ( 'Rule:' )
+            // InternalGoLDSL.g:1464:1: ( ( 'Rule:' ) )
+            // InternalGoLDSL.g:1465:1: ( 'Rule:' )
             {
-            // InternalGoLDSL.g:1505:1: ( 'Rule:' )
-            // InternalGoLDSL.g:1506:2: 'Rule:'
+            // InternalGoLDSL.g:1465:1: ( 'Rule:' )
+            // InternalGoLDSL.g:1466:2: 'Rule:'
             {
              before(grammarAccess.getRuleAccess().getRuleKeyword_0()); 
             match(input,23,FOLLOW_2); 
@@ -4800,14 +4639,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__1"
-    // InternalGoLDSL.g:1515:1: rule__Rule__Group__1 : rule__Rule__Group__1__Impl rule__Rule__Group__2 ;
+    // InternalGoLDSL.g:1475:1: rule__Rule__Group__1 : rule__Rule__Group__1__Impl rule__Rule__Group__2 ;
     public final void rule__Rule__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1519:1: ( rule__Rule__Group__1__Impl rule__Rule__Group__2 )
-            // InternalGoLDSL.g:1520:2: rule__Rule__Group__1__Impl rule__Rule__Group__2
+            // InternalGoLDSL.g:1479:1: ( rule__Rule__Group__1__Impl rule__Rule__Group__2 )
+            // InternalGoLDSL.g:1480:2: rule__Rule__Group__1__Impl rule__Rule__Group__2
             {
             pushFollow(FOLLOW_16);
             rule__Rule__Group__1__Impl();
@@ -4838,21 +4677,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__1__Impl"
-    // InternalGoLDSL.g:1527:1: rule__Rule__Group__1__Impl : ( ( rule__Rule__ConditionAssignment_1 ) ) ;
+    // InternalGoLDSL.g:1487:1: rule__Rule__Group__1__Impl : ( ( rule__Rule__ConditionAssignment_1 ) ) ;
     public final void rule__Rule__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1531:1: ( ( ( rule__Rule__ConditionAssignment_1 ) ) )
-            // InternalGoLDSL.g:1532:1: ( ( rule__Rule__ConditionAssignment_1 ) )
+            // InternalGoLDSL.g:1491:1: ( ( ( rule__Rule__ConditionAssignment_1 ) ) )
+            // InternalGoLDSL.g:1492:1: ( ( rule__Rule__ConditionAssignment_1 ) )
             {
-            // InternalGoLDSL.g:1532:1: ( ( rule__Rule__ConditionAssignment_1 ) )
-            // InternalGoLDSL.g:1533:2: ( rule__Rule__ConditionAssignment_1 )
+            // InternalGoLDSL.g:1492:1: ( ( rule__Rule__ConditionAssignment_1 ) )
+            // InternalGoLDSL.g:1493:2: ( rule__Rule__ConditionAssignment_1 )
             {
              before(grammarAccess.getRuleAccess().getConditionAssignment_1()); 
-            // InternalGoLDSL.g:1534:2: ( rule__Rule__ConditionAssignment_1 )
-            // InternalGoLDSL.g:1534:3: rule__Rule__ConditionAssignment_1
+            // InternalGoLDSL.g:1494:2: ( rule__Rule__ConditionAssignment_1 )
+            // InternalGoLDSL.g:1494:3: rule__Rule__ConditionAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Rule__ConditionAssignment_1();
@@ -4885,14 +4724,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__2"
-    // InternalGoLDSL.g:1542:1: rule__Rule__Group__2 : rule__Rule__Group__2__Impl ;
+    // InternalGoLDSL.g:1502:1: rule__Rule__Group__2 : rule__Rule__Group__2__Impl ;
     public final void rule__Rule__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1546:1: ( rule__Rule__Group__2__Impl )
-            // InternalGoLDSL.g:1547:2: rule__Rule__Group__2__Impl
+            // InternalGoLDSL.g:1506:1: ( rule__Rule__Group__2__Impl )
+            // InternalGoLDSL.g:1507:2: rule__Rule__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Rule__Group__2__Impl();
@@ -4918,21 +4757,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__2__Impl"
-    // InternalGoLDSL.g:1553:1: rule__Rule__Group__2__Impl : ( ( rule__Rule__ActionAssignment_2 ) ) ;
+    // InternalGoLDSL.g:1513:1: rule__Rule__Group__2__Impl : ( ( rule__Rule__ActionAssignment_2 ) ) ;
     public final void rule__Rule__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1557:1: ( ( ( rule__Rule__ActionAssignment_2 ) ) )
-            // InternalGoLDSL.g:1558:1: ( ( rule__Rule__ActionAssignment_2 ) )
+            // InternalGoLDSL.g:1517:1: ( ( ( rule__Rule__ActionAssignment_2 ) ) )
+            // InternalGoLDSL.g:1518:1: ( ( rule__Rule__ActionAssignment_2 ) )
             {
-            // InternalGoLDSL.g:1558:1: ( ( rule__Rule__ActionAssignment_2 ) )
-            // InternalGoLDSL.g:1559:2: ( rule__Rule__ActionAssignment_2 )
+            // InternalGoLDSL.g:1518:1: ( ( rule__Rule__ActionAssignment_2 ) )
+            // InternalGoLDSL.g:1519:2: ( rule__Rule__ActionAssignment_2 )
             {
              before(grammarAccess.getRuleAccess().getActionAssignment_2()); 
-            // InternalGoLDSL.g:1560:2: ( rule__Rule__ActionAssignment_2 )
-            // InternalGoLDSL.g:1560:3: rule__Rule__ActionAssignment_2
+            // InternalGoLDSL.g:1520:2: ( rule__Rule__ActionAssignment_2 )
+            // InternalGoLDSL.g:1520:3: rule__Rule__ActionAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Rule__ActionAssignment_2();
@@ -4965,14 +4804,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group__0"
-    // InternalGoLDSL.g:1569:1: rule__Action__Group__0 : rule__Action__Group__0__Impl rule__Action__Group__1 ;
+    // InternalGoLDSL.g:1529:1: rule__Action__Group__0 : rule__Action__Group__0__Impl rule__Action__Group__1 ;
     public final void rule__Action__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1573:1: ( rule__Action__Group__0__Impl rule__Action__Group__1 )
-            // InternalGoLDSL.g:1574:2: rule__Action__Group__0__Impl rule__Action__Group__1
+            // InternalGoLDSL.g:1533:1: ( rule__Action__Group__0__Impl rule__Action__Group__1 )
+            // InternalGoLDSL.g:1534:2: rule__Action__Group__0__Impl rule__Action__Group__1
             {
             pushFollow(FOLLOW_7);
             rule__Action__Group__0__Impl();
@@ -5003,17 +4842,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group__0__Impl"
-    // InternalGoLDSL.g:1581:1: rule__Action__Group__0__Impl : ( 'Create' ) ;
+    // InternalGoLDSL.g:1541:1: rule__Action__Group__0__Impl : ( 'Create' ) ;
     public final void rule__Action__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1585:1: ( ( 'Create' ) )
-            // InternalGoLDSL.g:1586:1: ( 'Create' )
+            // InternalGoLDSL.g:1545:1: ( ( 'Create' ) )
+            // InternalGoLDSL.g:1546:1: ( 'Create' )
             {
-            // InternalGoLDSL.g:1586:1: ( 'Create' )
-            // InternalGoLDSL.g:1587:2: 'Create'
+            // InternalGoLDSL.g:1546:1: ( 'Create' )
+            // InternalGoLDSL.g:1547:2: 'Create'
             {
              before(grammarAccess.getActionAccess().getCreateKeyword_0()); 
             match(input,24,FOLLOW_2); 
@@ -5040,14 +4879,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group__1"
-    // InternalGoLDSL.g:1596:1: rule__Action__Group__1 : rule__Action__Group__1__Impl ;
+    // InternalGoLDSL.g:1556:1: rule__Action__Group__1 : rule__Action__Group__1__Impl ;
     public final void rule__Action__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1600:1: ( rule__Action__Group__1__Impl )
-            // InternalGoLDSL.g:1601:2: rule__Action__Group__1__Impl
+            // InternalGoLDSL.g:1560:1: ( rule__Action__Group__1__Impl )
+            // InternalGoLDSL.g:1561:2: rule__Action__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Action__Group__1__Impl();
@@ -5073,17 +4912,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Action__Group__1__Impl"
-    // InternalGoLDSL.g:1607:1: rule__Action__Group__1__Impl : ( ruleObjects ) ;
+    // InternalGoLDSL.g:1567:1: rule__Action__Group__1__Impl : ( ruleObjects ) ;
     public final void rule__Action__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1611:1: ( ( ruleObjects ) )
-            // InternalGoLDSL.g:1612:1: ( ruleObjects )
+            // InternalGoLDSL.g:1571:1: ( ( ruleObjects ) )
+            // InternalGoLDSL.g:1572:1: ( ruleObjects )
             {
-            // InternalGoLDSL.g:1612:1: ( ruleObjects )
-            // InternalGoLDSL.g:1613:2: ruleObjects
+            // InternalGoLDSL.g:1572:1: ( ruleObjects )
+            // InternalGoLDSL.g:1573:2: ruleObjects
             {
              before(grammarAccess.getActionAccess().getObjectsParserRuleCall_1()); 
             pushFollow(FOLLOW_2);
@@ -5114,14 +4953,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group__0"
-    // InternalGoLDSL.g:1623:1: rule__Condition__Group__0 : rule__Condition__Group__0__Impl rule__Condition__Group__1 ;
+    // InternalGoLDSL.g:1583:1: rule__Condition__Group__0 : rule__Condition__Group__0__Impl rule__Condition__Group__1 ;
     public final void rule__Condition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1627:1: ( rule__Condition__Group__0__Impl rule__Condition__Group__1 )
-            // InternalGoLDSL.g:1628:2: rule__Condition__Group__0__Impl rule__Condition__Group__1
+            // InternalGoLDSL.g:1587:1: ( rule__Condition__Group__0__Impl rule__Condition__Group__1 )
+            // InternalGoLDSL.g:1588:2: rule__Condition__Group__0__Impl rule__Condition__Group__1
             {
             pushFollow(FOLLOW_17);
             rule__Condition__Group__0__Impl();
@@ -5152,17 +4991,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group__0__Impl"
-    // InternalGoLDSL.g:1635:1: rule__Condition__Group__0__Impl : ( 'If' ) ;
+    // InternalGoLDSL.g:1595:1: rule__Condition__Group__0__Impl : ( 'If' ) ;
     public final void rule__Condition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1639:1: ( ( 'If' ) )
-            // InternalGoLDSL.g:1640:1: ( 'If' )
+            // InternalGoLDSL.g:1599:1: ( ( 'If' ) )
+            // InternalGoLDSL.g:1600:1: ( 'If' )
             {
-            // InternalGoLDSL.g:1640:1: ( 'If' )
-            // InternalGoLDSL.g:1641:2: 'If'
+            // InternalGoLDSL.g:1600:1: ( 'If' )
+            // InternalGoLDSL.g:1601:2: 'If'
             {
              before(grammarAccess.getConditionAccess().getIfKeyword_0()); 
             match(input,25,FOLLOW_2); 
@@ -5189,14 +5028,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group__1"
-    // InternalGoLDSL.g:1650:1: rule__Condition__Group__1 : rule__Condition__Group__1__Impl ;
+    // InternalGoLDSL.g:1610:1: rule__Condition__Group__1 : rule__Condition__Group__1__Impl ;
     public final void rule__Condition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1654:1: ( rule__Condition__Group__1__Impl )
-            // InternalGoLDSL.g:1655:2: rule__Condition__Group__1__Impl
+            // InternalGoLDSL.g:1614:1: ( rule__Condition__Group__1__Impl )
+            // InternalGoLDSL.g:1615:2: rule__Condition__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Condition__Group__1__Impl();
@@ -5222,17 +5061,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group__1__Impl"
-    // InternalGoLDSL.g:1661:1: rule__Condition__Group__1__Impl : ( ruleConditionRules ) ;
+    // InternalGoLDSL.g:1621:1: rule__Condition__Group__1__Impl : ( ruleConditionRules ) ;
     public final void rule__Condition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1665:1: ( ( ruleConditionRules ) )
-            // InternalGoLDSL.g:1666:1: ( ruleConditionRules )
+            // InternalGoLDSL.g:1625:1: ( ( ruleConditionRules ) )
+            // InternalGoLDSL.g:1626:1: ( ruleConditionRules )
             {
-            // InternalGoLDSL.g:1666:1: ( ruleConditionRules )
-            // InternalGoLDSL.g:1667:2: ruleConditionRules
+            // InternalGoLDSL.g:1626:1: ( ruleConditionRules )
+            // InternalGoLDSL.g:1627:2: ruleConditionRules
             {
              before(grammarAccess.getConditionAccess().getConditionRulesParserRuleCall_1()); 
             pushFollow(FOLLOW_2);
@@ -5263,14 +5102,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRules__Group__0"
-    // InternalGoLDSL.g:1677:1: rule__ConditionRules__Group__0 : rule__ConditionRules__Group__0__Impl rule__ConditionRules__Group__1 ;
+    // InternalGoLDSL.g:1637:1: rule__ConditionRules__Group__0 : rule__ConditionRules__Group__0__Impl rule__ConditionRules__Group__1 ;
     public final void rule__ConditionRules__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1681:1: ( rule__ConditionRules__Group__0__Impl rule__ConditionRules__Group__1 )
-            // InternalGoLDSL.g:1682:2: rule__ConditionRules__Group__0__Impl rule__ConditionRules__Group__1
+            // InternalGoLDSL.g:1641:1: ( rule__ConditionRules__Group__0__Impl rule__ConditionRules__Group__1 )
+            // InternalGoLDSL.g:1642:2: rule__ConditionRules__Group__0__Impl rule__ConditionRules__Group__1
             {
             pushFollow(FOLLOW_18);
             rule__ConditionRules__Group__0__Impl();
@@ -5301,21 +5140,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRules__Group__0__Impl"
-    // InternalGoLDSL.g:1689:1: rule__ConditionRules__Group__0__Impl : ( ( rule__ConditionRules__Rule1Assignment_0 ) ) ;
+    // InternalGoLDSL.g:1649:1: rule__ConditionRules__Group__0__Impl : ( ( rule__ConditionRules__Rule1Assignment_0 ) ) ;
     public final void rule__ConditionRules__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1693:1: ( ( ( rule__ConditionRules__Rule1Assignment_0 ) ) )
-            // InternalGoLDSL.g:1694:1: ( ( rule__ConditionRules__Rule1Assignment_0 ) )
+            // InternalGoLDSL.g:1653:1: ( ( ( rule__ConditionRules__Rule1Assignment_0 ) ) )
+            // InternalGoLDSL.g:1654:1: ( ( rule__ConditionRules__Rule1Assignment_0 ) )
             {
-            // InternalGoLDSL.g:1694:1: ( ( rule__ConditionRules__Rule1Assignment_0 ) )
-            // InternalGoLDSL.g:1695:2: ( rule__ConditionRules__Rule1Assignment_0 )
+            // InternalGoLDSL.g:1654:1: ( ( rule__ConditionRules__Rule1Assignment_0 ) )
+            // InternalGoLDSL.g:1655:2: ( rule__ConditionRules__Rule1Assignment_0 )
             {
              before(grammarAccess.getConditionRulesAccess().getRule1Assignment_0()); 
-            // InternalGoLDSL.g:1696:2: ( rule__ConditionRules__Rule1Assignment_0 )
-            // InternalGoLDSL.g:1696:3: rule__ConditionRules__Rule1Assignment_0
+            // InternalGoLDSL.g:1656:2: ( rule__ConditionRules__Rule1Assignment_0 )
+            // InternalGoLDSL.g:1656:3: rule__ConditionRules__Rule1Assignment_0
             {
             pushFollow(FOLLOW_2);
             rule__ConditionRules__Rule1Assignment_0();
@@ -5348,14 +5187,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRules__Group__1"
-    // InternalGoLDSL.g:1704:1: rule__ConditionRules__Group__1 : rule__ConditionRules__Group__1__Impl ;
+    // InternalGoLDSL.g:1664:1: rule__ConditionRules__Group__1 : rule__ConditionRules__Group__1__Impl ;
     public final void rule__ConditionRules__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1708:1: ( rule__ConditionRules__Group__1__Impl )
-            // InternalGoLDSL.g:1709:2: rule__ConditionRules__Group__1__Impl
+            // InternalGoLDSL.g:1668:1: ( rule__ConditionRules__Group__1__Impl )
+            // InternalGoLDSL.g:1669:2: rule__ConditionRules__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ConditionRules__Group__1__Impl();
@@ -5381,29 +5220,29 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRules__Group__1__Impl"
-    // InternalGoLDSL.g:1715:1: rule__ConditionRules__Group__1__Impl : ( ( rule__ConditionRules__Group_1__0 )? ) ;
+    // InternalGoLDSL.g:1675:1: rule__ConditionRules__Group__1__Impl : ( ( rule__ConditionRules__Group_1__0 )? ) ;
     public final void rule__ConditionRules__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1719:1: ( ( ( rule__ConditionRules__Group_1__0 )? ) )
-            // InternalGoLDSL.g:1720:1: ( ( rule__ConditionRules__Group_1__0 )? )
+            // InternalGoLDSL.g:1679:1: ( ( ( rule__ConditionRules__Group_1__0 )? ) )
+            // InternalGoLDSL.g:1680:1: ( ( rule__ConditionRules__Group_1__0 )? )
             {
-            // InternalGoLDSL.g:1720:1: ( ( rule__ConditionRules__Group_1__0 )? )
-            // InternalGoLDSL.g:1721:2: ( rule__ConditionRules__Group_1__0 )?
+            // InternalGoLDSL.g:1680:1: ( ( rule__ConditionRules__Group_1__0 )? )
+            // InternalGoLDSL.g:1681:2: ( rule__ConditionRules__Group_1__0 )?
             {
              before(grammarAccess.getConditionRulesAccess().getGroup_1()); 
-            // InternalGoLDSL.g:1722:2: ( rule__ConditionRules__Group_1__0 )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // InternalGoLDSL.g:1682:2: ( rule__ConditionRules__Group_1__0 )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( ((LA12_0>=11 && LA12_0<=12)) ) {
-                alt12=1;
+            if ( ((LA11_0>=11 && LA11_0<=12)) ) {
+                alt11=1;
             }
-            switch (alt12) {
+            switch (alt11) {
                 case 1 :
-                    // InternalGoLDSL.g:1722:3: rule__ConditionRules__Group_1__0
+                    // InternalGoLDSL.g:1682:3: rule__ConditionRules__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ConditionRules__Group_1__0();
@@ -5439,14 +5278,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRules__Group_1__0"
-    // InternalGoLDSL.g:1731:1: rule__ConditionRules__Group_1__0 : rule__ConditionRules__Group_1__0__Impl rule__ConditionRules__Group_1__1 ;
+    // InternalGoLDSL.g:1691:1: rule__ConditionRules__Group_1__0 : rule__ConditionRules__Group_1__0__Impl rule__ConditionRules__Group_1__1 ;
     public final void rule__ConditionRules__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1735:1: ( rule__ConditionRules__Group_1__0__Impl rule__ConditionRules__Group_1__1 )
-            // InternalGoLDSL.g:1736:2: rule__ConditionRules__Group_1__0__Impl rule__ConditionRules__Group_1__1
+            // InternalGoLDSL.g:1695:1: ( rule__ConditionRules__Group_1__0__Impl rule__ConditionRules__Group_1__1 )
+            // InternalGoLDSL.g:1696:2: rule__ConditionRules__Group_1__0__Impl rule__ConditionRules__Group_1__1
             {
             pushFollow(FOLLOW_17);
             rule__ConditionRules__Group_1__0__Impl();
@@ -5477,21 +5316,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRules__Group_1__0__Impl"
-    // InternalGoLDSL.g:1743:1: rule__ConditionRules__Group_1__0__Impl : ( ( rule__ConditionRules__OperatorAssignment_1_0 ) ) ;
+    // InternalGoLDSL.g:1703:1: rule__ConditionRules__Group_1__0__Impl : ( ( rule__ConditionRules__OperatorAssignment_1_0 ) ) ;
     public final void rule__ConditionRules__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1747:1: ( ( ( rule__ConditionRules__OperatorAssignment_1_0 ) ) )
-            // InternalGoLDSL.g:1748:1: ( ( rule__ConditionRules__OperatorAssignment_1_0 ) )
+            // InternalGoLDSL.g:1707:1: ( ( ( rule__ConditionRules__OperatorAssignment_1_0 ) ) )
+            // InternalGoLDSL.g:1708:1: ( ( rule__ConditionRules__OperatorAssignment_1_0 ) )
             {
-            // InternalGoLDSL.g:1748:1: ( ( rule__ConditionRules__OperatorAssignment_1_0 ) )
-            // InternalGoLDSL.g:1749:2: ( rule__ConditionRules__OperatorAssignment_1_0 )
+            // InternalGoLDSL.g:1708:1: ( ( rule__ConditionRules__OperatorAssignment_1_0 ) )
+            // InternalGoLDSL.g:1709:2: ( rule__ConditionRules__OperatorAssignment_1_0 )
             {
              before(grammarAccess.getConditionRulesAccess().getOperatorAssignment_1_0()); 
-            // InternalGoLDSL.g:1750:2: ( rule__ConditionRules__OperatorAssignment_1_0 )
-            // InternalGoLDSL.g:1750:3: rule__ConditionRules__OperatorAssignment_1_0
+            // InternalGoLDSL.g:1710:2: ( rule__ConditionRules__OperatorAssignment_1_0 )
+            // InternalGoLDSL.g:1710:3: rule__ConditionRules__OperatorAssignment_1_0
             {
             pushFollow(FOLLOW_2);
             rule__ConditionRules__OperatorAssignment_1_0();
@@ -5524,14 +5363,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRules__Group_1__1"
-    // InternalGoLDSL.g:1758:1: rule__ConditionRules__Group_1__1 : rule__ConditionRules__Group_1__1__Impl ;
+    // InternalGoLDSL.g:1718:1: rule__ConditionRules__Group_1__1 : rule__ConditionRules__Group_1__1__Impl ;
     public final void rule__ConditionRules__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1762:1: ( rule__ConditionRules__Group_1__1__Impl )
-            // InternalGoLDSL.g:1763:2: rule__ConditionRules__Group_1__1__Impl
+            // InternalGoLDSL.g:1722:1: ( rule__ConditionRules__Group_1__1__Impl )
+            // InternalGoLDSL.g:1723:2: rule__ConditionRules__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ConditionRules__Group_1__1__Impl();
@@ -5557,21 +5396,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRules__Group_1__1__Impl"
-    // InternalGoLDSL.g:1769:1: rule__ConditionRules__Group_1__1__Impl : ( ( rule__ConditionRules__Rule2Assignment_1_1 ) ) ;
+    // InternalGoLDSL.g:1729:1: rule__ConditionRules__Group_1__1__Impl : ( ( rule__ConditionRules__Rule2Assignment_1_1 ) ) ;
     public final void rule__ConditionRules__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1773:1: ( ( ( rule__ConditionRules__Rule2Assignment_1_1 ) ) )
-            // InternalGoLDSL.g:1774:1: ( ( rule__ConditionRules__Rule2Assignment_1_1 ) )
+            // InternalGoLDSL.g:1733:1: ( ( ( rule__ConditionRules__Rule2Assignment_1_1 ) ) )
+            // InternalGoLDSL.g:1734:1: ( ( rule__ConditionRules__Rule2Assignment_1_1 ) )
             {
-            // InternalGoLDSL.g:1774:1: ( ( rule__ConditionRules__Rule2Assignment_1_1 ) )
-            // InternalGoLDSL.g:1775:2: ( rule__ConditionRules__Rule2Assignment_1_1 )
+            // InternalGoLDSL.g:1734:1: ( ( rule__ConditionRules__Rule2Assignment_1_1 ) )
+            // InternalGoLDSL.g:1735:2: ( rule__ConditionRules__Rule2Assignment_1_1 )
             {
              before(grammarAccess.getConditionRulesAccess().getRule2Assignment_1_1()); 
-            // InternalGoLDSL.g:1776:2: ( rule__ConditionRules__Rule2Assignment_1_1 )
-            // InternalGoLDSL.g:1776:3: rule__ConditionRules__Rule2Assignment_1_1
+            // InternalGoLDSL.g:1736:2: ( rule__ConditionRules__Rule2Assignment_1_1 )
+            // InternalGoLDSL.g:1736:3: rule__ConditionRules__Rule2Assignment_1_1
             {
             pushFollow(FOLLOW_2);
             rule__ConditionRules__Rule2Assignment_1_1();
@@ -5604,14 +5443,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundedRange__Group__0"
-    // InternalGoLDSL.g:1785:1: rule__BoundedRange__Group__0 : rule__BoundedRange__Group__0__Impl rule__BoundedRange__Group__1 ;
+    // InternalGoLDSL.g:1745:1: rule__BoundedRange__Group__0 : rule__BoundedRange__Group__0__Impl rule__BoundedRange__Group__1 ;
     public final void rule__BoundedRange__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1789:1: ( rule__BoundedRange__Group__0__Impl rule__BoundedRange__Group__1 )
-            // InternalGoLDSL.g:1790:2: rule__BoundedRange__Group__0__Impl rule__BoundedRange__Group__1
+            // InternalGoLDSL.g:1749:1: ( rule__BoundedRange__Group__0__Impl rule__BoundedRange__Group__1 )
+            // InternalGoLDSL.g:1750:2: rule__BoundedRange__Group__0__Impl rule__BoundedRange__Group__1
             {
             pushFollow(FOLLOW_19);
             rule__BoundedRange__Group__0__Impl();
@@ -5642,21 +5481,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundedRange__Group__0__Impl"
-    // InternalGoLDSL.g:1797:1: rule__BoundedRange__Group__0__Impl : ( ( rule__BoundedRange__LowerBoundAssignment_0 ) ) ;
+    // InternalGoLDSL.g:1757:1: rule__BoundedRange__Group__0__Impl : ( ( rule__BoundedRange__LowerBoundAssignment_0 ) ) ;
     public final void rule__BoundedRange__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1801:1: ( ( ( rule__BoundedRange__LowerBoundAssignment_0 ) ) )
-            // InternalGoLDSL.g:1802:1: ( ( rule__BoundedRange__LowerBoundAssignment_0 ) )
+            // InternalGoLDSL.g:1761:1: ( ( ( rule__BoundedRange__LowerBoundAssignment_0 ) ) )
+            // InternalGoLDSL.g:1762:1: ( ( rule__BoundedRange__LowerBoundAssignment_0 ) )
             {
-            // InternalGoLDSL.g:1802:1: ( ( rule__BoundedRange__LowerBoundAssignment_0 ) )
-            // InternalGoLDSL.g:1803:2: ( rule__BoundedRange__LowerBoundAssignment_0 )
+            // InternalGoLDSL.g:1762:1: ( ( rule__BoundedRange__LowerBoundAssignment_0 ) )
+            // InternalGoLDSL.g:1763:2: ( rule__BoundedRange__LowerBoundAssignment_0 )
             {
              before(grammarAccess.getBoundedRangeAccess().getLowerBoundAssignment_0()); 
-            // InternalGoLDSL.g:1804:2: ( rule__BoundedRange__LowerBoundAssignment_0 )
-            // InternalGoLDSL.g:1804:3: rule__BoundedRange__LowerBoundAssignment_0
+            // InternalGoLDSL.g:1764:2: ( rule__BoundedRange__LowerBoundAssignment_0 )
+            // InternalGoLDSL.g:1764:3: rule__BoundedRange__LowerBoundAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__BoundedRange__LowerBoundAssignment_0();
@@ -5689,14 +5528,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundedRange__Group__1"
-    // InternalGoLDSL.g:1812:1: rule__BoundedRange__Group__1 : rule__BoundedRange__Group__1__Impl rule__BoundedRange__Group__2 ;
+    // InternalGoLDSL.g:1772:1: rule__BoundedRange__Group__1 : rule__BoundedRange__Group__1__Impl rule__BoundedRange__Group__2 ;
     public final void rule__BoundedRange__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1816:1: ( rule__BoundedRange__Group__1__Impl rule__BoundedRange__Group__2 )
-            // InternalGoLDSL.g:1817:2: rule__BoundedRange__Group__1__Impl rule__BoundedRange__Group__2
+            // InternalGoLDSL.g:1776:1: ( rule__BoundedRange__Group__1__Impl rule__BoundedRange__Group__2 )
+            // InternalGoLDSL.g:1777:2: rule__BoundedRange__Group__1__Impl rule__BoundedRange__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__BoundedRange__Group__1__Impl();
@@ -5727,17 +5566,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundedRange__Group__1__Impl"
-    // InternalGoLDSL.g:1824:1: rule__BoundedRange__Group__1__Impl : ( '..' ) ;
+    // InternalGoLDSL.g:1784:1: rule__BoundedRange__Group__1__Impl : ( '..' ) ;
     public final void rule__BoundedRange__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1828:1: ( ( '..' ) )
-            // InternalGoLDSL.g:1829:1: ( '..' )
+            // InternalGoLDSL.g:1788:1: ( ( '..' ) )
+            // InternalGoLDSL.g:1789:1: ( '..' )
             {
-            // InternalGoLDSL.g:1829:1: ( '..' )
-            // InternalGoLDSL.g:1830:2: '..'
+            // InternalGoLDSL.g:1789:1: ( '..' )
+            // InternalGoLDSL.g:1790:2: '..'
             {
              before(grammarAccess.getBoundedRangeAccess().getFullStopFullStopKeyword_1()); 
             match(input,26,FOLLOW_2); 
@@ -5764,14 +5603,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundedRange__Group__2"
-    // InternalGoLDSL.g:1839:1: rule__BoundedRange__Group__2 : rule__BoundedRange__Group__2__Impl ;
+    // InternalGoLDSL.g:1799:1: rule__BoundedRange__Group__2 : rule__BoundedRange__Group__2__Impl ;
     public final void rule__BoundedRange__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1843:1: ( rule__BoundedRange__Group__2__Impl )
-            // InternalGoLDSL.g:1844:2: rule__BoundedRange__Group__2__Impl
+            // InternalGoLDSL.g:1803:1: ( rule__BoundedRange__Group__2__Impl )
+            // InternalGoLDSL.g:1804:2: rule__BoundedRange__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BoundedRange__Group__2__Impl();
@@ -5797,21 +5636,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundedRange__Group__2__Impl"
-    // InternalGoLDSL.g:1850:1: rule__BoundedRange__Group__2__Impl : ( ( rule__BoundedRange__HigherBoundAssignment_2 ) ) ;
+    // InternalGoLDSL.g:1810:1: rule__BoundedRange__Group__2__Impl : ( ( rule__BoundedRange__HigherBoundAssignment_2 ) ) ;
     public final void rule__BoundedRange__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1854:1: ( ( ( rule__BoundedRange__HigherBoundAssignment_2 ) ) )
-            // InternalGoLDSL.g:1855:1: ( ( rule__BoundedRange__HigherBoundAssignment_2 ) )
+            // InternalGoLDSL.g:1814:1: ( ( ( rule__BoundedRange__HigherBoundAssignment_2 ) ) )
+            // InternalGoLDSL.g:1815:1: ( ( rule__BoundedRange__HigherBoundAssignment_2 ) )
             {
-            // InternalGoLDSL.g:1855:1: ( ( rule__BoundedRange__HigherBoundAssignment_2 ) )
-            // InternalGoLDSL.g:1856:2: ( rule__BoundedRange__HigherBoundAssignment_2 )
+            // InternalGoLDSL.g:1815:1: ( ( rule__BoundedRange__HigherBoundAssignment_2 ) )
+            // InternalGoLDSL.g:1816:2: ( rule__BoundedRange__HigherBoundAssignment_2 )
             {
              before(grammarAccess.getBoundedRangeAccess().getHigherBoundAssignment_2()); 
-            // InternalGoLDSL.g:1857:2: ( rule__BoundedRange__HigherBoundAssignment_2 )
-            // InternalGoLDSL.g:1857:3: rule__BoundedRange__HigherBoundAssignment_2
+            // InternalGoLDSL.g:1817:2: ( rule__BoundedRange__HigherBoundAssignment_2 )
+            // InternalGoLDSL.g:1817:3: rule__BoundedRange__HigherBoundAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__BoundedRange__HigherBoundAssignment_2();
@@ -5844,14 +5683,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeftUnboundedRange__Group__0"
-    // InternalGoLDSL.g:1866:1: rule__LeftUnboundedRange__Group__0 : rule__LeftUnboundedRange__Group__0__Impl rule__LeftUnboundedRange__Group__1 ;
+    // InternalGoLDSL.g:1826:1: rule__LeftUnboundedRange__Group__0 : rule__LeftUnboundedRange__Group__0__Impl rule__LeftUnboundedRange__Group__1 ;
     public final void rule__LeftUnboundedRange__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1870:1: ( rule__LeftUnboundedRange__Group__0__Impl rule__LeftUnboundedRange__Group__1 )
-            // InternalGoLDSL.g:1871:2: rule__LeftUnboundedRange__Group__0__Impl rule__LeftUnboundedRange__Group__1
+            // InternalGoLDSL.g:1830:1: ( rule__LeftUnboundedRange__Group__0__Impl rule__LeftUnboundedRange__Group__1 )
+            // InternalGoLDSL.g:1831:2: rule__LeftUnboundedRange__Group__0__Impl rule__LeftUnboundedRange__Group__1
             {
             pushFollow(FOLLOW_19);
             rule__LeftUnboundedRange__Group__0__Impl();
@@ -5882,21 +5721,31 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeftUnboundedRange__Group__0__Impl"
-    // InternalGoLDSL.g:1878:1: rule__LeftUnboundedRange__Group__0__Impl : ( RULE_INT ) ;
+    // InternalGoLDSL.g:1838:1: rule__LeftUnboundedRange__Group__0__Impl : ( ( rule__LeftUnboundedRange__LowerBoundAssignment_0 ) ) ;
     public final void rule__LeftUnboundedRange__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1882:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:1883:1: ( RULE_INT )
+            // InternalGoLDSL.g:1842:1: ( ( ( rule__LeftUnboundedRange__LowerBoundAssignment_0 ) ) )
+            // InternalGoLDSL.g:1843:1: ( ( rule__LeftUnboundedRange__LowerBoundAssignment_0 ) )
             {
-            // InternalGoLDSL.g:1883:1: ( RULE_INT )
-            // InternalGoLDSL.g:1884:2: RULE_INT
+            // InternalGoLDSL.g:1843:1: ( ( rule__LeftUnboundedRange__LowerBoundAssignment_0 ) )
+            // InternalGoLDSL.g:1844:2: ( rule__LeftUnboundedRange__LowerBoundAssignment_0 )
             {
-             before(grammarAccess.getLeftUnboundedRangeAccess().getINTTerminalRuleCall_0()); 
-            match(input,RULE_INT,FOLLOW_2); 
-             after(grammarAccess.getLeftUnboundedRangeAccess().getINTTerminalRuleCall_0()); 
+             before(grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundAssignment_0()); 
+            // InternalGoLDSL.g:1845:2: ( rule__LeftUnboundedRange__LowerBoundAssignment_0 )
+            // InternalGoLDSL.g:1845:3: rule__LeftUnboundedRange__LowerBoundAssignment_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__LeftUnboundedRange__LowerBoundAssignment_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundAssignment_0()); 
 
             }
 
@@ -5919,14 +5768,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeftUnboundedRange__Group__1"
-    // InternalGoLDSL.g:1893:1: rule__LeftUnboundedRange__Group__1 : rule__LeftUnboundedRange__Group__1__Impl ;
+    // InternalGoLDSL.g:1853:1: rule__LeftUnboundedRange__Group__1 : rule__LeftUnboundedRange__Group__1__Impl ;
     public final void rule__LeftUnboundedRange__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1897:1: ( rule__LeftUnboundedRange__Group__1__Impl )
-            // InternalGoLDSL.g:1898:2: rule__LeftUnboundedRange__Group__1__Impl
+            // InternalGoLDSL.g:1857:1: ( rule__LeftUnboundedRange__Group__1__Impl )
+            // InternalGoLDSL.g:1858:2: rule__LeftUnboundedRange__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__LeftUnboundedRange__Group__1__Impl();
@@ -5952,17 +5801,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeftUnboundedRange__Group__1__Impl"
-    // InternalGoLDSL.g:1904:1: rule__LeftUnboundedRange__Group__1__Impl : ( '..' ) ;
+    // InternalGoLDSL.g:1864:1: rule__LeftUnboundedRange__Group__1__Impl : ( '..' ) ;
     public final void rule__LeftUnboundedRange__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1908:1: ( ( '..' ) )
-            // InternalGoLDSL.g:1909:1: ( '..' )
+            // InternalGoLDSL.g:1868:1: ( ( '..' ) )
+            // InternalGoLDSL.g:1869:1: ( '..' )
             {
-            // InternalGoLDSL.g:1909:1: ( '..' )
-            // InternalGoLDSL.g:1910:2: '..'
+            // InternalGoLDSL.g:1869:1: ( '..' )
+            // InternalGoLDSL.g:1870:2: '..'
             {
              before(grammarAccess.getLeftUnboundedRangeAccess().getFullStopFullStopKeyword_1()); 
             match(input,26,FOLLOW_2); 
@@ -5989,14 +5838,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RightUnboundedRange__Group__0"
-    // InternalGoLDSL.g:1920:1: rule__RightUnboundedRange__Group__0 : rule__RightUnboundedRange__Group__0__Impl rule__RightUnboundedRange__Group__1 ;
+    // InternalGoLDSL.g:1880:1: rule__RightUnboundedRange__Group__0 : rule__RightUnboundedRange__Group__0__Impl rule__RightUnboundedRange__Group__1 ;
     public final void rule__RightUnboundedRange__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1924:1: ( rule__RightUnboundedRange__Group__0__Impl rule__RightUnboundedRange__Group__1 )
-            // InternalGoLDSL.g:1925:2: rule__RightUnboundedRange__Group__0__Impl rule__RightUnboundedRange__Group__1
+            // InternalGoLDSL.g:1884:1: ( rule__RightUnboundedRange__Group__0__Impl rule__RightUnboundedRange__Group__1 )
+            // InternalGoLDSL.g:1885:2: rule__RightUnboundedRange__Group__0__Impl rule__RightUnboundedRange__Group__1
             {
             pushFollow(FOLLOW_11);
             rule__RightUnboundedRange__Group__0__Impl();
@@ -6027,17 +5876,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RightUnboundedRange__Group__0__Impl"
-    // InternalGoLDSL.g:1932:1: rule__RightUnboundedRange__Group__0__Impl : ( '..' ) ;
+    // InternalGoLDSL.g:1892:1: rule__RightUnboundedRange__Group__0__Impl : ( '..' ) ;
     public final void rule__RightUnboundedRange__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1936:1: ( ( '..' ) )
-            // InternalGoLDSL.g:1937:1: ( '..' )
+            // InternalGoLDSL.g:1896:1: ( ( '..' ) )
+            // InternalGoLDSL.g:1897:1: ( '..' )
             {
-            // InternalGoLDSL.g:1937:1: ( '..' )
-            // InternalGoLDSL.g:1938:2: '..'
+            // InternalGoLDSL.g:1897:1: ( '..' )
+            // InternalGoLDSL.g:1898:2: '..'
             {
              before(grammarAccess.getRightUnboundedRangeAccess().getFullStopFullStopKeyword_0()); 
             match(input,26,FOLLOW_2); 
@@ -6064,14 +5913,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RightUnboundedRange__Group__1"
-    // InternalGoLDSL.g:1947:1: rule__RightUnboundedRange__Group__1 : rule__RightUnboundedRange__Group__1__Impl ;
+    // InternalGoLDSL.g:1907:1: rule__RightUnboundedRange__Group__1 : rule__RightUnboundedRange__Group__1__Impl ;
     public final void rule__RightUnboundedRange__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1951:1: ( rule__RightUnboundedRange__Group__1__Impl )
-            // InternalGoLDSL.g:1952:2: rule__RightUnboundedRange__Group__1__Impl
+            // InternalGoLDSL.g:1911:1: ( rule__RightUnboundedRange__Group__1__Impl )
+            // InternalGoLDSL.g:1912:2: rule__RightUnboundedRange__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__RightUnboundedRange__Group__1__Impl();
@@ -6097,21 +5946,31 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RightUnboundedRange__Group__1__Impl"
-    // InternalGoLDSL.g:1958:1: rule__RightUnboundedRange__Group__1__Impl : ( RULE_INT ) ;
+    // InternalGoLDSL.g:1918:1: rule__RightUnboundedRange__Group__1__Impl : ( ( rule__RightUnboundedRange__HigherBoundAssignment_1 ) ) ;
     public final void rule__RightUnboundedRange__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1962:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:1963:1: ( RULE_INT )
+            // InternalGoLDSL.g:1922:1: ( ( ( rule__RightUnboundedRange__HigherBoundAssignment_1 ) ) )
+            // InternalGoLDSL.g:1923:1: ( ( rule__RightUnboundedRange__HigherBoundAssignment_1 ) )
             {
-            // InternalGoLDSL.g:1963:1: ( RULE_INT )
-            // InternalGoLDSL.g:1964:2: RULE_INT
+            // InternalGoLDSL.g:1923:1: ( ( rule__RightUnboundedRange__HigherBoundAssignment_1 ) )
+            // InternalGoLDSL.g:1924:2: ( rule__RightUnboundedRange__HigherBoundAssignment_1 )
             {
-             before(grammarAccess.getRightUnboundedRangeAccess().getINTTerminalRuleCall_1()); 
-            match(input,RULE_INT,FOLLOW_2); 
-             after(grammarAccess.getRightUnboundedRangeAccess().getINTTerminalRuleCall_1()); 
+             before(grammarAccess.getRightUnboundedRangeAccess().getHigherBoundAssignment_1()); 
+            // InternalGoLDSL.g:1925:2: ( rule__RightUnboundedRange__HigherBoundAssignment_1 )
+            // InternalGoLDSL.g:1925:3: rule__RightUnboundedRange__HigherBoundAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__RightUnboundedRange__HigherBoundAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRightUnboundedRangeAccess().getHigherBoundAssignment_1()); 
 
             }
 
@@ -6134,14 +5993,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grid__Group__0"
-    // InternalGoLDSL.g:1974:1: rule__Grid__Group__0 : rule__Grid__Group__0__Impl rule__Grid__Group__1 ;
+    // InternalGoLDSL.g:1934:1: rule__Grid__Group__0 : rule__Grid__Group__0__Impl rule__Grid__Group__1 ;
     public final void rule__Grid__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1978:1: ( rule__Grid__Group__0__Impl rule__Grid__Group__1 )
-            // InternalGoLDSL.g:1979:2: rule__Grid__Group__0__Impl rule__Grid__Group__1
+            // InternalGoLDSL.g:1938:1: ( rule__Grid__Group__0__Impl rule__Grid__Group__1 )
+            // InternalGoLDSL.g:1939:2: rule__Grid__Group__0__Impl rule__Grid__Group__1
             {
             pushFollow(FOLLOW_20);
             rule__Grid__Group__0__Impl();
@@ -6172,17 +6031,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grid__Group__0__Impl"
-    // InternalGoLDSL.g:1986:1: rule__Grid__Group__0__Impl : ( 'Grid:' ) ;
+    // InternalGoLDSL.g:1946:1: rule__Grid__Group__0__Impl : ( 'Grid:' ) ;
     public final void rule__Grid__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:1990:1: ( ( 'Grid:' ) )
-            // InternalGoLDSL.g:1991:1: ( 'Grid:' )
+            // InternalGoLDSL.g:1950:1: ( ( 'Grid:' ) )
+            // InternalGoLDSL.g:1951:1: ( 'Grid:' )
             {
-            // InternalGoLDSL.g:1991:1: ( 'Grid:' )
-            // InternalGoLDSL.g:1992:2: 'Grid:'
+            // InternalGoLDSL.g:1951:1: ( 'Grid:' )
+            // InternalGoLDSL.g:1952:2: 'Grid:'
             {
              before(grammarAccess.getGridAccess().getGridKeyword_0()); 
             match(input,27,FOLLOW_2); 
@@ -6209,14 +6068,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grid__Group__1"
-    // InternalGoLDSL.g:2001:1: rule__Grid__Group__1 : rule__Grid__Group__1__Impl rule__Grid__Group__2 ;
+    // InternalGoLDSL.g:1961:1: rule__Grid__Group__1 : rule__Grid__Group__1__Impl rule__Grid__Group__2 ;
     public final void rule__Grid__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2005:1: ( rule__Grid__Group__1__Impl rule__Grid__Group__2 )
-            // InternalGoLDSL.g:2006:2: rule__Grid__Group__1__Impl rule__Grid__Group__2
+            // InternalGoLDSL.g:1965:1: ( rule__Grid__Group__1__Impl rule__Grid__Group__2 )
+            // InternalGoLDSL.g:1966:2: rule__Grid__Group__1__Impl rule__Grid__Group__2
             {
             pushFollow(FOLLOW_21);
             rule__Grid__Group__1__Impl();
@@ -6247,21 +6106,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grid__Group__1__Impl"
-    // InternalGoLDSL.g:2013:1: rule__Grid__Group__1__Impl : ( ( rule__Grid__SizeAssignment_1 ) ) ;
+    // InternalGoLDSL.g:1973:1: rule__Grid__Group__1__Impl : ( ( rule__Grid__SizeAssignment_1 ) ) ;
     public final void rule__Grid__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2017:1: ( ( ( rule__Grid__SizeAssignment_1 ) ) )
-            // InternalGoLDSL.g:2018:1: ( ( rule__Grid__SizeAssignment_1 ) )
+            // InternalGoLDSL.g:1977:1: ( ( ( rule__Grid__SizeAssignment_1 ) ) )
+            // InternalGoLDSL.g:1978:1: ( ( rule__Grid__SizeAssignment_1 ) )
             {
-            // InternalGoLDSL.g:2018:1: ( ( rule__Grid__SizeAssignment_1 ) )
-            // InternalGoLDSL.g:2019:2: ( rule__Grid__SizeAssignment_1 )
+            // InternalGoLDSL.g:1978:1: ( ( rule__Grid__SizeAssignment_1 ) )
+            // InternalGoLDSL.g:1979:2: ( rule__Grid__SizeAssignment_1 )
             {
              before(grammarAccess.getGridAccess().getSizeAssignment_1()); 
-            // InternalGoLDSL.g:2020:2: ( rule__Grid__SizeAssignment_1 )
-            // InternalGoLDSL.g:2020:3: rule__Grid__SizeAssignment_1
+            // InternalGoLDSL.g:1980:2: ( rule__Grid__SizeAssignment_1 )
+            // InternalGoLDSL.g:1980:3: rule__Grid__SizeAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Grid__SizeAssignment_1();
@@ -6294,14 +6153,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grid__Group__2"
-    // InternalGoLDSL.g:2028:1: rule__Grid__Group__2 : rule__Grid__Group__2__Impl ;
+    // InternalGoLDSL.g:1988:1: rule__Grid__Group__2 : rule__Grid__Group__2__Impl ;
     public final void rule__Grid__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2032:1: ( rule__Grid__Group__2__Impl )
-            // InternalGoLDSL.g:2033:2: rule__Grid__Group__2__Impl
+            // InternalGoLDSL.g:1992:1: ( rule__Grid__Group__2__Impl )
+            // InternalGoLDSL.g:1993:2: rule__Grid__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Grid__Group__2__Impl();
@@ -6327,24 +6186,24 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grid__Group__2__Impl"
-    // InternalGoLDSL.g:2039:1: rule__Grid__Group__2__Impl : ( ( ( rule__Grid__PartsAssignment_2 ) ) ( ( rule__Grid__PartsAssignment_2 )* ) ) ;
+    // InternalGoLDSL.g:1999:1: rule__Grid__Group__2__Impl : ( ( ( rule__Grid__PartsAssignment_2 ) ) ( ( rule__Grid__PartsAssignment_2 )* ) ) ;
     public final void rule__Grid__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2043:1: ( ( ( ( rule__Grid__PartsAssignment_2 ) ) ( ( rule__Grid__PartsAssignment_2 )* ) ) )
-            // InternalGoLDSL.g:2044:1: ( ( ( rule__Grid__PartsAssignment_2 ) ) ( ( rule__Grid__PartsAssignment_2 )* ) )
+            // InternalGoLDSL.g:2003:1: ( ( ( ( rule__Grid__PartsAssignment_2 ) ) ( ( rule__Grid__PartsAssignment_2 )* ) ) )
+            // InternalGoLDSL.g:2004:1: ( ( ( rule__Grid__PartsAssignment_2 ) ) ( ( rule__Grid__PartsAssignment_2 )* ) )
             {
-            // InternalGoLDSL.g:2044:1: ( ( ( rule__Grid__PartsAssignment_2 ) ) ( ( rule__Grid__PartsAssignment_2 )* ) )
-            // InternalGoLDSL.g:2045:2: ( ( rule__Grid__PartsAssignment_2 ) ) ( ( rule__Grid__PartsAssignment_2 )* )
+            // InternalGoLDSL.g:2004:1: ( ( ( rule__Grid__PartsAssignment_2 ) ) ( ( rule__Grid__PartsAssignment_2 )* ) )
+            // InternalGoLDSL.g:2005:2: ( ( rule__Grid__PartsAssignment_2 ) ) ( ( rule__Grid__PartsAssignment_2 )* )
             {
-            // InternalGoLDSL.g:2045:2: ( ( rule__Grid__PartsAssignment_2 ) )
-            // InternalGoLDSL.g:2046:3: ( rule__Grid__PartsAssignment_2 )
+            // InternalGoLDSL.g:2005:2: ( ( rule__Grid__PartsAssignment_2 ) )
+            // InternalGoLDSL.g:2006:3: ( rule__Grid__PartsAssignment_2 )
             {
              before(grammarAccess.getGridAccess().getPartsAssignment_2()); 
-            // InternalGoLDSL.g:2047:3: ( rule__Grid__PartsAssignment_2 )
-            // InternalGoLDSL.g:2047:4: rule__Grid__PartsAssignment_2
+            // InternalGoLDSL.g:2007:3: ( rule__Grid__PartsAssignment_2 )
+            // InternalGoLDSL.g:2007:4: rule__Grid__PartsAssignment_2
             {
             pushFollow(FOLLOW_22);
             rule__Grid__PartsAssignment_2();
@@ -6358,24 +6217,24 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalGoLDSL.g:2050:2: ( ( rule__Grid__PartsAssignment_2 )* )
-            // InternalGoLDSL.g:2051:3: ( rule__Grid__PartsAssignment_2 )*
+            // InternalGoLDSL.g:2010:2: ( ( rule__Grid__PartsAssignment_2 )* )
+            // InternalGoLDSL.g:2011:3: ( rule__Grid__PartsAssignment_2 )*
             {
              before(grammarAccess.getGridAccess().getPartsAssignment_2()); 
-            // InternalGoLDSL.g:2052:3: ( rule__Grid__PartsAssignment_2 )*
-            loop13:
+            // InternalGoLDSL.g:2012:3: ( rule__Grid__PartsAssignment_2 )*
+            loop12:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( ((LA13_0>=13 && LA13_0<=14)) ) {
-                    alt13=1;
+                if ( ((LA12_0>=13 && LA12_0<=14)) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt12) {
             	case 1 :
-            	    // InternalGoLDSL.g:2052:4: rule__Grid__PartsAssignment_2
+            	    // InternalGoLDSL.g:2012:4: rule__Grid__PartsAssignment_2
             	    {
             	    pushFollow(FOLLOW_22);
             	    rule__Grid__PartsAssignment_2();
@@ -6387,7 +6246,7 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop12;
                 }
             } while (true);
 
@@ -6417,14 +6276,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Offset__Group__0"
-    // InternalGoLDSL.g:2062:1: rule__Offset__Group__0 : rule__Offset__Group__0__Impl rule__Offset__Group__1 ;
+    // InternalGoLDSL.g:2022:1: rule__Offset__Group__0 : rule__Offset__Group__0__Impl rule__Offset__Group__1 ;
     public final void rule__Offset__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2066:1: ( rule__Offset__Group__0__Impl rule__Offset__Group__1 )
-            // InternalGoLDSL.g:2067:2: rule__Offset__Group__0__Impl rule__Offset__Group__1
+            // InternalGoLDSL.g:2026:1: ( rule__Offset__Group__0__Impl rule__Offset__Group__1 )
+            // InternalGoLDSL.g:2027:2: rule__Offset__Group__0__Impl rule__Offset__Group__1
             {
             pushFollow(FOLLOW_11);
             rule__Offset__Group__0__Impl();
@@ -6455,17 +6314,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Offset__Group__0__Impl"
-    // InternalGoLDSL.g:2074:1: rule__Offset__Group__0__Impl : ( 'offset' ) ;
+    // InternalGoLDSL.g:2034:1: rule__Offset__Group__0__Impl : ( 'offset' ) ;
     public final void rule__Offset__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2078:1: ( ( 'offset' ) )
-            // InternalGoLDSL.g:2079:1: ( 'offset' )
+            // InternalGoLDSL.g:2038:1: ( ( 'offset' ) )
+            // InternalGoLDSL.g:2039:1: ( 'offset' )
             {
-            // InternalGoLDSL.g:2079:1: ( 'offset' )
-            // InternalGoLDSL.g:2080:2: 'offset'
+            // InternalGoLDSL.g:2039:1: ( 'offset' )
+            // InternalGoLDSL.g:2040:2: 'offset'
             {
              before(grammarAccess.getOffsetAccess().getOffsetKeyword_0()); 
             match(input,28,FOLLOW_2); 
@@ -6492,14 +6351,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Offset__Group__1"
-    // InternalGoLDSL.g:2089:1: rule__Offset__Group__1 : rule__Offset__Group__1__Impl rule__Offset__Group__2 ;
+    // InternalGoLDSL.g:2049:1: rule__Offset__Group__1 : rule__Offset__Group__1__Impl rule__Offset__Group__2 ;
     public final void rule__Offset__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2093:1: ( rule__Offset__Group__1__Impl rule__Offset__Group__2 )
-            // InternalGoLDSL.g:2094:2: rule__Offset__Group__1__Impl rule__Offset__Group__2
+            // InternalGoLDSL.g:2053:1: ( rule__Offset__Group__1__Impl rule__Offset__Group__2 )
+            // InternalGoLDSL.g:2054:2: rule__Offset__Group__1__Impl rule__Offset__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__Offset__Group__1__Impl();
@@ -6530,21 +6389,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Offset__Group__1__Impl"
-    // InternalGoLDSL.g:2101:1: rule__Offset__Group__1__Impl : ( ( rule__Offset__XAssignment_1 ) ) ;
+    // InternalGoLDSL.g:2061:1: rule__Offset__Group__1__Impl : ( ( rule__Offset__XAssignment_1 ) ) ;
     public final void rule__Offset__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2105:1: ( ( ( rule__Offset__XAssignment_1 ) ) )
-            // InternalGoLDSL.g:2106:1: ( ( rule__Offset__XAssignment_1 ) )
+            // InternalGoLDSL.g:2065:1: ( ( ( rule__Offset__XAssignment_1 ) ) )
+            // InternalGoLDSL.g:2066:1: ( ( rule__Offset__XAssignment_1 ) )
             {
-            // InternalGoLDSL.g:2106:1: ( ( rule__Offset__XAssignment_1 ) )
-            // InternalGoLDSL.g:2107:2: ( rule__Offset__XAssignment_1 )
+            // InternalGoLDSL.g:2066:1: ( ( rule__Offset__XAssignment_1 ) )
+            // InternalGoLDSL.g:2067:2: ( rule__Offset__XAssignment_1 )
             {
              before(grammarAccess.getOffsetAccess().getXAssignment_1()); 
-            // InternalGoLDSL.g:2108:2: ( rule__Offset__XAssignment_1 )
-            // InternalGoLDSL.g:2108:3: rule__Offset__XAssignment_1
+            // InternalGoLDSL.g:2068:2: ( rule__Offset__XAssignment_1 )
+            // InternalGoLDSL.g:2068:3: rule__Offset__XAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Offset__XAssignment_1();
@@ -6577,14 +6436,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Offset__Group__2"
-    // InternalGoLDSL.g:2116:1: rule__Offset__Group__2 : rule__Offset__Group__2__Impl ;
+    // InternalGoLDSL.g:2076:1: rule__Offset__Group__2 : rule__Offset__Group__2__Impl ;
     public final void rule__Offset__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2120:1: ( rule__Offset__Group__2__Impl )
-            // InternalGoLDSL.g:2121:2: rule__Offset__Group__2__Impl
+            // InternalGoLDSL.g:2080:1: ( rule__Offset__Group__2__Impl )
+            // InternalGoLDSL.g:2081:2: rule__Offset__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Offset__Group__2__Impl();
@@ -6610,21 +6469,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Offset__Group__2__Impl"
-    // InternalGoLDSL.g:2127:1: rule__Offset__Group__2__Impl : ( ( rule__Offset__YAssignment_2 ) ) ;
+    // InternalGoLDSL.g:2087:1: rule__Offset__Group__2__Impl : ( ( rule__Offset__YAssignment_2 ) ) ;
     public final void rule__Offset__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2131:1: ( ( ( rule__Offset__YAssignment_2 ) ) )
-            // InternalGoLDSL.g:2132:1: ( ( rule__Offset__YAssignment_2 ) )
+            // InternalGoLDSL.g:2091:1: ( ( ( rule__Offset__YAssignment_2 ) ) )
+            // InternalGoLDSL.g:2092:1: ( ( rule__Offset__YAssignment_2 ) )
             {
-            // InternalGoLDSL.g:2132:1: ( ( rule__Offset__YAssignment_2 ) )
-            // InternalGoLDSL.g:2133:2: ( rule__Offset__YAssignment_2 )
+            // InternalGoLDSL.g:2092:1: ( ( rule__Offset__YAssignment_2 ) )
+            // InternalGoLDSL.g:2093:2: ( rule__Offset__YAssignment_2 )
             {
              before(grammarAccess.getOffsetAccess().getYAssignment_2()); 
-            // InternalGoLDSL.g:2134:2: ( rule__Offset__YAssignment_2 )
-            // InternalGoLDSL.g:2134:3: rule__Offset__YAssignment_2
+            // InternalGoLDSL.g:2094:2: ( rule__Offset__YAssignment_2 )
+            // InternalGoLDSL.g:2094:3: rule__Offset__YAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Offset__YAssignment_2();
@@ -6657,14 +6516,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Size__Group__0"
-    // InternalGoLDSL.g:2143:1: rule__Size__Group__0 : rule__Size__Group__0__Impl rule__Size__Group__1 ;
+    // InternalGoLDSL.g:2103:1: rule__Size__Group__0 : rule__Size__Group__0__Impl rule__Size__Group__1 ;
     public final void rule__Size__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2147:1: ( rule__Size__Group__0__Impl rule__Size__Group__1 )
-            // InternalGoLDSL.g:2148:2: rule__Size__Group__0__Impl rule__Size__Group__1
+            // InternalGoLDSL.g:2107:1: ( rule__Size__Group__0__Impl rule__Size__Group__1 )
+            // InternalGoLDSL.g:2108:2: rule__Size__Group__0__Impl rule__Size__Group__1
             {
             pushFollow(FOLLOW_11);
             rule__Size__Group__0__Impl();
@@ -6695,17 +6554,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Size__Group__0__Impl"
-    // InternalGoLDSL.g:2155:1: rule__Size__Group__0__Impl : ( 'size' ) ;
+    // InternalGoLDSL.g:2115:1: rule__Size__Group__0__Impl : ( 'size' ) ;
     public final void rule__Size__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2159:1: ( ( 'size' ) )
-            // InternalGoLDSL.g:2160:1: ( 'size' )
+            // InternalGoLDSL.g:2119:1: ( ( 'size' ) )
+            // InternalGoLDSL.g:2120:1: ( 'size' )
             {
-            // InternalGoLDSL.g:2160:1: ( 'size' )
-            // InternalGoLDSL.g:2161:2: 'size'
+            // InternalGoLDSL.g:2120:1: ( 'size' )
+            // InternalGoLDSL.g:2121:2: 'size'
             {
              before(grammarAccess.getSizeAccess().getSizeKeyword_0()); 
             match(input,29,FOLLOW_2); 
@@ -6732,14 +6591,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Size__Group__1"
-    // InternalGoLDSL.g:2170:1: rule__Size__Group__1 : rule__Size__Group__1__Impl rule__Size__Group__2 ;
+    // InternalGoLDSL.g:2130:1: rule__Size__Group__1 : rule__Size__Group__1__Impl rule__Size__Group__2 ;
     public final void rule__Size__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2174:1: ( rule__Size__Group__1__Impl rule__Size__Group__2 )
-            // InternalGoLDSL.g:2175:2: rule__Size__Group__1__Impl rule__Size__Group__2
+            // InternalGoLDSL.g:2134:1: ( rule__Size__Group__1__Impl rule__Size__Group__2 )
+            // InternalGoLDSL.g:2135:2: rule__Size__Group__1__Impl rule__Size__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__Size__Group__1__Impl();
@@ -6770,21 +6629,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Size__Group__1__Impl"
-    // InternalGoLDSL.g:2182:1: rule__Size__Group__1__Impl : ( ( rule__Size__WidthAssignment_1 ) ) ;
+    // InternalGoLDSL.g:2142:1: rule__Size__Group__1__Impl : ( ( rule__Size__WidthAssignment_1 ) ) ;
     public final void rule__Size__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2186:1: ( ( ( rule__Size__WidthAssignment_1 ) ) )
-            // InternalGoLDSL.g:2187:1: ( ( rule__Size__WidthAssignment_1 ) )
+            // InternalGoLDSL.g:2146:1: ( ( ( rule__Size__WidthAssignment_1 ) ) )
+            // InternalGoLDSL.g:2147:1: ( ( rule__Size__WidthAssignment_1 ) )
             {
-            // InternalGoLDSL.g:2187:1: ( ( rule__Size__WidthAssignment_1 ) )
-            // InternalGoLDSL.g:2188:2: ( rule__Size__WidthAssignment_1 )
+            // InternalGoLDSL.g:2147:1: ( ( rule__Size__WidthAssignment_1 ) )
+            // InternalGoLDSL.g:2148:2: ( rule__Size__WidthAssignment_1 )
             {
              before(grammarAccess.getSizeAccess().getWidthAssignment_1()); 
-            // InternalGoLDSL.g:2189:2: ( rule__Size__WidthAssignment_1 )
-            // InternalGoLDSL.g:2189:3: rule__Size__WidthAssignment_1
+            // InternalGoLDSL.g:2149:2: ( rule__Size__WidthAssignment_1 )
+            // InternalGoLDSL.g:2149:3: rule__Size__WidthAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Size__WidthAssignment_1();
@@ -6817,14 +6676,14 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Size__Group__2"
-    // InternalGoLDSL.g:2197:1: rule__Size__Group__2 : rule__Size__Group__2__Impl ;
+    // InternalGoLDSL.g:2157:1: rule__Size__Group__2 : rule__Size__Group__2__Impl ;
     public final void rule__Size__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2201:1: ( rule__Size__Group__2__Impl )
-            // InternalGoLDSL.g:2202:2: rule__Size__Group__2__Impl
+            // InternalGoLDSL.g:2161:1: ( rule__Size__Group__2__Impl )
+            // InternalGoLDSL.g:2162:2: rule__Size__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Size__Group__2__Impl();
@@ -6850,21 +6709,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Size__Group__2__Impl"
-    // InternalGoLDSL.g:2208:1: rule__Size__Group__2__Impl : ( ( rule__Size__HeightAssignment_2 ) ) ;
+    // InternalGoLDSL.g:2168:1: rule__Size__Group__2__Impl : ( ( rule__Size__HeightAssignment_2 ) ) ;
     public final void rule__Size__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2212:1: ( ( ( rule__Size__HeightAssignment_2 ) ) )
-            // InternalGoLDSL.g:2213:1: ( ( rule__Size__HeightAssignment_2 ) )
+            // InternalGoLDSL.g:2172:1: ( ( ( rule__Size__HeightAssignment_2 ) ) )
+            // InternalGoLDSL.g:2173:1: ( ( rule__Size__HeightAssignment_2 ) )
             {
-            // InternalGoLDSL.g:2213:1: ( ( rule__Size__HeightAssignment_2 ) )
-            // InternalGoLDSL.g:2214:2: ( rule__Size__HeightAssignment_2 )
+            // InternalGoLDSL.g:2173:1: ( ( rule__Size__HeightAssignment_2 ) )
+            // InternalGoLDSL.g:2174:2: ( rule__Size__HeightAssignment_2 )
             {
              before(grammarAccess.getSizeAccess().getHeightAssignment_2()); 
-            // InternalGoLDSL.g:2215:2: ( rule__Size__HeightAssignment_2 )
-            // InternalGoLDSL.g:2215:3: rule__Size__HeightAssignment_2
+            // InternalGoLDSL.g:2175:2: ( rule__Size__HeightAssignment_2 )
+            // InternalGoLDSL.g:2175:3: rule__Size__HeightAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Size__HeightAssignment_2();
@@ -6897,17 +6756,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DSL__BoardAssignment_0"
-    // InternalGoLDSL.g:2224:1: rule__DSL__BoardAssignment_0 : ( ruleBoard ) ;
+    // InternalGoLDSL.g:2184:1: rule__DSL__BoardAssignment_0 : ( ruleBoard ) ;
     public final void rule__DSL__BoardAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2228:1: ( ( ruleBoard ) )
-            // InternalGoLDSL.g:2229:2: ( ruleBoard )
+            // InternalGoLDSL.g:2188:1: ( ( ruleBoard ) )
+            // InternalGoLDSL.g:2189:2: ( ruleBoard )
             {
-            // InternalGoLDSL.g:2229:2: ( ruleBoard )
-            // InternalGoLDSL.g:2230:3: ruleBoard
+            // InternalGoLDSL.g:2189:2: ( ruleBoard )
+            // InternalGoLDSL.g:2190:3: ruleBoard
             {
              before(grammarAccess.getDSLAccess().getBoardBoardParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -6938,17 +6797,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DSL__RulesAssignment_1_0"
-    // InternalGoLDSL.g:2239:1: rule__DSL__RulesAssignment_1_0 : ( ruleRule ) ;
+    // InternalGoLDSL.g:2199:1: rule__DSL__RulesAssignment_1_0 : ( ruleRule ) ;
     public final void rule__DSL__RulesAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2243:1: ( ( ruleRule ) )
-            // InternalGoLDSL.g:2244:2: ( ruleRule )
+            // InternalGoLDSL.g:2203:1: ( ( ruleRule ) )
+            // InternalGoLDSL.g:2204:2: ( ruleRule )
             {
-            // InternalGoLDSL.g:2244:2: ( ruleRule )
-            // InternalGoLDSL.g:2245:3: ruleRule
+            // InternalGoLDSL.g:2204:2: ( ruleRule )
+            // InternalGoLDSL.g:2205:3: ruleRule
             {
              before(grammarAccess.getDSLAccess().getRulesRuleParserRuleCall_1_0_0()); 
             pushFollow(FOLLOW_2);
@@ -6979,17 +6838,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DSL__ShapesAssignment_1_1"
-    // InternalGoLDSL.g:2254:1: rule__DSL__ShapesAssignment_1_1 : ( ruleShapeDef ) ;
+    // InternalGoLDSL.g:2214:1: rule__DSL__ShapesAssignment_1_1 : ( ruleShapeDef ) ;
     public final void rule__DSL__ShapesAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2258:1: ( ( ruleShapeDef ) )
-            // InternalGoLDSL.g:2259:2: ( ruleShapeDef )
+            // InternalGoLDSL.g:2218:1: ( ( ruleShapeDef ) )
+            // InternalGoLDSL.g:2219:2: ( ruleShapeDef )
             {
-            // InternalGoLDSL.g:2259:2: ( ruleShapeDef )
-            // InternalGoLDSL.g:2260:3: ruleShapeDef
+            // InternalGoLDSL.g:2219:2: ( ruleShapeDef )
+            // InternalGoLDSL.g:2220:3: ruleShapeDef
             {
              before(grammarAccess.getDSLAccess().getShapesShapeDefParserRuleCall_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -7020,17 +6879,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Objects__ShapesAssignment_0"
-    // InternalGoLDSL.g:2269:1: rule__Objects__ShapesAssignment_0 : ( ruleShapeRef ) ;
+    // InternalGoLDSL.g:2229:1: rule__Objects__ShapesAssignment_0 : ( ruleShapeRef ) ;
     public final void rule__Objects__ShapesAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2273:1: ( ( ruleShapeRef ) )
-            // InternalGoLDSL.g:2274:2: ( ruleShapeRef )
+            // InternalGoLDSL.g:2233:1: ( ( ruleShapeRef ) )
+            // InternalGoLDSL.g:2234:2: ( ruleShapeRef )
             {
-            // InternalGoLDSL.g:2274:2: ( ruleShapeRef )
-            // InternalGoLDSL.g:2275:3: ruleShapeRef
+            // InternalGoLDSL.g:2234:2: ( ruleShapeRef )
+            // InternalGoLDSL.g:2235:3: ruleShapeRef
             {
              before(grammarAccess.getObjectsAccess().getShapesShapeRefParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -7061,17 +6920,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Objects__CellAssignment_1"
-    // InternalGoLDSL.g:2284:1: rule__Objects__CellAssignment_1 : ( ruleCellDef ) ;
+    // InternalGoLDSL.g:2244:1: rule__Objects__CellAssignment_1 : ( ruleCellDef ) ;
     public final void rule__Objects__CellAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2288:1: ( ( ruleCellDef ) )
-            // InternalGoLDSL.g:2289:2: ( ruleCellDef )
+            // InternalGoLDSL.g:2248:1: ( ( ruleCellDef ) )
+            // InternalGoLDSL.g:2249:2: ( ruleCellDef )
             {
-            // InternalGoLDSL.g:2289:2: ( ruleCellDef )
-            // InternalGoLDSL.g:2290:3: ruleCellDef
+            // InternalGoLDSL.g:2249:2: ( ruleCellDef )
+            // InternalGoLDSL.g:2250:3: ruleCellDef
             {
              before(grammarAccess.getObjectsAccess().getCellCellDefParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -7102,17 +6961,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Objects__CellsAssignment_2"
-    // InternalGoLDSL.g:2299:1: rule__Objects__CellsAssignment_2 : ( ruleCells ) ;
+    // InternalGoLDSL.g:2259:1: rule__Objects__CellsAssignment_2 : ( ruleCells ) ;
     public final void rule__Objects__CellsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2303:1: ( ( ruleCells ) )
-            // InternalGoLDSL.g:2304:2: ( ruleCells )
+            // InternalGoLDSL.g:2263:1: ( ( ruleCells ) )
+            // InternalGoLDSL.g:2264:2: ( ruleCells )
             {
-            // InternalGoLDSL.g:2304:2: ( ruleCells )
-            // InternalGoLDSL.g:2305:3: ruleCells
+            // InternalGoLDSL.g:2264:2: ( ruleCells )
+            // InternalGoLDSL.g:2265:3: ruleCells
             {
              before(grammarAccess.getObjectsAccess().getCellsCellsParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -7143,17 +7002,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Objects__GridsAssignment_3"
-    // InternalGoLDSL.g:2314:1: rule__Objects__GridsAssignment_3 : ( ruleGrid ) ;
+    // InternalGoLDSL.g:2274:1: rule__Objects__GridsAssignment_3 : ( ruleGrid ) ;
     public final void rule__Objects__GridsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2318:1: ( ( ruleGrid ) )
-            // InternalGoLDSL.g:2319:2: ( ruleGrid )
+            // InternalGoLDSL.g:2278:1: ( ( ruleGrid ) )
+            // InternalGoLDSL.g:2279:2: ( ruleGrid )
             {
-            // InternalGoLDSL.g:2319:2: ( ruleGrid )
-            // InternalGoLDSL.g:2320:3: ruleGrid
+            // InternalGoLDSL.g:2279:2: ( ruleGrid )
+            // InternalGoLDSL.g:2280:3: ruleGrid
             {
              before(grammarAccess.getObjectsAccess().getGridsGridParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -7184,17 +7043,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__NameAssignment_1"
-    // InternalGoLDSL.g:2329:1: rule__ShapeDef__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGoLDSL.g:2289:1: rule__ShapeDef__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__ShapeDef__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2333:1: ( ( RULE_ID ) )
-            // InternalGoLDSL.g:2334:2: ( RULE_ID )
+            // InternalGoLDSL.g:2293:1: ( ( RULE_ID ) )
+            // InternalGoLDSL.g:2294:2: ( RULE_ID )
             {
-            // InternalGoLDSL.g:2334:2: ( RULE_ID )
-            // InternalGoLDSL.g:2335:3: RULE_ID
+            // InternalGoLDSL.g:2294:2: ( RULE_ID )
+            // InternalGoLDSL.g:2295:3: RULE_ID
             {
              before(grammarAccess.getShapeDefAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -7221,17 +7080,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__OffsetAssignment_3"
-    // InternalGoLDSL.g:2344:1: rule__ShapeDef__OffsetAssignment_3 : ( ruleOffset ) ;
+    // InternalGoLDSL.g:2304:1: rule__ShapeDef__OffsetAssignment_3 : ( ruleOffset ) ;
     public final void rule__ShapeDef__OffsetAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2348:1: ( ( ruleOffset ) )
-            // InternalGoLDSL.g:2349:2: ( ruleOffset )
+            // InternalGoLDSL.g:2308:1: ( ( ruleOffset ) )
+            // InternalGoLDSL.g:2309:2: ( ruleOffset )
             {
-            // InternalGoLDSL.g:2349:2: ( ruleOffset )
-            // InternalGoLDSL.g:2350:3: ruleOffset
+            // InternalGoLDSL.g:2309:2: ( ruleOffset )
+            // InternalGoLDSL.g:2310:3: ruleOffset
             {
              before(grammarAccess.getShapeDefAccess().getOffsetOffsetParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -7262,17 +7121,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeDef__ObjectsAssignment_4"
-    // InternalGoLDSL.g:2359:1: rule__ShapeDef__ObjectsAssignment_4 : ( ruleObjects ) ;
+    // InternalGoLDSL.g:2319:1: rule__ShapeDef__ObjectsAssignment_4 : ( ruleObjects ) ;
     public final void rule__ShapeDef__ObjectsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2363:1: ( ( ruleObjects ) )
-            // InternalGoLDSL.g:2364:2: ( ruleObjects )
+            // InternalGoLDSL.g:2323:1: ( ( ruleObjects ) )
+            // InternalGoLDSL.g:2324:2: ( ruleObjects )
             {
-            // InternalGoLDSL.g:2364:2: ( ruleObjects )
-            // InternalGoLDSL.g:2365:3: ruleObjects
+            // InternalGoLDSL.g:2324:2: ( ruleObjects )
+            // InternalGoLDSL.g:2325:3: ruleObjects
             {
              before(grammarAccess.getShapeDefAccess().getObjectsObjectsParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -7303,17 +7162,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CellPairs__CellsAssignment_1"
-    // InternalGoLDSL.g:2374:1: rule__CellPairs__CellsAssignment_1 : ( ruleCell ) ;
+    // InternalGoLDSL.g:2334:1: rule__CellPairs__CellsAssignment_1 : ( ruleCell ) ;
     public final void rule__CellPairs__CellsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2378:1: ( ( ruleCell ) )
-            // InternalGoLDSL.g:2379:2: ( ruleCell )
+            // InternalGoLDSL.g:2338:1: ( ( ruleCell ) )
+            // InternalGoLDSL.g:2339:2: ( ruleCell )
             {
-            // InternalGoLDSL.g:2379:2: ( ruleCell )
-            // InternalGoLDSL.g:2380:3: ruleCell
+            // InternalGoLDSL.g:2339:2: ( ruleCell )
+            // InternalGoLDSL.g:2340:3: ruleCell
             {
              before(grammarAccess.getCellPairsAccess().getCellsCellParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -7344,17 +7203,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__NameAssignment_1"
-    // InternalGoLDSL.g:2389:1: rule__ShapeRef__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGoLDSL.g:2349:1: rule__ShapeRef__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__ShapeRef__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2393:1: ( ( RULE_ID ) )
-            // InternalGoLDSL.g:2394:2: ( RULE_ID )
+            // InternalGoLDSL.g:2353:1: ( ( RULE_ID ) )
+            // InternalGoLDSL.g:2354:2: ( RULE_ID )
             {
-            // InternalGoLDSL.g:2394:2: ( RULE_ID )
-            // InternalGoLDSL.g:2395:3: RULE_ID
+            // InternalGoLDSL.g:2354:2: ( RULE_ID )
+            // InternalGoLDSL.g:2355:3: RULE_ID
             {
              before(grammarAccess.getShapeRefAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -7381,17 +7240,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__XAssignment_3"
-    // InternalGoLDSL.g:2404:1: rule__ShapeRef__XAssignment_3 : ( RULE_INT ) ;
+    // InternalGoLDSL.g:2364:1: rule__ShapeRef__XAssignment_3 : ( RULE_INT ) ;
     public final void rule__ShapeRef__XAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2408:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:2409:2: ( RULE_INT )
+            // InternalGoLDSL.g:2368:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2369:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2409:2: ( RULE_INT )
-            // InternalGoLDSL.g:2410:3: RULE_INT
+            // InternalGoLDSL.g:2369:2: ( RULE_INT )
+            // InternalGoLDSL.g:2370:3: RULE_INT
             {
              before(grammarAccess.getShapeRefAccess().getXINTTerminalRuleCall_3_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -7418,17 +7277,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ShapeRef__YAssignment_5"
-    // InternalGoLDSL.g:2419:1: rule__ShapeRef__YAssignment_5 : ( RULE_INT ) ;
+    // InternalGoLDSL.g:2379:1: rule__ShapeRef__YAssignment_5 : ( RULE_INT ) ;
     public final void rule__ShapeRef__YAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2423:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:2424:2: ( RULE_INT )
+            // InternalGoLDSL.g:2383:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2384:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2424:2: ( RULE_INT )
-            // InternalGoLDSL.g:2425:3: RULE_INT
+            // InternalGoLDSL.g:2384:2: ( RULE_INT )
+            // InternalGoLDSL.g:2385:3: RULE_INT
             {
              before(grammarAccess.getShapeRefAccess().getYINTTerminalRuleCall_5_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -7455,17 +7314,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cell__XAssignment_0"
-    // InternalGoLDSL.g:2434:1: rule__Cell__XAssignment_0 : ( RULE_INT ) ;
+    // InternalGoLDSL.g:2394:1: rule__Cell__XAssignment_0 : ( RULE_INT ) ;
     public final void rule__Cell__XAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2438:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:2439:2: ( RULE_INT )
+            // InternalGoLDSL.g:2398:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2399:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2439:2: ( RULE_INT )
-            // InternalGoLDSL.g:2440:3: RULE_INT
+            // InternalGoLDSL.g:2399:2: ( RULE_INT )
+            // InternalGoLDSL.g:2400:3: RULE_INT
             {
              before(grammarAccess.getCellAccess().getXINTTerminalRuleCall_0_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -7492,17 +7351,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cell__YAssignment_2"
-    // InternalGoLDSL.g:2449:1: rule__Cell__YAssignment_2 : ( RULE_INT ) ;
+    // InternalGoLDSL.g:2409:1: rule__Cell__YAssignment_2 : ( RULE_INT ) ;
     public final void rule__Cell__YAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2453:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:2454:2: ( RULE_INT )
+            // InternalGoLDSL.g:2413:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2414:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2454:2: ( RULE_INT )
-            // InternalGoLDSL.g:2455:3: RULE_INT
+            // InternalGoLDSL.g:2414:2: ( RULE_INT )
+            // InternalGoLDSL.g:2415:3: RULE_INT
             {
              before(grammarAccess.getCellAccess().getYINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -7529,17 +7388,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__ConditionAssignment_1"
-    // InternalGoLDSL.g:2464:1: rule__Rule__ConditionAssignment_1 : ( ruleCondition ) ;
+    // InternalGoLDSL.g:2424:1: rule__Rule__ConditionAssignment_1 : ( ruleCondition ) ;
     public final void rule__Rule__ConditionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2468:1: ( ( ruleCondition ) )
-            // InternalGoLDSL.g:2469:2: ( ruleCondition )
+            // InternalGoLDSL.g:2428:1: ( ( ruleCondition ) )
+            // InternalGoLDSL.g:2429:2: ( ruleCondition )
             {
-            // InternalGoLDSL.g:2469:2: ( ruleCondition )
-            // InternalGoLDSL.g:2470:3: ruleCondition
+            // InternalGoLDSL.g:2429:2: ( ruleCondition )
+            // InternalGoLDSL.g:2430:3: ruleCondition
             {
              before(grammarAccess.getRuleAccess().getConditionConditionParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -7570,17 +7429,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__ActionAssignment_2"
-    // InternalGoLDSL.g:2479:1: rule__Rule__ActionAssignment_2 : ( ruleAction ) ;
+    // InternalGoLDSL.g:2439:1: rule__Rule__ActionAssignment_2 : ( ruleAction ) ;
     public final void rule__Rule__ActionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2483:1: ( ( ruleAction ) )
-            // InternalGoLDSL.g:2484:2: ( ruleAction )
+            // InternalGoLDSL.g:2443:1: ( ( ruleAction ) )
+            // InternalGoLDSL.g:2444:2: ( ruleAction )
             {
-            // InternalGoLDSL.g:2484:2: ( ruleAction )
-            // InternalGoLDSL.g:2485:3: ruleAction
+            // InternalGoLDSL.g:2444:2: ( ruleAction )
+            // InternalGoLDSL.g:2445:3: ruleAction
             {
              before(grammarAccess.getRuleAccess().getActionActionParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -7611,17 +7470,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRule__NumberAssignment_0"
-    // InternalGoLDSL.g:2494:1: rule__ConditionRule__NumberAssignment_0 : ( RULE_INT ) ;
+    // InternalGoLDSL.g:2454:1: rule__ConditionRule__NumberAssignment_0 : ( RULE_INT ) ;
     public final void rule__ConditionRule__NumberAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2498:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:2499:2: ( RULE_INT )
+            // InternalGoLDSL.g:2458:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2459:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2499:2: ( RULE_INT )
-            // InternalGoLDSL.g:2500:3: RULE_INT
+            // InternalGoLDSL.g:2459:2: ( RULE_INT )
+            // InternalGoLDSL.g:2460:3: RULE_INT
             {
              before(grammarAccess.getConditionRuleAccess().getNumberINTTerminalRuleCall_0_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -7648,17 +7507,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRule__RangeAssignment_1"
-    // InternalGoLDSL.g:2509:1: rule__ConditionRule__RangeAssignment_1 : ( ruleRange ) ;
+    // InternalGoLDSL.g:2469:1: rule__ConditionRule__RangeAssignment_1 : ( ruleRange ) ;
     public final void rule__ConditionRule__RangeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2513:1: ( ( ruleRange ) )
-            // InternalGoLDSL.g:2514:2: ( ruleRange )
+            // InternalGoLDSL.g:2473:1: ( ( ruleRange ) )
+            // InternalGoLDSL.g:2474:2: ( ruleRange )
             {
-            // InternalGoLDSL.g:2514:2: ( ruleRange )
-            // InternalGoLDSL.g:2515:3: ruleRange
+            // InternalGoLDSL.g:2474:2: ( ruleRange )
+            // InternalGoLDSL.g:2475:3: ruleRange
             {
              before(grammarAccess.getConditionRuleAccess().getRangeRangeParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -7689,21 +7548,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRule__AliveAssignment_2"
-    // InternalGoLDSL.g:2524:1: rule__ConditionRule__AliveAssignment_2 : ( ( 'IsAlive' ) ) ;
+    // InternalGoLDSL.g:2484:1: rule__ConditionRule__AliveAssignment_2 : ( ( 'IsAlive' ) ) ;
     public final void rule__ConditionRule__AliveAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2528:1: ( ( ( 'IsAlive' ) ) )
-            // InternalGoLDSL.g:2529:2: ( ( 'IsAlive' ) )
+            // InternalGoLDSL.g:2488:1: ( ( ( 'IsAlive' ) ) )
+            // InternalGoLDSL.g:2489:2: ( ( 'IsAlive' ) )
             {
-            // InternalGoLDSL.g:2529:2: ( ( 'IsAlive' ) )
-            // InternalGoLDSL.g:2530:3: ( 'IsAlive' )
+            // InternalGoLDSL.g:2489:2: ( ( 'IsAlive' ) )
+            // InternalGoLDSL.g:2490:3: ( 'IsAlive' )
             {
              before(grammarAccess.getConditionRuleAccess().getAliveIsAliveKeyword_2_0()); 
-            // InternalGoLDSL.g:2531:3: ( 'IsAlive' )
-            // InternalGoLDSL.g:2532:4: 'IsAlive'
+            // InternalGoLDSL.g:2491:3: ( 'IsAlive' )
+            // InternalGoLDSL.g:2492:4: 'IsAlive'
             {
              before(grammarAccess.getConditionRuleAccess().getAliveIsAliveKeyword_2_0()); 
             match(input,30,FOLLOW_2); 
@@ -7734,17 +7593,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRules__Rule1Assignment_0"
-    // InternalGoLDSL.g:2543:1: rule__ConditionRules__Rule1Assignment_0 : ( ruleConditionRule ) ;
+    // InternalGoLDSL.g:2503:1: rule__ConditionRules__Rule1Assignment_0 : ( ruleConditionRule ) ;
     public final void rule__ConditionRules__Rule1Assignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2547:1: ( ( ruleConditionRule ) )
-            // InternalGoLDSL.g:2548:2: ( ruleConditionRule )
+            // InternalGoLDSL.g:2507:1: ( ( ruleConditionRule ) )
+            // InternalGoLDSL.g:2508:2: ( ruleConditionRule )
             {
-            // InternalGoLDSL.g:2548:2: ( ruleConditionRule )
-            // InternalGoLDSL.g:2549:3: ruleConditionRule
+            // InternalGoLDSL.g:2508:2: ( ruleConditionRule )
+            // InternalGoLDSL.g:2509:3: ruleConditionRule
             {
              before(grammarAccess.getConditionRulesAccess().getRule1ConditionRuleParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -7775,17 +7634,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRules__OperatorAssignment_1_0"
-    // InternalGoLDSL.g:2558:1: rule__ConditionRules__OperatorAssignment_1_0 : ( ruleBoolOperator ) ;
+    // InternalGoLDSL.g:2518:1: rule__ConditionRules__OperatorAssignment_1_0 : ( ruleBoolOperator ) ;
     public final void rule__ConditionRules__OperatorAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2562:1: ( ( ruleBoolOperator ) )
-            // InternalGoLDSL.g:2563:2: ( ruleBoolOperator )
+            // InternalGoLDSL.g:2522:1: ( ( ruleBoolOperator ) )
+            // InternalGoLDSL.g:2523:2: ( ruleBoolOperator )
             {
-            // InternalGoLDSL.g:2563:2: ( ruleBoolOperator )
-            // InternalGoLDSL.g:2564:3: ruleBoolOperator
+            // InternalGoLDSL.g:2523:2: ( ruleBoolOperator )
+            // InternalGoLDSL.g:2524:3: ruleBoolOperator
             {
              before(grammarAccess.getConditionRulesAccess().getOperatorBoolOperatorEnumRuleCall_1_0_0()); 
             pushFollow(FOLLOW_2);
@@ -7816,17 +7675,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionRules__Rule2Assignment_1_1"
-    // InternalGoLDSL.g:2573:1: rule__ConditionRules__Rule2Assignment_1_1 : ( ruleConditionRules ) ;
+    // InternalGoLDSL.g:2533:1: rule__ConditionRules__Rule2Assignment_1_1 : ( ruleConditionRules ) ;
     public final void rule__ConditionRules__Rule2Assignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2577:1: ( ( ruleConditionRules ) )
-            // InternalGoLDSL.g:2578:2: ( ruleConditionRules )
+            // InternalGoLDSL.g:2537:1: ( ( ruleConditionRules ) )
+            // InternalGoLDSL.g:2538:2: ( ruleConditionRules )
             {
-            // InternalGoLDSL.g:2578:2: ( ruleConditionRules )
-            // InternalGoLDSL.g:2579:3: ruleConditionRules
+            // InternalGoLDSL.g:2538:2: ( ruleConditionRules )
+            // InternalGoLDSL.g:2539:3: ruleConditionRules
             {
              before(grammarAccess.getConditionRulesAccess().getRule2ConditionRulesParserRuleCall_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -7856,100 +7715,18 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ConditionRules__Rule2Assignment_1_1"
 
 
-    // $ANTLR start "rule__Range__BoundedAssignment_0"
-    // InternalGoLDSL.g:2588:1: rule__Range__BoundedAssignment_0 : ( ruleBoundedRange ) ;
-    public final void rule__Range__BoundedAssignment_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalGoLDSL.g:2592:1: ( ( ruleBoundedRange ) )
-            // InternalGoLDSL.g:2593:2: ( ruleBoundedRange )
-            {
-            // InternalGoLDSL.g:2593:2: ( ruleBoundedRange )
-            // InternalGoLDSL.g:2594:3: ruleBoundedRange
-            {
-             before(grammarAccess.getRangeAccess().getBoundedBoundedRangeParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_2);
-            ruleBoundedRange();
-
-            state._fsp--;
-
-             after(grammarAccess.getRangeAccess().getBoundedBoundedRangeParserRuleCall_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Range__BoundedAssignment_0"
-
-
-    // $ANTLR start "rule__Range__UnboundedAssignment_1"
-    // InternalGoLDSL.g:2603:1: rule__Range__UnboundedAssignment_1 : ( ruleUnboundedRange ) ;
-    public final void rule__Range__UnboundedAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalGoLDSL.g:2607:1: ( ( ruleUnboundedRange ) )
-            // InternalGoLDSL.g:2608:2: ( ruleUnboundedRange )
-            {
-            // InternalGoLDSL.g:2608:2: ( ruleUnboundedRange )
-            // InternalGoLDSL.g:2609:3: ruleUnboundedRange
-            {
-             before(grammarAccess.getRangeAccess().getUnboundedUnboundedRangeParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_2);
-            ruleUnboundedRange();
-
-            state._fsp--;
-
-             after(grammarAccess.getRangeAccess().getUnboundedUnboundedRangeParserRuleCall_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Range__UnboundedAssignment_1"
-
-
     // $ANTLR start "rule__BoundedRange__LowerBoundAssignment_0"
-    // InternalGoLDSL.g:2618:1: rule__BoundedRange__LowerBoundAssignment_0 : ( RULE_INT ) ;
+    // InternalGoLDSL.g:2548:1: rule__BoundedRange__LowerBoundAssignment_0 : ( RULE_INT ) ;
     public final void rule__BoundedRange__LowerBoundAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2622:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:2623:2: ( RULE_INT )
+            // InternalGoLDSL.g:2552:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2553:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2623:2: ( RULE_INT )
-            // InternalGoLDSL.g:2624:3: RULE_INT
+            // InternalGoLDSL.g:2553:2: ( RULE_INT )
+            // InternalGoLDSL.g:2554:3: RULE_INT
             {
              before(grammarAccess.getBoundedRangeAccess().getLowerBoundINTTerminalRuleCall_0_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -7976,17 +7753,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BoundedRange__HigherBoundAssignment_2"
-    // InternalGoLDSL.g:2633:1: rule__BoundedRange__HigherBoundAssignment_2 : ( RULE_INT ) ;
+    // InternalGoLDSL.g:2563:1: rule__BoundedRange__HigherBoundAssignment_2 : ( RULE_INT ) ;
     public final void rule__BoundedRange__HigherBoundAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2637:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:2638:2: ( RULE_INT )
+            // InternalGoLDSL.g:2567:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2568:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2638:2: ( RULE_INT )
-            // InternalGoLDSL.g:2639:3: RULE_INT
+            // InternalGoLDSL.g:2568:2: ( RULE_INT )
+            // InternalGoLDSL.g:2569:3: RULE_INT
             {
              before(grammarAccess.getBoundedRangeAccess().getHigherBoundINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -8012,26 +7789,22 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__BoundedRange__HigherBoundAssignment_2"
 
 
-    // $ANTLR start "rule__UnboundedRange__LeftAssignment_0"
-    // InternalGoLDSL.g:2648:1: rule__UnboundedRange__LeftAssignment_0 : ( ruleLeftUnboundedRange ) ;
-    public final void rule__UnboundedRange__LeftAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__LeftUnboundedRange__LowerBoundAssignment_0"
+    // InternalGoLDSL.g:2578:1: rule__LeftUnboundedRange__LowerBoundAssignment_0 : ( RULE_INT ) ;
+    public final void rule__LeftUnboundedRange__LowerBoundAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2652:1: ( ( ruleLeftUnboundedRange ) )
-            // InternalGoLDSL.g:2653:2: ( ruleLeftUnboundedRange )
+            // InternalGoLDSL.g:2582:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2583:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2653:2: ( ruleLeftUnboundedRange )
-            // InternalGoLDSL.g:2654:3: ruleLeftUnboundedRange
+            // InternalGoLDSL.g:2583:2: ( RULE_INT )
+            // InternalGoLDSL.g:2584:3: RULE_INT
             {
-             before(grammarAccess.getUnboundedRangeAccess().getLeftLeftUnboundedRangeParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_2);
-            ruleLeftUnboundedRange();
-
-            state._fsp--;
-
-             after(grammarAccess.getUnboundedRangeAccess().getLeftLeftUnboundedRangeParserRuleCall_0_0()); 
+             before(grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundINTTerminalRuleCall_0_0()); 
+            match(input,RULE_INT,FOLLOW_2); 
+             after(grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundINTTerminalRuleCall_0_0()); 
 
             }
 
@@ -8050,29 +7823,25 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__UnboundedRange__LeftAssignment_0"
+    // $ANTLR end "rule__LeftUnboundedRange__LowerBoundAssignment_0"
 
 
-    // $ANTLR start "rule__UnboundedRange__RightAssignment_1"
-    // InternalGoLDSL.g:2663:1: rule__UnboundedRange__RightAssignment_1 : ( ruleRightUnboundedRange ) ;
-    public final void rule__UnboundedRange__RightAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__RightUnboundedRange__HigherBoundAssignment_1"
+    // InternalGoLDSL.g:2593:1: rule__RightUnboundedRange__HigherBoundAssignment_1 : ( RULE_INT ) ;
+    public final void rule__RightUnboundedRange__HigherBoundAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2667:1: ( ( ruleRightUnboundedRange ) )
-            // InternalGoLDSL.g:2668:2: ( ruleRightUnboundedRange )
+            // InternalGoLDSL.g:2597:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2598:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2668:2: ( ruleRightUnboundedRange )
-            // InternalGoLDSL.g:2669:3: ruleRightUnboundedRange
+            // InternalGoLDSL.g:2598:2: ( RULE_INT )
+            // InternalGoLDSL.g:2599:3: RULE_INT
             {
-             before(grammarAccess.getUnboundedRangeAccess().getRightRightUnboundedRangeParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_2);
-            ruleRightUnboundedRange();
-
-            state._fsp--;
-
-             after(grammarAccess.getUnboundedRangeAccess().getRightRightUnboundedRangeParserRuleCall_1_0()); 
+             before(grammarAccess.getRightUnboundedRangeAccess().getHigherBoundINTTerminalRuleCall_1_0()); 
+            match(input,RULE_INT,FOLLOW_2); 
+             after(grammarAccess.getRightUnboundedRangeAccess().getHigherBoundINTTerminalRuleCall_1_0()); 
 
             }
 
@@ -8091,21 +7860,21 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__UnboundedRange__RightAssignment_1"
+    // $ANTLR end "rule__RightUnboundedRange__HigherBoundAssignment_1"
 
 
     // $ANTLR start "rule__Grid__SizeAssignment_1"
-    // InternalGoLDSL.g:2678:1: rule__Grid__SizeAssignment_1 : ( ruleSize ) ;
+    // InternalGoLDSL.g:2608:1: rule__Grid__SizeAssignment_1 : ( ruleSize ) ;
     public final void rule__Grid__SizeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2682:1: ( ( ruleSize ) )
-            // InternalGoLDSL.g:2683:2: ( ruleSize )
+            // InternalGoLDSL.g:2612:1: ( ( ruleSize ) )
+            // InternalGoLDSL.g:2613:2: ( ruleSize )
             {
-            // InternalGoLDSL.g:2683:2: ( ruleSize )
-            // InternalGoLDSL.g:2684:3: ruleSize
+            // InternalGoLDSL.g:2613:2: ( ruleSize )
+            // InternalGoLDSL.g:2614:3: ruleSize
             {
              before(grammarAccess.getGridAccess().getSizeSizeParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8136,17 +7905,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Grid__PartsAssignment_2"
-    // InternalGoLDSL.g:2693:1: rule__Grid__PartsAssignment_2 : ( ruleGridPart ) ;
+    // InternalGoLDSL.g:2623:1: rule__Grid__PartsAssignment_2 : ( ruleGridPart ) ;
     public final void rule__Grid__PartsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2697:1: ( ( ruleGridPart ) )
-            // InternalGoLDSL.g:2698:2: ( ruleGridPart )
+            // InternalGoLDSL.g:2627:1: ( ( ruleGridPart ) )
+            // InternalGoLDSL.g:2628:2: ( ruleGridPart )
             {
-            // InternalGoLDSL.g:2698:2: ( ruleGridPart )
-            // InternalGoLDSL.g:2699:3: ruleGridPart
+            // InternalGoLDSL.g:2628:2: ( ruleGridPart )
+            // InternalGoLDSL.g:2629:3: ruleGridPart
             {
              before(grammarAccess.getGridAccess().getPartsGridPartEnumRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -8177,17 +7946,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Offset__XAssignment_1"
-    // InternalGoLDSL.g:2708:1: rule__Offset__XAssignment_1 : ( RULE_INT ) ;
+    // InternalGoLDSL.g:2638:1: rule__Offset__XAssignment_1 : ( RULE_INT ) ;
     public final void rule__Offset__XAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2712:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:2713:2: ( RULE_INT )
+            // InternalGoLDSL.g:2642:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2643:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2713:2: ( RULE_INT )
-            // InternalGoLDSL.g:2714:3: RULE_INT
+            // InternalGoLDSL.g:2643:2: ( RULE_INT )
+            // InternalGoLDSL.g:2644:3: RULE_INT
             {
              before(grammarAccess.getOffsetAccess().getXINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -8214,17 +7983,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Offset__YAssignment_2"
-    // InternalGoLDSL.g:2723:1: rule__Offset__YAssignment_2 : ( RULE_INT ) ;
+    // InternalGoLDSL.g:2653:1: rule__Offset__YAssignment_2 : ( RULE_INT ) ;
     public final void rule__Offset__YAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2727:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:2728:2: ( RULE_INT )
+            // InternalGoLDSL.g:2657:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2658:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2728:2: ( RULE_INT )
-            // InternalGoLDSL.g:2729:3: RULE_INT
+            // InternalGoLDSL.g:2658:2: ( RULE_INT )
+            // InternalGoLDSL.g:2659:3: RULE_INT
             {
              before(grammarAccess.getOffsetAccess().getYINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -8251,17 +8020,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Size__WidthAssignment_1"
-    // InternalGoLDSL.g:2738:1: rule__Size__WidthAssignment_1 : ( RULE_INT ) ;
+    // InternalGoLDSL.g:2668:1: rule__Size__WidthAssignment_1 : ( RULE_INT ) ;
     public final void rule__Size__WidthAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2742:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:2743:2: ( RULE_INT )
+            // InternalGoLDSL.g:2672:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2673:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2743:2: ( RULE_INT )
-            // InternalGoLDSL.g:2744:3: RULE_INT
+            // InternalGoLDSL.g:2673:2: ( RULE_INT )
+            // InternalGoLDSL.g:2674:3: RULE_INT
             {
              before(grammarAccess.getSizeAccess().getWidthINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -8288,17 +8057,17 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Size__HeightAssignment_2"
-    // InternalGoLDSL.g:2753:1: rule__Size__HeightAssignment_2 : ( RULE_INT ) ;
+    // InternalGoLDSL.g:2683:1: rule__Size__HeightAssignment_2 : ( RULE_INT ) ;
     public final void rule__Size__HeightAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGoLDSL.g:2757:1: ( ( RULE_INT ) )
-            // InternalGoLDSL.g:2758:2: ( RULE_INT )
+            // InternalGoLDSL.g:2687:1: ( ( RULE_INT ) )
+            // InternalGoLDSL.g:2688:2: ( RULE_INT )
             {
-            // InternalGoLDSL.g:2758:2: ( RULE_INT )
-            // InternalGoLDSL.g:2759:3: RULE_INT
+            // InternalGoLDSL.g:2688:2: ( RULE_INT )
+            // InternalGoLDSL.g:2689:3: RULE_INT
             {
              before(grammarAccess.getSizeAccess().getHeightINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -8335,16 +8104,16 @@ public class InternalGoLDSLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000810000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000810002L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000008310000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000020000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000018310000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000044000010L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000044000020L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000001800L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000020000000L});

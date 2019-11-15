@@ -3,8 +3,8 @@
  */
 package com.simonbaars.goLDSL.impl;
 
-import com.simonbaars.goLDSL.BoundedRange;
 import com.simonbaars.goLDSL.GoLDSLPackage;
+import com.simonbaars.goLDSL.LeftUnboundedRange;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,19 +14,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Bounded Range</b></em>'.
+ * An implementation of the model object '<em><b>Left Unbounded Range</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.simonbaars.goLDSL.impl.BoundedRangeImpl#getLowerBound <em>Lower Bound</em>}</li>
- *   <li>{@link com.simonbaars.goLDSL.impl.BoundedRangeImpl#getHigherBound <em>Higher Bound</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.impl.LeftUnboundedRangeImpl#getLowerBound <em>Lower Bound</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class BoundedRangeImpl extends RangeImpl implements BoundedRange
+public class LeftUnboundedRangeImpl extends RangeImpl implements LeftUnboundedRange
 {
   /**
    * The default value of the '{@link #getLowerBound() <em>Lower Bound</em>}' attribute.
@@ -49,31 +48,11 @@ public class BoundedRangeImpl extends RangeImpl implements BoundedRange
   protected int lowerBound = LOWER_BOUND_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getHigherBound() <em>Higher Bound</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHigherBound()
-   * @generated
-   * @ordered
-   */
-  protected static final int HIGHER_BOUND_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getHigherBound() <em>Higher Bound</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHigherBound()
-   * @generated
-   * @ordered
-   */
-  protected int higherBound = HIGHER_BOUND_EDEFAULT;
-
-  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected BoundedRangeImpl()
+  protected LeftUnboundedRangeImpl()
   {
     super();
   }
@@ -86,7 +65,7 @@ public class BoundedRangeImpl extends RangeImpl implements BoundedRange
   @Override
   protected EClass eStaticClass()
   {
-    return GoLDSLPackage.Literals.BOUNDED_RANGE;
+    return GoLDSLPackage.Literals.LEFT_UNBOUNDED_RANGE;
   }
 
   /**
@@ -111,32 +90,7 @@ public class BoundedRangeImpl extends RangeImpl implements BoundedRange
     int oldLowerBound = lowerBound;
     lowerBound = newLowerBound;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.BOUNDED_RANGE__LOWER_BOUND, oldLowerBound, lowerBound));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int getHigherBound()
-  {
-    return higherBound;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setHigherBound(int newHigherBound)
-  {
-    int oldHigherBound = higherBound;
-    higherBound = newHigherBound;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.BOUNDED_RANGE__HIGHER_BOUND, oldHigherBound, higherBound));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.LEFT_UNBOUNDED_RANGE__LOWER_BOUND, oldLowerBound, lowerBound));
   }
 
   /**
@@ -149,10 +103,8 @@ public class BoundedRangeImpl extends RangeImpl implements BoundedRange
   {
     switch (featureID)
     {
-      case GoLDSLPackage.BOUNDED_RANGE__LOWER_BOUND:
+      case GoLDSLPackage.LEFT_UNBOUNDED_RANGE__LOWER_BOUND:
         return getLowerBound();
-      case GoLDSLPackage.BOUNDED_RANGE__HIGHER_BOUND:
-        return getHigherBound();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -167,11 +119,8 @@ public class BoundedRangeImpl extends RangeImpl implements BoundedRange
   {
     switch (featureID)
     {
-      case GoLDSLPackage.BOUNDED_RANGE__LOWER_BOUND:
+      case GoLDSLPackage.LEFT_UNBOUNDED_RANGE__LOWER_BOUND:
         setLowerBound((Integer)newValue);
-        return;
-      case GoLDSLPackage.BOUNDED_RANGE__HIGHER_BOUND:
-        setHigherBound((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -187,11 +136,8 @@ public class BoundedRangeImpl extends RangeImpl implements BoundedRange
   {
     switch (featureID)
     {
-      case GoLDSLPackage.BOUNDED_RANGE__LOWER_BOUND:
+      case GoLDSLPackage.LEFT_UNBOUNDED_RANGE__LOWER_BOUND:
         setLowerBound(LOWER_BOUND_EDEFAULT);
-        return;
-      case GoLDSLPackage.BOUNDED_RANGE__HIGHER_BOUND:
-        setHigherBound(HIGHER_BOUND_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -207,10 +153,8 @@ public class BoundedRangeImpl extends RangeImpl implements BoundedRange
   {
     switch (featureID)
     {
-      case GoLDSLPackage.BOUNDED_RANGE__LOWER_BOUND:
+      case GoLDSLPackage.LEFT_UNBOUNDED_RANGE__LOWER_BOUND:
         return lowerBound != LOWER_BOUND_EDEFAULT;
-      case GoLDSLPackage.BOUNDED_RANGE__HIGHER_BOUND:
-        return higherBound != HIGHER_BOUND_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -228,10 +172,8 @@ public class BoundedRangeImpl extends RangeImpl implements BoundedRange
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (lowerBound: ");
     result.append(lowerBound);
-    result.append(", higherBound: ");
-    result.append(higherBound);
     result.append(')');
     return result.toString();
   }
 
-} //BoundedRangeImpl
+} //LeftUnboundedRangeImpl

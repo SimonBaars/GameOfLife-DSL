@@ -3,7 +3,6 @@
  */
 package com.simonbaars.goLDSL;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface BoundedRange extends EObject
+public interface BoundedRange extends Range
 {
   /**
    * Returns the value of the '<em><b>Lower Bound</b></em>' attribute.

@@ -10,13 +10,6 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Range</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link com.simonbaars.goLDSL.Range#getBounded <em>Bounded</em>}</li>
- *   <li>{@link com.simonbaars.goLDSL.Range#getUnbounded <em>Unbounded</em>}</li>
- * </ul>
  *
  * @see com.simonbaars.goLDSL.GoLDSLPackage#getRange()
  * @model
@@ -24,48 +17,4 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Range extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Bounded</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Bounded</em>' containment reference.
-   * @see #setBounded(BoundedRange)
-   * @see com.simonbaars.goLDSL.GoLDSLPackage#getRange_Bounded()
-   * @model containment="true"
-   * @generated
-   */
-  BoundedRange getBounded();
-
-  /**
-   * Sets the value of the '{@link com.simonbaars.goLDSL.Range#getBounded <em>Bounded</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Bounded</em>' containment reference.
-   * @see #getBounded()
-   * @generated
-   */
-  void setBounded(BoundedRange value);
-
-  /**
-   * Returns the value of the '<em><b>Unbounded</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Unbounded</em>' containment reference.
-   * @see #setUnbounded(UnboundedRange)
-   * @see com.simonbaars.goLDSL.GoLDSLPackage#getRange_Unbounded()
-   * @model containment="true"
-   * @generated
-   */
-  UnboundedRange getUnbounded();
-
-  /**
-   * Sets the value of the '{@link com.simonbaars.goLDSL.Range#getUnbounded <em>Unbounded</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Unbounded</em>' containment reference.
-   * @see #getUnbounded()
-   * @generated
-   */
-  void setUnbounded(UnboundedRange value);
-
 } // Range

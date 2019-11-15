@@ -168,13 +168,22 @@ public interface GoLDSLFactory extends EFactory
   BoundedRange createBoundedRange();
 
   /**
-   * Returns a new object of class '<em>Unbounded Range</em>'.
+   * Returns a new object of class '<em>Left Unbounded Range</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Unbounded Range</em>'.
+   * @return a new object of class '<em>Left Unbounded Range</em>'.
    * @generated
    */
-  UnboundedRange createUnboundedRange();
+  LeftUnboundedRange createLeftUnboundedRange();
+
+  /**
+   * Returns a new object of class '<em>Right Unbounded Range</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Right Unbounded Range</em>'.
+   * @generated
+   */
+  RightUnboundedRange createRightUnboundedRange();
 
   /**
    * Returns a new object of class '<em>Grid</em>'.

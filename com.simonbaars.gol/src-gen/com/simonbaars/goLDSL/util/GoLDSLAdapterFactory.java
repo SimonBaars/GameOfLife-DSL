@@ -156,9 +156,14 @@ public class GoLDSLAdapterFactory extends AdapterFactoryImpl
         return createBoundedRangeAdapter();
       }
       @Override
-      public Adapter caseUnboundedRange(UnboundedRange object)
+      public Adapter caseLeftUnboundedRange(LeftUnboundedRange object)
       {
-        return createUnboundedRangeAdapter();
+        return createLeftUnboundedRangeAdapter();
+      }
+      @Override
+      public Adapter caseRightUnboundedRange(RightUnboundedRange object)
+      {
+        return createRightUnboundedRangeAdapter();
       }
       @Override
       public Adapter caseGrid(Grid object)
@@ -438,16 +443,31 @@ public class GoLDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.UnboundedRange <em>Unbounded Range</em>}'.
+   * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.LeftUnboundedRange <em>Left Unbounded Range</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.simonbaars.goLDSL.UnboundedRange
+   * @see com.simonbaars.goLDSL.LeftUnboundedRange
    * @generated
    */
-  public Adapter createUnboundedRangeAdapter()
+  public Adapter createLeftUnboundedRangeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.simonbaars.goLDSL.RightUnboundedRange <em>Right Unbounded Range</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.simonbaars.goLDSL.RightUnboundedRange
+   * @generated
+   */
+  public Adapter createRightUnboundedRangeAdapter()
   {
     return null;
   }

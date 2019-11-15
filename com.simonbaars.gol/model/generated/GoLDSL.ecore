@@ -67,19 +67,16 @@
     <eLiterals name="AND" literal="&amp;"/>
     <eLiterals name="OR" value="1" literal="|"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Range">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bounded" eType="#//BoundedRange"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unbounded" eType="#//UnboundedRange"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BoundedRange">
+  <eClassifiers xsi:type="ecore:EClass" name="Range"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundedRange" eSuperTypes="#//Range">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="higherBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UnboundedRange">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="left" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="right" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LeftUnboundedRange" eSuperTypes="#//Range">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RightUnboundedRange" eSuperTypes="#//Range">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="higherBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Grid">
     <eStructuralFeatures xsi:type="ecore:EReference" name="size" eType="#//Size" containment="true"/>

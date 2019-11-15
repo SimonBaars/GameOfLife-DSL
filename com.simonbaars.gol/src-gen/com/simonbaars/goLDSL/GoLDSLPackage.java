@@ -551,31 +551,13 @@ public interface GoLDSLPackage extends EPackage
   int RANGE = 14;
 
   /**
-   * The feature id for the '<em><b>Bounded</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RANGE__BOUNDED = 0;
-
-  /**
-   * The feature id for the '<em><b>Unbounded</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RANGE__UNBOUNDED = 1;
-
-  /**
    * The number of structural features of the '<em>Range</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RANGE_FEATURE_COUNT = 2;
+  int RANGE_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.BoundedRangeImpl <em>Bounded Range</em>}' class.
@@ -594,7 +576,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BOUNDED_RANGE__LOWER_BOUND = 0;
+  int BOUNDED_RANGE__LOWER_BOUND = RANGE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Higher Bound</b></em>' attribute.
@@ -603,7 +585,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BOUNDED_RANGE__HIGHER_BOUND = 1;
+  int BOUNDED_RANGE__HIGHER_BOUND = RANGE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Bounded Range</em>' class.
@@ -612,44 +594,63 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BOUNDED_RANGE_FEATURE_COUNT = 2;
+  int BOUNDED_RANGE_FEATURE_COUNT = RANGE_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link com.simonbaars.goLDSL.impl.UnboundedRangeImpl <em>Unbounded Range</em>}' class.
+   * The meta object id for the '{@link com.simonbaars.goLDSL.impl.LeftUnboundedRangeImpl <em>Left Unbounded Range</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.simonbaars.goLDSL.impl.UnboundedRangeImpl
-   * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getUnboundedRange()
+   * @see com.simonbaars.goLDSL.impl.LeftUnboundedRangeImpl
+   * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getLeftUnboundedRange()
    * @generated
    */
-  int UNBOUNDED_RANGE = 16;
+  int LEFT_UNBOUNDED_RANGE = 16;
 
   /**
-   * The feature id for the '<em><b>Left</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int UNBOUNDED_RANGE__LEFT = 0;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' attribute.
+   * The feature id for the '<em><b>Lower Bound</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int UNBOUNDED_RANGE__RIGHT = 1;
+  int LEFT_UNBOUNDED_RANGE__LOWER_BOUND = RANGE_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Unbounded Range</em>' class.
+   * The number of structural features of the '<em>Left Unbounded Range</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int UNBOUNDED_RANGE_FEATURE_COUNT = 2;
+  int LEFT_UNBOUNDED_RANGE_FEATURE_COUNT = RANGE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link com.simonbaars.goLDSL.impl.RightUnboundedRangeImpl <em>Right Unbounded Range</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.simonbaars.goLDSL.impl.RightUnboundedRangeImpl
+   * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getRightUnboundedRange()
+   * @generated
+   */
+  int RIGHT_UNBOUNDED_RANGE = 17;
+
+  /**
+   * The feature id for the '<em><b>Higher Bound</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_UNBOUNDED_RANGE__HIGHER_BOUND = RANGE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Right Unbounded Range</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGHT_UNBOUNDED_RANGE_FEATURE_COUNT = RANGE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.GridImpl <em>Grid</em>}' class.
@@ -659,7 +660,7 @@ public interface GoLDSLPackage extends EPackage
    * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getGrid()
    * @generated
    */
-  int GRID = 17;
+  int GRID = 18;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' containment reference.
@@ -696,7 +697,7 @@ public interface GoLDSLPackage extends EPackage
    * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getOffset()
    * @generated
    */
-  int OFFSET = 18;
+  int OFFSET = 19;
 
   /**
    * The feature id for the '<em><b>X</b></em>' attribute.
@@ -733,7 +734,7 @@ public interface GoLDSLPackage extends EPackage
    * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getSize()
    * @generated
    */
-  int SIZE = 19;
+  int SIZE = 20;
 
   /**
    * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -770,7 +771,7 @@ public interface GoLDSLPackage extends EPackage
    * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getBoolOperator()
    * @generated
    */
-  int BOOL_OPERATOR = 20;
+  int BOOL_OPERATOR = 21;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.GridPart <em>Grid Part</em>}' enum.
@@ -780,7 +781,7 @@ public interface GoLDSLPackage extends EPackage
    * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getGridPart()
    * @generated
    */
-  int GRID_PART = 21;
+  int GRID_PART = 22;
 
 
   /**
@@ -1198,28 +1199,6 @@ public interface GoLDSLPackage extends EPackage
   EClass getRange();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.simonbaars.goLDSL.Range#getBounded <em>Bounded</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Bounded</em>'.
-   * @see com.simonbaars.goLDSL.Range#getBounded()
-   * @see #getRange()
-   * @generated
-   */
-  EReference getRange_Bounded();
-
-  /**
-   * Returns the meta object for the containment reference '{@link com.simonbaars.goLDSL.Range#getUnbounded <em>Unbounded</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Unbounded</em>'.
-   * @see com.simonbaars.goLDSL.Range#getUnbounded()
-   * @see #getRange()
-   * @generated
-   */
-  EReference getRange_Unbounded();
-
-  /**
    * Returns the meta object for class '{@link com.simonbaars.goLDSL.BoundedRange <em>Bounded Range</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1252,36 +1231,46 @@ public interface GoLDSLPackage extends EPackage
   EAttribute getBoundedRange_HigherBound();
 
   /**
-   * Returns the meta object for class '{@link com.simonbaars.goLDSL.UnboundedRange <em>Unbounded Range</em>}'.
+   * Returns the meta object for class '{@link com.simonbaars.goLDSL.LeftUnboundedRange <em>Left Unbounded Range</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Unbounded Range</em>'.
-   * @see com.simonbaars.goLDSL.UnboundedRange
+   * @return the meta object for class '<em>Left Unbounded Range</em>'.
+   * @see com.simonbaars.goLDSL.LeftUnboundedRange
    * @generated
    */
-  EClass getUnboundedRange();
+  EClass getLeftUnboundedRange();
 
   /**
-   * Returns the meta object for the attribute '{@link com.simonbaars.goLDSL.UnboundedRange#getLeft <em>Left</em>}'.
+   * Returns the meta object for the attribute '{@link com.simonbaars.goLDSL.LeftUnboundedRange#getLowerBound <em>Lower Bound</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Left</em>'.
-   * @see com.simonbaars.goLDSL.UnboundedRange#getLeft()
-   * @see #getUnboundedRange()
+   * @return the meta object for the attribute '<em>Lower Bound</em>'.
+   * @see com.simonbaars.goLDSL.LeftUnboundedRange#getLowerBound()
+   * @see #getLeftUnboundedRange()
    * @generated
    */
-  EAttribute getUnboundedRange_Left();
+  EAttribute getLeftUnboundedRange_LowerBound();
 
   /**
-   * Returns the meta object for the attribute '{@link com.simonbaars.goLDSL.UnboundedRange#getRight <em>Right</em>}'.
+   * Returns the meta object for class '{@link com.simonbaars.goLDSL.RightUnboundedRange <em>Right Unbounded Range</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Right</em>'.
-   * @see com.simonbaars.goLDSL.UnboundedRange#getRight()
-   * @see #getUnboundedRange()
+   * @return the meta object for class '<em>Right Unbounded Range</em>'.
+   * @see com.simonbaars.goLDSL.RightUnboundedRange
    * @generated
    */
-  EAttribute getUnboundedRange_Right();
+  EClass getRightUnboundedRange();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.simonbaars.goLDSL.RightUnboundedRange#getHigherBound <em>Higher Bound</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Higher Bound</em>'.
+   * @see com.simonbaars.goLDSL.RightUnboundedRange#getHigherBound()
+   * @see #getRightUnboundedRange()
+   * @generated
+   */
+  EAttribute getRightUnboundedRange_HigherBound();
 
   /**
    * Returns the meta object for class '{@link com.simonbaars.goLDSL.Grid <em>Grid</em>}'.
@@ -1765,22 +1754,6 @@ public interface GoLDSLPackage extends EPackage
     EClass RANGE = eINSTANCE.getRange();
 
     /**
-     * The meta object literal for the '<em><b>Bounded</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference RANGE__BOUNDED = eINSTANCE.getRange_Bounded();
-
-    /**
-     * The meta object literal for the '<em><b>Unbounded</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference RANGE__UNBOUNDED = eINSTANCE.getRange_Unbounded();
-
-    /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.BoundedRangeImpl <em>Bounded Range</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1807,30 +1780,40 @@ public interface GoLDSLPackage extends EPackage
     EAttribute BOUNDED_RANGE__HIGHER_BOUND = eINSTANCE.getBoundedRange_HigherBound();
 
     /**
-     * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.UnboundedRangeImpl <em>Unbounded Range</em>}' class.
+     * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.LeftUnboundedRangeImpl <em>Left Unbounded Range</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.simonbaars.goLDSL.impl.UnboundedRangeImpl
-     * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getUnboundedRange()
+     * @see com.simonbaars.goLDSL.impl.LeftUnboundedRangeImpl
+     * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getLeftUnboundedRange()
      * @generated
      */
-    EClass UNBOUNDED_RANGE = eINSTANCE.getUnboundedRange();
+    EClass LEFT_UNBOUNDED_RANGE = eINSTANCE.getLeftUnboundedRange();
 
     /**
-     * The meta object literal for the '<em><b>Left</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Lower Bound</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute UNBOUNDED_RANGE__LEFT = eINSTANCE.getUnboundedRange_Left();
+    EAttribute LEFT_UNBOUNDED_RANGE__LOWER_BOUND = eINSTANCE.getLeftUnboundedRange_LowerBound();
 
     /**
-     * The meta object literal for the '<em><b>Right</b></em>' attribute feature.
+     * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.RightUnboundedRangeImpl <em>Right Unbounded Range</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.simonbaars.goLDSL.impl.RightUnboundedRangeImpl
+     * @see com.simonbaars.goLDSL.impl.GoLDSLPackageImpl#getRightUnboundedRange()
+     * @generated
+     */
+    EClass RIGHT_UNBOUNDED_RANGE = eINSTANCE.getRightUnboundedRange();
+
+    /**
+     * The meta object literal for the '<em><b>Higher Bound</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute UNBOUNDED_RANGE__RIGHT = eINSTANCE.getUnboundedRange_Right();
+    EAttribute RIGHT_UNBOUNDED_RANGE__HIGHER_BOUND = eINSTANCE.getRightUnboundedRange_HigherBound();
 
     /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.GridImpl <em>Grid</em>}' class.

@@ -458,29 +458,25 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	public class RangeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Range");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cBoundedAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cBoundedBoundedRangeParserRuleCall_0_0 = (RuleCall)cBoundedAssignment_0.eContents().get(0);
-		private final Assignment cUnboundedAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cUnboundedUnboundedRangeParserRuleCall_1_0 = (RuleCall)cUnboundedAssignment_1.eContents().get(0);
+		private final RuleCall cBoundedRangeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cLeftUnboundedRangeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cRightUnboundedRangeParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Range:
-		//	bounded=BoundedRange | unbounded=UnboundedRange;
+		//	BoundedRange | LeftUnboundedRange | RightUnboundedRange;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//bounded=BoundedRange | unbounded=UnboundedRange
+		//BoundedRange | LeftUnboundedRange | RightUnboundedRange
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//bounded=BoundedRange
-		public Assignment getBoundedAssignment_0() { return cBoundedAssignment_0; }
-		
 		//BoundedRange
-		public RuleCall getBoundedBoundedRangeParserRuleCall_0_0() { return cBoundedBoundedRangeParserRuleCall_0_0; }
+		public RuleCall getBoundedRangeParserRuleCall_0() { return cBoundedRangeParserRuleCall_0; }
 		
-		//unbounded=UnboundedRange
-		public Assignment getUnboundedAssignment_1() { return cUnboundedAssignment_1; }
+		//LeftUnboundedRange
+		public RuleCall getLeftUnboundedRangeParserRuleCall_1() { return cLeftUnboundedRangeParserRuleCall_1; }
 		
-		//UnboundedRange
-		public RuleCall getUnboundedUnboundedRangeParserRuleCall_1_0() { return cUnboundedUnboundedRangeParserRuleCall_1_0; }
+		//RightUnboundedRange
+		public RuleCall getRightUnboundedRangeParserRuleCall_2() { return cRightUnboundedRangeParserRuleCall_2; }
 	}
 	public class BoundedRangeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.BoundedRange");
@@ -513,48 +509,25 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getHigherBoundINTTerminalRuleCall_2_0() { return cHigherBoundINTTerminalRuleCall_2_0; }
 	}
-	public class UnboundedRangeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.UnboundedRange");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cLeftAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cLeftLeftUnboundedRangeParserRuleCall_0_0 = (RuleCall)cLeftAssignment_0.eContents().get(0);
-		private final Assignment cRightAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cRightRightUnboundedRangeParserRuleCall_1_0 = (RuleCall)cRightAssignment_1.eContents().get(0);
-		
-		//UnboundedRange:
-		//	left=LeftUnboundedRange | right=RightUnboundedRange;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//left=LeftUnboundedRange | right=RightUnboundedRange
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//left=LeftUnboundedRange
-		public Assignment getLeftAssignment_0() { return cLeftAssignment_0; }
-		
-		//LeftUnboundedRange
-		public RuleCall getLeftLeftUnboundedRangeParserRuleCall_0_0() { return cLeftLeftUnboundedRangeParserRuleCall_0_0; }
-		
-		//right=RightUnboundedRange
-		public Assignment getRightAssignment_1() { return cRightAssignment_1; }
-		
-		//RightUnboundedRange
-		public RuleCall getRightRightUnboundedRangeParserRuleCall_1_0() { return cRightRightUnboundedRangeParserRuleCall_1_0; }
-	}
 	public class LeftUnboundedRangeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.LeftUnboundedRange");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cLowerBoundAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cLowerBoundINTTerminalRuleCall_0_0 = (RuleCall)cLowerBoundAssignment_0.eContents().get(0);
 		private final Keyword cFullStopFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
 		//LeftUnboundedRange:
-		//	INT '..';
+		//	lowerBound=INT '..';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//INT '..'
+		//lowerBound=INT '..'
 		public Group getGroup() { return cGroup; }
 		
+		//lowerBound=INT
+		public Assignment getLowerBoundAssignment_0() { return cLowerBoundAssignment_0; }
+		
 		//INT
-		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
+		public RuleCall getLowerBoundINTTerminalRuleCall_0_0() { return cLowerBoundINTTerminalRuleCall_0_0; }
 		
 		//'..'
 		public Keyword getFullStopFullStopKeyword_1() { return cFullStopFullStopKeyword_1; }
@@ -563,20 +536,24 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.RightUnboundedRange");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFullStopFullStopKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cHigherBoundAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cHigherBoundINTTerminalRuleCall_1_0 = (RuleCall)cHigherBoundAssignment_1.eContents().get(0);
 		
 		//RightUnboundedRange:
-		//	'..' INT;
+		//	'..' higherBound=INT;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'..' INT
+		//'..' higherBound=INT
 		public Group getGroup() { return cGroup; }
 		
 		//'..'
 		public Keyword getFullStopFullStopKeyword_0() { return cFullStopFullStopKeyword_0; }
 		
+		//higherBound=INT
+		public Assignment getHigherBoundAssignment_1() { return cHigherBoundAssignment_1; }
+		
 		//INT
-		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+		public RuleCall getHigherBoundINTTerminalRuleCall_1_0() { return cHigherBoundINTTerminalRuleCall_1_0; }
 	}
 	public class GridElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.Grid");
@@ -744,7 +721,6 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final BoolOperatorElements eBoolOperator;
 	private final RangeElements pRange;
 	private final BoundedRangeElements pBoundedRange;
-	private final UnboundedRangeElements pUnboundedRange;
 	private final LeftUnboundedRangeElements pLeftUnboundedRange;
 	private final RightUnboundedRangeElements pRightUnboundedRange;
 	private final GridElements pGrid;
@@ -778,7 +754,6 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.eBoolOperator = new BoolOperatorElements();
 		this.pRange = new RangeElements();
 		this.pBoundedRange = new BoundedRangeElements();
-		this.pUnboundedRange = new UnboundedRangeElements();
 		this.pLeftUnboundedRange = new LeftUnboundedRangeElements();
 		this.pRightUnboundedRange = new RightUnboundedRangeElements();
 		this.pGrid = new GridElements();
@@ -965,7 +940,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Range:
-	//	bounded=BoundedRange | unbounded=UnboundedRange;
+	//	BoundedRange | LeftUnboundedRange | RightUnboundedRange;
 	public RangeElements getRangeAccess() {
 		return pRange;
 	}
@@ -984,18 +959,8 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getBoundedRangeAccess().getRule();
 	}
 	
-	//UnboundedRange:
-	//	left=LeftUnboundedRange | right=RightUnboundedRange;
-	public UnboundedRangeElements getUnboundedRangeAccess() {
-		return pUnboundedRange;
-	}
-	
-	public ParserRule getUnboundedRangeRule() {
-		return getUnboundedRangeAccess().getRule();
-	}
-	
 	//LeftUnboundedRange:
-	//	INT '..';
+	//	lowerBound=INT '..';
 	public LeftUnboundedRangeElements getLeftUnboundedRangeAccess() {
 		return pLeftUnboundedRange;
 	}
@@ -1005,7 +970,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//RightUnboundedRange:
-	//	'..' INT;
+	//	'..' higherBound=INT;
 	public RightUnboundedRangeElements getRightUnboundedRangeAccess() {
 		return pRightUnboundedRange;
 	}

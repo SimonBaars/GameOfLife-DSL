@@ -3,56 +3,22 @@
  */
 package com.simonbaars.goLDSL.impl;
 
-import com.simonbaars.goLDSL.BoundedRange;
 import com.simonbaars.goLDSL.GoLDSLPackage;
 import com.simonbaars.goLDSL.Range;
-import com.simonbaars.goLDSL.UnboundedRange;
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Range</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * </p>
- * <ul>
- *   <li>{@link com.simonbaars.goLDSL.impl.RangeImpl#getBounded <em>Bounded</em>}</li>
- *   <li>{@link com.simonbaars.goLDSL.impl.RangeImpl#getUnbounded <em>Unbounded</em>}</li>
- * </ul>
  *
  * @generated
  */
 public class RangeImpl extends MinimalEObjectImpl.Container implements Range
 {
-  /**
-   * The cached value of the '{@link #getBounded() <em>Bounded</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getBounded()
-   * @generated
-   * @ordered
-   */
-  protected BoundedRange bounded;
-
-  /**
-   * The cached value of the '{@link #getUnbounded() <em>Unbounded</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getUnbounded()
-   * @generated
-   * @ordered
-   */
-  protected UnboundedRange unbounded;
-
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -72,200 +38,6 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range
   protected EClass eStaticClass()
   {
     return GoLDSLPackage.Literals.RANGE;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public BoundedRange getBounded()
-  {
-    return bounded;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetBounded(BoundedRange newBounded, NotificationChain msgs)
-  {
-    BoundedRange oldBounded = bounded;
-    bounded = newBounded;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoLDSLPackage.RANGE__BOUNDED, oldBounded, newBounded);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setBounded(BoundedRange newBounded)
-  {
-    if (newBounded != bounded)
-    {
-      NotificationChain msgs = null;
-      if (bounded != null)
-        msgs = ((InternalEObject)bounded).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.RANGE__BOUNDED, null, msgs);
-      if (newBounded != null)
-        msgs = ((InternalEObject)newBounded).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.RANGE__BOUNDED, null, msgs);
-      msgs = basicSetBounded(newBounded, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.RANGE__BOUNDED, newBounded, newBounded));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public UnboundedRange getUnbounded()
-  {
-    return unbounded;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetUnbounded(UnboundedRange newUnbounded, NotificationChain msgs)
-  {
-    UnboundedRange oldUnbounded = unbounded;
-    unbounded = newUnbounded;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoLDSLPackage.RANGE__UNBOUNDED, oldUnbounded, newUnbounded);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setUnbounded(UnboundedRange newUnbounded)
-  {
-    if (newUnbounded != unbounded)
-    {
-      NotificationChain msgs = null;
-      if (unbounded != null)
-        msgs = ((InternalEObject)unbounded).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.RANGE__UNBOUNDED, null, msgs);
-      if (newUnbounded != null)
-        msgs = ((InternalEObject)newUnbounded).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.RANGE__UNBOUNDED, null, msgs);
-      msgs = basicSetUnbounded(newUnbounded, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.RANGE__UNBOUNDED, newUnbounded, newUnbounded));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case GoLDSLPackage.RANGE__BOUNDED:
-        return basicSetBounded(null, msgs);
-      case GoLDSLPackage.RANGE__UNBOUNDED:
-        return basicSetUnbounded(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Object eGet(int featureID, boolean resolve, boolean coreType)
-  {
-    switch (featureID)
-    {
-      case GoLDSLPackage.RANGE__BOUNDED:
-        return getBounded();
-      case GoLDSLPackage.RANGE__UNBOUNDED:
-        return getUnbounded();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void eSet(int featureID, Object newValue)
-  {
-    switch (featureID)
-    {
-      case GoLDSLPackage.RANGE__BOUNDED:
-        setBounded((BoundedRange)newValue);
-        return;
-      case GoLDSLPackage.RANGE__UNBOUNDED:
-        setUnbounded((UnboundedRange)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void eUnset(int featureID)
-  {
-    switch (featureID)
-    {
-      case GoLDSLPackage.RANGE__BOUNDED:
-        setBounded((BoundedRange)null);
-        return;
-      case GoLDSLPackage.RANGE__UNBOUNDED:
-        setUnbounded((UnboundedRange)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public boolean eIsSet(int featureID)
-  {
-    switch (featureID)
-    {
-      case GoLDSLPackage.RANGE__BOUNDED:
-        return bounded != null;
-      case GoLDSLPackage.RANGE__UNBOUNDED:
-        return unbounded != null;
-    }
-    return super.eIsSet(featureID);
   }
 
 } //RangeImpl

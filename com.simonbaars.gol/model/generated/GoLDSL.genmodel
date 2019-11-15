@@ -61,17 +61,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//ConditionRules/operator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//ConditionRules/rule2"/>
     </genClasses>
-    <genClasses ecoreClass="GoLDSL.ecore#//Range">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Range/bounded"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Range/unbounded"/>
-    </genClasses>
+    <genClasses ecoreClass="GoLDSL.ecore#//Range"/>
     <genClasses ecoreClass="GoLDSL.ecore#//BoundedRange">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//BoundedRange/lowerBound"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//BoundedRange/higherBound"/>
     </genClasses>
-    <genClasses ecoreClass="GoLDSL.ecore#//UnboundedRange">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//UnboundedRange/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//UnboundedRange/right"/>
+    <genClasses ecoreClass="GoLDSL.ecore#//LeftUnboundedRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//LeftUnboundedRange/lowerBound"/>
+    </genClasses>
+    <genClasses ecoreClass="GoLDSL.ecore#//RightUnboundedRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//RightUnboundedRange/higherBound"/>
     </genClasses>
     <genClasses ecoreClass="GoLDSL.ecore#//Grid">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//Grid/size"/>

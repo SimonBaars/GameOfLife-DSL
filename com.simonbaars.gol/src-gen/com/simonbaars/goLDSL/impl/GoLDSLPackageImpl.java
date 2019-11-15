@@ -18,14 +18,15 @@ import com.simonbaars.goLDSL.GoLDSLFactory;
 import com.simonbaars.goLDSL.GoLDSLPackage;
 import com.simonbaars.goLDSL.Grid;
 import com.simonbaars.goLDSL.GridPart;
+import com.simonbaars.goLDSL.LeftUnboundedRange;
 import com.simonbaars.goLDSL.Objects;
 import com.simonbaars.goLDSL.Offset;
 import com.simonbaars.goLDSL.Range;
+import com.simonbaars.goLDSL.RightUnboundedRange;
 import com.simonbaars.goLDSL.Rule;
 import com.simonbaars.goLDSL.ShapeDef;
 import com.simonbaars.goLDSL.ShapeRef;
 import com.simonbaars.goLDSL.Size;
-import com.simonbaars.goLDSL.UnboundedRange;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -160,7 +161,14 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass unboundedRangeEClass = null;
+  private EClass leftUnboundedRangeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rightUnboundedRangeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -695,28 +703,6 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EReference getRange_Bounded()
-  {
-    return (EReference)rangeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getRange_Unbounded()
-  {
-    return (EReference)rangeEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getBoundedRange()
   {
     return boundedRangeEClass;
@@ -750,9 +736,9 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EClass getUnboundedRange()
+  public EClass getLeftUnboundedRange()
   {
-    return unboundedRangeEClass;
+    return leftUnboundedRangeEClass;
   }
 
   /**
@@ -761,9 +747,9 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EAttribute getUnboundedRange_Left()
+  public EAttribute getLeftUnboundedRange_LowerBound()
   {
-    return (EAttribute)unboundedRangeEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)leftUnboundedRangeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -772,9 +758,20 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
-  public EAttribute getUnboundedRange_Right()
+  public EClass getRightUnboundedRange()
   {
-    return (EAttribute)unboundedRangeEClass.getEStructuralFeatures().get(1);
+    return rightUnboundedRangeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRightUnboundedRange_HigherBound()
+  {
+    return (EAttribute)rightUnboundedRangeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -982,16 +979,16 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     createEReference(conditionRulesEClass, CONDITION_RULES__RULE2);
 
     rangeEClass = createEClass(RANGE);
-    createEReference(rangeEClass, RANGE__BOUNDED);
-    createEReference(rangeEClass, RANGE__UNBOUNDED);
 
     boundedRangeEClass = createEClass(BOUNDED_RANGE);
     createEAttribute(boundedRangeEClass, BOUNDED_RANGE__LOWER_BOUND);
     createEAttribute(boundedRangeEClass, BOUNDED_RANGE__HIGHER_BOUND);
 
-    unboundedRangeEClass = createEClass(UNBOUNDED_RANGE);
-    createEAttribute(unboundedRangeEClass, UNBOUNDED_RANGE__LEFT);
-    createEAttribute(unboundedRangeEClass, UNBOUNDED_RANGE__RIGHT);
+    leftUnboundedRangeEClass = createEClass(LEFT_UNBOUNDED_RANGE);
+    createEAttribute(leftUnboundedRangeEClass, LEFT_UNBOUNDED_RANGE__LOWER_BOUND);
+
+    rightUnboundedRangeEClass = createEClass(RIGHT_UNBOUNDED_RANGE);
+    createEAttribute(rightUnboundedRangeEClass, RIGHT_UNBOUNDED_RANGE__HIGHER_BOUND);
 
     gridEClass = createEClass(GRID);
     createEReference(gridEClass, GRID__SIZE);
@@ -1044,6 +1041,9 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     cellPairsEClass.getESuperTypes().add(this.getCells());
     cellEClass.getESuperTypes().add(this.getCellDef());
     conditionRulesEClass.getESuperTypes().add(this.getCondition());
+    boundedRangeEClass.getESuperTypes().add(this.getRange());
+    leftUnboundedRangeEClass.getESuperTypes().add(this.getRange());
+    rightUnboundedRangeEClass.getESuperTypes().add(this.getRange());
 
     // Initialize classes and features; add operations and parameters
     initEClass(dslEClass, com.simonbaars.goLDSL.DSL.class, "DSL", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1099,16 +1099,16 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     initEReference(getConditionRules_Rule2(), this.getConditionRules(), null, "rule2", null, 0, 1, ConditionRules.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rangeEClass, Range.class, "Range", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRange_Bounded(), this.getBoundedRange(), null, "bounded", null, 0, 1, Range.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRange_Unbounded(), this.getUnboundedRange(), null, "unbounded", null, 0, 1, Range.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(boundedRangeEClass, BoundedRange.class, "BoundedRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBoundedRange_LowerBound(), ecorePackage.getEInt(), "lowerBound", null, 0, 1, BoundedRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBoundedRange_HigherBound(), ecorePackage.getEInt(), "higherBound", null, 0, 1, BoundedRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(unboundedRangeEClass, UnboundedRange.class, "UnboundedRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getUnboundedRange_Left(), ecorePackage.getEString(), "left", null, 0, 1, UnboundedRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUnboundedRange_Right(), ecorePackage.getEString(), "right", null, 0, 1, UnboundedRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(leftUnboundedRangeEClass, LeftUnboundedRange.class, "LeftUnboundedRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLeftUnboundedRange_LowerBound(), ecorePackage.getEInt(), "lowerBound", null, 0, 1, LeftUnboundedRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rightUnboundedRangeEClass, RightUnboundedRange.class, "RightUnboundedRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRightUnboundedRange_HigherBound(), ecorePackage.getEInt(), "higherBound", null, 0, 1, RightUnboundedRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(gridEClass, Grid.class, "Grid", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getGrid_Size(), this.getSize(), null, "size", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

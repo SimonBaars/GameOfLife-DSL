@@ -12,14 +12,14 @@ import com.simonbaars.goLDSL.ConditionRules;
 import com.simonbaars.goLDSL.DSL;
 import com.simonbaars.goLDSL.GoLDSLPackage;
 import com.simonbaars.goLDSL.Grid;
+import com.simonbaars.goLDSL.LeftUnboundedRange;
 import com.simonbaars.goLDSL.Objects;
 import com.simonbaars.goLDSL.Offset;
-import com.simonbaars.goLDSL.Range;
+import com.simonbaars.goLDSL.RightUnboundedRange;
 import com.simonbaars.goLDSL.Rule;
 import com.simonbaars.goLDSL.ShapeDef;
 import com.simonbaars.goLDSL.ShapeRef;
 import com.simonbaars.goLDSL.Size;
-import com.simonbaars.goLDSL.UnboundedRange;
 import com.simonbaars.services.GoLDSLGrammarAccess;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -67,14 +67,17 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case GoLDSLPackage.GRID:
 				sequence_Grid(context, (Grid) semanticObject); 
 				return; 
+			case GoLDSLPackage.LEFT_UNBOUNDED_RANGE:
+				sequence_LeftUnboundedRange(context, (LeftUnboundedRange) semanticObject); 
+				return; 
 			case GoLDSLPackage.OBJECTS:
 				sequence_Objects(context, (Objects) semanticObject); 
 				return; 
 			case GoLDSLPackage.OFFSET:
 				sequence_Offset(context, (Offset) semanticObject); 
 				return; 
-			case GoLDSLPackage.RANGE:
-				sequence_Range(context, (Range) semanticObject); 
+			case GoLDSLPackage.RIGHT_UNBOUNDED_RANGE:
+				sequence_RightUnboundedRange(context, (RightUnboundedRange) semanticObject); 
 				return; 
 			case GoLDSLPackage.RULE:
 				sequence_Rule(context, (Rule) semanticObject); 
@@ -88,9 +91,6 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case GoLDSLPackage.SIZE:
 				sequence_Size(context, (Size) semanticObject); 
 				return; 
-			case GoLDSLPackage.UNBOUNDED_RANGE:
-				sequence_UnboundedRange(context, (UnboundedRange) semanticObject); 
-				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -98,6 +98,7 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     Range returns BoundedRange
 	 *     BoundedRange returns BoundedRange
 	 *
 	 * Constraint:
@@ -203,6 +204,25 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     Range returns LeftUnboundedRange
+	 *     LeftUnboundedRange returns LeftUnboundedRange
+	 *
+	 * Constraint:
+	 *     lowerBound=INT
+	 */
+	protected void sequence_LeftUnboundedRange(ISerializationContext context, LeftUnboundedRange semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.LEFT_UNBOUNDED_RANGE__LOWER_BOUND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.LEFT_UNBOUNDED_RANGE__LOWER_BOUND));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundINTTerminalRuleCall_0_0(), semanticObject.getLowerBound());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Board returns Objects
 	 *     Objects returns Objects
 	 *     Action returns Objects
@@ -238,13 +258,20 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     Range returns Range
+	 *     Range returns RightUnboundedRange
+	 *     RightUnboundedRange returns RightUnboundedRange
 	 *
 	 * Constraint:
-	 *     (bounded=BoundedRange | unbounded=UnboundedRange)
+	 *     higherBound=INT
 	 */
-	protected void sequence_Range(ISerializationContext context, Range semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_RightUnboundedRange(ISerializationContext context, RightUnboundedRange semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoLDSLPackage.Literals.RIGHT_UNBOUNDED_RANGE__HIGHER_BOUND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoLDSLPackage.Literals.RIGHT_UNBOUNDED_RANGE__HIGHER_BOUND));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRightUnboundedRangeAccess().getHigherBoundINTTerminalRuleCall_1_0(), semanticObject.getHigherBound());
+		feeder.finish();
 	}
 	
 	
@@ -323,18 +350,6 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		feeder.accept(grammarAccess.getSizeAccess().getWidthINTTerminalRuleCall_1_0(), semanticObject.getWidth());
 		feeder.accept(grammarAccess.getSizeAccess().getHeightINTTerminalRuleCall_2_0(), semanticObject.getHeight());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     UnboundedRange returns UnboundedRange
-	 *
-	 * Constraint:
-	 *     (left=LeftUnboundedRange | right=RightUnboundedRange)
-	 */
-	protected void sequence_UnboundedRange(ISerializationContext context, UnboundedRange semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

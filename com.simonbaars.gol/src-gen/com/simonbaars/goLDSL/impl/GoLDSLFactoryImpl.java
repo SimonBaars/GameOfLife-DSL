@@ -82,7 +82,8 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
       case GoLDSLPackage.CONDITION_RULES: return createConditionRules();
       case GoLDSLPackage.RANGE: return createRange();
       case GoLDSLPackage.BOUNDED_RANGE: return createBoundedRange();
-      case GoLDSLPackage.UNBOUNDED_RANGE: return createUnboundedRange();
+      case GoLDSLPackage.LEFT_UNBOUNDED_RANGE: return createLeftUnboundedRange();
+      case GoLDSLPackage.RIGHT_UNBOUNDED_RANGE: return createRightUnboundedRange();
       case GoLDSLPackage.GRID: return createGrid();
       case GoLDSLPackage.OFFSET: return createOffset();
       case GoLDSLPackage.SIZE: return createSize();
@@ -327,10 +328,22 @@ public class GoLDSLFactoryImpl extends EFactoryImpl implements GoLDSLFactory
    * @generated
    */
   @Override
-  public UnboundedRange createUnboundedRange()
+  public LeftUnboundedRange createLeftUnboundedRange()
   {
-    UnboundedRangeImpl unboundedRange = new UnboundedRangeImpl();
-    return unboundedRange;
+    LeftUnboundedRangeImpl leftUnboundedRange = new LeftUnboundedRangeImpl();
+    return leftUnboundedRange;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public RightUnboundedRange createRightUnboundedRange()
+  {
+    RightUnboundedRangeImpl rightUnboundedRange = new RightUnboundedRangeImpl();
+    return rightUnboundedRange;
   }
 
   /**

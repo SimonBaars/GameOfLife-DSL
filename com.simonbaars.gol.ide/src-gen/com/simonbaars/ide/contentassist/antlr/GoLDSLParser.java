@@ -35,7 +35,6 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getObjectsAccess().getAlternatives(), "rule__Objects__Alternatives");
 			builder.put(grammarAccess.getConditionRuleAccess().getAlternatives(), "rule__ConditionRule__Alternatives");
 			builder.put(grammarAccess.getRangeAccess().getAlternatives(), "rule__Range__Alternatives");
-			builder.put(grammarAccess.getUnboundedRangeAccess().getAlternatives(), "rule__UnboundedRange__Alternatives");
 			builder.put(grammarAccess.getBoolOperatorAccess().getAlternatives(), "rule__BoolOperator__Alternatives");
 			builder.put(grammarAccess.getGridPartAccess().getAlternatives(), "rule__GridPart__Alternatives");
 			builder.put(grammarAccess.getDSLAccess().getGroup(), "rule__DSL__Group__0");
@@ -81,12 +80,10 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getConditionRulesAccess().getRule1Assignment_0(), "rule__ConditionRules__Rule1Assignment_0");
 			builder.put(grammarAccess.getConditionRulesAccess().getOperatorAssignment_1_0(), "rule__ConditionRules__OperatorAssignment_1_0");
 			builder.put(grammarAccess.getConditionRulesAccess().getRule2Assignment_1_1(), "rule__ConditionRules__Rule2Assignment_1_1");
-			builder.put(grammarAccess.getRangeAccess().getBoundedAssignment_0(), "rule__Range__BoundedAssignment_0");
-			builder.put(grammarAccess.getRangeAccess().getUnboundedAssignment_1(), "rule__Range__UnboundedAssignment_1");
 			builder.put(grammarAccess.getBoundedRangeAccess().getLowerBoundAssignment_0(), "rule__BoundedRange__LowerBoundAssignment_0");
 			builder.put(grammarAccess.getBoundedRangeAccess().getHigherBoundAssignment_2(), "rule__BoundedRange__HigherBoundAssignment_2");
-			builder.put(grammarAccess.getUnboundedRangeAccess().getLeftAssignment_0(), "rule__UnboundedRange__LeftAssignment_0");
-			builder.put(grammarAccess.getUnboundedRangeAccess().getRightAssignment_1(), "rule__UnboundedRange__RightAssignment_1");
+			builder.put(grammarAccess.getLeftUnboundedRangeAccess().getLowerBoundAssignment_0(), "rule__LeftUnboundedRange__LowerBoundAssignment_0");
+			builder.put(grammarAccess.getRightUnboundedRangeAccess().getHigherBoundAssignment_1(), "rule__RightUnboundedRange__HigherBoundAssignment_1");
 			builder.put(grammarAccess.getGridAccess().getSizeAssignment_1(), "rule__Grid__SizeAssignment_1");
 			builder.put(grammarAccess.getGridAccess().getPartsAssignment_2(), "rule__Grid__PartsAssignment_2");
 			builder.put(grammarAccess.getOffsetAccess().getXAssignment_1(), "rule__Offset__XAssignment_1");
