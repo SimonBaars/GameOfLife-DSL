@@ -472,6 +472,28 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
    * @generated
    */
   @Override
+  public EReference getCellDef_Offset()
+  {
+    return (EReference)cellDefEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCellDef_Cell()
+  {
+    return (EReference)cellDefEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getShapeRef()
   {
     return shapeRefEClass;
@@ -961,6 +983,8 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     cellsEClass = createEClass(CELLS);
 
     cellDefEClass = createEClass(CELL_DEF);
+    createEReference(cellDefEClass, CELL_DEF__OFFSET);
+    createEReference(cellDefEClass, CELL_DEF__CELL);
 
     shapeRefEClass = createEClass(SHAPE_REF);
     createEAttribute(shapeRefEClass, SHAPE_REF__NAME);
@@ -1051,7 +1075,6 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     objectsEClass.getESuperTypes().add(this.getBoard());
     objectsEClass.getESuperTypes().add(this.getAction());
     cellPairsEClass.getESuperTypes().add(this.getCells());
-    cellEClass.getESuperTypes().add(this.getCellDef());
     conditionRulesEClass.getESuperTypes().add(this.getCondition());
     boundedRangeEClass.getESuperTypes().add(this.getRange());
     leftUnboundedRangeEClass.getESuperTypes().add(this.getRange());
@@ -1082,6 +1105,8 @@ public class GoLDSLPackageImpl extends EPackageImpl implements GoLDSLPackage
     initEClass(cellsEClass, Cells.class, "Cells", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(cellDefEClass, CellDef.class, "CellDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCellDef_Offset(), this.getOffset(), null, "offset", null, 0, 1, CellDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCellDef_Cell(), this.getCell(), null, "cell", null, 0, 1, CellDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(shapeRefEClass, ShapeRef.class, "ShapeRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getShapeRef_Name(), ecorePackage.getEString(), "name", null, 0, 1, ShapeRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

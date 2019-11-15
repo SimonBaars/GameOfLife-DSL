@@ -3,22 +3,56 @@
  */
 package com.simonbaars.goLDSL.impl;
 
+import com.simonbaars.goLDSL.Cell;
 import com.simonbaars.goLDSL.CellDef;
 import com.simonbaars.goLDSL.GoLDSLPackage;
+import com.simonbaars.goLDSL.Offset;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Cell Def</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link com.simonbaars.goLDSL.impl.CellDefImpl#getOffset <em>Offset</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.impl.CellDefImpl#getCell <em>Cell</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class CellDefImpl extends MinimalEObjectImpl.Container implements CellDef
 {
+  /**
+   * The cached value of the '{@link #getOffset() <em>Offset</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOffset()
+   * @generated
+   * @ordered
+   */
+  protected Offset offset;
+
+  /**
+   * The cached value of the '{@link #getCell() <em>Cell</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCell()
+   * @generated
+   * @ordered
+   */
+  protected Cell cell;
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -38,6 +72,200 @@ public class CellDefImpl extends MinimalEObjectImpl.Container implements CellDef
   protected EClass eStaticClass()
   {
     return GoLDSLPackage.Literals.CELL_DEF;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Offset getOffset()
+  {
+    return offset;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetOffset(Offset newOffset, NotificationChain msgs)
+  {
+    Offset oldOffset = offset;
+    offset = newOffset;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CELL_DEF__OFFSET, oldOffset, newOffset);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setOffset(Offset newOffset)
+  {
+    if (newOffset != offset)
+    {
+      NotificationChain msgs = null;
+      if (offset != null)
+        msgs = ((InternalEObject)offset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.CELL_DEF__OFFSET, null, msgs);
+      if (newOffset != null)
+        msgs = ((InternalEObject)newOffset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.CELL_DEF__OFFSET, null, msgs);
+      msgs = basicSetOffset(newOffset, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CELL_DEF__OFFSET, newOffset, newOffset));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Cell getCell()
+  {
+    return cell;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetCell(Cell newCell, NotificationChain msgs)
+  {
+    Cell oldCell = cell;
+    cell = newCell;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CELL_DEF__CELL, oldCell, newCell);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCell(Cell newCell)
+  {
+    if (newCell != cell)
+    {
+      NotificationChain msgs = null;
+      if (cell != null)
+        msgs = ((InternalEObject)cell).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.CELL_DEF__CELL, null, msgs);
+      if (newCell != null)
+        msgs = ((InternalEObject)newCell).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoLDSLPackage.CELL_DEF__CELL, null, msgs);
+      msgs = basicSetCell(newCell, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoLDSLPackage.CELL_DEF__CELL, newCell, newCell));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GoLDSLPackage.CELL_DEF__OFFSET:
+        return basicSetOffset(null, msgs);
+      case GoLDSLPackage.CELL_DEF__CELL:
+        return basicSetCell(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case GoLDSLPackage.CELL_DEF__OFFSET:
+        return getOffset();
+      case GoLDSLPackage.CELL_DEF__CELL:
+        return getCell();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case GoLDSLPackage.CELL_DEF__OFFSET:
+        setOffset((Offset)newValue);
+        return;
+      case GoLDSLPackage.CELL_DEF__CELL:
+        setCell((Cell)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case GoLDSLPackage.CELL_DEF__OFFSET:
+        setOffset((Offset)null);
+        return;
+      case GoLDSLPackage.CELL_DEF__CELL:
+        setCell((Cell)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case GoLDSLPackage.CELL_DEF__OFFSET:
+        return offset != null;
+      case GoLDSLPackage.CELL_DEF__CELL:
+        return cell != null;
+    }
+    return super.eIsSet(featureID);
   }
 
 } //CellDefImpl

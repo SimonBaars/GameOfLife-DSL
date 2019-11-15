@@ -67,6 +67,8 @@ public class GoLDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getShapeDefAccess().getOffsetAssignment_3(), "rule__ShapeDef__OffsetAssignment_3");
 			builder.put(grammarAccess.getShapeDefAccess().getObjectsAssignment_4(), "rule__ShapeDef__ObjectsAssignment_4");
 			builder.put(grammarAccess.getCellPairsAccess().getCellsAssignment_1(), "rule__CellPairs__CellsAssignment_1");
+			builder.put(grammarAccess.getCellDefAccess().getOffsetAssignment_1(), "rule__CellDef__OffsetAssignment_1");
+			builder.put(grammarAccess.getCellDefAccess().getCellAssignment_2(), "rule__CellDef__CellAssignment_2");
 			builder.put(grammarAccess.getShapeRefAccess().getNameAssignment_1(), "rule__ShapeRef__NameAssignment_1");
 			builder.put(grammarAccess.getShapeRefAccess().getXAssignment_3(), "rule__ShapeRef__XAssignment_3");
 			builder.put(grammarAccess.getShapeRefAccess().getYAssignment_5(), "rule__ShapeRef__YAssignment_5");

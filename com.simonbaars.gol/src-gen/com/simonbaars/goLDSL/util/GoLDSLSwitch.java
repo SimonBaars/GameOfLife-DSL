@@ -136,7 +136,6 @@ public class GoLDSLSwitch<T> extends Switch<T>
       {
         Cell cell = (Cell)theEObject;
         T result = caseCell(cell);
-        if (result == null) result = caseCellDef(cell);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

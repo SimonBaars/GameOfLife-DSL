@@ -493,10 +493,10 @@ public class InternalGoLDSLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGoLDSL.g:2723:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalGoLDSL.g:2723:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalGoLDSL.g:2780:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalGoLDSL.g:2780:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalGoLDSL.g:2723:11: ( '^' )?
+            // InternalGoLDSL.g:2780:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -505,7 +505,7 @@ public class InternalGoLDSLLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalGoLDSL.g:2723:11: '^'
+                    // InternalGoLDSL.g:2780:11: '^'
                     {
                     match('^'); 
 
@@ -523,7 +523,7 @@ public class InternalGoLDSLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalGoLDSL.g:2723:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalGoLDSL.g:2780:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -572,10 +572,10 @@ public class InternalGoLDSLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGoLDSL.g:2725:10: ( ( '0' .. '9' )+ )
-            // InternalGoLDSL.g:2725:12: ( '0' .. '9' )+
+            // InternalGoLDSL.g:2782:10: ( ( '0' .. '9' )+ )
+            // InternalGoLDSL.g:2782:12: ( '0' .. '9' )+
             {
-            // InternalGoLDSL.g:2725:12: ( '0' .. '9' )+
+            // InternalGoLDSL.g:2782:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -589,7 +589,7 @@ public class InternalGoLDSLLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalGoLDSL.g:2725:13: '0' .. '9'
+            	    // InternalGoLDSL.g:2782:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -621,10 +621,10 @@ public class InternalGoLDSLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGoLDSL.g:2727:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalGoLDSL.g:2727:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalGoLDSL.g:2784:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalGoLDSL.g:2784:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalGoLDSL.g:2727:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalGoLDSL.g:2784:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -642,10 +642,10 @@ public class InternalGoLDSLLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalGoLDSL.g:2727:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalGoLDSL.g:2784:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalGoLDSL.g:2727:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalGoLDSL.g:2784:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -661,7 +661,7 @@ public class InternalGoLDSLLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalGoLDSL.g:2727:21: '\\\\' .
+                    	    // InternalGoLDSL.g:2784:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -669,7 +669,7 @@ public class InternalGoLDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalGoLDSL.g:2727:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalGoLDSL.g:2784:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -694,10 +694,10 @@ public class InternalGoLDSLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalGoLDSL.g:2727:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalGoLDSL.g:2784:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalGoLDSL.g:2727:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalGoLDSL.g:2784:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -713,7 +713,7 @@ public class InternalGoLDSLLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalGoLDSL.g:2727:54: '\\\\' .
+                    	    // InternalGoLDSL.g:2784:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -721,7 +721,7 @@ public class InternalGoLDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalGoLDSL.g:2727:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalGoLDSL.g:2784:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -764,12 +764,12 @@ public class InternalGoLDSLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGoLDSL.g:2729:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalGoLDSL.g:2729:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalGoLDSL.g:2786:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalGoLDSL.g:2786:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalGoLDSL.g:2729:24: ( options {greedy=false; } : . )*
+            // InternalGoLDSL.g:2786:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -794,7 +794,7 @@ public class InternalGoLDSLLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalGoLDSL.g:2729:52: .
+            	    // InternalGoLDSL.g:2786:52: .
             	    {
             	    matchAny(); 
 
@@ -824,12 +824,12 @@ public class InternalGoLDSLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGoLDSL.g:2731:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalGoLDSL.g:2731:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalGoLDSL.g:2788:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalGoLDSL.g:2788:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalGoLDSL.g:2731:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalGoLDSL.g:2788:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -842,7 +842,7 @@ public class InternalGoLDSLLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalGoLDSL.g:2731:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalGoLDSL.g:2788:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -862,7 +862,7 @@ public class InternalGoLDSLLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalGoLDSL.g:2731:40: ( ( '\\r' )? '\\n' )?
+            // InternalGoLDSL.g:2788:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -871,9 +871,9 @@ public class InternalGoLDSLLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalGoLDSL.g:2731:41: ( '\\r' )? '\\n'
+                    // InternalGoLDSL.g:2788:41: ( '\\r' )? '\\n'
                     {
-                    // InternalGoLDSL.g:2731:41: ( '\\r' )?
+                    // InternalGoLDSL.g:2788:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -882,7 +882,7 @@ public class InternalGoLDSLLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalGoLDSL.g:2731:41: '\\r'
+                            // InternalGoLDSL.g:2788:41: '\\r'
                             {
                             match('\r'); 
 
@@ -914,10 +914,10 @@ public class InternalGoLDSLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGoLDSL.g:2733:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalGoLDSL.g:2733:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalGoLDSL.g:2790:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalGoLDSL.g:2790:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalGoLDSL.g:2733:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalGoLDSL.g:2790:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -971,8 +971,8 @@ public class InternalGoLDSLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGoLDSL.g:2735:16: ( . )
-            // InternalGoLDSL.g:2735:18: .
+            // InternalGoLDSL.g:2792:16: ( . )
+            // InternalGoLDSL.g:2792:18: .
             {
             matchAny(); 
 

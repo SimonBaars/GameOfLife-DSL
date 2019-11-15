@@ -114,7 +114,7 @@ public class RulesOfLife {
 	}
 	
 	def static cellListToJava(EList<CellDef> cells, Position offset) {
-		cells.stream.map(cell | cellToJava(cell as Cell, offset)).collect(Collectors.joining(System.lineSeparator));
+		cells.stream.map(cell | cellToJava(cell.cell, cell.offset === null ? offset : merge(pos(-cell.offset.x, -cell.offset.y), offset))).collect(Collectors.joining(System.lineSeparator));
 	}
 	
 	def static cellToJava(Cell cell, Position offset){

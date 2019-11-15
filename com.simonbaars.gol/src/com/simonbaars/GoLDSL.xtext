@@ -8,7 +8,7 @@ Objects: (shapes += ShapeRef | cell += CellDef | cells += Cells | grids += Grid)
 ShapeDef: 'Shape' name=ID ':' offset=Offset? objects = Objects;
 CellPairs: ('(' cells += Cell ')')+;
 Cells: 'Cells:' CellPairs;
-CellDef: 'Cell:' Cell;
+CellDef: 'Cell:' offset = Offset? cell = Cell;
 ShapeRef: 'Shape' name=ID ':' x=INT ',' y=INT;
 Cell: x=INT ',' y=INT;
 Rule: 'Rule:' condition=Condition action=Action;

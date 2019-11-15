@@ -282,13 +282,31 @@ public interface GoLDSLPackage extends EPackage
   int CELL_DEF = 6;
 
   /**
+   * The feature id for the '<em><b>Offset</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CELL_DEF__OFFSET = 0;
+
+  /**
+   * The feature id for the '<em><b>Cell</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CELL_DEF__CELL = 1;
+
+  /**
    * The number of structural features of the '<em>Cell Def</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CELL_DEF_FEATURE_COUNT = 0;
+  int CELL_DEF_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.ShapeRefImpl <em>Shape Ref</em>}' class.
@@ -353,7 +371,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CELL__X = CELL_DEF_FEATURE_COUNT + 0;
+  int CELL__X = 0;
 
   /**
    * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -362,7 +380,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CELL__Y = CELL_DEF_FEATURE_COUNT + 1;
+  int CELL__Y = 1;
 
   /**
    * The number of structural features of the '<em>Cell</em>' class.
@@ -371,7 +389,7 @@ public interface GoLDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CELL_FEATURE_COUNT = CELL_DEF_FEATURE_COUNT + 2;
+  int CELL_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link com.simonbaars.goLDSL.impl.RuleImpl <em>Rule</em>}' class.
@@ -985,6 +1003,28 @@ public interface GoLDSLPackage extends EPackage
   EClass getCellDef();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.simonbaars.goLDSL.CellDef#getOffset <em>Offset</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Offset</em>'.
+   * @see com.simonbaars.goLDSL.CellDef#getOffset()
+   * @see #getCellDef()
+   * @generated
+   */
+  EReference getCellDef_Offset();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.simonbaars.goLDSL.CellDef#getCell <em>Cell</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Cell</em>'.
+   * @see com.simonbaars.goLDSL.CellDef#getCell()
+   * @see #getCellDef()
+   * @generated
+   */
+  EReference getCellDef_Cell();
+
+  /**
    * Returns the meta object for class '{@link com.simonbaars.goLDSL.ShapeRef <em>Shape Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1588,6 +1628,22 @@ public interface GoLDSLPackage extends EPackage
      * @generated
      */
     EClass CELL_DEF = eINSTANCE.getCellDef();
+
+    /**
+     * The meta object literal for the '<em><b>Offset</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CELL_DEF__OFFSET = eINSTANCE.getCellDef_Offset();
+
+    /**
+     * The meta object literal for the '<em><b>Cell</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CELL_DEF__CELL = eINSTANCE.getCellDef_Cell();
 
     /**
      * The meta object literal for the '{@link com.simonbaars.goLDSL.impl.ShapeRefImpl <em>Shape Ref</em>}' class.

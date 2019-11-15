@@ -6,6 +6,7 @@ package com.simonbaars.serializer;
 import com.google.inject.Inject;
 import com.simonbaars.goLDSL.BoundedRange;
 import com.simonbaars.goLDSL.Cell;
+import com.simonbaars.goLDSL.CellDef;
 import com.simonbaars.goLDSL.CellPairs;
 import com.simonbaars.goLDSL.ConditionRule;
 import com.simonbaars.goLDSL.ConditionRules;
@@ -51,6 +52,9 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				return; 
 			case GoLDSLPackage.CELL:
 				sequence_Cell(context, (Cell) semanticObject); 
+				return; 
+			case GoLDSLPackage.CELL_DEF:
+				sequence_CellDef(context, (CellDef) semanticObject); 
 				return; 
 			case GoLDSLPackage.CELL_PAIRS:
 				sequence_CellPairs(context, (CellPairs) semanticObject); 
@@ -120,6 +124,18 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     CellDef returns CellDef
+	 *
+	 * Constraint:
+	 *     (offset=Offset? cell=Cell)
+	 */
+	protected void sequence_CellDef(ISerializationContext context, CellDef semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     CellPairs returns CellPairs
 	 *     Cells returns CellPairs
 	 *
@@ -133,7 +149,6 @@ public class GoLDSLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     CellDef returns Cell
 	 *     Cell returns Cell
 	 *
 	 * Constraint:

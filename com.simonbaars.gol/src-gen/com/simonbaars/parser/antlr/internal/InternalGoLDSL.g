@@ -449,14 +449,44 @@ ruleCellDef returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getCellDefAccess().getCellKeyword_0());
 		}
-		{
-			newCompositeNode(grammarAccess.getCellDefAccess().getCellParserRuleCall_1());
-		}
-		this_Cell_1=ruleCell
-		{
-			$current = $this_Cell_1.current;
-			afterParserOrEnumRuleCall();
-		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getCellDefAccess().getOffsetOffsetParserRuleCall_1_0());
+				}
+				lv_offset_1_0=ruleOffset
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getCellDefRule());
+					}
+					set(
+						$current,
+						"offset",
+						lv_offset_1_0,
+						"com.simonbaars.GoLDSL.Offset");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getCellDefAccess().getCellCellParserRuleCall_2_0());
+				}
+				lv_cell_2_0=ruleCell
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getCellDefRule());
+					}
+					set(
+						$current,
+						"cell",
+						lv_cell_2_0,
+						"com.simonbaars.GoLDSL.Cell");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 

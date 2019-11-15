@@ -10,6 +10,13 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Cell Def</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link com.simonbaars.goLDSL.CellDef#getOffset <em>Offset</em>}</li>
+ *   <li>{@link com.simonbaars.goLDSL.CellDef#getCell <em>Cell</em>}</li>
+ * </ul>
  *
  * @see com.simonbaars.goLDSL.GoLDSLPackage#getCellDef()
  * @model
@@ -17,4 +24,48 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface CellDef extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Offset</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Offset</em>' containment reference.
+   * @see #setOffset(Offset)
+   * @see com.simonbaars.goLDSL.GoLDSLPackage#getCellDef_Offset()
+   * @model containment="true"
+   * @generated
+   */
+  Offset getOffset();
+
+  /**
+   * Sets the value of the '{@link com.simonbaars.goLDSL.CellDef#getOffset <em>Offset</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Offset</em>' containment reference.
+   * @see #getOffset()
+   * @generated
+   */
+  void setOffset(Offset value);
+
+  /**
+   * Returns the value of the '<em><b>Cell</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Cell</em>' containment reference.
+   * @see #setCell(Cell)
+   * @see com.simonbaars.goLDSL.GoLDSLPackage#getCellDef_Cell()
+   * @model containment="true"
+   * @generated
+   */
+  Cell getCell();
+
+  /**
+   * Sets the value of the '{@link com.simonbaars.goLDSL.CellDef#getCell <em>Cell</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Cell</em>' containment reference.
+   * @see #getCell()
+   * @generated
+   */
+  void setCell(Cell value);
+
 } // CellDef

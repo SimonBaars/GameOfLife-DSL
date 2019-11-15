@@ -219,20 +219,32 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.CellDef");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCellKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cCellParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cOffsetAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cOffsetOffsetParserRuleCall_1_0 = (RuleCall)cOffsetAssignment_1.eContents().get(0);
+		private final Assignment cCellAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cCellCellParserRuleCall_2_0 = (RuleCall)cCellAssignment_2.eContents().get(0);
 		
 		//CellDef:
-		//	'Cell:' Cell;
+		//	'Cell:' offset=Offset? cell=Cell;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Cell:' Cell
+		//'Cell:' offset=Offset? cell=Cell
 		public Group getGroup() { return cGroup; }
 		
 		//'Cell:'
 		public Keyword getCellKeyword_0() { return cCellKeyword_0; }
 		
+		//offset=Offset?
+		public Assignment getOffsetAssignment_1() { return cOffsetAssignment_1; }
+		
+		//Offset
+		public RuleCall getOffsetOffsetParserRuleCall_1_0() { return cOffsetOffsetParserRuleCall_1_0; }
+		
+		//cell=Cell
+		public Assignment getCellAssignment_2() { return cCellAssignment_2; }
+		
 		//Cell
-		public RuleCall getCellParserRuleCall_1() { return cCellParserRuleCall_1; }
+		public RuleCall getCellCellParserRuleCall_2_0() { return cCellCellParserRuleCall_2_0; }
 	}
 	public class ShapeRefElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.simonbaars.GoLDSL.ShapeRef");
@@ -858,7 +870,7 @@ public class GoLDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//CellDef:
-	//	'Cell:' Cell;
+	//	'Cell:' offset=Offset? cell=Cell;
 	public CellDefElements getCellDefAccess() {
 		return pCellDef;
 	}

@@ -217,7 +217,20 @@ public class JavaGenerator {
   
   public static String cellListToJava(final EList<CellDef> cells, final Position offset) {
     final Function<CellDef, String> _function = (CellDef cell) -> {
-      return JavaGenerator.cellToJava(((Cell) cell), offset);
+      Cell _cell = cell.getCell();
+      Position _xifexpression = null;
+      Offset _offset = cell.getOffset();
+      boolean _tripleEquals = (_offset == null);
+      if (_tripleEquals) {
+        _xifexpression = offset;
+      } else {
+        int _x = cell.getOffset().getX();
+        int _minus = (-_x);
+        int _y = cell.getOffset().getY();
+        int _minus_1 = (-_y);
+        _xifexpression = JavaGenerator.merge(JavaGenerator.pos(_minus, _minus_1), offset);
+      }
+      return JavaGenerator.cellToJava(_cell, _xifexpression);
     };
     return cells.stream().<String>map(_function).collect(Collectors.joining(System.lineSeparator()));
   }

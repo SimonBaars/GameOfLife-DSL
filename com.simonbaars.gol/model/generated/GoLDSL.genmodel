@@ -35,7 +35,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//CellPairs/cells"/>
     </genClasses>
     <genClasses ecoreClass="GoLDSL.ecore#//Cells"/>
-    <genClasses ecoreClass="GoLDSL.ecore#//CellDef"/>
+    <genClasses ecoreClass="GoLDSL.ecore#//CellDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//CellDef/offset"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GoLDSL.ecore#//CellDef/cell"/>
+    </genClasses>
     <genClasses ecoreClass="GoLDSL.ecore#//ShapeRef">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//ShapeRef/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GoLDSL.ecore#//ShapeRef/x"/>
