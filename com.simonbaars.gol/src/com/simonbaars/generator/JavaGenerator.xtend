@@ -40,11 +40,11 @@ import java.util.List;
 public class RulesOfLife {
 
 	public static void computeSurvivors(boolean[][] board, List<Point> points, int surrounding, int i, int j) {
-		«getRules(dsl.getRules, dsl.getShapes)»
+		«getRules(dsl.rules, dsl.shapes)»
 	}
 
 	public static void determineBeginPoints(List<Point> points) {
-		«getBeginPoints(dsl.getBoard, dsl.getShapes)»
+		«getBeginPoints(dsl.board, dsl.shapes)»
 		
 	}
 
@@ -98,7 +98,7 @@ public class RulesOfLife {
 	}
 	
 	def static String objectsToJava(Objects objects, EList<ShapeDef> shapes, Position offset) {
-		shapesToJava(objects.getShapes, shapes, offset) + cellsToJava(objects.getCells, offset) + cellListToJava(objects.getCell, offset) + gridsToJava(objects.getGrids, offset)
+		shapesToJava(objects.shapes, shapes, offset) + cellsToJava(objects.cells, offset) + cellListToJava(objects.cell, offset) + gridsToJava(objects.grids, offset)
 	}
 	
 	def static gridsToJava(EList<Grid> grids, Position offset) {
@@ -106,11 +106,11 @@ public class RulesOfLife {
 	}
 	
 	def static gridToJava(Grid grid, Position offset) {
-		IntStream.range(0, grid.getSize.getWidth).boxed.flatMap(x | IntStream.range(0, grid.getSize.getHeight).boxed.map(y | pos(x, y))).filter(pos | grid.getParts.get(pos.getX + grid.getSize.getWidth * pos.getY) == GridPart.ALIVE).map(pos | cellToJava(merge(pos, offset))).collect(Collectors.joining(System.lineSeparator))
+		IntStream.range(0, grid.size.width).boxed.flatMap(x | IntStream.range(0, grid.size.height).boxed.map(y | pos(x, y))).filter(pos | grid.parts.get(pos.x + grid.size.width * pos.y) == GridPart.ALIVE).map(pos | cellToJava(merge(pos, offset))).collect(Collectors.joining(System.lineSeparator))
 	}
 		
 	def static merge(Position pos1, Position pos2) {
-		new Position(pos1.getX + pos2.getX, pos1.getY + pos2.getY, pos1.isRule || pos2.isRule)
+		new Position(pos1.x + pos2.x, pos1.y + pos2.y, pos1.isRule || pos2.isRule)
 	}
 	
 	def static cellListToJava(EList<CellDef> cells, Position offset) {
@@ -126,7 +126,7 @@ public class RulesOfLife {
 	}
 	
 	def static cellToJava(Position pos) {
-		"points.add(new Point("+(pos.isRule ? "i + " : "")+pos.getX+", "+(pos.isRule ? "j + " : "")+pos.getY+"));"
+		"points.add(new Point("+(pos.isRule ? "i + " : "")+pos.x+", "+(pos.isRule ? "j + " : "")+pos.y+"));"
 	}
 	
 	def static cellsToJava(EList<Cells> cells, Position offset) {
@@ -134,19 +134,19 @@ public class RulesOfLife {
 	}
 	
 	def static cellsToJava(CellPairs cells, Position offset) {
-		cells.getCells.stream.map(cell | cellToJava(cell, offset)).collect(Collectors.joining(System.lineSeparator));
+		cells.cells.stream.map(cell | cellToJava(cell, offset)).collect(Collectors.joining(System.lineSeparator));
 	}
 	
 	def static shapesToJava(EList<ShapeRef> refs, EList<ShapeDef> shapes, Position offset) {
-		refs.stream.map(ref | shapeToJava(shapes, getShapeByName(shapes, ref.getName), merge(offset, pos(ref.getX, ref.getY)))).collect(Collectors.joining(System.lineSeparator));
+		refs.stream.map(ref | shapeToJava(shapes, getShapeByName(shapes, ref.name), merge(offset, pos(ref.x, ref.y)))).collect(Collectors.joining(System.lineSeparator));
 	}
 	
 	def static shapeToJava(EList<ShapeDef> shapes, ShapeDef shape, Position offset) {
-		objectsToJava(shape.getObjects, shapes, merge(offset, shape.getOffset === null ? pos(0,0) : pos(-shape.getOffset.getX, -shape.getOffset.getY)))
+		objectsToJava(shape.objects, shapes, merge(offset, shape.offset === null ? pos(0,0) : pos(-shape.offset.x, -shape.offset.y)))
 	}
 	
 	def static getShapeByName(EList<ShapeDef> shapes, String name) {
-		shapes.stream.filter(shape | shape.getName.equals(name)).findAny.get
+		shapes.stream.filter(shape | shape.name.equals(name)).findAny.get
 	}
 	
 }
