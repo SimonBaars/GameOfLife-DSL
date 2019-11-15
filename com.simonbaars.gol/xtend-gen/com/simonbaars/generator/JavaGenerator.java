@@ -47,7 +47,7 @@ public class JavaGenerator {
     _builder.newLine();
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("public static void computeSurvivors(boolean[][] board, List<Point> points, int surrounding) {");
+    _builder.append("public static void computeSurvivors(boolean[][] board, List<Point> points, int surrounding, int i, int j) {");
     _builder.newLine();
     _builder.append("\t\t");
     String _rules = JavaGenerator.getRules(dsl.getRules(), dsl.getShapes());
@@ -209,7 +209,7 @@ public class JavaGenerator {
     int _y = pos1.getY();
     int _y_1 = pos2.getY();
     int _plus_1 = (_y + _y_1);
-    return JavaGenerator.pos(_plus, _plus_1);
+    return new Position(_plus, _plus_1, (pos1.isRule() || pos2.isRule()));
   }
   
   public static String cellListToJava(final EList<CellDef> cells, final Position offset) {
@@ -224,16 +224,32 @@ public class JavaGenerator {
   }
   
   public static Position pos(final int x, final int y) {
-    return new Position(x, y);
+    return new Position(x, y, false);
   }
   
   public static String cellToJava(final Position pos) {
+    String _xifexpression = null;
+    boolean _isRule = pos.isRule();
+    if (_isRule) {
+      _xifexpression = "i + ";
+    } else {
+      _xifexpression = "";
+    }
+    String _plus = ("points.add(new Point(" + _xifexpression);
     int _x = pos.getX();
-    String _plus = ("points.add(new Point(" + Integer.valueOf(_x));
-    String _plus_1 = (_plus + ", ");
+    String _plus_1 = (_plus + Integer.valueOf(_x));
+    String _plus_2 = (_plus_1 + ", ");
+    String _xifexpression_1 = null;
+    boolean _isRule_1 = pos.isRule();
+    if (_isRule_1) {
+      _xifexpression_1 = "j + ";
+    } else {
+      _xifexpression_1 = "";
+    }
+    String _plus_3 = (_plus_2 + _xifexpression_1);
     int _y = pos.getY();
-    String _plus_2 = (_plus_1 + Integer.valueOf(_y));
-    return (_plus_2 + "));");
+    String _plus_4 = (_plus_3 + Integer.valueOf(_y));
+    return (_plus_4 + "));");
   }
   
   public static String cellsToJava(final EList<Cells> cells, final Position offset) {

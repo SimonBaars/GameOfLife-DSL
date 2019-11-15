@@ -5,7 +5,7 @@ import java.util.List;
 
 public class RulesOfLife {
 
-	public static void computeSurvivors(boolean[][] gameBoard, List<Point> survivingCells, int surrounding) {
+	public static void computeSurvivors(boolean[][] gameBoard, List<Point> survivingCells, int surrounding, int i, int j) {
 	}
 
 	public static void determineBeginPoints(List<Point> points) {

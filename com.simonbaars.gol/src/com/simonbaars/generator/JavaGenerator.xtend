@@ -27,6 +27,7 @@ import org.eclipse.xtend.lib.annotations.Data
 @Data class Position {
 	int x
 	int y
+	boolean isRule
 }
 	
 class JavaGenerator {
@@ -38,7 +39,7 @@ import java.util.List;
 
 public class RulesOfLife {
 
-	public static void computeSurvivors(boolean[][] board, List<Point> points, int surrounding) {
+	public static void computeSurvivors(boolean[][] board, List<Point> points, int surrounding, int i, int j) {
 		«getRules(dsl.getRules, dsl.getShapes)»
 	}
 
@@ -85,7 +86,7 @@ public class RulesOfLife {
 	}
 		
 	def static actionToJava(Action action, EList<ShapeDef> shapes) {
-		objectsToJava(action.objects, shapes)
+		objectsToJava(action.objects, shapes, new Position(0, 0, true))
 	}
 	
 	def static getBeginPoints(Board board, EList<ShapeDef> shapes) {
@@ -109,7 +110,7 @@ public class RulesOfLife {
 	}
 		
 	def static merge(Position pos1, Position pos2) {
-		pos(pos1.getX + pos2.getX, pos1.getY + pos2.getY)
+		new Position(pos1.getX + pos2.getX, pos1.getY + pos2.getY, pos1.isRule || pos2.isRule)
 	}
 	
 	def static cellListToJava(EList<CellDef> cells, Position offset) {
@@ -121,11 +122,11 @@ public class RulesOfLife {
 	}
 	
 	def static pos(int x, int y){
-		new Position(x, y)
+		new Position(x, y, false)
 	}
 	
 	def static cellToJava(Position pos) {
-		"points.add(new Point("+pos.getX+", "+pos.getY+"));"
+		"points.add(new Point("+(pos.isRule ? "i + " : "")+pos.getX+", "+(pos.isRule ? "j + " : "")+pos.getY+"));"
 	}
 	
 	def static cellsToJava(EList<Cells> cells, Position offset) {

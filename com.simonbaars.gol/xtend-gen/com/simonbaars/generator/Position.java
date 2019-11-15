@@ -11,10 +11,13 @@ public class Position {
   
   private final int y;
   
-  public Position(final int x, final int y) {
+  private final boolean isRule;
+  
+  public Position(final int x, final int y, final boolean isRule) {
     super();
     this.x = x;
     this.y = y;
+    this.isRule = isRule;
   }
   
   @Override
@@ -23,7 +26,8 @@ public class Position {
     final int prime = 31;
     int result = 1;
     result = prime * result + this.x;
-    return prime * result + this.y;
+    result = prime * result + this.y;
+    return prime * result + (this.isRule ? 1231 : 1237);
   }
   
   @Override
@@ -40,6 +44,8 @@ public class Position {
       return false;
     if (other.y != this.y)
       return false;
+    if (other.isRule != this.isRule)
+      return false;
     return true;
   }
   
@@ -49,6 +55,7 @@ public class Position {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("x", this.x);
     b.add("y", this.y);
+    b.add("isRule", this.isRule);
     return b.toString();
   }
   
@@ -60,5 +67,10 @@ public class Position {
   @Pure
   public int getY() {
     return this.y;
+  }
+  
+  @Pure
+  public boolean isRule() {
+    return this.isRule;
   }
 }

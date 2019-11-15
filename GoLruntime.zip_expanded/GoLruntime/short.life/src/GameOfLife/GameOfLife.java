@@ -225,10 +225,6 @@ public class GameOfLife extends JFrame implements ActionListener {
             }
         }
  
-        public void removePoint(int x, int y) {
-            point.remove(new Point(x,y));
-        }
- 
         public void resetBoard() {
             point.clear();
         }
@@ -322,7 +318,7 @@ public class GameOfLife extends JFrame implements ActionListener {
                     if (gameBoard[i+1][j])   { surrounding++; }
                     if (gameBoard[i+1][j+1]) { surrounding++; }
 
-                    RulesOfLife.computeSurvivors(gameBoard, survivingCells, surrounding);
+                    RulesOfLife.computeSurvivors(gameBoard, survivingCells, surrounding, i, j);
                 }
             }
             
