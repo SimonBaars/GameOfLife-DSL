@@ -1,0 +1,26 @@
+Board:
+	Cell: 1, 1
+
+Rule:
+	If Alive & 0
+	Create Shape Glider: 0, 0
+
+Rule:
+	If Alive & 2 | Alive & 3 
+	Create Cell: 
+		offset 1 1
+		0, 0
+
+Rule:
+	If Dead & 3
+	Create Cell: 
+		offset 1 1
+		0, 0
+
+Shape Glider:
+	offset 1 1
+	Grid:
+		size 3 3
+		-+-
+		--+
+		+++

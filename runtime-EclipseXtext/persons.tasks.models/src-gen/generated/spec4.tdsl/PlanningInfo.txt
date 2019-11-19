@@ -1,0 +1,14 @@
+Info of the planning ScopingTest
+All Persons:
+	Alice
+	Carol
+14
+All actions of tasks:
+====== 
+Paper for journal Strategy &
+Meeting with topic Training with duration: 3
+d
+=====
+Other way of listing all tasks:
+Paper for journal Strategy , 
+Meeting with topic Training
